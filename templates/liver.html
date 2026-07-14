@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Liver Module | HealSphere Medical Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "outline": "#737685",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#b2c5ff",
+                        "tertiary-fixed": "#82f9be",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary": "#004e32",
+                        "background": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8ea",
+                        "secondary-container": "#50dcff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "primary": "#003d9b",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary-fixed": "#002113",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "primary-fixed": "#dae2ff",
+                        "inverse-surface": "#2e3132",
+                        "primary-container": "#0052cc",
+                        "outline-variant": "#c3c6d6",
+                        "error": "#ba1a1a",
+                        "surface": "#f8f9fb",
+                        "surface-dim": "#d9dadc",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fb",
+                        "surface-tint": "#0c56d0",
+                        "on-primary-container": "#c4d2ff",
+                        "surface-variant": "#e1e2e4",
+                        "surface-container": "#edeef0",
+                        "secondary": "#00687b",
+                        "secondary-fixed": "#afecff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-primary-fixed": "#001848",
+                        "on-tertiary-container": "#72e9af",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "on-secondary-fixed": "#001f27",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#005f71",
+                        "surface-container-highest": "#e1e2e4",
+                        "surface-container-low": "#f3f4f6",
+                        "on-secondary-fixed-variant": "#004e5d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "container-max": "1280px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xs": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c3c6d6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-16 px-gutter flex justify-between items-center max-w-container-max mx-auto left-0 right-0">
+        <div class="flex items-center gap-xs">
+            <span class="material-symbols-outlined text-primary text-[32px]">health_metrics</span>
+            <h1 class="font-title-md text-title-md text-primary tracking-tight">HealSphere</h1>
+        </div>
+        <nav class="hidden md:flex items-center space-x-md h-full">
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                href="#">Systems</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                href="#">Resources</a>
+            <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary h-full flex items-center"
+                href="#">Research</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                href="#">Contact</a>
+        </nav>
+        <div class="flex items-center gap-sm">
+            <button
+                class="material-symbols-outlined text-primary hover:bg-primary/5 p-2 rounded-full transition-all">account_circle</button>
+        </div>
+    </header>
+    <div class="flex max-w-container-max mx-auto pt-16 min-h-screen">
+        <!-- SideNavBar -->
+        <aside
+            class="h-[calc(100vh-64px)] w-64 hidden lg:flex flex-col sticky top-16 border-r border-outline-variant/30 bg-surface py-md space-y-xs">
+            <div class="px-md mb-md">
+                <div class="flex items-center gap-sm p-sm bg-surface-container-low rounded-xl">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+                        <span class="material-symbols-outlined">biotech</span>
+                    </div>
+                    <div>
+                        <p class="font-title-md text-label-md text-primary leading-tight">Hepatology</p>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Liver Module</p>
+                    </div>
+                </div>
+            </div>
+            <a class="flex items-center gap-sm py-sm px-md bg-primary-container text-on-primary-container rounded-xl mx-2 duration-200 ease-in-out font-label-md text-label-md"
+                href="#anatomy">
+                <span class="material-symbols-outlined">biotech</span>
+                <span>Liver Anatomy</span>
+            </a>
+            <a class="flex items-center gap-sm py-sm px-md text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-xl transition-all font-label-md text-label-md"
+                href="#functions">
+                <span class="material-symbols-outlined">settings_suggest</span>
+                <span>Functions</span>
+            </a>
+            <a class="flex items-center gap-sm py-sm px-md text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-xl transition-all font-label-md text-label-md"
+                href="#pathology">
+                <span class="material-symbols-outlined">coronavirus</span>
+                <span>Pathology</span>
+            </a>
+            <a class="flex items-center gap-sm py-sm px-md text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-xl transition-all font-label-md text-label-md"
+                href="#diagnostics">
+                <span class="material-symbols-outlined">microwave</span>
+                <span>Diagnostics</span>
+            </a>
+            <a class="flex items-center gap-sm py-sm px-md text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-xl transition-all font-label-md text-label-md"
+                href="#treatment">
+                <span class="material-symbols-outlined">vaccines</span>
+                <span>Treatment</span>
+            </a>
+
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 px-md lg:px-lg py-xl overflow-x-hidden">
+            <!-- 1. Hero Section -->
+            <section class="mb-xl grid lg:grid-cols-2 gap-lg items-center">
+                <div class="space-y-md">
+                    <span
+                        class="px-sm py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm uppercase tracking-wider">Module
+                        04: Hepatology</span>
+                    <h2 class="font-display-lg text-display-lg text-primary leading-tight">The Liver: Your Vital
+                        Chemical Factory</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        The liver is the body's most complex organ after the brain. Acting as a central processing
+                        plant, it performs over 500 essential functions including metabolic regulation, blood
+                        purification, and critical protein synthesis.
+                    </p>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary-fixed/30 rounded-full blur-3xl group-hover:bg-primary-fixed/40 transition-all">
+                    </div>
+                    <img class="relative z-10 w-full h-auto rounded-3xl drop-shadow-2xl border border-white/20"
+                        data-alt="A hyper-realistic, medical-grade 3D anatomical illustration of a human liver in a sterile clinical style. The organ shows high-fidelity texture with visible vascular networks. Soft global illumination emphasizes its reddish-brown lobes against a clean, minimalist off-white background. The mood is scientific, authoritative, and sophisticated, aligning with a high-end medical education platform."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVpSCKm8mmTBvVO8pvOiPDKQhYvTvUow1m0YpPNa5Hm1VencjYUafAdTV51Uc2efz9-KrHLxA6yQ8jL76Uw-42_deHZwkQyKwfchncF0MmD3Gbv_ZaXn0CRGrXXCPVFq-Rl2_IVkllaE_lsnyNmPh2-CbebLSKXdlAeUJJEszsaJeLlCdLRN2RV3blaKHlkLCnpZFU-6kRdM4Mms3Z2HrTaWAptCSJhMM6pUy52u0ssVExLT80jndHnw" />
+                </div>
+            </section>
+            <!-- 2. Anatomy of the Liver -->
+            <section class="mb-xl" id="anatomy">
+                <div class="flex items-center gap-sm mb-lg">
+                    <div class="h-8 w-1 bg-primary rounded-full"></div>
+                    <h3 class="font-headline-lg text-headline-lg text-on-surface">Anatomy Overview</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-transform">
+                        <span class="material-symbols-outlined text-primary mb-sm">view_quilt</span>
+                        <h4 class="font-title-md text-title-md text-primary mb-xs">The Lobes</h4>
+                        <p class="font-label-md text-on-surface-variant">Divided into the larger Right Lobe and smaller
+                            Left Lobe, separated by the falciform ligament.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-transform">
+                        <span class="material-symbols-outlined text-secondary mb-sm">database</span>
+                        <h4 class="font-title-md text-title-md text-secondary mb-xs">Gallbladder</h4>
+                        <p class="font-label-md text-on-surface-variant">A pear-shaped reservoir that stores and
+                            concentrates bile produced by the hepatocytes.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-transform">
+                        <span class="material-symbols-outlined text-tertiary mb-sm">rebase_edit</span>
+                        <h4 class="font-title-md text-title-md text-tertiary mb-xs">Hepatic Veins</h4>
+                        <p class="font-label-md text-on-surface-variant">Carries deoxygenated, filtered blood from the
+                            liver to the inferior vena cava.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-transform">
+                        <span class="material-symbols-outlined text-error mb-sm">vitals</span>
+                        <h4 class="font-title-md text-title-md text-error mb-xs">Portal Artery</h4>
+                        <p class="font-label-md text-on-surface-variant">Provides oxygen-rich blood to the liver
+                            tissues, ensuring metabolic viability.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- 3. Essential Liver Functions -->
+            <section class="mb-xl bg-surface-container-low rounded-3xl p-lg border border-outline-variant/20"
+                id="functions">
+                <div class="text-center max-w-2xl mx-auto mb-lg">
+                    <h3 class="font-headline-lg text-headline-lg text-primary mb-sm">Core Biological Roles</h3>
+                    <p class="font-body-md text-on-surface-variant">Beyond filtration, the liver serves as a metabolic
+                        hub for growth and immunity.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-lg">
+                    <div class="flex flex-col items-center text-center p-md">
+                        <div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-primary text-[32px]">cleaning_services</span>
+                        </div>
+                        <h5 class="font-title-md text-title-md mb-xs">Detoxification</h5>
+                        <p class="text-label-md text-on-surface-variant">Filters toxins from the blood, including drugs,
+                            alcohol, and metabolic waste like ammonia.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-md">
+                        <div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-secondary text-[32px]">architecture</span>
+                        </div>
+                        <h5 class="font-title-md text-title-md mb-xs">Protein Synthesis</h5>
+                        <p class="text-label-md text-on-surface-variant">Produces essential proteins for blood clotting
+                            (fibrinogen) and fluid balance (albumin).</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-md">
+                        <div class="w-16 h-16 rounded-full bg-tertiary-fixed flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-tertiary text-[32px]">format_paint</span>
+                        </div>
+                        <h5 class="font-title-md text-title-md mb-xs">Bile Production</h5>
+                        <p class="text-label-md text-on-surface-variant">Secrets bile into the small intestine to
+                            emulsify fats and facilitate vitamin absorption.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- 4. Hepatobiliary Process -->
+            <section class="mb-xl">
+                <div class="flex items-center justify-between mb-lg">
+                    <h3 class="font-headline-lg text-headline-lg text-on-surface">Nutrient Processing Cycle</h3>
+                    <span class="text-label-sm text-outline uppercase font-bold tracking-widest">Flow Dynamics</span>
+                </div>
+                <div
+                    class="relative flex flex-col md:flex-row items-center justify-between gap-md before:hidden md:before:block before:absolute before:top-1/2 before:left-0 before:right-0 before:h-px before:bg-outline-variant before:-z-10">
+                    <div class="glass-card p-md rounded-2xl w-full md:w-64 text-center">
+                        <span class="font-title-md text-primary">1. Intake</span>
+                        <p class="text-label-sm text-on-surface-variant mt-1">Nutrients enter via the portal vein from
+                            the digestive tract.</p>
+                    </div>
+                    <div class="material-symbols-outlined text-outline-variant hidden md:block">arrow_forward</div>
+                    <div
+                        class="glass-card p-md rounded-2xl w-full md:w-64 text-center border-primary/30 ring-2 ring-primary/5">
+                        <span class="font-title-md text-primary">2. Metabolism</span>
+                        <p class="text-label-sm text-on-surface-variant mt-1">Hepatocytes break down glucose, fats, and
+                            amino acids.</p>
+                    </div>
+                    <div class="material-symbols-outlined text-outline-variant hidden md:block">arrow_forward</div>
+                    <div class="glass-card p-md rounded-2xl w-full md:w-64 text-center">
+                        <span class="font-title-md text-primary">3. Storage</span>
+                        <p class="text-label-sm text-on-surface-variant mt-1">Vitamins A, D, E, K, and B12 are stored
+                            for future use.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- 5. Common Liver Conditions -->
+            <section class="mb-xl" id="pathology">
+                <h3 class="font-headline-lg text-headline-lg text-on-surface mb-lg">Pathological Overview</h3>
+                <div class="grid md:grid-cols-2 gap-md">
+                    <!-- Condition Card 1 -->
+                    <div class="glass-card p-lg rounded-2xl border-l-4 border-l-primary">
+                        <div class="flex justify-between items-start mb-md">
+                            <div>
+                                <h4 class="font-title-md text-title-md text-on-surface">Fatty Liver (NAFLD)</h4>
+                                <p class="text-label-sm text-on-surface-variant">Non-Alcoholic Fatty Liver Disease</p>
+                            </div>
+                            <span class="material-symbols-outlined text-primary/50">layers</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">Accumulation of excess fat in liver cells
+                            not caused by alcohol consumption, often linked to obesity and diabetes.</p>
+                        <div class="bg-surface-container rounded-xl p-sm">
+                            <p class="font-label-sm text-primary uppercase font-bold mb-xs">Key Symptoms</p>
+                            <ul class="text-label-md space-y-1">
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-primary"></span>Fatigue</li>
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-primary"></span>Pain in upper right abdomen
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Condition Card 2 -->
+                    <div class="glass-card p-lg rounded-2xl border-l-4 border-l-secondary">
+                        <div class="flex justify-between items-start mb-md">
+                            <div>
+                                <h4 class="font-title-md text-title-md text-on-surface">Hepatitis (Viral)</h4>
+                                <p class="text-label-sm text-on-surface-variant">Strains A, B, and C</p>
+                            </div>
+                            <span class="material-symbols-outlined text-secondary/50">coronavirus</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">Inflammation of the liver caused by viral
+                            infection, leading to potential scarring or chronic failure.</p>
+                        <div class="bg-surface-container rounded-xl p-sm">
+                            <p class="font-label-sm text-secondary uppercase font-bold mb-xs">Key Symptoms</p>
+                            <ul class="text-label-md space-y-1">
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Jaundice (yellowing)</li>
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Dark urine</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Condition Card 3 -->
+                    <div class="glass-card p-lg rounded-2xl border-l-4 border-l-error">
+                        <div class="flex justify-between items-start mb-md">
+                            <div>
+                                <h4 class="font-title-md text-title-md text-on-surface">Cirrhosis</h4>
+                                <p class="text-label-sm text-on-surface-variant">Late-stage Scarring</p>
+                            </div>
+                            <span class="material-symbols-outlined text-error/50">texture</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">The replacement of liver tissue by scar
+                            tissue, eventually preventing the liver from functioning properly.</p>
+                        <div class="bg-surface-container rounded-xl p-sm">
+                            <p class="font-label-sm text-error uppercase font-bold mb-xs">Key Symptoms</p>
+                            <ul class="text-label-md space-y-1">
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-error"></span>Easy bruising</li>
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-error"></span>Swelling in legs (Edema)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Condition Card 4 -->
+                    <div class="glass-card p-lg rounded-2xl border-l-4 border-l-inverse-surface">
+                        <div class="flex justify-between items-start mb-md">
+                            <div>
+                                <h4 class="font-title-md text-title-md text-on-surface">Liver Cancer</h4>
+                                <p class="text-label-sm text-on-surface-variant">Hepatocellular Carcinoma</p>
+                            </div>
+                            <span class="material-symbols-outlined text-inverse-surface/50">warning</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">Malignant tumor that starts in the cells
+                            of the liver, often arising from chronic liver disease backgrounds.</p>
+                        <div class="bg-surface-container rounded-xl p-sm">
+                            <p class="font-label-sm text-inverse-surface uppercase font-bold mb-xs">Key Symptoms</p>
+                            <ul class="text-label-md space-y-1">
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-inverse-surface"></span>Unexplained weight
+                                    loss</li>
+                                <li class="flex items-center gap-xs"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-inverse-surface"></span>Abdominal swelling
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 6. Diagnostic Procedures -->
+            <section class="mb-xl" id="diagnostics">
+                <div
+                    class="bg-white rounded-3xl p-lg border border-outline-variant/30 shadow-sm overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
+                    <h3 class="font-headline-lg text-headline-lg text-on-surface mb-lg">Clinical Diagnostics</h3>
+                    <div class="space-y-sm">
+                        <div
+                            class="flex gap-md p-md hover:bg-surface-container transition-colors rounded-2xl cursor-pointer group">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 bg-primary-fixed rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-primary">lab_profile</span>
+                            </div>
+                            <div>
+                                <h5 class="font-title-md text-title-md text-on-surface">Liver Function Tests (LFTs)</h5>
+                                <p class="text-label-md text-on-surface-variant">Blood tests measuring enzymes (ALT,
+                                    AST) and proteins (Albumin) to assess overall liver health.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex gap-md p-md hover:bg-surface-container transition-colors rounded-2xl cursor-pointer group">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 bg-secondary-fixed rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-secondary">waves</span>
+                            </div>
+                            <div>
+                                <h5 class="font-title-md text-title-md text-on-surface">Abdominal Ultrasound</h5>
+                                <p class="text-label-md text-on-surface-variant">Non-invasive imaging using sound waves
+                                    to visualize liver structure and detect masses or cysts.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex gap-md p-md hover:bg-surface-container transition-colors rounded-2xl cursor-pointer group">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 bg-tertiary-fixed rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-tertiary">biotech</span>
+                            </div>
+                            <div>
+                                <h5 class="font-title-md text-title-md text-on-surface">Liver Biopsy</h5>
+                                <p class="text-label-md text-on-surface-variant">Extraction of a small tissue sample for
+                                    microscopic analysis, definitive for staging cirrhosis or cancer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 7. Treatment & Management -->
+            <section class="mb-xl grid lg:grid-cols-2 gap-lg" id="treatment">
+                <div>
+                    <h3 class="font-headline-lg text-headline-lg text-on-surface mb-md">Management Protocols</h3>
+                    <p class="text-body-md text-on-surface-variant mb-lg">Clinical management focuses on halting
+                        progression and supporting regenerative capacity.</p>
+                    <div class="space-y-md">
+                        <details
+                            class="group bg-surface-container-low rounded-2xl border border-outline-variant/30 overflow-hidden">
+                            <summary
+                                class="flex items-center justify-between p-md cursor-pointer list-none font-title-md text-on-surface">
+                                Pharmacological Interventions
+                                <span
+                                    class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                            </summary>
+                            <div class="p-md pt-0 text-label-md text-on-surface-variant">
+                                Includes antiviral medications for Hepatitis, corticosteroids for autoimmune conditions,
+                                and diuretics for managing fluid retention (ascites).
+                            </div>
+                        </details>
+                        <details
+                            class="group bg-surface-container-low rounded-2xl border border-outline-variant/30 overflow-hidden">
+                            <summary
+                                class="flex items-center justify-between p-md cursor-pointer list-none font-title-md text-on-surface">
+                                Surgical Options
+                                <span
+                                    class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                            </summary>
+                            <div class="p-md pt-0 text-label-md text-on-surface-variant">
+                                From resection of localized tumors to full liver transplantation for end-stage liver
+                                disease (ESLD).
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="bg-primary/5 rounded-3xl p-lg flex flex-col justify-center border border-primary/10">
+                    <div class="flex items-center gap-md mb-md">
+                        <span class="material-symbols-outlined text-primary text-[48px]">clinical_notes</span>
+                        <h4 class="font-headline-lg text-headline-lg text-primary">Lifestyle Protocols</h4>
+                    </div>
+                    <ul class="space-y-sm">
+                        <li class="flex gap-sm">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <p class="text-body-md">Low-sodium diet to prevent fluid buildup.</p>
+                        </li>
+                        <li class="flex gap-sm">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <p class="text-body-md">Complete abstinence from alcohol for alcoholic-related injury.</p>
+                        </li>
+                        <li class="flex gap-sm">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <p class="text-body-md">Weight management through aerobic exercise.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 8. Liver Health Tips -->
+            <section class="mb-xl">
+                <div class="text-center mb-lg">
+                    <h3 class="font-headline-lg text-headline-lg text-on-surface">Nurturing Your Liver</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-md">
+                    <div class="glass-card p-md rounded-2xl text-center">
+                        <div
+                            class="bg-secondary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-md">
+                            <span class="material-symbols-outlined text-secondary">nutrition</span>
+                        </div>
+                        <h6 class="font-title-md text-title-md mb-xs">Fiber Intake</h6>
+                        <p class="text-label-sm text-on-surface-variant">High-fiber foods like whole grains and leafy
+                            greens help regulate bile flow.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-2xl text-center">
+                        <div
+                            class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-md">
+                            <span class="material-symbols-outlined text-primary">vaccines</span>
+                        </div>
+                        <h6 class="font-title-md text-title-md mb-xs">Vaccination</h6>
+                        <p class="text-label-sm text-on-surface-variant">Protect against Hepatitis A and B viruses
+                            through complete vaccination series.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-2xl text-center">
+                        <div
+                            class="bg-tertiary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-md">
+                            <span class="material-symbols-outlined text-tertiary">no_drinks</span>
+                        </div>
+                        <h6 class="font-title-md text-title-md mb-xs">Moderation</h6>
+                        <p class="text-label-sm text-on-surface-variant">Limit alcohol intake to prevent fatty buildup
+                            and permanent oxidative stress.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- 9. Liver by the Numbers -->
+            <section class="mb-xl">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+                    <div class="p-lg bg-inverse-surface rounded-2xl text-center text-inverse-on-surface">
+                        <p class="text-[40px] font-bold leading-none mb-2">500+</p>
+                        <p class="text-label-sm uppercase tracking-widest opacity-80">Vital Functions</p>
+                    </div>
+                    <div class="p-lg bg-primary rounded-2xl text-center text-on-primary">
+                        <p class="text-[40px] font-bold leading-none mb-2">25%</p>
+                        <p class="text-label-sm uppercase tracking-widest opacity-80">Regeneration</p>
+                    </div>
+                    <div class="p-lg bg-secondary rounded-2xl text-center text-on-secondary">
+                        <p class="text-[40px] font-bold leading-none mb-2">1.5kg</p>
+                        <p class="text-label-sm uppercase tracking-widest opacity-80">Average Weight</p>
+                    </div>
+                    <div class="p-lg bg-tertiary rounded-2xl text-center text-on-tertiary">
+                        <p class="text-[40px] font-bold leading-none mb-2">1.4L</p>
+                        <p class="text-label-sm uppercase tracking-widest opacity-80">Blood Flow/Min</p>
+                    </div>
+                </div>
+                <div class="mt-md p-md glass-card rounded-2xl flex items-center gap-md">
+                    <span class="material-symbols-outlined text-primary text-[32px]">auto_awesome</span>
+                    <p class="font-body-md text-on-surface italic">"The liver is the only organ in the human body
+                        capable of regenerating entirely from as little as 25% of its original tissue."</p>
+                </div>
+            </section>
+            <!-- 10. FAQ -->
+            <section class="mb-xl">
+                <h3 class="font-headline-lg text-headline-lg text-on-surface mb-lg">Frequently Asked Questions</h3>
+                <div class="space-y-sm">
+                    <div class="bg-white border border-outline-variant/30 rounded-xl px-md py-sm">
+                        <button
+                            class="w-full text-left font-title-md text-on-surface flex justify-between items-center py-2"
+                            onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            Can fatty liver disease be reversed?
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                        <p class="hidden pt-2 text-label-md text-on-surface-variant">Yes, early-stage fatty liver
+                            (steatosis) can often be reversed through significant weight loss, dietary changes, and
+                            regular exercise before inflammation causes scarring.</p>
+                    </div>
+                    <div class="bg-white border border-outline-variant/30 rounded-xl px-md py-sm">
+                        <button
+                            class="w-full text-left font-title-md text-on-surface flex justify-between items-center py-2"
+                            onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            What are the first signs of liver stress?
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                        <p class="hidden pt-2 text-label-md text-on-surface-variant">Often the liver is "silent" in
+                            early disease, but subtle signs include persistent fatigue, itchy skin (pruritus), and
+                            discomfort in the upper right quadrant of the abdomen.</p>
+                    </div>
+                    <div class="bg-white border border-outline-variant/30 rounded-xl px-md py-sm">
+                        <button
+                            class="w-full text-left font-title-md text-on-surface flex justify-between items-center py-2"
+                            onclick="this.nextElementSibling.classList.toggle('hidden')">
+                            How does alcohol specifically damage the liver?
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                        <p class="hidden pt-2 text-label-md text-on-surface-variant">Alcohol metabolism produces toxic
+                            chemicals like acetaldehyde, which trigger inflammation, destroy liver cells, and promote
+                            fat accumulation and fibrosis.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant mt-lg w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-md px-gutter py-lg max-w-container-max mx-auto items-center">
+            <div class="space-y-sm">
+                <h2 class="font-title-md text-title-md text-primary">HealSphere</h2>
+                <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 HealSphere Medical Education.
+                    Professional Use Only.</p>
+            </div>
+            <div class="flex flex-wrap gap-md md:justify-end">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline"
+                    href="#">Emergency Contacts</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline"
+                    href="#">Medical Disclaimer</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline"
+                    href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple micro-interaction for side nav active state
+        const navLinks = document.querySelectorAll('aside a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                navLinks.forEach(l => {
+                    l.classList.remove('bg-primary-container', 'text-on-primary-container');
+                    l.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+                });
+                link.classList.add('bg-primary-container', 'text-on-primary-container');
+                link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+            });
+        });
+    </script>
+</body>
+
+</html>

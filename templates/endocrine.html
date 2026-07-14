@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Module 10: The Endocrine System | HealSphere Clinical Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#006844",
+                        "inverse-primary": "#b2c5ff",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "on-surface": "#191c1e",
+                        "surface-bright": "#f8f9fb",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#434654",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadc",
+                        "primary-container": "#0052cc",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e1e2e4",
+                        "secondary-fixed": "#afecff",
+                        "outline": "#737685",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "surface-container-highest": "#e1e2e4",
+                        "outline-variant": "#c3c6d6",
+                        "surface-tint": "#0c56d0",
+                        "surface-container": "#edeef0",
+                        "on-tertiary-container": "#72e9af",
+                        "primary-fixed": "#dae2ff",
+                        "on-secondary-fixed": "#001f27",
+                        "on-primary-container": "#c4d2ff",
+                        "inverse-surface": "#2e3132",
+                        "secondary": "#00687b",
+                        "primary": "#003d9b",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "on-primary-fixed": "#001848",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "tertiary": "#004e32",
+                        "surface-container-high": "#e7e8ea",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "surface": "#f8f9fb",
+                        "tertiary-fixed": "#82f9be",
+                        "secondary-container": "#50dcff",
+                        "on-background": "#191c1e",
+                        "surface-container-low": "#f3f4f6",
+                        "on-secondary": "#ffffff",
+                        "background": "#f8f9fb",
+                        "on-secondary-container": "#005f71"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "base": "4px",
+                        "xl": "80px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fb;
+            color: #191c1e;
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 12px 30px rgba(0, 82, 204, 0.08);
+        }
+
+        .medical-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #00687b 100%);
+        }
+
+        .pill-radius {
+            border-radius: 24px;
+        }
+
+        .standard-radius {
+            border-radius: 16px;
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md bg-background">
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm z-50">
+        <nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+            <div class="flex items-center gap-xs">
+                <span class="font-headline-lg text-headline-lg text-primary tracking-tight">HealSphere</span>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-xl overflow-x-hidden">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center pt-xl pb-lg px-gutter bg-surface">
+            <div class="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+                <div class="space-y-md">
+                    <span
+                        class="inline-block px-sm py-1 bg-primary-fixed text-on-primary-fixed font-label-md text-label-md rounded-full">
+                        Clinical Education
+                    </span>
+                    <h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+                        Module 10: <br /><span class="text-primary">The Endocrine System</span>
+                    </h1>
+                    <p class="font-title-md text-title-md text-on-surface-variant max-w-xl">
+                        The Body's Chemical Messaging Network. Explore how a complex symphony of glands and hormones
+                        regulates homeostasis, growth, and metabolic vitality.
+                    </p>
+                    <div class="flex gap-md pt-base">
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-primary-container/10 blur-3xl rounded-full"></div>
+                    <img class="relative w-full h-auto object-contain drop-shadow-2xl rounded-xl"
+                        data-alt="A highly detailed, professional medical illustration of the human endocrine system on a clean, clinical background. The image features a translucent human figure with major glands—pituitary, thyroid, adrenals, and pancreas—highlighted with glowing blue and teal accents. The lighting is soft and high-key, maintaining a serene and authoritative clinical aesthetic consistent with premium health portal interfaces."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXu86oAzMSX9xkXs8WpM7a4hnb9Bs_yJopFr31l03lDNscKN08TaCRQTQbLnLuWgRbE-SqrcQGTq2avaD_IhpiwqYtV3VaijsrNNBoa6X19WEDy2WbWHlGJCtc1ypzUIKtttwOg9Pr20qQi3OEouKunN4yBbaFdRcXPoXvLcvh-ZUiOlzMDFQz5SVGNFT58Xck9byH4dHP-LX2VQNpGKY_LsrnQQec-tgBlZbnJUoExLM6GD-GZW1A7A" />
+                </div>
+            </div>
+        </section>
+        <!-- Anatomical Architecture -->
+        <section class="py-xl px-gutter bg-surface-container-low">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-xl">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Anatomical Architecture</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Each gland in the endocrine system serves as a specialized command center, releasing hormones
+                        directly into the bloodstream.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-md">
+                    <!-- Pituitary -->
+                    <div class="glass-card p-md standard-radius flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-xs">Pituitary</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">The "Master Gland" controlling
+                            growth and other glands.</p>
+                    </div>
+                    <!-- Thyroid -->
+                    <div class="glass-card p-md standard-radius flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-secondary text-3xl">airplay</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-xs">Thyroid</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">Regulates metabolism, heart rate,
+                            and temperature.</p>
+                    </div>
+                    <!-- Pancreas -->
+                    <div class="glass-card p-md standard-radius flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-tertiary/10 rounded-full flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-tertiary text-3xl">nutrition</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-xs">Pancreas</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">Regulates blood glucose levels
+                            via insulin and glucagon.</p>
+                    </div>
+                    <!-- Adrenals -->
+                    <div class="glass-card p-md standard-radius flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-error/10 rounded-full flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-error text-3xl">bolt</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-xs">Adrenals</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">Manages stress response, blood
+                            pressure, and metabolism.</p>
+                    </div>
+                    <!-- Reproductive -->
+                    <div class="glass-card p-md standard-radius flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 bg-primary-fixed-dim/30 rounded-full flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-primary-fixed-dim text-3xl"
+                                style="font-variation-settings: 'FILL' 1;">diversity_1</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-xs">Reproductive</h3>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">Coordinates development and
+                            sexual characteristics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hormonal Mechanics -->
+        <section class="py-xl px-gutter bg-surface">
+            <div class="max-w-container-max mx-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-xl">
+                    <div class="flex-1 space-y-md">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">Hormonal Mechanics</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Hormones are biochemical signals traveling through the circulatory system to target specific
+                            receptors. They orchestrate nearly every physiological function through precise lock-and-key
+                            mechanisms.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-md pt-md">
+                            <div class="flex items-start gap-sm">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">speed</span>
+                                <div>
+                                    <h4 class="font-title-md text-title-md">Metabolism</h4>
+                                    <p class="text-label-sm text-on-surface-variant">Energy conversion and storage.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-sm">
+                                <span class="material-symbols-outlined text-secondary"
+                                    style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                                <div>
+                                    <h4 class="font-title-md text-title-md">Growth</h4>
+                                    <p class="text-label-sm text-on-surface-variant">Cell division and tissue repair.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-sm">
+                                <span class="material-symbols-outlined text-tertiary"
+                                    style="font-variation-settings: 'FILL' 1;">sentiment_satisfied</span>
+                                <div>
+                                    <h4 class="font-title-md text-title-md">Mood</h4>
+                                    <p class="text-label-sm text-on-surface-variant">Emotional balance and neurological
+                                        state.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div
+                            class="aspect-video glass-card standard-radius flex items-center justify-center p-md overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-lg"
+                                data-alt="A sophisticated 3D visualization showing a hormone molecule binding to a cell receptor. The scene is rendered in soft clinical tones of light blue and translucent white with microscopic depth of field. Glowing particles represent the chemical signaling process, emphasizing a clean, modern, and high-tech medical laboratory aesthetic."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoAgP6tTtvgL1_htqe8MTarq21X4pXLIskgMoFmP8qRnMxmyvCpNhAfANaQ-s5ZuCW687MJIlVVmccNK4zP0mWB0-ZnL3UMNQVCjh_COBQvScDKRsRJX8S-LQPkaHEpuw1L3D69km5uSv_7LaAso4-vCmPN0feTPquICzQECACSS5q0p5Aixb26Rr-XJeGPEi0tiPA3BcReMo2T_ttGTPFu9iXCwFWQxXReR3AciyEDOQScEnsZqXDwg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pathology Center -->
+        <section class="py-xl px-gutter bg-surface-container">
+            <div class="max-w-container-max mx-auto">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-xl text-center">Pathology Center</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                    <!-- Diabetes -->
+                    <div class="bg-white p-lg standard-radius border border-outline-variant/30 shadow-sm">
+                        <div class="flex justify-between items-start mb-md">
+                            <h3 class="font-title-md text-title-md text-primary">Diabetes Mellitus</h3>
+                            <span
+                                class="px-sm py-1 bg-error-container text-on-error-container text-label-sm rounded-full">High
+                                Prevalence</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">A chronic condition where the body cannot
+                            effectively regulate blood glucose.</p>
+                        <div class="space-y-xs">
+                            <div class="flex gap-xs text-label-sm font-label-sm text-on-surface">
+                                <span class="text-primary font-bold">Type 1:</span> Insulin deficiency (autoimmune)
+                            </div>
+                            <div
+                                class="flex gap-xs text-label-sm font-label-sm text-on-surface border-t border-outline-variant/10 pt-xs">
+                                <span class="text-primary font-bold">Type 2:</span> Insulin resistance
+                                (lifestyle/genetic)
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Thyroid Disorders -->
+                    <div class="bg-white p-lg standard-radius border border-outline-variant/30 shadow-sm">
+                        <div class="flex justify-between items-start mb-md">
+                            <h3 class="font-title-md text-title-md text-secondary">Thyroid Disorders</h3>
+                            <span
+                                class="px-sm py-1 bg-secondary-container text-on-secondary-container text-label-sm rounded-full">Metabolic
+                                Focus</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">Dysfunction in the production of T3 and T4
+                            hormones.</p>
+                        <div class="space-y-xs">
+                            <div class="flex gap-xs text-label-sm font-label-sm text-on-surface">
+                                <span class="text-secondary font-bold">Hypothyroidism:</span> Fatigue, weight gain, cold
+                                sensitivity.
+                            </div>
+                            <div
+                                class="flex gap-xs text-label-sm font-label-sm text-on-surface border-t border-outline-variant/10 pt-xs">
+                                <span class="text-secondary font-bold">Hyperthyroidism:</span> Anxiety, weight loss,
+                                heat intolerance.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Addison's -->
+                    <div class="bg-white p-lg standard-radius border border-outline-variant/30 shadow-sm">
+                        <div class="flex justify-between items-start mb-md">
+                            <h3 class="font-title-md text-title-md text-on-surface">Addison’s Disease</h3>
+                            <span
+                                class="px-sm py-1 bg-surface-container-highest text-on-surface text-label-sm rounded-full">Adrenal
+                                Insufficiency</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">Primary adrenal insufficiency where the
+                            body produces insufficient cortisol.</p>
+                        <div class="flex gap-xs text-label-sm font-label-sm text-on-surface">
+                            <span class="material-symbols-outlined text-error text-sm">warning</span>
+                            Symptoms include hyperpigmentation and extreme fatigue.
+                        </div>
+                    </div>
+                    <!-- Cushing Syndrome -->
+                    <div class="bg-white p-lg standard-radius border border-outline-variant/30 shadow-sm">
+                        <div class="flex justify-between items-start mb-md">
+                            <h3 class="font-title-md text-title-md text-on-surface">Cushing Syndrome</h3>
+                            <span
+                                class="px-sm py-1 bg-surface-container-highest text-on-surface text-label-sm rounded-full">Hypercortisolism</span>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant mb-md">Results from exposure to high levels of
+                            cortisol for a long time.</p>
+                        <div class="flex gap-xs text-label-sm font-label-sm text-on-surface">
+                            <span class="material-symbols-outlined text-error text-sm">warning</span>
+                            Common signs: weight gain in the trunk and face, skin thinning.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic Roadmap -->
+        <section class="py-xl px-gutter bg-surface">
+            <div class="max-w-container-max mx-auto">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-xl">Diagnostic Roadmap</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+                    <div class="flex items-start gap-md">
+                        <div
+                            class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            1</div>
+                        <div>
+                            <h4 class="font-title-md text-title-md mb-xs">Laboratory Assays</h4>
+                            <p class="text-on-surface-variant">Blood serum tests including A1C for glucose monitoring,
+                                TSH for thyroid function, and specific antibody panels.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-md">
+                        <div
+                            class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            2</div>
+                        <div>
+                            <h4 class="font-title-md text-title-md mb-xs">Advanced Imaging</h4>
+                            <p class="text-on-surface-variant">Ultrasound, MRI, and CT scans to visualize glandular
+                                size, nodules, or potential structural abnormalities.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-md">
+                        <div
+                            class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            3</div>
+                        <div>
+                            <h4 class="font-title-md text-title-md mb-xs">Functional Tests</h4>
+                            <p class="text-on-surface-variant">Stimulation and suppression tests (e.g., ACTH
+                                stimulation) to evaluate glandular response under pressure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Management & Balance -->
+        <section class="py-xl px-gutter bg-white">
+            <div class="max-w-container-max mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+                    <div class="space-y-md">
+                        <h3 class="font-headline-lg text-headline-lg text-primary">Treatment Modalities</h3>
+                        <div class="space-y-sm">
+                            <div class="p-md bg-surface-container-lowest border-l-4 border-primary rounded-r-lg">
+                                <p class="font-title-md text-title-md mb-base">Insulin Therapy</p>
+                                <p class="text-label-md text-on-surface-variant">Crucial for Type 1 management and
+                                    advanced Type 2 cases.</p>
+                            </div>
+                            <div class="p-md bg-surface-container-lowest border-l-4 border-secondary rounded-r-lg">
+                                <p class="font-title-md text-title-md mb-base">Hormone Replacement (HRT)</p>
+                                <p class="text-label-md text-on-surface-variant">Synthetic hormones like Levothyroxine
+                                    to restore natural balance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-md">
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Lifestyle Pillars</h3>
+                        <div class="grid grid-cols-3 gap-sm">
+                            <div class="text-center p-md bg-tertiary/5 rounded-xl border border-tertiary/10">
+                                <span
+                                    class="material-symbols-outlined text-tertiary text-3xl block mb-xs">bedtime</span>
+                                <span class="font-label-sm">Sleep</span>
+                            </div>
+                            <div class="text-center p-md bg-primary/5 rounded-xl border border-primary/10">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl block mb-xs">restaurant</span>
+                                <span class="font-label-sm">Nutrition</span>
+                            </div>
+                            <div class="text-center p-md bg-secondary/5 rounded-xl border border-secondary/10">
+                                <span
+                                    class="material-symbols-outlined text-secondary text-3xl block mb-xs">self_improvement</span>
+                                <span class="font-label-sm">Stress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clinical FAQ Accordion -->
+        <section class="py-xl px-gutter bg-surface-container-low mb-xl">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg text-center">Clinical FAQ</h2>
+                <div class="space-y-sm">
+                    <!-- Accordion Item 1 -->
+                    <div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm">
+                        <button
+                            class="w-full px-lg py-md flex justify-between items-center hover:bg-primary/5 transition-colors"
+                            onclick="toggleAccordion('faq1')">
+                            <span class="font-title-md text-title-md text-on-surface text-left">What is the difference
+                                between Type 1 and Type 2 Diabetes?</span>
+                            <span class="material-symbols-outlined transition-transform duration-300"
+                                id="faq1-icon">expand_more</span>
+                        </button>
+                        <div class="hidden px-lg pb-md" id="faq1">
+                            <p class="text-body-md text-on-surface-variant">Type 1 diabetes is an autoimmune condition
+                                where the pancreas produces little to no insulin. Type 2 is a chronic condition that
+                                affects the way the body processes blood sugar (glucose) due to insulin resistance or
+                                insufficient insulin production.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm">
+                        <button
+                            class="w-full px-lg py-md flex justify-between items-center hover:bg-primary/5 transition-colors"
+                            onclick="toggleAccordion('faq2')">
+                            <span class="font-title-md text-title-md text-on-surface text-left">How does stress affect
+                                hormones?</span>
+                            <span class="material-symbols-outlined transition-transform duration-300"
+                                id="faq2-icon">expand_more</span>
+                        </button>
+                        <div class="hidden px-lg pb-md" id="faq2">
+                            <p class="text-body-md text-on-surface-variant">Stress triggers the hypothalamus to signal
+                                the adrenal glands to release cortisol and adrenaline. Chronic stress can lead to
+                                prolonged high cortisol levels, which may disrupt sleep, metabolism, and immune
+                                function.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm">
+                        <button
+                            class="w-full px-lg py-md flex justify-between items-center hover:bg-primary/5 transition-colors"
+                            onclick="toggleAccordion('faq3')">
+                            <span class="font-title-md text-title-md text-on-surface text-left">Are thyroid nodules
+                                always cancerous?</span>
+                            <span class="material-symbols-outlined transition-transform duration-300"
+                                id="faq3-icon">expand_more</span>
+                        </button>
+                        <div class="hidden px-lg pb-md" id="faq3">
+                            <p class="text-body-md text-on-surface-variant">No, the vast majority (over 90%) of thyroid
+                                nodules are benign (non-cancerous). However, they require clinical evaluation via
+                                ultrasound or biopsy to confirm their nature.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/20 w-full">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl max-w-container-max mx-auto gap-md">
+            <div class="flex flex-col gap-xs items-center md:items-start">
+                <span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">HealSphere</span>
+                <p
+                    class="font-label-sm text-label-sm text-secondary-fixed text-secondary max-w-sm text-center md:text-left">
+                    © 2024 HealSphere Clinical Education. For professional use only. Medical Disclaimer: Information
+                    provided is for educational purposes and does not constitute medical advice.
+                </p>
+            </div>
+            <div class="flex gap-lg">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-colors"
+                    href="#">Medical Board Standards</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-colors"
+                    href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+
+</html>

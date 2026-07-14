@@ -1,0 +1,51 @@
+Disease_ID,Warning_Signs,Emergency_Action
+D001,"Confusion, unconsciousness, severe low/high blood sugar",Seek emergency medical care immediately.
+D002,"Severe chest pain, vision changes, difficulty breathing",Call emergency services and go to the nearest hospital.
+D003,"Severe breathlessness, bluish lips, inability to speak",Use rescue inhaler if prescribed and seek emergency care.
+D004,Sudden severe headache with weakness or confusion,Go to the emergency department immediately.
+D005,"Vomiting blood, black stools, severe abdominal pain",Seek urgent medical attention.
+D006,"Severe breathing difficulty, blue lips, confusion",Call emergency services immediately.
+D007,"Persistent bleeding, severe abdominal pain, shock",Go to the nearest hospital immediately.
+D008,"No urine output, chest pain, severe swelling",Seek emergency medical treatment.
+D009,"Unable to move joint after injury, severe swelling",Visit the emergency department for assessment.
+D010,"Suicidal thoughts, self-harm risk, inability to stay safe",Contact emergency services or go to the nearest emergency department immediately.
+D011,Chest pain sweating nausea shortness of breath,"Call emergency services immediately and chew aspirin if advised."
+D012,Severe breathlessness chest pain swelling fainting,"Call emergency services immediately."
+D013,Sudden weakness facial drooping speech difficulty vision loss,"Call emergency services immediately. Time-critical treatment is essential."
+D014,Severe breathlessness blue lips confusion,"Seek emergency medical care and oxygen support."
+D015,Persistent cough coughing blood weight loss difficulty breathing,"Seek urgent medical evaluation and isolation."
+D016,Difficulty breathing chest pain confusion low oxygen levels,"Seek emergency medical care immediately."
+D017,High fever breathing difficulty chest pain,"Seek urgent medical care especially in high-risk individuals."
+D018,Severe abdominal pain vomiting blood black stools,"Go to the emergency department immediately."
+D019,Chest pain difficulty swallowing vomiting blood,"Seek immediate medical evaluation."
+D020,Yellow eyes severe abdominal pain confusion bleeding,"Go to the hospital immediately."
+D021,Confusion abdominal swelling vomiting blood jaundice,"Seek emergency medical care."
+D022,Severe right upper abdominal pain fever jaundice,"Seek urgent surgical evaluation."
+D023,Severe lower right abdominal pain fever vomiting,"Go to the emergency department for possible surgery."
+D024,Extreme fatigue slow heart rate confusion hypothermia,"Seek urgent medical care."
+D025,Rapid heartbeat chest pain severe anxiety fever,"Seek emergency medical evaluation."
+D026,Severe fatigue chest pain dizziness fainting,"Seek urgent medical assessment or blood transfusion if severe."
+D027,Persistent fever bleeding bruising extreme fatigue,"Seek immediate oncology or emergency care."
+D028,Breast lump skin changes nipple discharge persistent pain,"Seek urgent oncology evaluation."
+D029,Persistent cough coughing blood chest pain weight loss,"Seek immediate oncology assessment."
+D030,Difficulty urinating blood in urine bone pain,"Seek urgent urology consultation."
+D031,Widespread skin redness fever severe skin pain,"Seek emergency dermatology evaluation."
+D032,Severe rash swelling breathing difficulty infection,"Seek emergency care if allergic reaction or infection develops."
+D033,Large painful cysts fever facial swelling,"Seek urgent dermatology care."
+D034,Sudden vision loss severe eye pain halos around lights,"Seek emergency ophthalmology treatment immediately."
+D035,Sudden vision changes eye pain redness,"Seek urgent ophthalmology evaluation."
+D036,Severe eye pain vision loss light sensitivity,"Seek immediate eye specialist care."
+D037,Severe ear pain swelling behind ear high fever,"Seek urgent medical evaluation."
+D038,Facial swelling severe headache vision changes high fever,"Seek emergency medical care."
+D039,Sudden confusion wandering inability to recognize family,"Ensure patient safety and seek urgent medical attention."
+D040,Difficulty swallowing repeated falls breathing difficulty,"Seek emergency medical care."
+D041,Seizure lasting more than five minutes repeated seizures unconsciousness,"Call emergency services immediately."
+D042,Severe joint swelling chest pain breathing difficulty,"Seek urgent medical evaluation."
+D043,Sudden severe joint pain fever inability to move joint,"Seek emergency care to rule out septic arthritis."
+D044,Sudden severe back pain hip pain after fall,"Seek emergency care for possible fracture."
+D045,High fever seizures unconsciousness jaundice,"Go to the hospital immediately for antimalarial treatment."
+D046,Persistent high fever severe abdominal pain confusion bleeding,"Seek urgent hospital treatment."
+D047,Severe dehydration sunken eyes confusion shock,"Begin oral rehydration if possible and seek emergency care immediately."
+D048,Difficulty breathing severe rash confusion,"Seek emergency medical care."
+D049,High fever breathing difficulty seizures confusion,"Seek emergency treatment immediately."
+D050,Severe weight loss persistent fever breathing difficulty confusion,"Seek immediate medical care for opportunistic infections."

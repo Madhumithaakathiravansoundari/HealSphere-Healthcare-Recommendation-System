@@ -1,0 +1,51 @@
+Disease_ID,Primary_Treatment,Description
+D001,Modern Medicine,Blood sugar control through prescribed medication and lifestyle management.
+D002,Modern Medicine,Control blood pressure using antihypertensive medicines and healthy lifestyle.
+D003,Modern Medicine,"Use inhalers, bronchodilators, and avoid asthma triggers."
+D004,Modern Medicine,Pain relief medications and preventive therapy.
+D005,Modern Medicine,Acid-reducing medicines and dietary modifications.
+D006,Modern Medicine,"Antibiotics, oxygen therapy, and supportive care."
+D007,Supportive Care,"Fluid replacement, fever management, and monitoring."
+D008,Modern Medicine,"Medicines, dialysis when required, and lifestyle changes."
+D009,Modern Medicine,"Pain relief, physiotherapy, and joint protection."
+D010,Psychotherapy & Medication,Counseling with antidepressants when indicated.
+D011,Statins antiplatelets and lifestyle modification,Narrowing of coronary arteries.
+D012,ACE inhibitors beta blockers and diuretics,Heart cannot pump efficiently.
+D013,Thrombolytic therapy or mechanical thrombectomy,Interrupted blood supply to brain.
+D014,Bronchodilators inhaled steroids and oxygen therapy,Chronic airflow limitation.
+D015,Combination anti-tuberculosis antibiotics,Bacterial lung infection.
+D016,Antiviral medications and supportive care,Coronavirus infection.
+D017,Antiviral drugs and rest,Seasonal flu infection.
+D018,Proton pump inhibitors and antibiotics if H. pylori,Sores in stomach lining.
+D019,Proton pump inhibitors and lifestyle modification,Acid reflux disorder.
+D020,Antiviral therapy such as tenofovir,Viral liver infection.
+D021,Liver disease management and transplantation if needed,Scarring of liver.
+D022,Pain management and cholecystectomy,Stone formation in gallbladder.
+D023,Appendectomy surgery,Inflamed appendix.
+D024,Levothyroxine replacement therapy,Underactive thyroid.
+D025,Antithyroid drugs radioactive iodine or surgery,Overactive thyroid.
+D026,Iron supplements or vitamin therapy,Low red blood cells.
+D027,Chemotherapy targeted therapy and bone marrow transplant,Cancer of blood-forming tissues.
+D028,Surgery chemotherapy and radiation therapy,Malignant breast tumor.
+D029,Surgery chemotherapy targeted therapy and immunotherapy,Malignant lung tumor.
+D030,Surgery radiation therapy and hormone therapy,Cancer of prostate gland.
+D031,Topical corticosteroids and biologic therapy,Autoimmune skin condition.
+D032,Moisturizers and topical corticosteroids,Inflammatory skin condition.
+D033,Topical retinoids benzoyl peroxide and antibiotics,Inflammation of hair follicles.
+D034,Eye drops laser therapy or surgery,Damage to optic nerve.
+D035,Cataract surgery,Clouding of eye lens.
+D036,Antibiotic or antiviral eye drops depending on cause,Inflamed conjunctiva.
+D037,Antibiotics and pain relievers,Middle ear infection.
+D038,Decongestants nasal corticosteroids and antibiotics if bacterial,Inflamed sinuses.
+D039,Cholinesterase inhibitors and supportive care,Progressive memory loss.
+D040,Levodopa and dopamine agonists,Movement disorder.
+D041,Antiepileptic medications,Recurring seizures.
+D042,DMARDs biologics and corticosteroids,Inflammatory joint disease.
+D043,NSAIDs colchicine and urate lowering therapy,Uric acid crystal arthritis.
+D044,Calcium vitamin D and bisphosphonates,Weak brittle bones.
+D045,Antimalarial medications such as artemisinin combination therapy,Mosquito-borne parasitic disease.
+D046,Appropriate antibiotics and hydration,Salmonella infection.
+D047,Rapid fluid replacement and antibiotics,Severe diarrheal illness.
+D048,Supportive care and antiviral therapy in severe cases,Varicella-zoster infection.
+D049,Supportive care and vitamin A supplementation,Highly contagious viral disease.
+D050,Combination antiretroviral therapy,Virus that weakens immune system.

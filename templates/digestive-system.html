@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Digestive System | HealSphere Medical Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind Config from Source of Truth -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#82f9be",
+                        "outline-variant": "#c3c6d6",
+                        "inverse-primary": "#b2c5ff",
+                        "primary-container": "#0052cc",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-error": "#ffffff",
+                        "tertiary": "#004e32",
+                        "secondary-fixed": "#afecff",
+                        "surface-container-high": "#e7e8ea",
+                        "on-surface-variant": "#434654",
+                        "primary": "#003d9b",
+                        "secondary-container": "#50dcff",
+                        "surface-dim": "#d9dadc",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dae2ff",
+                        "surface": "#f8f9fb",
+                        "inverse-surface": "#2e3132",
+                        "outline": "#737685",
+                        "on-primary-container": "#c4d2ff",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary-fixed": "#002113",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#001f27",
+                        "surface-container-low": "#f3f4f6",
+                        "secondary": "#00687b",
+                        "on-tertiary-container": "#72e9af",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e1e2e4",
+                        "surface-tint": "#0c56d0",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "background": "#f8f9fb",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fb",
+                        "on-secondary-container": "#005f71",
+                        "on-primary-fixed": "#001848",
+                        "tertiary-container": "#006844",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-variant": "#e1e2e4",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#edeef0",
+                        "on-surface": "#191c1e",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "base": "4px",
+                        "container-max": "1280px",
+                        "lg": "48px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "title-md": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .active-pill {
+            background-color: rgba(0, 82, 204, 0.08);
+            border-radius: 9999px;
+        }
+
+        .step-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: repeating-linear-gradient(to bottom, #0052cc 0%, #0052cc 50%, transparent 50%, transparent 100%);
+            background-size: 2px 8px;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .step-line::before {
+                left: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+    <!-- TopNavBar - Rendered from JSON Identity -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm h-20">
+        <div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-full">
+            <div class="flex items-center gap-md">
+                <span class="font-headline-lg text-headline-lg font-bold text-primary">HealSphere</span>
+                <div class="hidden md:flex items-center gap-sm ml-lg">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                        href="#">Courses</a>
+                    <a class="font-body-md text-body-md text-primary border-b-2 border-primary font-bold pb-1"
+                        href="#">Library</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                        href="#">Practitioners</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                        href="#">Research</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-md">
+                <div class="hidden lg:flex items-center gap-sm">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">notifications</span>
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">help_outline</span>
+                </div>
+                <button class="hidden sm:block text-primary font-bold hover:scale-95 transition-transform">Sign
+                    In</button>
+                <button
+                    class="bg-primary text-on-primary px-md py-xs rounded-full font-bold hover:scale-95 transition-transform">Join
+                    Now</button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-xl overflow-hidden">
+
+            <div
+                class="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+                <div class="space-y-md">
+                    <span
+                        class="inline-block px-sm py-base bg-secondary-container text-on-secondary-container rounded-full text-label-md font-label-md uppercase tracking-wider">Medical
+                        Library • Anatomy</span>
+                    <h1 class="font-display-lg text-display-lg text-on-background leading-tight">
+                        The Digestive System: <br /><span class="text-primary">Fueling Your Body</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Explore the complex journey of food through your body and learn how to maintain optimal gut
+                        health through clinically validated education.
+                    </p>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/5 rounded-3xl blur-3xl group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <img class="relative z-10 w-full h-[500px] object-contain drop-shadow-2xl transform transition-transform duration-700 hover:scale-105"
+                        data-alt="A hyper-realistic, clinical medical illustration of the human digestive system, showing the esophagus, stomach, liver, and intestines in translucent detail. The lighting is soft and clinical with a clean white background, utilizing a palette of soft teals, medical blues, and muted organic tones. The style is educational yet highly aesthetic, typical of a modern digital medical encyclopedia."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuANBVfGmrRO6sDc0oEM_0wLvRvfJvEvPEXV3oNamcemPom0NjxodvtM391d2_6JdBFuma-qLemkIMgKVwOFjlUm301HhvjY5_dZ9GNNvQThCZ0p56VHtTG8Ts_Ax41kLTxrjTAMEwvmmz8nWBiCl255_hB0tUFdqHzb6Lu9TrlvbWYXuvFhix1znq-K7Mrv_bIgmguDFk4nXoAHY4tMVk98h2seYM2Hp437BkQIKrpg-ZYNOYOKv_UB0Q" />
+                </div>
+            </div>
+        </section>
+        <!-- Overview -->
+        <section class="py-lg bg-surface-container-low">
+            <div class="max-w-3xl mx-auto px-gutter text-center">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Clinical Overview</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Digestion is the complex physiological process by which the body breaks down food into nutrients,
+                    which it then uses for energy, growth, and cell repair. This journey involves a series of
+                    coordinated muscle movements and chemical releases, beginning the moment food enters the mouth and
+                    ending with the elimination of waste.
+                </p>
+            </div>
+        </section>
+        <!-- Digestive Organs Bento Grid -->
+        <section class="py-xl max-w-container-max mx-auto px-gutter">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+                <div class="max-w-xl">
+                    <h2 class="font-headline-lg text-headline-lg text-on-background mb-base">The Anatomy of Digestion
+                    </h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Click on an organ to learn about its
+                        specialized function in the digestive process.</p>
+                </div>
+                <div class="flex gap-xs">
+                    <span
+                        class="px-sm py-base rounded-full border border-outline-variant text-label-sm font-label-sm">Primary
+                        Organs</span>
+                    <span
+                        class="px-sm py-base rounded-full border border-outline-variant text-label-sm font-label-sm">Accessory
+                        Organs</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-md">
+                <!-- Mouth -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:text-on-primary">restaurant</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md mb-xs">The Mouth</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Mechanical breakdown via chewing and
+                        chemical breakdown via salivary enzymes.</p>
+                </div>
+                <!-- Esophagus -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center mb-md group-hover:bg-secondary transition-colors">
+                        <span
+                            class="material-symbols-outlined text-secondary group-hover:text-on-primary">straighten</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md mb-xs">Esophagus</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">A muscular tube that uses peristalsis
+                        to move food from the throat to the stomach.</p>
+                </div>
+                <!-- Stomach -->
+                <div
+                    class="glass-card p-md rounded-xl lg:col-span-2 hover:translate-y-[-4px] transition-all cursor-pointer group relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center mb-md group-hover:bg-tertiary transition-colors">
+                            <span
+                                class="material-symbols-outlined text-tertiary group-hover:text-on-primary">biotech</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md mb-xs">Stomach</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Secretes acid and enzymes
+                            that digest food. Muscles contract periodically, churning food to enhance digestion.</p>
+                    </div>
+                    <div
+                        class="absolute right-[-20px] bottom-[-20px] opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-[120px]">science</span>
+                    </div>
+                </div>
+                <!-- Liver -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-error-container flex items-center justify-center mb-md group-hover:bg-error transition-colors">
+                        <span class="material-symbols-outlined text-error group-hover:text-on-error">water_drop</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md mb-xs">Liver</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Produces bile to digest fats and
+                        filters toxins from the blood absorbed from the gut.</p>
+                </div>
+                <!-- Pancreas -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-md group-hover:bg-primary transition-colors">
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:text-on-primary">medication_liquid</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md mb-xs">Pancreas</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Secretes digestive enzymes into the
+                        duodenum and regulates blood sugar levels.</p>
+                </div>
+                <!-- Small Intestine -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center mb-md group-hover:bg-secondary transition-colors">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-on-primary">hub</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md mb-xs">Small Intestine</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">The site where 90% of digestion and
+                        nutrient absorption occurs via villi and microvilli.</p>
+                </div>
+                <!-- Large Intestine -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center mb-md group-hover:bg-tertiary transition-colors">
+                        <span class="material-symbols-outlined text-tertiary group-hover:text-on-primary">cycle</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md mb-xs">Large Intestine</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Absorbs water and electrolytes, forming
+                        and storing feces for elimination.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Digestion Process Timeline -->
+        <section class="py-xl bg-surface-container">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-xl">
+                    <h2 class="font-headline-lg text-headline-lg text-on-background">The Journey: 4 Key Stages</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-base">Tracing the path from nutrient
+                        intake to metabolic utilization.</p>
+                </div>
+                <div class="relative step-line">
+                    <div class="space-y-xl">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col md:flex-row items-center gap-lg relative z-10">
+                            <div class="w-full md:w-1/2 flex justify-end">
+                                <div class="glass-card p-md rounded-2xl max-w-sm border-l-4 border-primary">
+                                    <h4 class="font-title-md text-title-md text-primary mb-xs">1. Ingestion</h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">The process of taking
+                                        in food through the mouth, where the biological journey begins with mastication
+                                        and lubrication.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shadow-lg">
+                                01</div>
+                            <div class="w-full md:w-1/2"></div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex flex-col md:flex-row items-center gap-lg relative z-10">
+                            <div class="w-full md:w-1/2 order-3 md:order-1"></div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-on-primary font-bold shadow-lg order-2">
+                                02</div>
+                            <div class="w-full md:w-1/2 order-1 md:order-3">
+                                <div class="glass-card p-md rounded-2xl max-w-sm border-l-4 border-secondary">
+                                    <h4 class="font-title-md text-title-md text-secondary mb-xs">2. Digestion</h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Both mechanical and
+                                        chemical breakdown. Gastric juices and enzymes reduce food to a semi-liquid
+                                        state called chyme.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex flex-col md:flex-row items-center gap-lg relative z-10">
+                            <div class="w-full md:w-1/2 flex justify-end">
+                                <div class="glass-card p-md rounded-2xl max-w-sm border-l-4 border-tertiary">
+                                    <h4 class="font-title-md text-title-md text-tertiary mb-xs">3. Absorption</h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Nutrients move through
+                                        the intestinal walls into the bloodstream to be transported to cells throughout
+                                        the body.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center text-on-primary font-bold shadow-lg">
+                                03</div>
+                            <div class="w-full md:w-1/2"></div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="flex flex-col md:flex-row items-center gap-lg relative z-10">
+                            <div class="w-full md:w-1/2 order-3 md:order-1"></div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-on-surface-variant flex items-center justify-center text-on-primary font-bold shadow-lg order-2">
+                                04</div>
+                            <div class="w-full md:w-1/2 order-1 md:order-3">
+                                <div class="glass-card p-md rounded-2xl max-w-sm border-l-4 border-outline">
+                                    <h4 class="font-title-md text-title-md text-on-surface-variant mb-xs">4. Elimination
+                                    </h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">The removal of
+                                        indigestible substances and metabolic waste through the large intestine and
+                                        rectum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Common Diseases -->
+        <section class="py-xl max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-on-background mb-lg text-center">Gastrointestinal
+                Disorders</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-sm">
+                <!-- GERD -->
+                <div
+                    class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/30 flex flex-col hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <span class="text-error font-bold text-label-md mb-xs">GERD</span>
+                    <h5 class="font-title-md text-title-md mb-md">Acid Reflux</h5>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Chronic condition where
+                        stomach acid flows back into the esophagus.</p>
+                    <div class="bg-error-container/20 p-sm rounded-lg">
+                        <span class="text-label-sm font-bold text-error uppercase">Key Symptoms</span>
+                        <ul class="mt-base space-y-base text-body-md">
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-error rounded-full"></span>
+                                Heartburn</li>
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-error rounded-full"></span>
+                                Chest pain</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Gastritis -->
+                <div
+                    class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/30 flex flex-col hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <span class="text-secondary font-bold text-label-md mb-xs">Gastritis</span>
+                    <h5 class="font-title-md text-title-md mb-md">Stomach Inflammation</h5>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Inflammation of the
+                        protective lining of the stomach.</p>
+                    <div class="bg-secondary-container/20 p-sm rounded-lg">
+                        <span class="text-label-sm font-bold text-secondary uppercase">Key Symptoms</span>
+                        <ul class="mt-base space-y-base text-body-md">
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span>
+                                Nausea</li>
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span>
+                                Upper belly pain</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Peptic Ulcer -->
+                <div
+                    class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/30 flex flex-col hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <span class="text-primary font-bold text-label-md mb-xs">Peptic Ulcer</span>
+                    <h5 class="font-title-md text-title-md mb-md">Open Sores</h5>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Sores that develop on
+                        the inside lining of your stomach or small intestine.</p>
+                    <div class="bg-primary-container/10 p-sm rounded-lg">
+                        <span class="text-label-sm font-bold text-primary uppercase">Key Symptoms</span>
+                        <ul class="mt-base space-y-base text-body-md">
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-primary rounded-full"></span>
+                                Burning pain</li>
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-primary rounded-full"></span>
+                                Bloating</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- IBS -->
+                <div
+                    class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/30 flex flex-col hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <span class="text-tertiary font-bold text-label-md mb-xs">IBS</span>
+                    <h5 class="font-title-md text-title-md mb-md">Irritable Bowel</h5>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Common disorder that
+                        affects the large intestine causing discomfort.</p>
+                    <div class="bg-tertiary-container/10 p-sm rounded-lg">
+                        <span class="text-label-sm font-bold text-tertiary uppercase">Key Symptoms</span>
+                        <ul class="mt-base space-y-base text-body-md">
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-tertiary rounded-full"></span>
+                                Cramping</li>
+                            <li class="flex items-center gap-xs"><span class="w-1 h-1 bg-tertiary rounded-full"></span>
+                                Gas / Diarrhea</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Crohn's -->
+                <div
+                    class="bg-surface-container-low p-md rounded-2xl border border-outline-variant/30 flex flex-col hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <span class="text-on-surface-variant font-bold text-label-md mb-xs">Crohn's Disease</span>
+                    <h5 class="font-title-md text-title-md mb-md">IBD Condition</h5>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">A type of inflammatory
+                        bowel disease causing severe inflammation.</p>
+                    <div class="bg-outline-variant/20 p-sm rounded-lg">
+                        <span class="text-label-sm font-bold text-on-surface-variant uppercase">Key Symptoms</span>
+                        <ul class="mt-base space-y-base text-body-md">
+                            <li class="flex items-center gap-xs"><span
+                                    class="w-1 h-1 bg-on-surface-variant rounded-full"></span> Weight loss</li>
+                            <li class="flex items-center gap-xs"><span
+                                    class="w-1 h-1 bg-on-surface-variant rounded-full"></span> Fatigue</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnosis & Treatments -->
+        <section class="py-xl bg-surface-bright">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                    <!-- Diagnostic Tests -->
+                    <div class="space-y-md">
+                        <h2 class="font-headline-lg text-headline-lg text-primary border-l-4 border-primary pl-md">
+                            Diagnostic Procedures</h2>
+                        <div class="space-y-sm">
+                            <div
+                                class="bg-white p-md rounded-xl flex gap-md items-start shadow-sm hover:shadow-md transition-shadow">
+                                <span class="material-symbols-outlined text-primary text-[32px]">visibility</span>
+                                <div>
+                                    <h6 class="font-title-md text-title-md">Endoscopy</h6>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">A flexible tube with a
+                                        camera is used to examine the upper digestive tract.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white p-md rounded-xl flex gap-md items-start shadow-sm hover:shadow-md transition-shadow">
+                                <span class="material-symbols-outlined text-primary text-[32px]">biotech</span>
+                                <div>
+                                    <h6 class="font-title-md text-title-md">Colonoscopy</h6>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Examination of the
+                                        entire colon to detect polyps or inflammatory changes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Treatments -->
+                    <div class="space-y-md">
+                        <h2 class="font-headline-lg text-headline-lg text-secondary border-l-4 border-secondary pl-md">
+                            Treatment &amp; Management</h2>
+                        <div class="space-y-sm">
+                            <div
+                                class="bg-white p-md rounded-xl flex gap-md items-start shadow-sm hover:shadow-md transition-shadow">
+                                <span class="material-symbols-outlined text-secondary text-[32px]">pill</span>
+                                <div>
+                                    <h6 class="font-title-md text-title-md">Medications</h6>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Includes proton pump
+                                        inhibitors, antibiotics, and anti-inflammatories.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white p-md rounded-xl flex gap-md items-start shadow-sm hover:shadow-md transition-shadow">
+                                <span class="material-symbols-outlined text-secondary text-[32px]">self_care</span>
+                                <div>
+                                    <h6 class="font-title-md text-title-md">Lifestyle Modifications</h6>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Stress management,
+                                        dietary changes, and weight control protocols.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Healthy Diet & Prevention -->
+        <section class="py-xl">
+            <div
+                class="max-w-container-max mx-auto px-gutter bg-tertiary-container text-on-tertiary rounded-3xl p-lg relative overflow-hidden">
+
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+                    <div>
+                        <h2 class="font-display-lg text-display-lg mb-md">Nurturing Your Gut</h2>
+                        <p class="font-body-lg text-body-lg mb-lg opacity-90">Preventative care is the foundation of
+                            gastrointestinal health. Adopt these habits for a high-functioning digestive system.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+                            <div class="flex items-center gap-sm">
+                                <span class="material-symbols-outlined text-[32px]">nutrition</span>
+                                <span class="font-title-md">High Fiber Intake</span>
+                            </div>
+                            <div class="flex items-center gap-sm">
+                                <span class="material-symbols-outlined text-[32px]">water_full</span>
+                                <span class="font-title-md">Consistent Hydration</span>
+                            </div>
+                            <div class="flex items-center gap-sm">
+                                <span class="material-symbols-outlined text-[32px]">fitness_center</span>
+                                <span class="font-title-md">Regular Exercise</span>
+                            </div>
+                            <div class="flex items-center gap-sm">
+                                <span class="material-symbols-outlined text-[32px]">psychology</span>
+                                <span class="font-title-md">Probiotic Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img class="rounded-2xl shadow-2xl w-full max-w-md border-4 border-tertiary-fixed-dim"
+                            data-alt="A clean, vibrant still-life photograph showcasing fiber-rich whole foods like avocados, leafy greens, berries, and whole grains arranged on a minimalist ceramic plate. The lighting is bright and natural, suggesting a healthy, energetic lifestyle. The background is a soft, warm off-white, echoing a clinical wellness aesthetic that feels approachable and fresh."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuJczx7JS4DF_FrJQFQ0OS_xd-BHW5p_0qHkdmxvVsnFwabJ-cjG9G7QPc0RBrzC6QpMK29MpbjAeqkwdV8Evi_9am-sxFqQad8_uH1rgw9buyo9LkHUtpZx7qFlIBS1-Wgb75_jFKMyqQOPBn7wc5Pdp8xmbv6UnHeUJVNjRTWn3_hp0uzoZsk-uxtYq7yzR8urFqQo51qt7UznBvnHRnW9ICXSwn00UNM3mzk9hkm_ScBCalKGN-9w" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fascinating Facts -->
+        <section class="py-xl bg-surface">
+            <div class="max-w-container-max mx-auto px-gutter text-center">
+                <h2 class="font-headline-lg text-headline-lg text-on-background mb-xl">Gut Health by the Numbers</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <div
+                        class="p-lg rounded-2xl bg-white shadow-sm border border-outline-variant/20 hover:border-primary transition-colors">
+                        <div class="text-[48px] font-bold text-primary mb-sm">250m²</div>
+                        <p class="font-body-md text-on-surface-variant">The surface area of the small intestine—roughly
+                            the size of a tennis court.</p>
+                    </div>
+                    <div
+                        class="p-lg rounded-2xl bg-white shadow-sm border border-outline-variant/20 hover:border-secondary transition-colors">
+                        <div class="text-[48px] font-bold text-secondary mb-sm">100t</div>
+                        <p class="font-body-md text-on-surface-variant">The approximate number of microbes living in
+                            your gut microbiome.</p>
+                    </div>
+                    <div
+                        class="p-lg rounded-2xl bg-white shadow-sm border border-outline-variant/20 hover:border-tertiary transition-colors">
+                        <div class="text-[48px] font-bold text-tertiary mb-sm">36h</div>
+                        <p class="font-body-md text-on-surface-variant">Average time it takes for food to travel through
+                            the entire human digestive system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Accordion -->
+        <section class="py-xl max-w-3xl mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-on-background mb-lg text-center">Frequently Asked
+                Questions</h2>
+            <div class="space-y-sm">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-md cursor-pointer list-none hover:bg-surface-container-low transition-colors">
+                        <span class="font-title-md text-title-md">What are the signs of a healthy gut?</span>
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="p-md pt-0 text-on-surface-variant font-body-md leading-relaxed">
+                        Regular bowel movements, lack of excessive bloating or gas, and high energy levels are primary
+                        indicators. A healthy gut is also closely linked to immune system performance and mental
+                        clarity.
+                    </div>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-md cursor-pointer list-none hover:bg-surface-container-low transition-colors">
+                        <span class="font-title-md text-title-md">How does stress affect digestion?</span>
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="p-md pt-0 text-on-surface-variant font-body-md leading-relaxed">
+                        The gut-brain axis is a two-way communication system. Stress can trigger the "fight or flight"
+                        response, slowing down digestion and potentially leading to symptoms like cramping or diarrhea.
+                    </div>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center p-md cursor-pointer list-none hover:bg-surface-container-low transition-colors">
+                        <span class="font-title-md text-title-md">Should I take probiotics daily?</span>
+                        <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="p-md pt-0 text-on-surface-variant font-body-md leading-relaxed">
+                        While beneficial for many, probiotic needs vary by individual. Consult with a healthcare
+                        practitioner to determine if a supplement is right for your specific microbiome profile.
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+    <!-- Footer - Rendered from JSON Identity -->
+    <footer class="w-full mt-xl bg-surface-container-low border-t border-outline-variant/50">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start px-gutter py-lg max-w-container-max mx-auto gap-md">
+            <div class="space-y-sm max-w-md">
+                <span class="font-title-md text-title-md font-bold text-primary">HealSphere</span>
+                <p class="font-label-md text-label-md text-on-surface-variant leading-relaxed">
+                    © 2024 HealSphere Medical Education. All rights reserved. For educational purposes only. In case of
+                    emergency, contact your local emergency services immediately.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-md">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Medical Disclaimer</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Accreditation</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Contact Support</a>
+                <a class="font-label-md text-label-md text-primary underline" href="#">Emergency Info</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Micro-interactions for accessibility and navigation
+        document.querySelectorAll('details').forEach((el) => {
+            el.addEventListener('click', (e) => {
+                if (el.open) return;
+                document.querySelectorAll('details[open]').forEach((openDetails) => {
+                    if (openDetails !== el) {
+                        openDetails.removeAttribute('open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

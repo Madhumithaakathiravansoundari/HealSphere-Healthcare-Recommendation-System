@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Eyes &amp; Vision | Serene Clinical</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f4f6",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeef0",
+                        "on-tertiary-container": "#72e9af",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001f27",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "outline": "#737685",
+                        "inverse-primary": "#b2c5ff",
+                        "surface-tint": "#0c56d0",
+                        "on-tertiary-fixed": "#002113",
+                        "tertiary-container": "#006844",
+                        "tertiary": "#004e32",
+                        "inverse-on-surface": "#f0f1f3",
+                        "primary": "#003d9b",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#00687b",
+                        "primary-container": "#0052cc",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#434654",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#005f71",
+                        "surface": "#f8f9fb",
+                        "secondary-fixed": "#afecff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "surface-dim": "#d9dadc",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#50dcff",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f8f9fb",
+                        "outline-variant": "#c3c6d6",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary-fixed": "#001848",
+                        "on-background": "#191c1e",
+                        "tertiary-fixed": "#82f9be",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e1e2e4",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-primary-container": "#c4d2ff",
+                        "background": "#f8f9fb",
+                        "surface-container-high": "#e7e8ea",
+                        "inverse-surface": "#2e3132"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "base": "4px",
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .gradient-accent {
+            background: linear-gradient(135deg, #003d9b 0%, #00687b 100%);
+        }
+
+        .pill-button {
+            border-radius: 9999px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pill-button:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <header class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm">
+        <nav class="flex justify-between items-center px-gutter py-sm w-full max-w-container-max mx-auto">
+            <div class="font-headline-lg text-headline-lg font-bold text-primary">Serene Clinical</div>
+
+            <div class="flex items-center gap-sm">
+                <button class="p-xs text-on-surface-variant hover:text-primary transition-colors active:opacity-80">
+                    <span class="material-symbols-outlined" data-icon="search">search</span>
+                </button>
+                <button class="p-xs text-on-surface-variant hover:text-primary transition-colors active:opacity-80">
+                    <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="w-full">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-surface-container-lowest py-xl">
+            <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+                <div class="z-10">
+                    <span
+                        class="inline-block px-sm py-xs bg-secondary-container/20 text-secondary font-label-sm rounded-full mb-sm">Medical
+                        Module Series</span>
+                    <h1 class="font-display-lg text-display-lg text-primary mb-md">Module 12: Eyes &amp; Vision</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed max-w-xl">
+                        The visual system is a complex biological marvel, processing light into electrical signals that
+                        the brain interprets as images. Understanding its anatomical architecture and physiological
+                        mechanics is essential for maintaining ocular health and diagnostic precision.
+                    </p>
+                    <div class="flex gap-sm">
+                        <button
+                            class="gradient-accent text-on-primary px-lg py-sm pill-button font-label-md flex items-center gap-xs">
+                            Start Learning
+                            <span class="material-symbols-outlined text-[18px]"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative h-[400px] lg:h-[500px] w-full rounded-xl overflow-hidden shadow-sm">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A high-fidelity, hyper-realistic medical 3D illustration of a human eye cross-section. The image shows the crystalline lens, the cornea, the vitreous humor, and the detailed layers of the retina. The lighting is clinical yet soft, using a palette of serene blues and teals to emphasize textures of biological tissue. The background is a clean, minimal white medical workspace, suggesting an educational and professional healthcare environment."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBflgDPCzHY_ljDWucFYWuhIa7vTxROCiSPwDAejbsX43t2tDoIMFxLueo2tarYLLVzaqTE-86QEE8QCma2HEtLxxqFwlIAIrzm6yOAc4iY442PjkJ-kc75JNvnhyNHNU3RIDRvWV8ZQqZ444U-rVKiMgccqxwax2Z3onxMUjcRecbXitIYQe9lgGd2mlhNGGOpgk-0qVWaKOek5ubjwO62pIhHef9c7XIrcHJcuBEg1Lwz8KbZ7y4ZMw">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Anatomical Architecture (Bento Grid) -->
+        <section class="py-xl max-w-container-max mx-auto px-gutter">
+            <div class="mb-lg text-center">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Anatomical Architecture</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">Primary structures governing the visual
+                    input process.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-sm">
+                <!-- Cornea -->
+                <div class="glass-card p-md rounded-xl hover:border-primary/40 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-sm">
+                        <span class="material-symbols-outlined" data-icon="lens">lens</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md text-on-surface mb-xs">Cornea</h3>
+                    <p class="font-label-sm text-on-surface-variant">The eye's clear protective outer layer, acting as
+                        its primary lens for focusing light.</p>
+                </div>
+                <!-- Lens -->
+                <div class="glass-card p-md rounded-xl hover:border-primary/40 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-sm">
+                        <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md text-on-surface mb-xs">Lens</h3>
+                    <p class="font-label-sm text-on-surface-variant">A transparent biconvex structure that helps to
+                        refract light to be focused on the retina.</p>
+                </div>
+                <!-- Retina -->
+                <div class="glass-card p-md rounded-xl hover:border-primary/40 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary mb-sm">
+                        <span class="material-symbols-outlined" data-icon="grain">grain</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md text-on-surface mb-xs">Retina</h3>
+                    <p class="font-label-sm text-on-surface-variant">The light-sensitive inner surface containing rods
+                        and cones for signal conversion.</p>
+                </div>
+                <!-- Optic Nerve -->
+                <div class="glass-card p-md rounded-xl hover:border-primary/40 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-sm">
+                        <span class="material-symbols-outlined"
+                            data-icon="electrical_services">electrical_services</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md text-on-surface mb-xs">Optic Nerve</h3>
+                    <p class="font-label-sm text-on-surface-variant">Transmits visual information from the retina to the
+                        brain via electrical impulses.</p>
+                </div>
+                <!-- Iris -->
+                <div class="glass-card p-md rounded-xl hover:border-primary/40 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-sm">
+                        <span class="material-symbols-outlined" data-icon="blur_circular">blur_circular</span>
+                    </div>
+                    <h3 class="font-title-md text-title-md text-on-surface mb-xs">Iris</h3>
+                    <p class="font-label-sm text-on-surface-variant">Controls the diameter and size of the pupil and
+                        thus the amount of light reaching the retina.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Vision Mechanics -->
+        <section class="py-xl bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex flex-col md:flex-row gap-lg items-center">
+                    <div class="flex-1 space-y-md">
+                        <h2 class="font-headline-lg text-headline-lg text-primary">Vision Mechanics: Light to Sight</h2>
+                        <div class="space-y-sm">
+                            <div class="flex gap-md">
+                                <div
+                                    class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
+                                    1</div>
+                                <div>
+                                    <h4 class="font-title-md text-title-md mb-xs">Refraction</h4>
+                                    <p class="text-on-surface-variant">Light rays enter through the cornea, which
+                                        provides most of the eye's optical power. The lens then fine-tunes the focus to
+                                        create a sharp image on the retina.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-md">
+                                <div
+                                    class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
+                                    2</div>
+                                <div>
+                                    <h4 class="font-title-md text-title-md mb-xs">Signal Transmission</h4>
+                                    <p class="text-on-surface-variant">Photoreceptors (rods and cones) convert light
+                                        energy into neurochemical signals, which travel through the optic nerve to the
+                                        visual cortex.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex-1 w-full h-[350px] bg-surface-container-highest rounded-2xl overflow-hidden relative">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A sophisticated scientific diagram illustrating the path of light rays entering a human eye. The rays are shown as glowing cyan lines passing through the cornea and lens, converging precisely on a vibrant, golden focal point at the retina. The surrounding anatomical context is rendered in a soft-focus clinical style with muted greys and deep blues, emphasizing the physics of optics in a serene, modern medical educational context."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjNhGP6vagAOfKV4GOtZYxqZAi1Pf2sHUJ6UXU1zr3RHU6wPJO6V_llV1RLOegbGVNxr0NYmO1gFeEv3BzLL-6jZ2BSBM4-5RKwf12W98lltaFpuDe_UVCZwz8ZSA3UTnEUJICbwRowinj76zZ58oUSoz0o0bTK1trZyy0k7AlAMuF4EdHoLHJhkgUeIBqWqKjQOhHXrRbZoXOwIm3NHQzxe-CAnGQ1gux1zZFsMto9BvMN_bN6w30-A">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pathology Center -->
+        <section class="py-xl max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-center mb-xl">Clinical Pathology Center</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+                <!-- Cataracts -->
+                <div
+                    class="p-md rounded-xl border border-outline-variant bg-white flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-title-md text-title-md text-primary">Cataracts</h3>
+                        <span
+                            class="px-xs py-base bg-error-container text-on-error-container text-[10px] uppercase font-bold rounded">Common</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-md">Clouding of the eye's natural
+                        lens, often related to aging or injury, leading to blurry vision and glare.</p>
+                    <div class="mt-auto pt-sm border-t border-outline-variant/30">
+                        <p class="font-label-sm text-on-surface mb-xs uppercase opacity-70">Key Symptoms</p>
+                        <ul class="text-label-md text-on-surface-variant list-disc pl-sm space-y-1">
+                            <li class="">Cloudy or dim vision</li>
+                            <li class="">Increased sensitivity to glare</li>
+                            <li class="">Halos around lights</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Glaucoma -->
+                <div
+                    class="p-md rounded-xl border border-outline-variant bg-white flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-title-md text-title-md text-primary">Glaucoma</h3>
+                        <span
+                            class="px-xs py-base bg-error-container text-on-error-container text-[10px] uppercase font-bold rounded">Critical</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-md">A group of eye conditions that
+                        damage the optic nerve, typically caused by abnormally high pressure.</p>
+                    <div class="mt-auto pt-sm border-t border-outline-variant/30">
+                        <p class="font-label-sm text-on-surface mb-xs uppercase opacity-70">Key Symptoms</p>
+                        <ul class="text-label-md text-on-surface-variant list-disc pl-sm space-y-1">
+                            <li class="">Loss of peripheral vision</li>
+                            <li class="">Severe eye pain (Acute)</li>
+                            <li class="">Sudden visual disturbance</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Conjunctivitis -->
+                <div
+                    class="p-md rounded-xl border border-outline-variant bg-white flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-title-md text-title-md text-primary">Conjunctivitis</h3>
+                        <span
+                            class="px-xs py-base bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold rounded">Mild</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-md">Inflammation or infection of the
+                        transparent membrane that lines the eyelid and eyeball surface.</p>
+                    <div class="mt-auto pt-sm border-t border-outline-variant/30">
+                        <p class="font-label-sm text-on-surface mb-xs uppercase opacity-70">Key Symptoms</p>
+                        <ul class="text-label-md text-on-surface-variant list-disc pl-sm space-y-1">
+                            <li class="">Redness in the white of the eye</li>
+                            <li class="">Itchiness or burning</li>
+                            <li class="">Discharge or crusting</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Refractive Errors -->
+                <div
+                    class="p-md rounded-xl border border-outline-variant bg-white flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-title-md text-title-md text-primary">Refractive Errors</h3>
+                        <span
+                            class="px-xs py-base bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold rounded">Widespread</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-md">Vision problems that happen when
+                        the shape of the eye keeps light from focusing correctly (Myopia, Hyperopia).</p>
+                    <div class="mt-auto pt-sm border-t border-outline-variant/30">
+                        <p class="font-label-sm text-on-surface mb-xs uppercase opacity-70">Key Symptoms</p>
+                        <ul class="text-label-md text-on-surface-variant list-disc pl-sm space-y-1">
+                            <li class="">Blurred distance or near vision</li>
+                            <li class="">Eye strain or squinting</li>
+                            <li class="">Headaches after reading</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Diabetic Retinopathy -->
+                <div
+                    class="p-md rounded-xl border border-outline-variant bg-white flex flex-col hover:shadow-lg transition-shadow lg:col-span-2">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-title-md text-title-md text-primary">Diabetic Retinopathy</h3>
+                        <span
+                            class="px-xs py-base bg-error-container text-on-error-container text-[10px] uppercase font-bold rounded">Systemic</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                        <p class="font-body-md text-body-md text-on-surface-variant">A diabetes complication that
+                            affects eyes. It's caused by damage to the blood vessels of the light-sensitive tissue at
+                            the back of the eye (retina).</p>
+                        <div class="pt-sm md:pt-0">
+                            <p class="font-label-sm text-on-surface mb-xs uppercase opacity-70">Key Symptoms</p>
+                            <ul class="text-label-md text-on-surface-variant list-disc pl-sm space-y-1">
+                                <li class="">Spots or dark strings (floaters)</li>
+                                <li class="">Fluctuating or dark/empty areas</li>
+                                <li class="">Progressive vision loss</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic & Treatment Roadmap -->
+        <section class="py-xl bg-primary text-on-primary">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-xl">
+                    <h2 class="font-headline-lg text-headline-lg mb-xs">Diagnostic &amp; Treatment Roadmap</h2>
+                    <p class="font-body-md opacity-80">The path from assessment to visual restoration.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                    <div class="space-y-sm">
+                        <h3
+                            class="font-title-md text-title-md border-b border-on-primary/20 pb-sm mb-md flex items-center gap-xs">
+                            <span class="material-symbols-outlined" data-icon="clinical_notes">clinical_notes</span>
+                            Clinical Exams
+                        </h3>
+                        <div class="bg-on-primary/10 p-md rounded-xl backdrop-blur-sm">
+                            <h4 class="font-label-md font-bold mb-xs">Visual Acuity Test</h4>
+                            <p class="text-label-md opacity-80">Measuring clarity using a Snellen chart to determine the
+                                '20/20' standard of vision.</p>
+                        </div>
+                        <div class="bg-on-primary/10 p-md rounded-xl backdrop-blur-sm">
+                            <h4 class="font-label-md font-bold mb-xs">Tonometry</h4>
+                            <p class="text-label-md opacity-80">Measuring intraocular pressure, vital for detecting
+                                early signs of glaucoma.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-sm">
+                        <h3
+                            class="font-title-md text-title-md border-b border-on-primary/20 pb-sm mb-md flex items-center gap-xs">
+                            <span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+                            Common Treatments
+                        </h3>
+                        <div class="flex items-center gap-md bg-on-primary/10 p-md rounded-xl backdrop-blur-sm">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 bg-on-primary text-primary rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-md font-bold">LASIK Surgery</h4>
+                                <p class="text-label-md opacity-80">Laser reshaping of the cornea to correct refractive
+                                    errors permanently.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-md bg-on-primary/10 p-md rounded-xl backdrop-blur-sm">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 bg-on-primary text-primary rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-md font-bold">Cataract Removal</h4>
+                                <p class="text-label-md opacity-80">Replacement of the clouded lens with an intraocular
+                                    lens (IOL).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Preventive Eye Care (Lifestyle Pillars) -->
+        <section class="py-xl max-w-container-max mx-auto px-gutter">
+            <div class="bg-surface-container rounded-3xl p-lg md:p-xl flex flex-col md:flex-row gap-lg items-center">
+                <div class="w-full md:w-1/3">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Lifestyle Pillars for Ocular
+                        Health</h2>
+                    <p class="font-body-md text-on-surface-variant mb-lg">Simple daily habits can significantly reduce
+                        the risk of long-term vision impairment.</p>
+                    <img class="w-full h-48 object-cover rounded-2xl"
+                        data-alt="A minimalist, aesthetic photo of a professional desk with a laptop and a pair of blue-light blocking glasses. Soft sunlight filters through a nearby window, illuminating a small green succulent plant and a clean white ceramic mug. The overall atmosphere is calm, organized, and health-conscious, reinforcing the message of digital wellness and preventive eye care."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7WrltPbsiOwKLq3mgw4hPJDg0YNnzrsOGdjUwR7zPYFPxVNIpBjjBbpWk7s_D69XX2XRAijrCxVM3-OhM3I9aJJ-E-5z0cHCdcqExeY3FhpyuT9ePjyPL5HOJNmID84728MKtx3DySLw1fcFaw8JKL5kX_rt0W60ZO-fruvK4iSm2ZanCEUlxlloRMh-tiZ0WLC9Q4ugFqeoF1ELA6B29JbHa0oatAfv6eBDe92kMYl2KNKbUJetFzw">
+                </div>
+                <div class="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-md">
+                    <div class="bg-white p-md rounded-2xl shadow-sm border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-primary mb-sm" data-icon="timer">timer</span>
+                        <h4 class="font-title-md text-title-md mb-xs">20-20-20 Rule</h4>
+                        <p class="text-label-md text-on-surface-variant leading-relaxed">Every 20 minutes, look at
+                            something 20 feet away for at least 20 seconds to reduce digital eye strain.</p>
+                    </div>
+                    <div class="bg-white p-md rounded-2xl shadow-sm border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-secondary mb-sm"
+                            data-icon="wb_sunny">wb_sunny</span>
+                        <h4 class="font-title-md text-title-md mb-xs">UV Protection</h4>
+                        <p class="text-label-md text-on-surface-variant leading-relaxed">Wear sunglasses that block 99%
+                            to 100% of UVA and UVB radiation whenever you're outdoors.</p>
+                    </div>
+                    <div class="bg-white p-md rounded-2xl shadow-sm border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-tertiary mb-sm"
+                            data-icon="event_repeat">event_repeat</span>
+                        <h4 class="font-title-md text-title-md mb-xs">Regular Checkups</h4>
+                        <p class="text-label-md text-on-surface-variant leading-relaxed">Annual comprehensive eye exams
+                            can detect asymptomatic conditions like glaucoma early.</p>
+                    </div>
+                    <div class="bg-white p-md rounded-2xl shadow-sm border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-primary mb-sm"
+                            data-icon="restaurant">restaurant</span>
+                        <h4 class="font-title-md text-title-md mb-xs">Nutritional Support</h4>
+                        <p class="text-label-md text-on-surface-variant leading-relaxed">Diets rich in Omega-3 fatty
+                            acids, lutein, and zinc help maintain retinal health over time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clinical FAQ -->
+        <section class="py-xl max-w-3xl mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-center mb-xl">Clinical FAQ</h2>
+            <div class="space-y-sm">
+                <!-- Accordion Item 1 -->
+                <div class="border border-outline-variant rounded-xl overflow-hidden bg-white">
+                    <button
+                        class="w-full flex justify-between items-center p-md text-left transition-colors hover:bg-surface-container-low"
+                        onclick="toggleAccordion('faq-1')">
+                        <span class="font-title-md text-title-md text-on-surface">How often should adults have a
+                            comprehensive eye exam?</span>
+                        <span class="material-symbols-outlined transition-transform" id="faq-1-icon">expand_more</span>
+                    </button>
+                    <div class="hidden p-md pt-0 text-body-md text-on-surface-variant" id="faq-1-content">
+                        Adults between 18 and 60 should have an exam at least every two years. Those over 60 or with
+                        high-risk factors (diabetes, hypertension) should undergo annual screenings.
+                    </div>
+                </div>
+                <!-- Accordion Item 2 -->
+                <div class="border border-outline-variant rounded-xl overflow-hidden bg-white">
+                    <button
+                        class="w-full flex justify-between items-center p-md text-left transition-colors hover:bg-surface-container-low"
+                        onclick="toggleAccordion('faq-2')">
+                        <span class="font-title-md text-title-md text-on-surface">Can blue light from screens
+                            permanently damage eyes?</span>
+                        <span class="material-symbols-outlined transition-transform" id="faq-2-icon">expand_more</span>
+                    </button>
+                    <div class="hidden p-md pt-0 text-body-md text-on-surface-variant" id="faq-2-content">
+                        While blue light contributes to eye strain and disrupted sleep cycles, current clinical evidence
+                        does not support that standard screen use causes permanent retinal damage.
+                    </div>
+                </div>
+                <!-- Accordion Item 3 -->
+                <div class="border border-outline-variant rounded-xl overflow-hidden bg-white">
+                    <button
+                        class="w-full flex justify-between items-center p-md text-left transition-colors hover:bg-surface-container-low"
+                        onclick="toggleAccordion('faq-3')">
+                        <span class="font-title-md text-title-md text-on-surface">What is the difference between an
+                            Optometrist and an Ophthalmologist?</span>
+                        <span class="material-symbols-outlined transition-transform" id="faq-3-icon">expand_more</span>
+                    </button>
+                    <div class="hidden p-md pt-0 text-body-md text-on-surface-variant" id="faq-3-content">
+                        Optometrists focus on primary vision care, including sight testing and correction.
+                        Ophthalmologists are medical doctors specialized in eye and vision care who can perform surgery
+                        and treat complex diseases.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/50">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter py-lg w-full max-w-container-max mx-auto gap-md text-center md:text-left">
+            <div class="flex flex-col gap-xs">
+                <div class="font-title-md text-title-md font-bold text-on-surface">Serene Clinical Education</div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                    © 2024 Serene Clinical Education. All rights reserved. Medical Disclaimer: Information provided is
+                    for educational purposes only and does not constitute medical advice.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-md">
+                <a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-body-md"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-body-md"
+                    href="#">Terms of Service</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-body-md"
+                    href="#">Accreditation</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer font-body-md"
+                    href="#">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id + '-content');
+            const icon = document.getElementById(id + '-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

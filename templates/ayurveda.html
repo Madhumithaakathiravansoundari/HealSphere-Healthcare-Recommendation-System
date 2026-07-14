@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ayurveda: The Science of Life | HealSphere</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#001f27",
+                        "background": "#f8f9fb",
+                        "on-tertiary-fixed": "#002113",
+                        "primary-container": "#0052cc",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001848",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#edeef0",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-container": "#006844",
+                        "surface-bright": "#f8f9fb",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "on-surface-variant": "#434654",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#005f71",
+                        "tertiary-fixed": "#82f9be",
+                        "surface": "#f8f9fb",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "outline": "#737685",
+                        "surface-dim": "#d9dadc",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-surface": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8ea",
+                        "secondary-container": "#50dcff",
+                        "surface-variant": "#e1e2e4",
+                        "primary-fixed": "#dae2ff",
+                        "outline-variant": "#c3c6d6",
+                        "secondary": "#00687b",
+                        "surface-container-low": "#f3f4f6",
+                        "secondary-fixed": "#afecff",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#0c56d0",
+                        "on-primary-container": "#c4d2ff",
+                        "inverse-surface": "#2e3132",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#72e9af",
+                        "primary": "#003d9b",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "tertiary": "#004e32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "base": "4px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Shell -->
+<nav class="bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-md py-xs max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">HealSphere</span>
+<div class="hidden md:flex gap-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-title-md py-xs" href="/">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary font-title-md text-title-md py-xs" href="#">Research</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-title-md py-xs" href="#">Resources</a>
+</div>
+</div>
+
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-on-surface-variant">notifications</span></button>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-on-surface-variant">account_circle</span></button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto pt-24 px-md pb-lg">
+<div class="flex flex-col lg:flex-row gap-lg">
+<!-- Side Navigation Shell -->
+<aside class="hidden lg:flex flex-col w-64 shrink-0">
+<div class="sticky top-24 bg-surface-container-low shadow-sm rounded-xl p-md flex flex-col gap-xs">
+<div class="mb-md">
+<h2 class="font-title-md text-title-md font-semibold text-on-surface">Modern Medicine</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Information Portal</p>
+</div>
+<a class="flex items-center gap-xs px-sm py-xs bg-primary-container text-on-primary-container font-bold rounded-lg transition-all scale-[0.98]" href="#overview">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="text-label-md font-label-md">Overview</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#history">
+<span class="material-symbols-outlined">history</span>
+<span class="text-label-md font-label-md">History</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#principles">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-label-md font-label-md">Principles</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#mechanisms">
+<span class="material-symbols-outlined">settings_heart</span>
+<span class="text-label-md font-label-md">Mechanisms</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#conditions">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="text-label-md font-label-md">Conditions</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#benefits">
+<span class="material-symbols-outlined">verified</span>
+<span class="text-label-md font-label-md">Benefits</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#risks">
+<span class="material-symbols-outlined">warning</span>
+<span class="text-label-md font-label-md">Risks</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#evidence">
+<span class="material-symbols-outlined">science</span>
+<span class="text-label-md font-label-md">Evidence</span>
+</a>
+</div>
+</aside>
+<!-- Content Area -->
+<div class="flex-1 flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-3xl min-h-[500px] flex items-center bg-primary" id="overview">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A premium, cinematic medical illustration of Ayurvedic herbal medicine. Traditional clay pots and mortar with pestle filled with vibrant green herbs and spices are arranged on a clean, sunlit wooden table in a serene, modern clinical laboratory. The lighting is soft and natural, blending ancient tradition with high-end digital wellness aesthetics. Soft teal and gold accents illuminate the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3q0zmFOLhZKNdPQlGlXT0VABN5a6ODkUmO-CzT7hl4AXfddtlwfLHepLQj0Ds0eS9kFkKjckiAmy-Yk_H9EBcqawmn2Jv-XPn8oulUsQhXyJuD3tS0Pphd-pL6YB24un42NjWeAnpSpb4_CUrJNP9m2DZSCMGD9FHizGFVtprTe9rvbnQtMgFJTSdYp1n0PJk_wI6gMM6zofxUpqsvAaK7LY0CPFD_x3zQiNcM5GAjDHswpqPzxUHGQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/70 to-transparent"></div>
+</div>
+<div class="relative z-10 p-lg max-w-2xl text-white">
+<span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-label-sm font-label-sm uppercase tracking-wider mb-sm inline-block">Clinical Excellence</span>
+<h1 class="font-display-lg text-display-lg font-bold leading-tight mb-md">Ayurveda: The Science of Life</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-lg">Ancient Wisdom for Modern Wellness. A holistic healing system originating in India over 5,000 years ago, focusing on the dynamic balance of mind, body, and spirit.</p>
+<div class="flex flex-wrap gap-md">
+<button class="px-md py-3 bg-white text-primary rounded-full font-title-md text-title-md font-bold shadow-lg hover:scale-105 transition-transform">Explore Conditions</button>
+<button class="px-md py-3 border-2 border-white/40 text-white rounded-full font-title-md text-title-md font-bold hover:bg-white/10 transition-colors">Watch Overview</button>
+</div>
+</div>
+</section>
+<!-- What is Ayurveda? -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<div class="lg:col-span-2 space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">What is Ayurveda?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Ayurveda, often called "the mother of all healing," is a comprehensive system of medicine that emphasizes prevention and personalized health. It posits that every individual is born with a unique genetic constitution known as <strong class="text-primary">Prakriti</strong>.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">The core philosophy is rooted in the belief that health is a state of equilibrium between the three vital forces or doshas. By understanding these energies, practitioners can tailor treatments to the individual's specific needs rather than treating symptoms in isolation.</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-md flex flex-col gap-md soft-shadow">
+<div class="flex items-start gap-sm">
+<div class="p-2 bg-secondary-container rounded-lg text-on-secondary-container">
+<span class="material-symbols-outlined">center_focus_strong</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface">Primary Objective</h4>
+<p class="text-label-md font-label-md text-on-surface-variant">Prakriti Restoration &amp; Holistic Balance</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<div class="p-2 bg-tertiary-fixed rounded-lg text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface">Philosophy</h4>
+<p class="text-label-md font-label-md text-on-surface-variant">Individualized Determinism</p>
+</div>
+</div>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="space-y-lg" id="history">
+<div class="text-center max-w-xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Evolutionary Timeline</h2>
+<p class="text-label-md font-label-md text-on-surface-variant">From ancient observations to modern clinical validation</p>
+</div>
+<div class="relative flex flex-col gap-lg before:absolute before:left-6 before:top-0 before:h-full before:w-[2px] before:bg-outline-variant">
+<!-- Event 1 -->
+<div class="relative pl-16">
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white z-10 shadow-md">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div class="bg-white p-md rounded-2xl border border-outline-variant/30 soft-shadow">
+<span class="text-primary font-bold text-label-sm">Ancient Vedic Period (5000+ Years Ago)</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mt-xs">Origins in the Rigveda</h3>
+<p class="text-body-md text-on-surface-variant mt-sm">The foundation of Ayurveda is laid in the sacred Indian texts, describing health as a divine balance between natural elements and cosmic consciousness.</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative pl-16">
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white z-10 shadow-md">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div class="bg-white p-md rounded-2xl border border-outline-variant/30 soft-shadow">
+<span class="text-primary font-bold text-label-sm">Classic Era (300 BC - 700 AD)</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mt-xs">Charaka &amp; Sushruta Samhita</h3>
+<p class="text-body-md text-on-surface-variant mt-sm">Formal medical texts were codified. Charaka documented internal medicine, while Sushruta described advanced surgical techniques and anatomy.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative pl-16">
+<div class="absolute left-0 top-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white z-10 shadow-md">
+<span class="material-symbols-outlined">science</span>
+</div>
+<div class="bg-white p-md rounded-2xl border border-outline-variant/30 soft-shadow">
+<span class="text-primary font-bold text-label-sm">Modern Integration (21st Century)</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mt-xs">Integrative Clinical Research</h3>
+<p class="text-body-md text-on-surface-variant mt-sm">Global scientific communities begin validating herbal compounds for chronic inflammatory conditions and stress management.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Principles: Doshas -->
+<section class="space-y-lg" id="principles">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center">Core Principles: The Doshas</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="p-md bg-white rounded-2xl border border-outline-variant/30 soft-shadow text-center flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed mb-md flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-3xl">air</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Vata</h3>
+<p class="text-label-sm font-label-sm text-secondary mb-sm uppercase tracking-wide">Air &amp; Space</p>
+<p class="text-body-md text-on-surface-variant">Governs movement, respiration, and nervous system functions. Characterized by lightness and cold.</p>
+</div>
+<div class="p-md bg-white rounded-2xl border border-outline-variant/30 soft-shadow text-center flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-error-container mb-md flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-3xl">local_fire_department</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Pitta</h3>
+<p class="text-label-sm font-label-sm text-error mb-sm uppercase tracking-wide">Fire &amp; Water</p>
+<p class="text-body-md text-on-surface-variant">Governs metabolism, digestion, and body temperature. Characterized by heat and transformation.</p>
+</div>
+<div class="p-md bg-white rounded-2xl border border-outline-variant/30 soft-shadow text-center flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed mb-md flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Kapha</h3>
+<p class="text-label-sm font-label-sm text-tertiary mb-sm uppercase tracking-wide">Earth &amp; Water</p>
+<p class="text-body-md text-on-surface-variant">Governs structure, lubrication, and immunity. Characterized by stability, heaviness, and moisture.</p>
+</div>
+</div>
+</section>
+<!-- Process Stepper -->
+<section class="space-y-lg" id="mechanisms">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Ayurvedic Process</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+<div class="relative flex flex-col gap-sm">
+<div class="text-display-lg font-bold text-primary-fixed opacity-30 absolute -top-4 -left-2 select-none">01</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface z-10">Consultation</h4>
+<p class="text-body-md text-on-surface-variant">Initial assessment including Nadi Pariksha (Pulse Diagnosis) to determine your constitution.</p>
+</div>
+<div class="relative flex flex-col gap-sm">
+<div class="text-display-lg font-bold text-primary-fixed opacity-30 absolute -top-4 -left-2 select-none">02</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface z-10">Analysis</h4>
+<p class="text-body-md text-on-surface-variant">Identifying current imbalances (Vikriti) against your original state (Prakriti).</p>
+</div>
+<div class="relative flex flex-col gap-sm">
+<div class="text-display-lg font-bold text-primary-fixed opacity-30 absolute -top-4 -left-2 select-none">03</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface z-10">Treatment</h4>
+<p class="text-body-md text-on-surface-variant">Implementation of Panchakarma, herbal protocols, and dietary modifications.</p>
+</div>
+<div class="relative flex flex-col gap-sm">
+<div class="text-display-lg font-bold text-primary-fixed opacity-30 absolute -top-4 -left-2 select-none">04</div>
+<h4 class="font-title-md text-title-md font-bold text-on-surface z-10">Maintenance</h4>
+<p class="text-body-md text-on-surface-variant">Ongoing Dinacharya (Daily Routine) and seasonal adjustments for lasting health.</p>
+</div>
+</div>
+</section>
+<!-- Evidence Progress -->
+<section class="p-lg bg-primary rounded-3xl text-white" id="evidence">
+<h2 class="font-headline-lg text-headline-lg mb-lg">Scientific Evidence &amp; Clinical Progress</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-md">
+<div class="flex justify-between items-end">
+<span class="font-title-md text-title-md font-bold">Stress Management (Adaptogens)</span>
+<span class="text-label-md font-label-md">Strong Evidence</span>
+</div>
+<div class="w-full bg-white/20 h-3 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full w-[92%] rounded-full shadow-[0_0_10px_rgba(72,215,249,0.5)]"></div>
+</div>
+<p class="text-label-md font-label-md text-white/70 italic">Validated through randomized controlled trials (RCTs) for cortisol reduction.</p>
+</div>
+<div class="space-y-md">
+<div class="flex justify-between items-end">
+<span class="font-title-md text-title-md font-bold">Chronic Inflammation</span>
+<span class="text-label-md font-label-md">Moderate Evidence</span>
+</div>
+<div class="w-full bg-white/20 h-3 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed h-full w-[68%] rounded-full shadow-[0_0_10px_rgba(130,249,190,0.5)]"></div>
+</div>
+<p class="text-label-md font-label-md text-white/70 italic">Ongoing studies on Turmeric (Curcumin) and Boswellia efficacy.</p>
+</div>
+</div>
+</section>
+<!-- Risks & Considerations -->
+<section class="space-y-md" id="risks">
+<h2 class="font-headline-lg text-headline-lg text-primary">Limitations &amp; Safety</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="p-md bg-error-container/20 border border-error-container rounded-2xl flex gap-md">
+<span class="material-symbols-outlined text-error text-3xl">warning</span>
+<div class="space-y-xs">
+<h4 class="font-title-md text-title-md font-bold text-on-error-container">Acute Trauma &amp; Surgery</h4>
+<p class="text-body-md text-on-surface-variant">Ayurveda is not recommended as a primary treatment for severe acute trauma, infectious epidemics, or conditions requiring immediate surgical intervention.</p>
+</div>
+</div>
+<div class="p-md bg-secondary-container/20 border border-secondary-container rounded-2xl flex gap-md">
+<span class="material-symbols-outlined text-secondary text-3xl">verified_user</span>
+<div class="space-y-xs">
+<h4 class="font-title-md text-title-md font-bold text-on-secondary-container">Certification Matters</h4>
+<p class="text-body-md text-on-surface-variant">Always consult a BAMS (Bachelor of Ayurvedic Medicine and Surgery) qualified practitioner to ensure herb purity and correct dosage.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Frequently Asked Questions</h2>
+<div class="space-y-sm">
+<details class="group bg-white rounded-xl border border-outline-variant/30 soft-shadow overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<span class="font-title-md text-title-md font-bold text-on-surface">Can Ayurveda be combined with Western medicine?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-md pb-md text-body-md text-on-surface-variant border-t border-outline-variant/10 pt-sm">
+                                Yes, Ayurveda often works complementarily with modern medicine. However, it is vital to disclose all herbal supplements to your MD, as certain herbs like Guggul or Ashwagandha can interact with prescriptions.
+                            </div>
+</details>
+<details class="group bg-white rounded-xl border border-outline-variant/30 soft-shadow overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<span class="font-title-md text-title-md font-bold text-on-surface">How long before I see results?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-md pb-md text-body-md text-on-surface-variant border-t border-outline-variant/10 pt-sm">
+                                Since Ayurveda treats the root cause rather than symptoms, changes are often gradual. While some experience relief in days, chronic imbalances may require 3 to 6 months of dedicated protocol for sustainable results.
+                            </div>
+</details>
+</div>
+</section>
+<!-- Educational Disclaimer -->
+<section class="bg-surface-container-high rounded-2xl p-md">
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-outline text-3xl">info</span>
+<div>
+<p class="text-label-sm font-label-sm uppercase text-outline mb-xs">Educational Disclaimer</p>
+<p class="text-body-md text-on-surface-variant">The information provided on this portal is for educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full py-lg px-md">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex flex-col gap-xs items-center md:items-start text-center md:text-left">
+<span class="font-title-md text-title-md font-bold text-primary">HealSphere</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-md">© 2024 HealSphere Portal. All rights reserved. Medical Disclaimer: Information provided is for educational purposes only.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Medical Advisory Board</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll spy to highlight active nav item
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('aside nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+    </script>
+</body></html>

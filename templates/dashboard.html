@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealSphere | Your Complete Health Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fb;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pill-gradient {
+            background: linear-gradient(135deg, #0052cc 0%, #003d9b 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#b2c5ff",
+                        "surface": "#f8f9fb",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d9dadc",
+                        "tertiary-container": "#006844",
+                        "on-secondary-fixed": "#001f27",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "surface-tint": "#0c56d0",
+                        "tertiary": "#004e32",
+                        "on-secondary": "#ffffff",
+                        "outline": "#737685",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c3c6d6",
+                        "surface-variant": "#e1e2e4",
+                        "on-tertiary-container": "#72e9af",
+                        "secondary-container": "#50dcff",
+                        "secondary-fixed": "#afecff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#003d9b",
+                        "primary-container": "#0052cc",
+                        "secondary": "#00687b",
+                        "surface-container-low": "#f3f4f6",
+                        "on-primary-fixed": "#001848",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "on-surface-variant": "#434654",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "surface-container-highest": "#e1e2e4",
+                        "tertiary-fixed": "#82f9be",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "surface-container-high": "#e7e8ea",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-tertiary-fixed": "#002113",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#c4d2ff",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2e3132",
+                        "on-secondary-container": "#005f71",
+                        "background": "#f8f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "medical": "16px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "base": "4px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "xl": "80px",
+                        "xs": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-sm": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-on-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-gutter py-xs max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-inverse-primary tracking-tight">HealSphere</span>
+</div>
+<nav class="hidden md:flex gap-md">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary font-body-md text-body-md py-1" href="/">Home</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-body-md text-body-md py-1" href="#">Diseases</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-body-md text-body-md py-1" href="#">Treatments</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-body-md text-body-md py-1" href="#">Body Systems</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-body-md text-body-md py-1" href="#">Medicines</a>
+<a href="/ai-assistant"></a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-body-md text-body-md py-1" href="/ai-assistant">AI Assistant</a>
+</nav></a>
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">notifications</button>
+<div class="flex items-center gap-xs ml-2 cursor-pointer group">
+<span class="text-on-surface-variant font-label-md text-label-md hidden lg:block group-hover:text-primary transition-colors">About</span>
+<span class="material-symbols-outlined text-3xl text-on-surface-variant group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-xl px-gutter max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="relative mb-xl py-xl flex flex-col items-center text-center">
+<div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+
+</div>
+<h1 class="font-display-lg text-display-lg text-primary max-w-3xl mb-md leading-tight">
+                Find the Right Healthcare Approach for Your Condition.
+            </h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mb-xl">
+                Navigate through medical systems, understand your body's vital systems, and discover personalized treatment pathways with expert clarity.
+            </p>
+<!-- Search Bar -->
+<div class="relative w-full max-w-3xl mx-auto">
+
+    <form action="/recommendation" method="GET"
+        class="glass p-2 rounded-full flex items-center gap-xs soft-shadow border border-outline-variant/40">
+
+        <div class="pl-4 text-outline">
+            <span class="material-symbols-outlined">search</span>
+        </div>
+
+        <input id="diseaseInput" type="text" name="disease" placeholder="Search symptoms or diseases..." autocomplete="off"
+            class="w-full border-none bg-transparent focus:ring-0 text-on-surface font-body-md text-body-md placeholder:text-outline/60"
+            required>
+
+        <button type="submit" class="pill-gradient text-on-primary px-8 py-3 rounded-full font-label-md font-bold">
+            Get Recommendation
+        </button>
+
+    </form>
+
+    <div id="suggestions" class="absolute left-0 top-full mt-2 w-full bg-white rounded-xl shadow-lg border z-50 hidden">
+    </div>
+
+</div>
+       
+</section>
+<!-- Feature Grid (Bento Style) -->
+<section class="mb-xl">
+<div class="flex justify-between items-end mb-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Health Explorer</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Comprehensive tools for your well-being journey.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-md">
+<!-- Row 1 -->
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-primary">library_books</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Disease Library</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Detailed guides on thousands of conditions.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-secondary">clinical_notes</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Treatment Systems</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Diverse healing modalities explored.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-tertiary">body_system</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Body Systems</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">How your biological engines work.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-primary">pill</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Medicine Guide</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Drug interactions and safety info.</p>
+</div>
+<!-- Row 2 -->
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-tertiary">restaurant</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Diet &amp; Nutrition</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Personalized meal plans for health.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-secondary">self_improvement</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Yoga &amp; Exercise</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Movement therapy for every body.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Mental Wellness</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Mindfulness and emotional support.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-error-container rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-error">medical_services</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">First Aid</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Immediate actions for emergencies.</p>
+</div>
+<!-- Row 3 -->
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-primary">alarm</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Medicine Reminder</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Never miss a dose with smart alerts.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-secondary">monitoring</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Health Tracker</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Log vitals and track progress.</p>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-medical border border-outline-variant/30 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-tertiary">smart_toy</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">AI Health Assistant</h3>
+<p class="text-on-surface-variant text-label-sm font-label-sm">24/7 intelligent health guidance.</p>
+</div>
+<div class="bg-error-container p-sm rounded-medical border border-error/20 soft-shadow hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 bg-on-error rounded-xl flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-error">emergency</span>
+</div>
+<h3 class="font-title-md text-title-md text-error mb-1">Emergency Contacts</h3>
+<p class="text-on-error-container text-label-sm font-label-sm">Quick access to life-saving help.</p>
+</div>
+</div>
+</section>
+<!-- Treatment Systems Section -->
+<section class="mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-md">Treatment Systems</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-sm">
+<a href="/modern-medicine" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-4xl mb-xs block group-hover:scale-110 transition-transform">vaccines</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Modern Medicine</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Evidence-based pharmaceutical and surgical interventions.</p>
+</div>
+</a>
+<a href="/ayurveda" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-xs block group-hover:scale-110 transition-transform">eco</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Ayurveda</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Ancient holistic healing through herbal balance.</p>
+</div>
+</a>
+<a href="/siddha" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-xs block group-hover:scale-110 transition-transform">spa</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Siddha</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Traditional spiritual and physical wellness system.</p>
+</div>
+</a>
+<a href="/acupuncture" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-4xl mb-xs block group-hover:scale-110 transition-transform">acupuncture</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Acupuncture</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Precision needle stimulation of vital energy points.</p>
+</div>
+</a>
+<a href="/physiotherapy" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-xs block group-hover:scale-110 transition-transform">fitness_center</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Physiotherapy</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Rehabilitation through physical movement therapy.</p>
+</div>
+</a>
+<a href="/yoga-therapy" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-xs block group-hover:scale-110 transition-transform">mediation</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Yoga Therapy</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Therapeutic postures and breathwork cycles.</p>
+</div>
+</a>
+<a href="/homeopathy" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-4xl mb-xs block group-hover:scale-110 transition-transform">fluid_med</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Homeopathy</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Natural dilution treatment based on similarity.</p>
+</div>
+</a>
+<a href="/naturopathy" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-xs block group-hover:scale-110 transition-transform">nature</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Naturopathy</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Harnessing the body's innate healing power.</p>
+</div>
+</a>
+<a href="/nutrition-therapy" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-xs block group-hover:scale-110 transition-transform">nutrition</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Nutrition Therapy</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Managing diseases through clinical dietary shifts.</p>
+</div>
+</a>
+<a href="/mental-health" class="block no-underline text-inherit">
+    <div class="bg-white p-md rounded-medical border border-outline-variant/40 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-4xl mb-xs block group-hover:scale-110 transition-transform">mindfulness</span>
+<h4 class="font-title-md text-title-md font-bold mb-xs">Mental Health</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">Therapy and cognitive counseling for the mind.</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Body Systems Section -->
+<section class="mb-xl bg-primary-container/5 rounded-medical p-md lg:p-xl">
+    <div class="text-center mb-xl">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-xs">Interactive Body Systems</h2>
+        <p class="text-on-surface-variant font-body-md text-body-md">Click a system to explore its primary diseases and
+            functions.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-md">
+        <a href="/brain-nervous" class="flex flex-col items-center group cursor-pointer">
+        
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-primary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white"
+                    style="font-variation-settings:'FILL' 1;">
+                    psychology
+                </span>
+            </div>
+        
+            <span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors text-center">
+                Brain &amp; Nervous System
+            </span>
+        
+        </a>
+        <a href="/heart-vascular" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-error group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-error text-3xl group-hover:text-white"
+                    style="font-variation-settings:'FILL' 1;">
+                    favorite
+                </span>
+            </div>
+        
+            <span class="font-label-md text-label-md text-on-surface group-hover:text-error transition-colors text-center">
+                Heart & Vascular
+            </span>
+        </a>
+        <a href="/lungs" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-secondary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-secondary text-3xl group-hover:text-white"
+                    style="font-variation-settings:'FILL' 1;">
+                    air
+                </span>
+            </div>
+        
+            <span class="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors text-center">
+                Lungs
+            </span>
+        </a>
+        <a href="/digestive-system" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-tertiary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-tertiary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">rebase_edit</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-tertiary transition-colors text-center">Digestive
+                System</span>
+        </a>
+        <a href="/liver" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-tertiary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-tertiary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">water_drop</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-tertiary transition-colors text-center">Liver</span>
+        </a>
+        <a href="/kidneys" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-secondary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-secondary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">water_drop</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors text-center">Kidneys</span>
+        </a>
+        <a href="/bones-joints" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-on-surface group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-on-surface text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">done</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-on-surface transition-colors text-center">Bones
+                &amp; Joints</span>
+        </a>
+        <a href="/skin" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-tertiary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-tertiary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">face</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-tertiary transition-colors text-center">Skin</span>
+        </a>
+        <a href="/eyes" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-primary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">visibility</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors text-center">Eyes</span>
+        </a>
+        <a href="/ears" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-secondary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-secondary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">hearing</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors text-center">Ears</span>
+        </a>
+        <a href="/reproductive-system" class="flex flex-col items-center group cursor-pointer">
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-primary group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-primary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">diversity_1</span>
+            </div>
+            <span
+                class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors text-center">Reproductive
+                System</span>
+        </a>
+        <a href="/endocrine" class="flex flex-col items-center group cursor-pointer">
+        
+            <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-sm soft-shadow group-hover:bg-tertiary group-hover:scale-110 transition-all">
+        
+                <span class="material-symbols-outlined text-tertiary text-3xl group-hover:text-white"
+                    style="font-variation-settings: 'FILL' 1;">
+                    stream
+                </span>
+        
+            </div>
+        
+            <span class="font-label-md text-label-md text-on-surface group-hover:text-tertiary transition-colors text-center">
+                Endocrine System
+            </span>
+        
+        </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-highest dark:bg-on-background border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md px-gutter py-md max-w-container-max mx-auto items-start">
+<div>
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+<span class="font-title-md text-title-md font-black text-primary">HealSphere</span>
+</div>
+<p class="text-on-surface-variant font-label-sm text-label-sm leading-relaxed">
+                    Empowering patients and practitioners with a unified view of medical systems and holistic wellness pathways.
+                </p>
+</div>
+<div class="flex flex-col gap-xs">
+<h4 class="font-title-md text-title-md text-on-surface mb-xs">Quick Links</h4>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-label-sm text-label-sm" href="#">Emergency Contacts</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-label-sm text-label-sm" href="#">Medical Disclaimer</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-label-sm text-label-sm" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-xs">
+    <h4 class="font-title-md text-title-md text-on-surface mb-xs">
+        Stay Informed
+    </h4>
+
+    <form action="/subscribe" method="POST" class="flex">
+        <input type="email" name="email" required placeholder="Email for health updates"
+            class="flex-1 border rounded-l-lg px-4 py-3">
+    
+        <button class="bg-blue-700 text-white px-5 rounded-r-lg">
+            Subscribe
+        </button>
+    </form>
+
+</div>
+<p class="mt-sm text-on-surface-variant font-label-sm text-label-sm">
+                    © 2024 HealSphere Healthcare. For emergency dial 911 immediately.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.rounded-medical').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = 'rgba(0, 82, 204, 0.4)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = 'rgba(195, 198, 214, 0.3)';
+            });
+        });
+    </script>
+    <script>
+        const input = document.getElementById("diseaseInput");
+        const suggestions = document.getElementById("suggestions");
+
+        input.addEventListener("input", async () => {
+
+            const text = input.value.trim();
+
+            if (text.length < 2) {
+                suggestions.innerHTML = "";
+                suggestions.classList.add("hidden");
+                return;
+            }
+
+            try {
+
+                const response = await fetch("/search?q=" + encodeURIComponent(text));
+
+                const data = await response.json();
+
+                suggestions.innerHTML = "";
+
+                if (data.length === 0) {
+                    suggestions.classList.add("hidden");
+                    return;
+                }
+
+                suggestions.classList.remove("hidden");
+
+                data.forEach(item => {
+
+                    suggestions.innerHTML += `
+                    <div class="suggestion-item p-3 hover:bg-blue-100 cursor-pointer border-b">
+                        ${item}
+                    </div>
+                `;
+
+                });
+
+            } catch (err) {
+                console.log(err);
+            }
+
+        });
+
+        suggestions.addEventListener("click", function (e) {
+
+            if (e.target.classList.contains("suggestion-item")) {
+
+                input.value = e.target.textContent.trim();
+
+                suggestions.innerHTML = "";
+
+                suggestions.classList.add("hidden");
+
+            }
+
+        });
+    </script 
+</body></html>

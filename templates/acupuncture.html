@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acupuncture: Precision Healing | HealSphere</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d9dadc",
+                    "on-secondary-fixed-variant": "#004e5d",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "outline": "#737685",
+                    "tertiary-fixed": "#82f9be",
+                    "surface": "#f8f9fb",
+                    "on-secondary-container": "#005f71",
+                    "on-tertiary-fixed-variant": "#005235",
+                    "surface-bright": "#f8f9fb",
+                    "on-surface-variant": "#434654",
+                    "on-background": "#191c1e",
+                    "secondary-fixed-dim": "#48d7f9",
+                    "surface-container": "#edeef0",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "tertiary-container": "#006844",
+                    "on-primary-fixed": "#001848",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#0052cc",
+                    "error-container": "#ffdad6",
+                    "background": "#f8f9fb",
+                    "on-secondary-fixed": "#001f27",
+                    "on-tertiary-fixed": "#002113",
+                    "tertiary": "#004e32",
+                    "on-tertiary-container": "#72e9af",
+                    "inverse-primary": "#b2c5ff",
+                    "primary": "#003d9b",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "surface-tint": "#0c56d0",
+                    "on-primary-container": "#c4d2ff",
+                    "surface-container-low": "#f3f4f6",
+                    "secondary-fixed": "#afecff",
+                    "inverse-on-surface": "#f0f1f3",
+                    "secondary": "#00687b",
+                    "outline-variant": "#c3c6d6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e7e8ea",
+                    "secondary-container": "#50dcff",
+                    "primary-fixed": "#dae2ff",
+                    "surface-variant": "#e1e2e4",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#65dca4",
+                    "surface-container-highest": "#e1e2e4",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "16px",
+                    "container-max": "1280px",
+                    "xl": "80px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "title-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-morphism {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(226, 232, 240, 0.5);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .card-shadow {
+        box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+      }
+      .active-nav-pill {
+        background: #dae2ff; /* primary-fixed */
+        color: #003d9b; /* primary */
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center px-md py-xs max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">HealSphere</span>
+<nav class="hidden md:flex gap-md items-center">
+<a href="/"
+  class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-title-md">
+  Dashboard
+</a>
+  <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-title-md" href="#">Patients</a>
+  <a class="text-primary font-bold border-b-2 border-primary font-title-md text-title-md" href="#">Research</a>
+  <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-md text-title-md" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<div class="hidden lg:flex items-center glass-morphism rounded-full px-sm py-xs border border-outline-variant/50">
+</div>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-md py-md lg:py-lg">
+<!-- Breadcrumb & Back Action -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-sm mb-lg">
+<nav class="flex items-center gap-xs text-label-md text-on-surface-variant">
+<a class="hover:text-primary" href="/">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Treatment Systems</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-semibold">Acupuncture</span>
+</nav>
+<a href="/"
+<button class="flex items-center gap-xs text-primary border-2 border-primary px-sm py-xs rounded-full font-label-md hover:bg-primary/5 transition-all">
+  <span class="material-symbols-outlined">arrow_back</span>
+                Back to Dashboard
+            </button>
+            </a>
+</div>
+<div class="flex flex-col lg:flex-row gap-lg">
+<!-- Side Navigation (Sticky) -->
+<aside class="hidden lg:block w-64 shrink-0">
+<div class="sticky top-[100px] flex flex-col gap-xs p-md bg-surface-container-low shadow-sm rounded-xl border border-outline-variant/20">
+<div class="mb-sm">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Modern Medicine</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Information Portal</p>
+</div>
+<a class="flex items-center gap-sm p-sm bg-primary-container text-on-primary-container font-bold rounded-lg transition-all" href="#overview">
+<span class="material-symbols-outlined">info</span> Overview
+                    </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#history">
+<span class="material-symbols-outlined">history</span> History
+                    </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#principles">
+<span class="material-symbols-outlined">psychology</span> Principles
+                    </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#process">
+<span class="material-symbols-outlined">settings_heart</span> Process
+                    </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#conditions">
+<span class="material-symbols-outlined">medical_services</span> Conditions
+                    </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#benefits">
+<span class="material-symbols-outlined">verified</span> Benefits
+                    </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#risks">
+<span class="material-symbols-outlined">warning</span> Risks
+                    </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#evidence">
+<span class="material-symbols-outlined">science</span> Evidence
+                    </a>
+
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<div class="flex-1 space-y-xl">
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-[32px] bg-primary h-[500px] flex items-center" id="overview">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40 mix-blend-overlay" data-alt="A cinematic, high-resolution professional medical illustration of a clinical acupuncture session. The image features a serene atmosphere with soft, focused lighting on a patient's shoulder where a thin, sterile acupuncture needle is precisely placed. The background is a clean, modern clinic with a palette of soft teals and calming blues. The overall aesthetic is authoritative, clean, and digitally hygienic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZgRlMM8F-PxyWDmQtpz9kQHQ5lzLe923ti3DMzfNJzmm9kdPcvE9_ySfg4JQPJcVfjLOvoiVPZQ2NATFECqvDoBP_8AJz06T2IMfqQZoMXlO9nQFSJzUa5DgPhtTANKTqtrucX_KjCSNJVqw1ixipZs9_h6dkpcVaS4z5uphRl2kiBZbTWRxYSfNoiz7cosjexKBJf_mCV6wb4AJ1rStEQAbhTQrEeeCpy0tEf7cDHobkB1RhJqlSMw')"></div>
+</div>
+<div class="relative z-10 px-lg lg:px-xl max-w-2xl text-on-primary">
+<span class="inline-block px-sm py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-label-sm mb-sm font-bold uppercase tracking-wider">Clinical Treatment</span>
+<h1 class="font-display-lg text-display-lg mb-sm">Acupuncture: Precision Healing</h1>
+<p class="font-body-lg text-body-lg mb-lg opacity-90 leading-relaxed italic">"Ancient Wisdom, Modern Clinical Results"</p>
+<p class="font-body-md text-body-md mb-xl opacity-80 max-w-lg">A sophisticated therapeutic technique involving the insertion of ultra-thin needles into specific body points to stimulate natural recovery processes and restore physiological balance.</p>
+<div class="flex gap-md">
+<a class="bg-surface text-primary px-lg py-sm rounded-full font-label-md font-bold shadow-xl hover:scale-105 transition-transform" href="#conditions">Explore Conditions</a>
+<button class="flex items-center gap-xs text-on-primary border border-on-primary/30 px-lg py-sm rounded-full font-label-md backdrop-blur-md hover:bg-on-primary/10 transition-all">
+<span class="material-symbols-outlined">play_circle</span> Watch Overview
+                            </button>
+</div>
+</div>
+</section>
+<!-- What is Acupuncture & Philosophy -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest p-lg rounded-[24px] card-shadow border border-outline-variant/30">
+<h2 class="font-headline-lg text-headline-lg mb-md text-primary">What is Acupuncture?</h2>
+<p class="text-on-surface-variant mb-md leading-relaxed">Acupuncture is a key component of Traditional Chinese Medicine (TCM) that has gained global recognition in modern clinical environments. It involves the careful insertion of sterile, hair-thin needles at strategically selected 'Acupoints'.</p>
+<div class="flex flex-col gap-sm">
+<div class="flex gap-sm p-sm bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-secondary">target</span>
+<div>
+<p class="font-bold text-on-surface">Main Objective</p>
+<p class="text-label-md text-on-surface-variant">Primarily used for neurological modulation and systemic pain relief.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-lg rounded-[24px] card-shadow border border-outline-variant/30">
+<h2 class="font-headline-lg text-headline-lg mb-md text-tertiary">The Philosophy</h2>
+<p class="text-on-surface-variant mb-md leading-relaxed">Central to its practice is the concept of <strong class="text-tertiary">Qi</strong> (vital energy) flowing through <strong class="text-tertiary">Meridians</strong>. When this flow is disrupted, illness or pain occurs; acupuncture aims to restore this harmonic balance.</p>
+<div class="grid grid-cols-2 gap-sm">
+<div class="p-sm bg-tertiary/5 rounded-xl border border-tertiary/10">
+<p class="font-bold text-tertiary">Qi Flow</p>
+<p class="text-label-sm">Dynamic energy movement</p>
+</div>
+<div class="p-sm bg-tertiary/5 rounded-xl border border-tertiary/10">
+<p class="font-bold text-tertiary">Homeostasis</p>
+<p class="text-label-sm">Systemic biological equilibrium</p>
+</div>
+</div>
+</div>
+</section>
+<!-- History & Origin (Vertical Timeline) -->
+<section class="py-sm" id="history">
+<h2 class="font-headline-lg text-headline-lg mb-lg text-center">Historical Evolution</h2>
+<div class="relative max-w-3xl mx-auto space-y-md">
+<div class="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-[2px] bg-outline-variant/40 md:-translate-x-1/2"></div>
+<!-- Timeline Items -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-md">
+<div class="hidden md:block w-[45%] text-right font-bold text-primary">2000+ BCE</div>
+<div class="z-10 w-[40px] h-[40px] rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+</div>
+<div class="w-full md:w-[45%] bg-surface-container-low p-sm rounded-xl border border-outline-variant/20 ml-[60px] md:ml-0">
+<h4 class="font-bold text-on-surface">Ancient China</h4>
+<p class="text-label-md text-on-surface-variant">The earliest documented use in the "Yellow Emperor's Inner Canon".</p>
+</div>
+</div>
+<div class="relative flex flex-col md:flex-row-reverse items-start md:items-center justify-between gap-md">
+<div class="hidden md:block w-[45%] text-left font-bold text-primary">1970s</div>
+<div class="z-10 w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-on-primary shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div class="w-full md:w-[45%] bg-surface-container-low p-sm rounded-xl border border-outline-variant/20 ml-[60px] md:ml-0">
+<h4 class="font-bold text-on-surface">Western Integration</h4>
+<p class="text-label-md text-on-surface-variant">Increased interest following diplomatic missions and clinical observation.</p>
+</div>
+</div>
+<div class="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-md">
+<div class="hidden md:block w-[45%] text-right font-bold text-primary">2003</div>
+<div class="z-10 w-[40px] h-[40px] rounded-full bg-tertiary flex items-center justify-center text-on-primary shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="w-full md:w-[45%] bg-surface-container-low p-sm rounded-xl border border-outline-variant/20 ml-[60px] md:ml-0">
+<h4 class="font-bold text-on-surface">WHO Recognition</h4>
+<p class="text-label-md text-on-surface-variant">World Health Organization recognizes acupuncture for dozens of conditions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Principles (Bento Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md" id="principles">
+<div class="bg-white p-md rounded-xl card-shadow border-t-4 border-primary">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-md">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h3 class="font-title-md text-title-md mb-xs">Qi (Energy)</h3>
+<p class="text-label-md text-on-surface-variant">The vital life force that sustains biological function and psychological health.</p>
+</div>
+<div class="bg-white p-md rounded-xl card-shadow border-t-4 border-secondary">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-md">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<h3 class="font-title-md text-title-md mb-xs">Meridians</h3>
+<p class="text-label-md text-on-surface-variant">Specific pathways through which energy travels to nourish organs and tissues.</p>
+</div>
+<div class="bg-white p-md rounded-xl card-shadow border-t-4 border-tertiary">
+<div class="w-12 h-12 bg-tertiary/10 rounded-full flex items-center justify-center text-tertiary mb-md">
+<span class="material-symbols-outlined">radio_button_checked</span>
+</div>
+<h3 class="font-title-md text-title-md mb-xs">Acupoints</h3>
+<p class="text-label-md text-on-surface-variant">Anatomical landmarks where the flow of Qi can be effectively stimulated.</p>
+</div>
+</section>
+<!-- The Acupuncture Process -->
+<section class="bg-surface-container-high/30 p-lg rounded-[32px] border border-outline-variant/20" id="process">
+<h2 class="font-headline-lg text-headline-lg mb-lg text-center">Patient Journey</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md relative">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-on-primary mb-md z-10">
+<span class="font-bold text-xl">01</span>
+</div>
+<h4 class="font-bold mb-xs">Consultation</h4>
+<p class="text-label-sm text-on-surface-variant">Detailed assessment of medical history and symptoms.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-on-primary mb-md z-10">
+<span class="font-bold text-xl">02</span>
+</div>
+<h4 class="font-bold mb-xs">Point Selection</h4>
+<p class="text-label-sm text-on-surface-variant">Mapping the treatment area based on diagnostic findings.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-on-primary mb-md z-10">
+<span class="font-bold text-xl">03</span>
+</div>
+<h4 class="font-bold mb-xs">Treatment</h4>
+<p class="text-label-sm text-on-surface-variant">Insertion of sterile needles (usually 20-30 mins duration).</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-on-primary mb-md z-10">
+<span class="font-bold text-xl">04</span>
+</div>
+<h4 class="font-bold mb-xs">Observation</h4>
+<p class="text-label-sm text-on-surface-variant">Post-session advice and scheduling for follow-up.</p>
+</div>
+<!-- Connector Line -->
+<div class="hidden lg:block absolute top-8 left-[10%] right-[10%] h-[2px] bg-primary/20 -z-0"></div>
+</div>
+</section>
+<!-- Conditions Treated & Benefits -->
+<section class="space-y-lg" id="conditions">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Targeted Conditions</h2>
+<p class="text-on-surface-variant">Where clinical evidence shows high efficacy rates.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-sm">
+<div class="group bg-white p-sm rounded-2xl card-shadow border border-outline-variant/30 hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-xs text-[32px]">healing</span>
+<h4 class="font-bold text-on-surface">Chronic Pain</h4>
+<p class="text-label-sm text-on-surface-variant mt-xs">Back, neck, and joint osteoarthritis pain management.</p>
+</div>
+<div class="group bg-white p-sm rounded-2xl card-shadow border border-outline-variant/30 hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-xs text-[32px]">neurology</span>
+<h4 class="font-bold text-on-surface">Migraines</h4>
+<p class="text-label-sm text-on-surface-variant mt-xs">Reduction in frequency and intensity of tension headaches.</p>
+</div>
+<div class="group bg-white p-sm rounded-2xl card-shadow border border-outline-variant/30 hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-xs text-[32px]">psychology</span>
+<h4 class="font-bold text-on-surface">Stress</h4>
+<p class="text-label-sm text-on-surface-variant mt-xs">Modulating cortisol levels and calming the nervous system.</p>
+</div>
+<div class="group bg-white p-sm rounded-2xl card-shadow border border-outline-variant/30 hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mb-xs text-[32px]">spa</span>
+<h4 class="font-bold text-on-surface">Nausea</h4>
+<p class="text-label-sm text-on-surface-variant mt-xs">Post-operative or chemotherapy-induced nausea relief.</p>
+</div>
+</div>
+</section>
+<!-- Benefits & Suitability -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-md" id="benefits">
+<div class="lg:col-span-2 space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Key Patient Benefits</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex gap-sm items-start p-md bg-secondary/5 rounded-xl border border-secondary/10">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-bold text-on-secondary-container">Non-pharmacological</h4>
+<p class="text-label-md">Effective relief without reliance on synthetic medication or side effects.</p>
+</div>
+</div>
+<div class="flex gap-sm items-start p-md bg-secondary/5 rounded-xl border border-secondary/10">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-bold text-on-secondary-container">Targeted Relief</h4>
+<p class="text-label-md">Specific focus on localized points of origin for direct symptom management.</p>
+</div>
+</div>
+<div class="flex gap-sm items-start p-md bg-secondary/5 rounded-xl border border-secondary/10">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-bold text-on-secondary-container">Holistic Wellness</h4>
+<p class="text-label-md">Improves sleep, energy levels, and overall mood alongside physical healing.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 p-lg rounded-[24px] border border-primary/10">
+<h3 class="font-title-md text-title-md text-primary mb-md">Suitable For</h3>
+<ul class="space-y-sm">
+<li class="flex items-center gap-xs text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">person</span>
+                                Chronic pain patients
+                            </li>
+<li class="flex items-center gap-xs text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">medical_services</span>
+                                Post-operative recovery
+                            </li>
+<li class="flex items-center gap-xs text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">self_care</span>
+                                Stress-related ailments
+                            </li>
+</ul>
+</div>
+</section>
+<!-- Risks & Limitations -->
+<section class="space-y-lg" id="risks">
+<h2 class="font-headline-lg text-headline-lg text-error">Precautions &amp; Risks</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="p-md bg-error-container text-on-error-container rounded-xl flex items-start gap-sm">
+<span class="material-symbols-outlined">warning</span>
+<div>
+<h4 class="font-bold">Bleeding Disorders</h4>
+<p class="text-label-sm opacity-80">Increased risk of bruising or excessive bleeding if on anticoagulants.</p>
+</div>
+</div>
+<div class="p-md bg-error-container text-on-error-container rounded-xl flex items-start gap-sm">
+<span class="material-symbols-outlined">pregnant_woman</span>
+<div>
+<h4 class="font-bold">Pregnancy</h4>
+<p class="text-label-sm opacity-80">Certain points can trigger uterine contractions; disclose status immediately.</p>
+</div>
+</div>
+<div class="p-md bg-error-container text-on-error-container rounded-xl flex items-start gap-sm">
+<span class="material-symbols-outlined">emergency</span>
+<div>
+<h4 class="font-bold">Pacemakers</h4>
+<p class="text-label-sm opacity-80">Electro-acupuncture can interfere with electronic cardiac devices.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest p-md rounded-xl">
+<h4 class="font-bold text-on-surface mb-sm">Not Recommended For:</h4>
+<div class="flex flex-wrap gap-sm">
+<span class="px-sm py-1 bg-surface-container-lowest rounded-full text-label-sm text-on-surface-variant border border-outline-variant/30">Active Skin Infections</span>
+<span class="px-sm py-1 bg-surface-container-lowest rounded-full text-label-sm text-on-surface-variant border border-outline-variant/30">Severe Needle Phobia</span>
+<span class="px-sm py-1 bg-surface-container-lowest rounded-full text-label-sm text-on-surface-variant border border-outline-variant/30">Acute Emergency Traumas</span>
+</div>
+</div>
+</section>
+<!-- Scientific Evidence -->
+<section class="bg-white p-lg rounded-[24px] card-shadow border border-outline-variant/30" id="evidence">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-12 h-12 bg-tertiary rounded-full flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined">science</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg">Clinical Evidence Strength</h2>
+<p class="text-on-surface-variant">Based on peer-reviewed meta-analyses.</p>
+</div>
+</div>
+<div class="space-y-lg">
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-bold">Pain Management</span>
+<span class="text-label-sm font-bold text-tertiary">STRONG EVIDENCE</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[95%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-bold">Mental Health (Stress/Anxiety)</span>
+<span class="text-label-sm font-bold text-secondary">MODERATE EVIDENCE</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[65%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-bold">Digestive Disorders</span>
+<span class="text-label-sm font-bold text-primary">EMERGING EVIDENCE</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[40%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section (Accordions) -->
+<section class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Frequently Asked Questions</h2>
+<div class="space-y-sm">
+<details class="group glass-morphism rounded-xl border border-outline-variant/30 overflow-hidden" open="">
+<summary class="flex justify-between items-center p-md cursor-pointer font-bold text-on-surface hover:bg-surface-variant/20 transition-colors">
+                                Does it hurt?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant text-label-md">
+                                Most patients feel a mild tingling or dull ache, but the needles are so thin that there is generally no sharp pain. Some people find the experience deeply relaxing.
+                            </div>
+</details>
+<details class="group glass-morphism rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer font-bold text-on-surface hover:bg-surface-variant/20 transition-colors">
+                                How many sessions will I need?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant text-label-md">
+                                While some find immediate relief, chronic issues usually require 6-10 sessions to show significant clinical progress. Your practitioner will design a customized plan.
+                            </div>
+</details>
+<details class="group glass-morphism rounded-xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer font-bold text-on-surface hover:bg-surface-variant/20 transition-colors">
+                                Is it safe?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant text-label-md">
+                                Yes, when performed by a licensed professional using single-use, sterile disposable needles, it is considered one of the safest medical treatments available.
+                            </div>
+</details>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-xl">
+<div class="w-full py-lg px-md max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex flex-col items-center md:items-start gap-xs">
+<span class="font-title-md text-title-md font-bold text-primary">HealSphere Portal</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left max-w-lg">
+                    © 2024 HealSphere Portal. All rights reserved. Medical Disclaimer: Information provided is for educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Medical Advisory Board</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll spy and active state handling for the side nav
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('aside nav a, aside a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+    </script>
+</body></html>

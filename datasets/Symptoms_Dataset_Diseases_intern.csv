@@ -1,0 +1,151 @@
+Symptom_ID,Disease_ID,Symptom,Type
+S001,D001,Frequent urination,Common
+S002,D001,Excessive thirst,Common
+S003,D001,Blurred vision,Advanced
+S004,D002,Headache,Common
+S005,D002,Dizziness,Common
+S006,D002,Chest pain,Advanced
+S007,D003,Wheezing,Common
+S008,D003,Shortness of breath,Common
+S009,D003,Chest tightness,Advanced
+S010,D004,Severe headache,Common
+S011,D004,Nausea,Common
+S012,D004,Light sensitivity,Advanced
+S013,D005,Stomach pain,Common
+S014,D005,Bloating,Common
+S015,D005,Vomiting,Advanced
+S016,D006,Fever,Common
+S017,D006,Cough,Common
+S018,D006,Breathing difficulty,Advanced
+S019,D007,High fever,Common
+S020,D007,Body pain,Common
+S021,D007,Skin rash,Advanced
+S022,D008,Fatigue,Common
+S023,D008,Swollen feet,Common
+S024,D008,Reduced urine output,Advanced
+S025,D009,Joint pain,Common
+S026,D009,Stiffness,Common
+S027,D009,Limited movement,Advanced
+S028,D010,Persistent sadness,Common
+S029,D010,Loss of interest,Common
+S030,D010,Suicidal thoughts,Advanced
+S031,D011,Chest discomfort,Common
+S032,D011,Shortness of breath,Common
+S033,D011,Arm pain,Advanced
+S034,D012,Fatigue,Common
+S035,D012,Swollen legs,Common
+S036,D012,Breathlessness,Advanced
+S037,D013,Sudden weakness,Common
+S038,D013,Speech difficulty,Common
+S039,D013,Confusion,Advanced
+S040,D014,Chronic cough,Common
+S041,D014,Wheezing,Common
+S042,D014,Blue lips,Advanced
+S043,D015,Persistent cough,Common
+S044,D015,Night sweats,Common
+S045,D015,Weight loss,Advanced
+S046,D016,Fever,Common
+S047,D016,Dry cough,Common
+S048,D016,Loss of smell,Advanced
+S049,D017,Fever,Common
+S050,D017,Sore throat,Common
+S051,D017,Runny nose,Advanced
+S052,D018,Burning stomach pain,Common
+S053,D018,Nausea,Common
+S054,D018,Black stools,Advanced
+S055,D019,Heartburn,Common
+S056,D019,Acid reflux,Common
+S057,D019,Difficulty swallowing,Advanced
+S058,D020,Jaundice,Common
+S059,D020,Fatigue,Common
+S060,D020,Dark urine,Advanced
+S061,D021,Abdominal swelling,Common
+S062,D021,Jaundice,Common
+S063,D021,Confusion,Advanced
+S064,D022,Upper abdominal pain,Common
+S065,D022,Nausea,Common
+S066,D022,Fever,Advanced
+S067,D023,Abdominal pain,Common
+S068,D023,Loss of appetite,Common
+S069,D023,Vomiting,Advanced
+S070,D024,Weight gain,Common
+S071,D024,Fatigue,Common
+S072,D024,Cold intolerance,Advanced
+S073,D025,Weight loss,Common
+S074,D025,Rapid heartbeat,Common
+S075,D025,Sweating,Advanced
+S076,D026,Weakness,Common
+S077,D026,Pale skin,Common
+S078,D026,Shortness of breath,Advanced
+S079,D027,Frequent infections,Common
+S080,D027,Fatigue,Common
+S081,D027,Easy bleeding,Advanced
+S082,D028,Breast lump,Common
+S083,D028,Nipple discharge,Common
+S084,D028,Skin changes,Advanced
+S085,D029,Persistent cough,Common
+S086,D029,Chest pain,Common
+S087,D029,Coughing blood,Advanced
+S088,D030,Difficulty urinating,Common
+S089,D030,Blood in urine,Common
+S090,D030,Bone pain,Advanced
+S091,D031,Red patches,Common
+S092,D031,Itching,Common
+S093,D031,Cracked skin,Advanced
+S094,D032,Dry skin,Common
+S095,D032,Itching,Common
+S096,D032,Rash,Advanced
+S097,D033,Pimples,Common
+S098,D033,Oily skin,Common
+S099,D033,Scarring,Advanced
+S100,D034,Vision loss,Common
+S101,D034,Eye pain,Common
+S102,D034,Halos,Advanced
+S103,D035,Blurred vision,Common
+S104,D035,Cloudy vision,Common
+S105,D035,Night vision problems,Advanced
+S106,D036,Red eye,Common
+S107,D036,Itching,Common
+S108,D036,Eye discharge,Advanced
+S109,D037,Ear pain,Common
+S110,D037,Hearing loss,Common
+S111,D037,Fever,Advanced
+S112,D038,Facial pain,Common
+S113,D038,Nasal congestion,Common
+S114,D038,Thick mucus,Advanced
+S115,D039,Memory loss,Common
+S116,D039,Confusion,Common
+S117,D039,Personality changes,Advanced
+S118,D040,Tremor,Common
+S119,D040,Slow movement,Common
+S120,D040,Balance problems,Advanced
+S121,D041,Seizures,Common
+S122,D041,Confusion,Common
+S123,D041,Loss of consciousness,Advanced
+S124,D042,Joint swelling,Common
+S125,D042,Morning stiffness,Common
+S126,D042,Joint deformity,Advanced
+S127,D043,Sudden joint pain,Common
+S128,D043,Redness,Common
+S129,D043,Swelling,Advanced
+S130,D044,Back pain,Common
+S131,D044,Bone fractures,Common
+S132,D044,Loss of height,Advanced
+S133,D045,Fever,Common
+S134,D045,Chills,Common
+S135,D045,Sweating,Advanced
+S136,D046,High fever,Common
+S137,D046,Abdominal pain,Common
+S138,D046,Rose spots,Advanced
+S139,D047,Profuse diarrhea,Common
+S140,D047,Dehydration,Common
+S141,D047,Muscle cramps,Advanced
+S142,D048,Itchy rash,Common
+S143,D048,Fever,Common
+S144,D048,Blisters,Advanced
+S145,D049,Fever,Common
+S146,D049,Rash,Common
+S147,D049,Red eyes,Advanced
+S148,D050,Weight loss,Common
+S149,D050,Frequent infections,Common
+S150,D050,Night sweats,Advanced

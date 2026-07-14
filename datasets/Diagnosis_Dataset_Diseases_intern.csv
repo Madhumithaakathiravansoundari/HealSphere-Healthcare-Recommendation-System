@@ -1,0 +1,51 @@
+Disease_ID,Medical_Test,Purpose
+D001,HbA1c Test,Measure long-term blood glucose levels
+D002,Blood Pressure Measurement,Diagnose and monitor hypertension
+D003,Spirometry,Assess lung function and confirm asthma
+D004,Neurological Examination,Evaluate migraine and rule out other causes
+D005,Upper GI Endoscopy,Detect stomach lining inflammation
+D006,Chest X-ray,Identify lung infection and pneumonia
+D007,NS1 Antigen / Dengue IgM Test,Confirm dengue infection
+D008,Serum Creatinine & eGFR,Assess kidney function
+D009,X-ray of Affected Joint,Evaluate joint damage
+D010,Psychiatric Assessment,Evaluate symptoms of depression
+D011,Coronary Angiography,Detect narrowed or blocked coronary arteries.
+D012,Echocardiogram,Assess heart pumping efficiency and structure
+D013,CT Brain Scan,Detect brain bleeding or blocked blood vessels.
+D014,Spirometry,Measure airflow limitation and disease severity.
+D015,Sputum GeneXpert Test,Detect Mycobacterium tuberculosis and drug resistance.
+D016,RT-PCR Test,Detect SARS-CoV-2 viral RNA
+D017,Rapid Influenza Diagnostic Test,Identify influenza virus infection.
+D018,Upper GI Endoscopy,Visualize ulcers in stomach or duodenum.
+D019,Upper GI Endoscopy,Identify esophageal inflammation and acid damage.
+D020,HBsAg Blood Test,Detect hepatitis B virus infection.
+D021,Liver Function Test,Assess liver damage and function.
+D022,Abdominal Ultrasound,Detect stones in the gallbladder.
+D023,Abdominal CT Scan,Confirm inflammation of the appendix.
+D024,TSH Blood Test,Measure thyroid hormone regulation.
+D025,Thyroid Function Test,Detect excessive thyroid hormone production.
+D026,Complete Blood Count (CBC),Measure hemoglobin and red blood cells.
+D027,Bone Marrow Biopsy,Confirm blood cancer and identify leukemia type.
+D028,Mammography,Detect abnormal breast tissue or tumors.
+D029,Chest CT Scan,Identify lung tumors and staging.
+D030,PSA Blood Test,Screen for prostate abnormalities.
+D031,Skin Biopsy,Confirm autoimmune skin disease.
+D032,Physical Skin Examination,Assess skin inflammation and symptoms.
+D033,Clinical Skin Examination,Determine acne severity and type.
+D034,Tonometry,Measure intraocular pressure.
+D035,Slit Lamp Examination,Detect clouding of the eye lens.
+D036,Eye Examination,Identify eye infection or inflammation.
+D037,Otoscopy,Examine the middle ear for infection.
+D038,Nasal Endoscopy,Visualize sinus inflammation and blockage.
+D039,Cognitive Assessment Test,Evaluate memory and cognitive decline.
+D040,Neurological Examination,Assess movement abnormalities.
+D041,Electroencephalogram (EEG),Record abnormal brain electrical activity.
+D042,Rheumatoid Factor Blood Test,Detect autoimmune markers causing joint inflammation.
+D043,Serum Uric Acid Test,Measure elevated uric acid levels.
+D044,DEXA Scan,Measure bone mineral density
+D045,Peripheral Blood Smear,Identify malaria parasites in blood.
+D046,Widal Test,Detect antibodies against Salmonella typhi.
+D047,Stool Culture,Identify Vibrio cholerae bacteria.
+D048,Clinical Examination,Identify characteristic skin rash and symptoms.
+D049,Measles IgM Antibody Test,Confirm measles virus infection.
+D050,HIV ELISA Test,Detect antibodies or antigens for HIV.

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Siddha Medicine | HealSphere Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#004e32",
+                    "on-secondary-fixed": "#001f27",
+                    "on-tertiary-fixed-variant": "#005235",
+                    "surface-bright": "#f8f9fb",
+                    "surface-container-highest": "#e1e2e4",
+                    "on-surface": "#191c1e",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#004e5d",
+                    "on-primary-container": "#c4d2ff",
+                    "tertiary-fixed": "#82f9be",
+                    "surface-container": "#edeef0",
+                    "on-primary-fixed": "#001848",
+                    "surface-container-high": "#e7e8ea",
+                    "secondary-fixed-dim": "#48d7f9",
+                    "error": "#ba1a1a",
+                    "outline": "#737685",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#afecff",
+                    "secondary-container": "#50dcff",
+                    "inverse-surface": "#2e3132",
+                    "on-secondary-container": "#005f71",
+                    "on-background": "#191c1e",
+                    "surface-tint": "#0c56d0",
+                    "secondary": "#00687b",
+                    "background": "#f8f9fb",
+                    "surface-variant": "#e1e2e4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "tertiary-fixed-dim": "#65dca4",
+                    "outline-variant": "#c3c6d6",
+                    "tertiary-container": "#006844",
+                    "inverse-on-surface": "#f0f1f3",
+                    "surface-dim": "#d9dadc",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#b2c5ff",
+                    "primary-fixed": "#dae2ff",
+                    "primary-container": "#0052cc",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#002113",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f6",
+                    "primary": "#003d9b",
+                    "on-tertiary-container": "#72e9af",
+                    "surface": "#f8f9fb",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-surface-variant": "#434654",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "sm": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "xl": "80px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #00687b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #003d9b 0%, #72e9af 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c3c6d6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-primary">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/80 dark:bg-on-surface/80 backdrop-blur-xl border-b border-outline-variant/30 docked full-width top-0 sticky z-50 shadow-sm">
+<div class="flex justify-between items-center px-md py-xs max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">HealSphere</span>
+<div class="hidden md:flex gap-md ml-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="/">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md" href="#">Research</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Resources</a>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant/50 rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant/50 rounded-full transition-all">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Layout Container -->
+<main class="max-w-container-max mx-auto px-md py-md lg:grid lg:grid-cols-[260px_1fr] gap-lg">
+<!-- Sidebar Navigation -->
+<aside class="hidden lg:block">
+<div class="sticky top-[88px] flex flex-col gap-xs p-md bg-surface-container-low shadow-sm rounded-xl h-fit border border-outline-variant/20">
+<div class="mb-md">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Modern Medicine</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Siddha Information Portal</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="bg-primary-container text-on-primary-container font-bold rounded-lg flex items-center gap-sm p-sm transition-all scale-[0.98]" href="#overview">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg flex items-center gap-sm p-sm transition-all" href="#history">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-md text-label-md">History</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg flex items-center gap-sm p-sm transition-all" href="#principles">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-md text-label-md">Principles</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg flex items-center gap-sm p-sm transition-all" href="#how-it-works">
+<span class="material-symbols-outlined">settings_heart</span>
+<span class="font-label-md text-label-md">Mechanisms</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg flex items-center gap-sm p-sm transition-all" href="#conditions">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="font-label-md text-label-md">Conditions</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg flex items-center gap-sm p-sm transition-all" href="#benefits">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-md text-label-md">Benefits</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg flex items-center gap-sm p-sm transition-all" href="#evidence">
+<span class="material-symbols-outlined">science</span>
+<span class="font-label-md text-label-md">Evidence</span>
+</a>
+</nav>
+<hr class="my-md border-outline-variant/30"/>
+
+</div>
+</aside>
+<!-- Content Canvas -->
+<div class="flex flex-col gap-lg">
+<!-- Breadcrumb & Action -->
+<div class="flex flex-wrap justify-between items-center gap-sm">
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary" href="/">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Treatment Systems</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Siddha</span>
+</nav>
+<a href="/"
+<button class="text-primary font-bold flex items-center gap-1 hover:opacity-80 transition-all font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                    Back to Dashboard
+                </button>
+</a>
+</div>
+<!-- 1. Hero Section -->
+<section class="relative overflow-hidden rounded-[32px] bg-primary text-on-primary p-lg lg:p-xl min-h-[400px] flex items-center" id="overview">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full object-cover opacity-30 mix-blend-overlay" data-alt="A sophisticated medical illustration featuring a translucent human silhouette and glowing botanical elements, presented in a serene and clinical style with soft blue and emerald green hues. The lighting is ethereal and diffused, suggesting a blend of ancient natural wisdom and modern biotechnology. The composition is spacious and minimalist, emphasizing professional healthcare excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoNbJ6LBdnhlpgW8DK3r7xShmlEagrtCICUX61-kije3-AzrcNVFze734Li6vFGzqkar-6K93mL17fxCnjI8Mh9CqR4PB2WLhFaYD40MHamIFW0FfVOXtOs9pkji85w2k3fwek3QKN0gpLEVreDFvKGmixVGZvc7CLbvuX9xuo6ZS1ObVDkBb-Bd0CvxUyYN5h6jjvnRbGLHmRczd45vN7z5ZB5mSaqlYqCHQhfwRWT2ODOnCxxhYK_w')"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="bg-primary-container/30 border border-primary-container/50 px-4 py-1 rounded-full font-label-md text-label-md inline-block mb-4">Integrative Medicine</span>
+<h1 class="font-display-lg text-display-lg mb-4">Siddha: The Path to Perfection</h1>
+<p class="font-body-lg text-body-lg mb-8 opacity-90">Ancient wisdom for timeless wellness. Siddha medicine is a traditional South Indian healing system that balances physical, mental, and spiritual health through natural alchemy.</p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-secondary-container text-on-secondary-container px-lg py-sm rounded-full font-bold hover:scale-105 transition-all shadow-lg">Explore Conditions</button>
+<button class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-lg py-sm rounded-full font-bold hover:bg-white/20 transition-all">Clinical Guidelines</button>
+</div>
+</div>
+</section>
+<!-- 2. What is Siddha? & Bento Principles -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="md:col-span-2 bg-surface-container-lowest p-md rounded-3xl border border-outline-variant/30 flex flex-col justify-center shadow-sm">
+<h2 class="font-headline-lg text-headline-lg text-gradient mb-md">Universal Foundations</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">
+                        Siddha medicine originated in the pre-Vedic period of South India. Its philosophy is built upon the **96 Tattvas**, which are categorized principles governing the human soul, body, and senses. This clinical system aims to achieve **Ashta Siddhis** (Eight Divine Perfections) by maintaining equilibrium within the body's constitution.
+                    </p>
+<div class="flex gap-md mt-sm">
+<div class="bg-surface-container p-sm rounded-xl">
+<span class="block font-title-md text-title-md text-primary">96</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Tattvas</span>
+</div>
+<div class="bg-surface-container p-sm rounded-xl">
+<span class="block font-title-md text-title-md text-secondary">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Great Siddhars</span>
+</div>
+</div>
+</div>
+<div class="bg-tertiary-container text-on-tertiary-container p-md rounded-3xl relative overflow-hidden group">
+<span class="material-symbols-outlined text-[64px] absolute -bottom-4 -right-4 opacity-20 group-hover:scale-110 transition-transform duration-500">eco</span>
+<h3 class="font-title-md text-title-md mb-xs">Ashta Siddhis</h3>
+<p class="font-label-md text-label-md opacity-80 leading-snug">The eight spiritual and physical powers attained through refined yogic and medicinal practices in Siddha tradition.</p>
+</div>
+</section>
+<!-- 3. History Timeline -->
+<section class="p-lg bg-surface-container-low rounded-3xl" id="history">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Siddhar Legacy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Charting thousands of years of South Indian medical heritage.</p>
+</div>
+<div class="relative max-w-3xl mx-auto pl-8">
+<div class="absolute left-[7px] top-0 bottom-0 w-1 timeline-line rounded-full"></div>
+<div class="mb-lg relative">
+<div class="absolute -left-[35px] top-1 w-5 h-5 rounded-full bg-primary ring-4 ring-primary-container"></div>
+<h4 class="font-title-md text-title-md text-primary">The Era of Sage Agastya</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">Pre-Vedic Period</p>
+<p class="font-body-md text-body-md text-on-surface-variant">The founding father of Siddha medicine, Sage Agastya, established the first principles of alchemy and herbalism in the Tamil landscape.</p>
+</div>
+<div class="mb-lg relative">
+<div class="absolute -left-[35px] top-1 w-5 h-5 rounded-full bg-secondary ring-4 ring-secondary-container"></div>
+<h4 class="font-title-md text-title-md text-secondary">The 18 Siddhars</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">Classical Era</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Development of advanced diagnostics (Nadi) and therapeutic formulations including metals and minerals (Kuppi-pasparm).</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[35px] top-1 w-5 h-5 rounded-full bg-tertiary ring-4 ring-tertiary-fixed"></div>
+<h4 class="font-title-md text-title-md text-tertiary">Modern Global Integration</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">21st Century</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Inclusion in the WHO traditional medicine registry and integration within digital healthcare platforms like HealSphere.</p>
+</div>
+</div>
+</section>
+<!-- 4. Core Principles -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md" id="principles">
+<!-- Pancha Bhoothas -->
+<div class="bg-surface-container-lowest p-md rounded-3xl border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary p-2 bg-primary-container/20 rounded-lg">pentagon</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Pancha Bhoothas</h3>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mb-md">The Five Elements that constitute both the universe and the human body.</p>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-xs bg-surface border border-outline-variant/20 rounded-xl text-center font-label-md">Earth (Nilam)</div>
+<div class="p-xs bg-surface border border-outline-variant/20 rounded-xl text-center font-label-md">Water (Neer)</div>
+<div class="p-xs bg-surface border border-outline-variant/20 rounded-xl text-center font-label-md">Fire (Thee)</div>
+<div class="p-xs bg-surface border border-outline-variant/20 rounded-xl text-center font-label-md">Air (Kaatru)</div>
+<div class="p-xs bg-surface border border-outline-variant/20 rounded-xl text-center font-label-md col-span-2">Ether (Akayam)</div>
+</div>
+</div>
+<!-- Three Humors -->
+<div class="bg-surface-container-lowest p-md rounded-3xl border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-secondary p-2 bg-secondary-container/20 rounded-lg">balance</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Three Humors</h3>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mb-md">The vital forces (Doshas) that must remain balanced for perfect health.</p>
+<ul class="space-y-sm">
+<li class="flex items-center justify-between p-sm bg-surface-container-low rounded-xl">
+<span class="font-bold text-primary">Vali (Air)</span>
+<span class="font-label-sm text-on-surface-variant">Movement &amp; Nervous System</span>
+</li>
+<li class="flex items-center justify-between p-sm bg-surface-container-low rounded-xl">
+<span class="font-bold text-secondary">Azhal (Fire)</span>
+<span class="font-label-sm text-on-surface-variant">Metabolism &amp; Heat</span>
+</li>
+<li class="flex items-center justify-between p-sm bg-surface-container-low rounded-xl">
+<span class="font-bold text-tertiary">Aiyam (Water)</span>
+<span class="font-label-sm text-on-surface-variant">Stability &amp; Immunity</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- 5. How It Works (Stepper) -->
+<section class="py-lg" id="how-it-works">
+<h2 class="font-headline-lg text-headline-lg text-center mb-xl">Clinical Diagnostic Pathway</h2>
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-lg relative">
+<div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-outline-variant/30 -z-10 translate-y-[-12px]"></div>
+<div class="flex-1 text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold mb-md shadow-lg ring-8 ring-primary/10">1</div>
+<h4 class="font-title-md text-title-md text-primary mb-2">Nadi (Pulse)</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-[200px]">Diagnostic reading of the eight-point metabolic signature.</p>
+</div>
+<div class="flex-1 text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold mb-md shadow-lg ring-8 ring-secondary/10">2</div>
+<h4 class="font-title-md text-title-md text-secondary mb-2">Soolal (Env)</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-[200px]">Analysis of environmental and lifestyle factors affecting the humors.</p>
+</div>
+<div class="flex-1 text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold mb-md shadow-lg ring-8 ring-tertiary/10">3</div>
+<h4 class="font-title-md text-title-md text-tertiary mb-2">Marunthu (Therapy)</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-[200px]">Tailored treatment using herbal, mineral, and animal formulations.</p>
+</div>
+</div>
+</section>
+<!-- 6. Conditions Treated -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md" id="conditions">
+<div class="bg-white p-md rounded-3xl border border-outline-variant/30 hover:border-primary/50 transition-all group">
+<span class="material-symbols-outlined text-primary mb-md block text-[32px]">air</span>
+<h4 class="font-title-md text-title-md mb-2">Respiratory Issues</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-md">Effective management of bronchial asthma, sinusitis, and chronic cough through herbal steams and elixirs.</p>
+<button class="text-primary font-bold font-label-sm flex items-center gap-1 group-hover:gap-2 transition-all">Learn More <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+</div>
+<div class="bg-white p-md rounded-3xl border border-outline-variant/30 hover:border-secondary/50 transition-all group">
+<span class="material-symbols-outlined text-secondary mb-md block text-[32px]">spa</span>
+<h4 class="font-title-md text-title-md mb-2">Skin Disorders</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-md">Specialized treatments for psoriasis, eczema, and chronic vitiligo using unique mineral-herbal oils.</p>
+<button class="text-secondary font-bold font-label-sm flex items-center gap-1 group-hover:gap-2 transition-all">Learn More <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+</div>
+<div class="bg-white p-md rounded-3xl border border-outline-variant/30 hover:border-tertiary/50 transition-all group">
+<span class="material-symbols-outlined text-tertiary mb-md block text-[32px]">rebase_edit</span>
+<h4 class="font-title-md text-title-md mb-2">Inflammatory Care</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-md">Addressing rheumatoid arthritis and chronic joint pain by rebalancing the Vali (Air) humor.</p>
+<button class="text-tertiary font-bold font-label-sm flex items-center gap-1 group-hover:gap-2 transition-all">Learn More <span class="material-symbols-outlined text-[16px]">arrow_forward</span></button>
+</div>
+</section>
+<!-- 7. Benefits & Risks -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md" id="benefits">
+<div class="bg-tertiary/5 border border-tertiary/20 p-md rounded-3xl">
+<h3 class="font-title-md text-title-md text-tertiary flex items-center gap-2 mb-md">
+<span class="material-symbols-outlined">check_circle</span>
+                        Clinical Benefits
+                    </h3>
+<ul class="space-y-sm">
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">done</span>
+<span class="font-label-md text-on-surface-variant text-label-md">Non-invasive holistic approach targeting the root cause.</span>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">done</span>
+<span class="font-label-md text-on-surface-variant text-label-md">Long-term remission for chronic autoimmune conditions.</span>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">done</span>
+<span class="font-label-md text-on-surface-variant text-label-md">Synergistic use of heavy metals purified via ancient methods.</span>
+</li>
+</ul>
+</div>
+<div class="bg-error/5 border border-error/20 p-md rounded-3xl">
+<h3 class="font-title-md text-title-md text-error flex items-center gap-2 mb-md">
+<span class="material-symbols-outlined">warning</span>
+                        Surgical Limitations
+                    </h3>
+<ul class="space-y-sm">
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-error text-[20px]">close</span>
+<span class="font-label-md text-on-surface-variant text-label-md">Not suitable for emergency trauma or acute surgical needs.</span>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-error text-[20px]">close</span>
+<span class="font-label-md text-on-surface-variant text-label-md">Requires strict dietary adherence (Pathyam) for efficacy.</span>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-error text-[20px]">close</span>
+<span class="font-label-md text-on-surface-variant text-label-md">Slower onset of results compared to acute Allopathic care.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- 8. Evidence Section -->
+<section class="p-lg bg-surface-container-highest/30 rounded-3xl border border-outline-variant/30" id="evidence">
+<div class="flex items-center gap-sm mb-lg">
+<span class="material-symbols-outlined text-primary">science</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Scientific Evidence</h2>
+</div>
+<div class="space-y-lg">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-title-md text-title-md">Stress &amp; Mental Wellness</span>
+<span class="font-label-sm text-label-sm bg-primary-container text-on-primary-container px-3 py-1 rounded-full">Moderate Evidence</span>
+</div>
+<div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 65%;"></div>
+</div>
+<p class="mt-2 font-label-sm text-label-sm text-on-surface-variant">Multiple clinical trials support the efficacy of Siddha breathing and herbal formulations in reducing cortisol levels.</p>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-title-md text-title-md">Chronic Inflammatory Care</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">Emerging Evidence</span>
+</div>
+<div class="w-full bg-outline-variant/20 h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 45%;"></div>
+</div>
+<p class="mt-2 font-label-sm text-label-sm text-on-surface-variant">Preliminary studies show promising results in managing IL-6 markers in rheumatoid patients, requiring further large-scale RCTs.</p>
+</div>
+</div>
+</section>
+<!-- 9. Suitability Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-surface-container-low p-md rounded-3xl">
+<h3 class="font-title-md text-title-md mb-md text-primary">Highly Recommended For</h3>
+<div class="grid grid-cols-1 gap-sm">
+<div class="flex items-center gap-sm p-sm bg-white rounded-xl">
+<span class="material-symbols-outlined text-primary">elderly</span>
+<span class="font-label-md">Elderly for geriatric metabolic support</span>
+</div>
+<div class="flex items-center gap-sm p-sm bg-white rounded-xl">
+<span class="material-symbols-outlined text-primary">chronic</span>
+<span class="font-label-md">Patients with multi-system chronic illness</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-md rounded-3xl">
+<h3 class="font-title-md text-title-md mb-md text-on-surface-variant">Contraindications</h3>
+<div class="grid grid-cols-1 gap-sm">
+<div class="flex items-center gap-sm p-sm bg-white/50 rounded-xl">
+<span class="material-symbols-outlined text-error">pregnant_woman</span>
+<span class="font-label-md">Severe pregnancy complications</span>
+</div>
+<div class="flex items-center gap-sm p-sm bg-white/50 rounded-xl">
+<span class="material-symbols-outlined text-error">emergency_home</span>
+<span class="font-label-md">Acute life-threatening emergencies</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. FAQ Accordion -->
+<section class="bg-surface-container-lowest p-lg rounded-3xl border border-outline-variant/30">
+<h2 class="font-headline-lg text-headline-lg mb-lg text-center">Frequently Asked Questions</h2>
+<div class="space-y-md max-w-3xl mx-auto">
+<details class="group bg-surface rounded-2xl border border-outline-variant/20 open:shadow-md transition-all">
+<summary class="p-md cursor-pointer list-none flex justify-between items-center">
+<span class="font-title-md text-title-md text-on-surface">Is Siddha different from Ayurveda?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant font-body-md">
+                            While both share elements and humors, Siddha has a unique focus on mineral-metallic formulations (Iatrochemistry) and a distinct 96-tattva philosophy rooted in Tamil culture.
+                        </div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/20 open:shadow-md transition-all">
+<summary class="p-md cursor-pointer list-none flex justify-between items-center">
+<span class="font-title-md text-title-md text-on-surface">Are the metallic medicines safe?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant font-body-md">
+                            Siddha medicine utilizes rigorous purification processes called 'Suddhi'. When prepared by qualified practitioners according to traditional canons, these minerals are bio-transformed into non-toxic, therapeutic agents.
+                        </div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/20 open:shadow-md transition-all">
+<summary class="p-md cursor-pointer list-none flex justify-between items-center">
+<span class="font-title-md text-title-md text-on-surface">What is 'Pathyam'?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant font-body-md">
+                            Pathyam refers to the strictly prescribed diet and lifestyle regimen required to allow the medicine to work effectively. It is considered 50% of the treatment in Siddha.
+                        </div>
+</details>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant full-width mt-xl">
+<div class="w-full py-lg px-md max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-md">
+<div class="max-w-sm">
+<span class="font-title-md text-title-md font-bold text-primary mb-md block">HealSphere Portal</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+                    © 2024 HealSphere Portal. All rights reserved. 
+                    <br/><br/>
+<strong>Medical Disclaimer:</strong> The information provided on this page is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+                </p>
+</div>
+<div class="flex flex-col md:flex-row gap-lg">
+<div class="flex flex-col gap-xs">
+<h5 class="font-label-md text-label-md font-bold mb-2">Platform</h5>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Medical Advisory Board</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-xs">
+<h5 class="font-label-md text-label-md font-bold mb-2">Support</h5>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Support</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Clinical Registry</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB for quick action (Mobile/Desktop) -->
+<div class="fixed bottom-md right-md z-40">
+<button class="bg-primary text-on-primary w-14 h-14 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="absolute right-16 bg-surface-container-highest text-on-surface text-label-sm px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm border border-outline-variant/30">Ask Health AI</span>
+</button>
+</div>
+<script>
+        // Micro-interaction for smooth scrolling highlight in sidebar
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('aside nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold', 'scale-[0.98]');
+                link.classList.add('text-on-surface-variant', 'hover:bg-surface-variant/50');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold', 'scale-[0.98]');
+                    link.classList.remove('text-on-surface-variant', 'hover:bg-surface-variant/50');
+                }
+            });
+        });
+    </script>
+</body></html>

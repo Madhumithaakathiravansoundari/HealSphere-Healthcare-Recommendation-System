@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>HealSphere | Skin: The Body's Protective Shield</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-surface-variant": "#434654",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#c4d2ff",
+                        "surface-variant": "#e1e2e4",
+                        "outline-variant": "#c3c6d6",
+                        "on-error-container": "#93000a",
+                        "outline": "#737685",
+                        "surface-container-highest": "#e1e2e4",
+                        "surface-dim": "#d9dadc",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-container": "#72e9af",
+                        "on-secondary-container": "#005f71",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9fb",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "surface-tint": "#0c56d0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#afecff",
+                        "on-secondary-fixed": "#001f27",
+                        "tertiary-fixed": "#82f9be",
+                        "surface-container-low": "#f3f4f6",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "on-background": "#191c1e",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "primary": "#003d9b",
+                        "on-primary-fixed": "#001848",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeef0",
+                        "surface-bright": "#f8f9fb",
+                        "on-tertiary-fixed": "#002113",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "primary-container": "#0052cc",
+                        "surface-container-high": "#e7e8ea",
+                        "secondary": "#00687b",
+                        "tertiary": "#004e32",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "tertiary-container": "#006844",
+                        "secondary-container": "#50dcff",
+                        "surface": "#f8f9fb",
+                        "inverse-primary": "#b2c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "md": "24px",
+                        "xs": "8px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "container-max": "1280px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        body {
+            background-color: #f8f9fb;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+
+<body
+    class="font-body-md text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm flex items-center justify-between px-gutter h-16">
+        <div class="font-headline-lg text-headline-lg font-bold text-primary flex items-center gap-2">
+            <span class="material-symbols-outlined text-3xl"
+                style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+            HealSphere
+        </div>
+
+
+    </header>
+    <!-- SideNavBar -->
+
+    <!-- Main Content Area -->
+    <main class="ml-0 pt-16 min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative w-full py-xl px-gutter md:px-lg flex flex-col items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+
+            </div>
+            <div class="relative z-10 max-w-container-max w-full">
+                <div class="flex flex-col lg:flex-row gap-lg items-center">
+                    <div class="flex-1 space-y-sm">
+                        <span
+                            class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-sm uppercase tracking-wider">Clinical
+                            Module 08</span>
+                        <h1 class="font-display-lg text-display-lg text-on-surface leading-tight">Skin: The Body's
+                            <br><span class="text-primary">Protective Shield</span></h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            The integumentary system is our primary interface with the external environment. This module
+                            provides a professional-grade overview of cutaneous physiology, pathology, and clinical
+                            assessment protocols.
+                        </p>
+
+                    </div>
+                    <div class="flex-1 w-full max-w-lg">
+                        <div class="relative glass-card p-4 rounded-3xl overflow-hidden group"
+                            style="--mouse-x: 61px; --mouse-y: 135px;">
+                            <img class="w-full h-[400px] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A hyper-realistic 3D medical illustration of a skin cross-section showing detailed layers: epidermis, dermis with hair follicles, sweat glands, and blood vessels. The style is clean, clinical, and high-fidelity, using a palette of soft pinks, blues, and warm tans against a sterile white background. Soft studio lighting highlights the intricate textures of the subcutaneous tissue."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiRSshkDwy1doliYv4UKIhhIRoUQJyzf-QPyCFWjSMwXkQZq_dH72LigyJZpjSIyQ38lkUPg3BcVBKVEsts32dUKc0zJi5eq8T8epLJxeG3q1YINEQRtl9q7SOWTPbvr3nmqxkSlCT5cqp5dVYYlSOvH65v2yRfpFlmZ9QiJjVbdbGHmUGabn3AShfzhohqMsoQEiPQqqgIq1kLG1pYUob5BxJEoIBLclGj8JwMDV_RincTd4-MOhlAg">
+                            <div
+                                class="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-primary/10 shadow-sm">
+                                <p class="font-label-sm text-primary mb-1">Microscopic View</p>
+                                <p class="text-xs text-on-surface-variant">Magnification: 400x</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Anatomy Deep-Dive -->
+        <section class="py-xl px-gutter md:px-lg bg-surface-container-low">
+            <div class="max-w-container-max mx-auto">
+                <div class="flex flex-col items-center mb-12 text-center">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Architecture of the Skin</h2>
+                    <div class="w-24 h-1 bg-primary rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Epidermis -->
+                    <div class="glass-card p-8 rounded-[20px] transition-all hover:-translate-y-2">
+                        <div
+                            class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">layers</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-3">Epidermis</h3>
+                        <p class="text-on-surface-variant font-body-md mb-6">The outermost layer consisting primarily of
+                            keratinocytes. It serves as a waterproof barrier and creates our skin tone.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-primary rounded-full"></span> Stratum Corneum</li>
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-primary rounded-full"></span> Melanocyte Integration</li>
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-primary rounded-full"></span> Avascular Tissue</li>
+                        </ul>
+                    </div>
+                    <!-- Dermis -->
+                    <div class="glass-card p-8 rounded-[20px] transition-all hover:-translate-y-2">
+                        <div
+                            class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center text-secondary mb-6">
+                            <span class="material-symbols-outlined text-3xl">texture</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-3">Dermis</h3>
+                        <p class="text-on-surface-variant font-body-md mb-6">The thick middle layer containing tough
+                            connective tissue, hair follicles, and sweat glands providing structural support.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Collagen &amp; Elastin</li>
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Sensory Receptors</li>
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Vascular Network</li>
+                        </ul>
+                    </div>
+                    <!-- Hypodermis -->
+                    <div class="glass-card p-8 rounded-[20px] transition-all hover:-translate-y-2"
+                        style="--mouse-x: 6px; --mouse-y: 245.39996337890625px;">
+                        <div
+                            class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center text-tertiary mb-6">
+                            <span class="material-symbols-outlined text-3xl">grid_view</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface mb-3">Hypodermis</h3>
+                        <p class="text-on-surface-variant font-body-md mb-6">Also known as the subcutaneous layer, it is
+                            made of fat and connective tissue for insulation and padding.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Adipose Storage</li>
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Nerve Insulation</li>
+                            <li class="flex items-center gap-2 text-label-md"><span
+                                    class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Impact Protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Biological Roles -->
+        <section class="py-xl px-gutter md:px-lg">
+            <div class="max-w-container-max mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <div class="lg:col-span-1 py-4">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Essential Skin Functions</h2>
+                        <p class="text-on-surface-variant font-body-md">Beyond aesthetics, the skin performs vital
+                            physiological duties to maintain homeostasis.</p>
+                    </div>
+                    <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex gap-4 p-6 bg-white border border-outline-variant/30 rounded-2xl">
+                            <div class="text-primary"><span class="material-symbols-outlined text-4xl">shield</span>
+                            </div>
+                            <div>
+                                <h4 class="font-title-md text-on-surface">Protection</h4>
+                                <p class="text-on-surface-variant text-sm">Physical barrier against pathogens, UV
+                                    radiation, and mechanical trauma.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-6 bg-white border border-outline-variant/30 rounded-2xl">
+                            <div class="text-primary"><span class="material-symbols-outlined text-4xl">touch_app</span>
+                            </div>
+                            <div>
+                                <h4 class="font-title-md text-on-surface">Sensation</h4>
+                                <p class="text-on-surface-variant text-sm">Rich neural network for pressure, pain, and
+                                    temperature detection.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-6 bg-white border border-outline-variant/30 rounded-2xl">
+                            <div class="text-primary"><span
+                                    class="material-symbols-outlined text-4xl">device_thermostat</span></div>
+                            <div>
+                                <h4 class="font-title-md text-on-surface">Thermoregulation</h4>
+                                <p class="text-on-surface-variant text-sm">Control of body temperature via sweat
+                                    secretion and blood flow modulation.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-6 bg-white border border-outline-variant/30 rounded-2xl">
+                            <div class="text-primary"><span class="material-symbols-outlined text-4xl">sunny</span>
+                            </div>
+                            <div>
+                                <h4 class="font-title-md text-on-surface">Vitamin D Synthesis</h4>
+                                <p class="text-on-surface-variant text-sm">Biological conversion of UVB radiation into
+                                    essential Vitamin D3.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Dermatology Pathology Center -->
+        <section class="py-xl px-gutter md:px-lg bg-surface-container-high/40">
+            <div class="max-w-container-max mx-auto">
+                <div class="flex justify-between items-end mb-10">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">Pathology Center</h2>
+                        <p class="text-on-surface-variant">Common conditions encountered in clinical dermatology.</p>
+                    </div>
+                    <button class="text-primary font-label-md flex items-center gap-2 hover:underline">View Full
+                        Database <span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Acne -->
+                    <div
+                        class="bg-white p-6 rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                        <div class="h-32 w-full rounded-xl mb-4 overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="A professional dermatological clinical photo showing a close-up of skin with common acne vulgaris. The image is captured in high-resolution medical style, with neutral clinical lighting. It highlights papules, pustules, and comedones on the skin surface. The overall tone is educational and professional, suitable for a medical textbook."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMg2xI25KwQRVRepfCkanR5NG6r20JN-artiUvIqi3MRGjClUQXLxXsznR40LZJ3wJAuiG6Gyvsong-Rv-W853JtTTM2EjyvsMUAOQ4uFuSh4JAG0som5lLLeAMuRWrH9tK2uuoFNxfbYJlpjx9NKPGNy9-O04kySlUag2o714rr0NzDJtux5NE5zO8mGOPO995JUxc6DBvOSqltjaUPxAL8rRF4AHjfjlrgWUAApXmeUS-zNTKIwJeQ">
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-primary mb-2 block">Common
+                            Inflammatory</span>
+                        <h4 class="font-title-md text-on-surface mb-2">Acne Vulgaris</h4>
+                        <p class="text-xs text-on-surface-variant mb-4">Occurs when hair follicles become plugged with
+                            oil and dead skin cells.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-surface-variant px-2 py-1 rounded text-[10px] text-on-surface-variant">Pustules</span>
+                            <span class="bg-surface-variant px-2 py-1 rounded text-[10px] text-on-surface-variant">Sebum
+                                Excess</span>
+                        </div>
+                    </div>
+                    <!-- Psoriasis -->
+                    <div
+                        class="bg-white p-6 rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                        <div class="h-32 w-full rounded-xl mb-4 overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="A clinical macro shot of plaque psoriasis on skin, showing characteristic silvery-white scales over red, inflamed patches. The lighting is diffused to show texture without glare. Professional medical photography style, clean background, focused on the pathology for diagnostic education."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8zPKAnETeAMv9Og3ymHD_pgKjMnWlar2H5xlSf3fcVVb18U9tTlTpZnimMJVlNEJdglpfe3Gjidz1kdc0iZcfD19cKqb-Jjwutx-80bL9DmijENiH3OSKCyAMe9BhJ_tGkWaV2vgT7przRD-SQheXtN3pIeY69CvnJbHcQTh3aVHS6JfdHyTSXgKbHFi18ciMkXfVHleiFbu2TFRohCNUVe8nIuVeN_xwnMsIBZDVJjxjZ_uQijAw2Q">
+                        </div>
+                        <span
+                            class="text-[10px] uppercase font-bold tracking-widest text-on-tertiary-fixed-variant mb-2 block">Autoimmune
+                            Chronic</span>
+                        <h4 class="font-title-md text-on-surface mb-2">Psoriasis</h4>
+                        <p class="text-xs text-on-surface-variant mb-4">A condition in which skin cells build up and
+                            form scales and itchy, dry patches.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-surface-variant px-2 py-1 rounded text-[10px] text-on-surface-variant">Silvery
+                                Scales</span>
+                            <span class="bg-surface-variant px-2 py-1 rounded text-[10px] text-on-surface-variant">Joint
+                                Pain</span>
+                        </div>
+                    </div>
+                    <!-- Melanoma -->
+                    <div
+                        class="bg-white p-6 rounded-2xl border border-error/20 border-2 hover:shadow-xl transition-all group">
+                        <div class="h-32 w-full rounded-xl mb-4 overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="A high-contrast clinical close-up of a malignant melanoma lesion on human skin. The image clearly demonstrates irregular borders and variegated colors as per the ABCDE diagnostic rule. Clinical medical aesthetic with accurate color representation and sharp focus for educational analysis."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQp8jbN_DysC_SX986IKLbmZcug4VTRrpvom8QuX1rLezkief7itrPKLjfkoTZgmSVs3dFbh3C3gR-FJdEjPQoZmPmS2RtGqZTgayaLSjn31q-SAkB0tdeHfveLYFBFgt_WC3nHQ5xs3FQKMeGWjXJskH5RbP973qiQ8TcX3VzMwy-o0IwYAb61CTIh4C2uFwPDJuKaAYt4Kl-mK2prVOTL_57ukiY3pJt1MLjFVgk4yyVJEU4TgfzlA">
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-error mb-2 block">Critical
+                            Awareness</span>
+                        <h4 class="font-title-md text-on-surface mb-2">Melanoma</h4>
+                        <p class="text-xs text-on-surface-variant mb-4">The most serious type of skin cancer. Develops
+                            in the melanocytes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-error-container px-2 py-1 rounded text-[10px] text-on-error-container font-bold">Urgent
+                                Screening</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic & Treatment Roadmap -->
+        <section class="py-xl px-gutter md:px-lg">
+            <div class="max-w-container-max mx-auto">
+                <div class="bento-grid">
+                    <!-- Diagnostic Steps -->
+                    <div class="col-span-12 lg:col-span-7 bg-primary-container/10 p-8 rounded-[32px]">
+                        <h3 class="font-headline-lg text-headline-lg text-primary mb-6">Diagnostic Pathway</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-6 items-start">
+                                <div
+                                    class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-bold">
+                                    1</div>
+                                <div>
+                                    <h5 class="font-title-md text-on-surface">Physical Assessment</h5>
+                                    <p class="text-on-surface-variant text-sm">Visual inspection using dermatoscopy to
+                                        examine lesion morphology and color distribution.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <div
+                                    class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-bold">
+                                    2</div>
+                                <div>
+                                    <h5 class="font-title-md text-on-surface">Skin Biopsy</h5>
+                                    <p class="text-on-surface-variant text-sm">Removal of a small sample for
+                                        histopathological analysis to confirm malignancy or complex conditions.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <div
+                                    class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-bold">
+                                    3</div>
+                                <div>
+                                    <h5 class="font-title-md text-on-surface">Allergy Patch Testing</h5>
+                                    <p class="text-on-surface-variant text-sm">Evaluating delayed hypersensitivity
+                                        reactions to specific topical allergens or chemicals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Protocols -->
+                    <div class="col-span-12 lg:col-span-5 bg-white border border-outline-variant/30 p-8 rounded-[32px]">
+                        <h3 class="font-title-md text-title-md text-on-surface mb-6">Management Protocols</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-surface-container-low rounded-xl flex items-center justify-between">
+                                <span class="font-label-md">Topical Therapy</span>
+                                <span class="material-symbols-outlined text-primary">medication</span>
+                            </div>
+                            <div class="p-4 bg-surface-container-low rounded-xl flex items-center justify-between">
+                                <span class="font-label-md">Systemic Treatment</span>
+                                <span class="material-symbols-outlined text-primary">vaccines</span>
+                            </div>
+                            <div class="p-4 bg-surface-container-low rounded-xl flex items-center justify-between">
+                                <span class="font-label-md">Phototherapy (UVB/PUVA)</span>
+                                <span class="material-symbols-outlined text-primary">lightbulb</span>
+                            </div>
+                            <div class="p-4 bg-surface-container-low rounded-xl flex items-center justify-between">
+                                <span class="font-label-md">Surgical Excision</span>
+                                <span class="material-symbols-outlined text-primary">content_cut</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Daily Dermatology (Wellness) -->
+        <section class="py-xl px-gutter md:px-lg bg-secondary-fixed/10">
+            <div class="max-w-container-max mx-auto text-center">
+                <h2 class="font-headline-lg text-headline-lg mb-4">Skin Care Pillars</h2>
+                <p class="text-on-surface-variant mb-12 max-w-2xl mx-auto">Maintaining healthy skin requires a daily
+                    regimen rooted in science, not trends. These core pillars prevent 80% of preventable skin
+                    conditions.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+                            <span class="material-symbols-outlined text-4xl text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">water_drop</span>
+                        </div>
+                        <h4 class="font-title-md mb-2">Gentle Cleansing</h4>
+                        <p class="text-sm text-on-surface-variant">Remove debris without stripping the natural lipid
+                            barrier.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+                            <span class="material-symbols-outlined text-4xl text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">humidity_mid</span>
+                        </div>
+                        <h4 class="font-title-md mb-2">Ceramide Hydration</h4>
+                        <p class="text-sm text-on-surface-variant">Lock in moisture to support the stratum corneum
+                            integrity.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+                            <span class="material-symbols-outlined text-4xl text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+                        </div>
+                        <h4 class="font-title-md mb-2">Broad-Spectrum SPF</h4>
+                        <p class="text-sm text-on-surface-variant">Daily protection against photoaging and
+                            carcinogenesis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Prevention & ABCDE -->
+        <section class="py-xl px-gutter md:px-lg">
+            <div class="max-w-container-max mx-auto glass-card p-10 rounded-[40px] border-primary/20">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="flex-1">
+                        <h3 class="font-headline-lg text-headline-lg text-primary mb-6">The ABCDE Screening Rule</h3>
+                        <p class="mb-8 text-on-surface-variant">Perform a monthly self-exam. Consult a professional if
+                            you notice any of the following in a mole or lesion:</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 border-b border-outline-variant/30 pb-4">
+                                <span class="text-2xl font-bold text-primary w-8">A</span>
+                                <div>
+                                    <span class="font-bold">Asymmetry:</span>
+                                    <span class="text-sm text-on-surface-variant"> One half of the mole does not match
+                                        the other.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 border-b border-outline-variant/30 pb-4">
+                                <span class="text-2xl font-bold text-primary w-8">B</span>
+                                <div>
+                                    <span class="font-bold">Border:</span>
+                                    <span class="text-sm text-on-surface-variant"> Edges are irregular, ragged, notched,
+                                        or blurred.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 border-b border-outline-variant/30 pb-4">
+                                <span class="text-2xl font-bold text-primary w-8">C</span>
+                                <div>
+                                    <span class="font-bold">Color:</span>
+                                    <span class="text-sm text-on-surface-variant"> The color is not the same all over;
+                                        may include brown, black, red, white, or blue.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 border-b border-outline-variant/30 pb-4">
+                                <span class="text-2xl font-bold text-primary w-8">D</span>
+                                <div>
+                                    <span class="font-bold">Diameter:</span>
+                                    <span class="text-sm text-on-surface-variant"> The spot is larger than 6mm (about
+                                        the size of a pencil eraser).</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 pb-4">
+                                <span class="text-2xl font-bold text-primary w-8">E</span>
+                                <div>
+                                    <span class="font-bold">Evolving:</span>
+                                    <span class="text-sm text-on-surface-variant"> The mole is changing in size, shape,
+                                        or color.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-surface-container rounded-3xl p-8 flex flex-col justify-center">
+                        <h4 class="font-title-md text-primary mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined">lightbulb</span> Did You Know?
+                        </h4>
+                        <p class="italic text-lg text-on-surface mb-6">"The average adult has about 21 square feet of
+                            skin, which regenerates itself completely every 27 to 30 days."</p>
+                        <div class="p-6 bg-white rounded-2xl shadow-sm">
+                            <p class="font-label-sm text-on-surface-variant">Regeneration Fact</p>
+                            <p class="text-sm">You shed nearly 30,000 to 40,000 dead skin cells every minute. That’s
+                                nearly 9 pounds of skin per year!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clinical FAQ -->
+        <section class="py-xl px-gutter md:px-lg bg-surface-container-low">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-headline-lg text-headline-lg text-center mb-10">Clinical FAQ</h2>
+                <div class="space-y-4">
+                    <details class="group bg-white rounded-2xl border border-outline-variant/30 overflow-hidden"
+                        open="">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-title-md text-on-surface">How often should I see a dermatologist?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                            For most adults, an annual full-body skin examination is recommended. However, if you have a
+                            personal or family history of skin cancer, or more than 50 moles, your specialist may
+                            recommend visits every 3-6 months.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-2xl border border-outline-variant/30 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-title-md text-on-surface">What are the early signs of skin cancer?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                            Beyond the ABCDE rules, look for sores that do not heal, pigment that spreads from the
+                            border of a spot into surrounding skin, and redness or new swelling beyond the border of a
+                            mole.
+                        </div>
+                    </details>
+                    <details class="group bg-white rounded-2xl border border-outline-variant/30 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                            <span class="font-title-md text-on-surface">Can diet significantly impact skin
+                                health?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-6 pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                            Yes. High-glycemic diets can exacerbate acne due to insulin spikes, while antioxidant-rich
+                            foods and omega-3 fatty acids support cellular repair and inflammatory control.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer
+            class="w-full mt-auto bg-surface-container-highest flex flex-col md:flex-row justify-between items-center px-gutter py-md border-t border-outline-variant">
+            <div class="flex flex-col gap-1 mb-4 md:mb-0">
+                <div class="font-title-md text-title-md text-primary">HealSphere</div>
+                <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 HealSphere Medical Education.
+                    Professional use only.</p>
+            </div>
+            <div class="flex flex-wrap gap-6 justify-center">
+                <a class="text-on-surface-variant font-label-sm hover:text-primary underline" href="#">Medical
+                    Disclaimer</a>
+                <a class="text-on-surface-variant font-label-sm hover:text-primary underline" href="#">Privacy
+                    Policy</a>
+                <a class="text-on-surface-variant font-label-sm hover:text-primary underline" href="#">Terms of
+                    Service</a>
+                <a class="text-on-surface-variant font-label-sm hover:text-primary underline" href="#">Institutional
+                    Access</a>
+                <a class="text-on-surface-variant font-label-sm hover:text-primary underline" href="#">Support</a>
+            </div>
+        </footer>
+    </main>
+    <script>
+        // Simple micro-interaction for glass cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

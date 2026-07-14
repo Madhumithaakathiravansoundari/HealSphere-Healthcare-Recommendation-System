@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Brain &amp; Nervous System | HealSphere</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#005235",
+                        "inverse-primary": "#b2c5ff",
+                        "on-secondary-fixed": "#001f27",
+                        "on-error-container": "#93000a",
+                        "primary": "#003d9b",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "surface-dim": "#d9dadc",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-container-high": "#e7e8ea",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f4f6",
+                        "outline": "#737685",
+                        "inverse-on-surface": "#f0f1f3",
+                        "tertiary-container": "#006844",
+                        "on-background": "#191c1e",
+                        "on-surface": "#191c1e",
+                        "tertiary": "#004e32",
+                        "surface-bright": "#f8f9fb",
+                        "primary-fixed": "#dae2ff",
+                        "primary-container": "#0052cc",
+                        "outline-variant": "#c3c6d6",
+                        "on-secondary-container": "#005f71",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0c56d0",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#afecff",
+                        "on-surface-variant": "#434654",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "on-tertiary-fixed": "#002113",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "background": "#f8f9fb",
+                        "secondary-container": "#50dcff",
+                        "surface-variant": "#e1e2e4",
+                        "tertiary-fixed": "#82f9be",
+                        "surface-container-highest": "#e1e2e4",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-container": "#c4d2ff",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "on-primary-fixed": "#001848",
+                        "secondary": "#00687b",
+                        "on-tertiary-container": "#72e9af"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "sm": "16px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fb;
+            color: #191c1e;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+
+        .inner-shadow:active {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #003d9b 0%, #00687b 100%);
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20">
+        <div class="flex justify-between items-center px-gutter h-full max-w-container-max mx-auto">
+            <div class="flex items-center gap-sm">
+                <span class="font-display-lg text-primary tracking-tight">HealSphere</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-lg">
+                <a href="/"
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">AI
+                    Dashboard</a>
+                </a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#">Symptom
+                    Checker</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors" href="#">Medical
+                    Records</a>
+            </nav>
+            <div class="flex items-center gap-md">
+                <button
+                    class="material-symbols-outlined text-primary p-2 hover:bg-primary-container/10 rounded-full transition-colors active:scale-95">notifications</button>
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A clean professional studio portrait of a healthcare user, a middle-aged woman with a friendly expression, soft natural lighting, high-quality photography, clinical yet warm digital wellness aesthetic."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8X4bfVmg-BNdBUfb0j5JJjSavZnTi6D8_iay85zKkLF3pCR0XEI2oS2emwEkKxknWSQE0N7kAxTRE_lIJ50jsaANS61gCYrXEKyudVk059RuY3mOOyMXt0EZpb3BrYTA9z-SI6RtWOKInCJLISbBlEe8oaBl6csZtSQLIRuZZqY9Cv_ejQQLJlzS0aaxCcx7tTTSPiAZVee1I_X442BZksftdXJDnK-hrZocKFTnTenSiUeEYyOvT8w">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-xl pb-lg">
+            <div class="absolute inset-0 z-0">
+
+            </div>
+            <div
+                class="max-w-container-max mx-auto px-gutter relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+                <div class="space-y-md">
+                    <span
+                        class="bg-secondary-container/20 text-on-secondary-fixed-variant px-4 py-1.5 rounded-full text-label-md font-bold uppercase tracking-wider">Clinical
+                        Neurology</span>
+                    <h1 class="font-display-lg text-display-lg text-primary leading-tight">Brain &amp; Nervous System
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">The nervous system is your
+                        body’s command center. Originating from your brain, it controls your movements, thoughts, and
+                        automatic responses to the world around you. It also controls other body systems and processes,
+                        such as digestion, breathing, and sexual development.</p>
+
+                </div>
+                <div class="relative">
+                    <div class="aspect-square glass rounded-3xl overflow-hidden shadow-2xl relative group">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="A futuristic and clinical digital medical illustration of a human brain glowing with soft blue synaptic activity, suspended in a sterile white laboratory setting, featuring glassmorphic UI elements and high-tech data overlays, serene clinical aesthetic."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbvgZaq5UMkAO26CeK1aNpP4xeOQZSs5tgkzPij6KiF1Gg10PgB5p3QWhh0ldN-3NyuyYp-orjVpzS7D2yY6HINT2Wz1WnXarX4YIQrqzmrpP12B9GkSF86xXBU3BQ3775DBjOFgyKL2DMZOW0KISi65Ws1pTTDj52XpnaFA4X6lbCFoM6GnhwhoL5a1T_XnET3tGbj0BBJkVDuMVPtIai3Ydi_ehH7Mpva__w8CyrLqFE-9axOeAI-A">
+                        <div class="absolute bottom-6 left-6 right-6 glass p-4 rounded-2xl">
+                            <p class="text-label-sm text-primary font-bold">REAL-TIME CONNECTIVITY</p>
+                            <p class="text-body-md text-on-surface">The brain contains roughly 86 billion neurons
+                                communicating at 268 mph.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Structure Section -->
+        <section class="py-xl bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-lg">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Anatomical Breakdown</h2>
+                    <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mt-xs">Understanding the complex
+                        network of pathways that facilitate every human experience.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                    <!-- Central Nervous System -->
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                        <div
+                            class="w-14 h-14 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-md group-hover:bg-primary-container group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">psychology</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-primary mb-sm">The Brain</h3>
+                        <p class="font-body-md text-on-surface-variant mb-md">The master control unit. It processes
+                            sensory information, coordinates physical movement, and handles complex cognitive tasks.</p>
+                        <ul class="space-y-2 text-label-md text-on-surface">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+                                Cerebrum &amp; Cerebellum</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+                                Brainstem Control</li>
+                        </ul>
+                    </div>
+                    <!-- Spinal Cord -->
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                        <div
+                            class="w-14 h-14 bg-secondary-container/10 rounded-2xl flex items-center justify-center mb-md group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+                            <span class="material-symbols-outlined text-3xl">hub</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-primary mb-sm">Spinal Cord</h3>
+                        <p class="font-body-md text-on-surface-variant mb-md">The primary information highway. It
+                            transmits signals between the brain and the rest of the body through nerve fibers.</p>
+                        <ul class="space-y-2 text-label-md text-on-surface">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-secondary">check_circle</span> Reflex
+                                Arch Actions</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+                                Vertebral Protection</li>
+                        </ul>
+                    </div>
+                    <!-- Peripheral -->
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant/30 hover:shadow-xl transition-all group">
+                        <div
+                            class="w-14 h-14 bg-tertiary-fixed/20 rounded-2xl flex items-center justify-center mb-md group-hover:bg-tertiary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-3xl">settings_input_component</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-primary mb-sm">Peripheral System</h3>
+                        <p class="font-body-md text-on-surface-variant mb-md">The network extending to your limbs and
+                            organs. Includes the somatic and autonomic nervous systems.</p>
+                        <ul class="space-y-2 text-label-md text-on-surface">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-secondary">check_circle</span> Sensory
+                                Reception</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+                                Autonomic Responses</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interactive Functions -->
+        <section class="py-xl overflow-hidden">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">System Functions</h2>
+                        <p class="font-body-md text-on-surface-variant max-w-xl">How your nervous system facilitates
+                            your daily experience through three primary roles.</p>
+                    </div>
+                    <div class="flex gap-xs">
+                        <button
+                            class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container transition-colors"><span
+                                class="material-symbols-outlined">arrow_back</span></button>
+                        <button
+                            class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-surface-container transition-colors"><span
+                                class="material-symbols-outlined">arrow_forward</span></button>
+                    </div>
+                </div>
+                <div class="flex gap-md overflow-x-auto pb-md scrollbar-hide">
+                    <!-- Function Card 1 -->
+                    <div
+                        class="min-w-[320px] md:min-w-[400px] glass p-lg rounded-3xl space-y-md flex-shrink-0 group cursor-pointer hover:border-primary transition-all">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-md">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Close up image of an eye reflecting digital circuitry, symbolizing sensory input and neurological processing, soft teal and blue lighting, high precision medical photography style."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD6pGZjt7zXdQq8A-Yb2O3emQP9ybCS3gasW0RwYL8Trli45i6yQ5bgTEOME1UPbLEaMK7gPDBQ0v0p-GZbwktm5Bwd2z9ScpF6COVs_HkL0kgF7Zc6Gvq_OezsGvr-Ojs6HHjl8boQCuKmvH_bBX6w2eNMqYdmWWJFaV5us1bYIvt99K_flNltCifpS6Y1P_Th7pbtMb8-1YL8sHs6CkErY94qJvjUkcbR8bIXTcTLBUbO8cFDYMGUw">
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary flex items-center justify-between">
+                            Sensory Function
+                            <span class="material-symbols-outlined">visibility</span>
+                        </h4>
+                        <p class="font-body-md text-on-surface-variant">Gathering information from inside and outside
+                            the body via receptors like eyes, skin, and internal organs.</p>
+                    </div>
+                    <!-- Function Card 2 -->
+                    <div
+                        class="min-w-[320px] md:min-w-[400px] glass p-lg rounded-3xl space-y-md flex-shrink-0 group cursor-pointer hover:border-primary transition-all">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-md">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Conceptual image of glowing neurons connecting in a dark space, representing cognitive processing and decision making, serene clinical blue palette, modern digital art."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxCAalQLGd9IJRLLvi8E5uhstrkZ-z_TNXCjtZ2Gb-wCyuSvvLYI-bx1lkKJVYUsKNmSnPjq6nb1VKZtZvkpW2E-E4J3KbI5t7gbTDK0dv58LE3I_v0zXcLssha4lo-ud1us39eMyS7Loi4euKTfx-YQb-SM0c6yWMZKC2JBk7U7h69kz0rvV0RkkRLFJGirpcR3SP2__gourc4qDlUq5wattTEtFfRxWbhNBIrx7koBz7r24Xs2jTBA">
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary flex items-center justify-between">
+                            Cognitive Processing
+                            <span class="material-symbols-outlined">memory</span>
+                        </h4>
+                        <p class="font-body-md text-on-surface-variant">Integrating and processing information to make
+                            decisions, store memories, and trigger emotions.</p>
+                    </div>
+                    <!-- Function Card 3 -->
+                    <div
+                        class="min-w-[320px] md:min-w-[400px] glass p-lg rounded-3xl space-y-md flex-shrink-0 group cursor-pointer hover:border-primary transition-all">
+                        <div class="h-48 rounded-2xl overflow-hidden mb-md">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="Macro photo of a human hand playing a piano with surgical precision, symbolizing motor control and the nervous system's command over muscles, soft natural light, clinic hygiene aesthetic."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYeXm3bNkggsQkWRm22rn9KAo958h9JEND0mVMlS62xRXUdvV-Z-RJpMrkaqap-Ks_CdfiKFnC2XBzfOt2KQVe5BrN4mYQJohVj-HVgbDdyr7aAVLGqQPA7GIN8PpTMseSSmydEiRIdTpmczIkLWGrWyRE3LGG1DDm-kO5tWz1eqmFSmkXemk0DKrQulYt_V7rJB5Yc_PRvSs8L7uuiMJobbqG45iinmhcvvbOtFSdFUj81iAGoHcteQ">
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary flex items-center justify-between">
+                            Motor Output
+                            <span class="material-symbols-outlined">directions_run</span>
+                        </h4>
+                        <p class="font-body-md text-on-surface-variant">Sending signals to muscles and glands to enact
+                            movements or physiological changes in the body.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Common Diseases -->
+        <section class="py-xl bg-primary-fixed/5">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-lg">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Neurological Conditions</h2>
+                    <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mt-xs">Deep dives into common
+                        disorders affecting the nervous system.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+                    <!-- Disease Items with expand logic -->
+                    <div class="bg-white p-lg rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow cursor-pointer disease-card"
+                        onclick="this.classList.toggle('expanded')">
+                        <div class="flex items-start justify-between mb-sm">
+                            <div
+                                class="w-12 h-12 bg-error-container/20 text-error rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined" style="transform: rotate(0deg);">bolt</span>
+                            </div>
+                            <span class="text-label-sm font-bold text-on-surface-variant/60">Condition 01</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary mb-xs">Stroke</h4>
+                        <p class="font-body-md text-on-surface-variant mb-md line-clamp-3">Occurs when blood supply to
+                            part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and
+                            nutrients.</p>
+                        <div
+                            class="pt-4 border-t border-outline-variant flex items-center justify-between text-primary font-bold">
+                            <span class="">Learn More</span>
+                            <span class="material-symbols-outlined transition-transform">expand_more</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow cursor-pointer disease-card">
+                        <div class="flex items-start justify-between mb-sm">
+                            <div
+                                class="w-12 h-12 bg-secondary-container/20 text-secondary rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined">analytics</span>
+                            </div>
+                            <span class="text-label-sm font-bold text-on-surface-variant/60">Condition 02</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary mb-xs">Epilepsy</h4>
+                        <p class="font-body-md text-on-surface-variant line-clamp-3 mb-md">A neurological disorder in
+                            which brain activity becomes abnormal, causing seizures or periods of unusual behavior and
+                            sensations.</p>
+                        <div
+                            class="pt-4 border-t border-outline-variant flex items-center justify-between text-primary font-bold">
+                            <span class="">Learn More</span>
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow cursor-pointer disease-card">
+                        <div class="flex items-start justify-between mb-sm">
+                            <div
+                                class="w-12 h-12 bg-tertiary-container/10 text-tertiary rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined">personal_injury</span>
+                            </div>
+                            <span class="text-label-sm font-bold text-on-surface-variant/60">Condition 03</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary mb-xs">Parkinson's Disease</h4>
+                        <p class="font-body-md text-on-surface-variant line-clamp-3 mb-md">A progressive disorder that
+                            affects the nervous system and the parts of the body controlled by the nerves.</p>
+                        <div
+                            class="pt-4 border-t border-outline-variant flex items-center justify-between text-primary font-bold">
+                            <span class="">Learn More</span>
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow cursor-pointer disease-card">
+                        <div class="flex items-start justify-between mb-sm">
+                            <div
+                                class="w-12 h-12 bg-primary-container/10 text-primary rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined">psychology_alt</span>
+                            </div>
+                            <span class="text-label-sm font-bold text-on-surface-variant/60">Condition 04</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary mb-xs">Alzheimer's Disease</h4>
+                        <p class="font-body-md text-on-surface-variant line-clamp-3 mb-md">A progressive disease that
+                            destroys memory and other important mental functions.</p>
+                        <div
+                            class="pt-4 border-t border-outline-variant flex items-center justify-between text-primary font-bold">
+                            <span class="">Learn More</span>
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow cursor-pointer disease-card">
+                        <div class="flex items-start justify-between mb-sm">
+                            <div
+                                class="w-12 h-12 bg-error-container/20 text-error rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined">medical_services</span>
+                            </div>
+                            <span class="text-label-sm font-bold text-on-surface-variant/60">Condition 05</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary mb-xs">Meningitis</h4>
+                        <p class="font-body-md text-on-surface-variant line-clamp-3 mb-md">Inflammation of the fluid and
+                            membranes surrounding your brain and spinal cord.</p>
+                        <div
+                            class="pt-4 border-t border-outline-variant flex items-center justify-between text-primary font-bold">
+                            <span class="">Learn More</span>
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-lg rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow cursor-pointer disease-card">
+                        <div class="flex items-start justify-between mb-sm">
+                            <div
+                                class="w-12 h-12 bg-on-primary-container/20 text-primary rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined">schema</span>
+                            </div>
+                            <span class="text-label-sm font-bold text-on-surface-variant/60">Condition 06</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-primary mb-xs">Multiple Sclerosis</h4>
+                        <p class="font-body-md text-on-surface-variant line-clamp-3 mb-md">A disease in which the immune
+                            system eats away at the protective covering of nerves.</p>
+                        <div
+                            class="pt-4 border-t border-outline-variant flex items-center justify-between text-primary font-bold">
+                            <span class="">Learn More</span>
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Symptoms Grid -->
+        <section class="py-xl">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="bg-primary rounded-[32px] p-lg md:p-xl text-on-primary relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
+
+                    </div>
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+                        <div>
+                            <h2 class="font-headline-lg text-headline-lg mb-sm">Critical Warning Signs</h2>
+                            <p class="font-body-lg text-primary-fixed mb-md">Seek immediate medical attention if you or
+                                someone else experiences any of the following symptoms suddenly.</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
+                                <div class="bg-white/10 p-md rounded-2xl border border-white/20">
+                                    <span class="material-symbols-outlined text-secondary-container mb-xs">report</span>
+                                    <h5 class="font-bold mb-xs">Sudden Numbness</h5>
+                                    <p class="text-label-md opacity-80">Particularly on one side of the face or body.
+                                    </p>
+                                </div>
+                                <div class="bg-white/10 p-md rounded-2xl border border-white/20">
+                                    <span
+                                        class="material-symbols-outlined text-secondary-container mb-xs">blur_on</span>
+                                    <h5 class="font-bold mb-xs">Vision Loss</h5>
+                                    <p class="text-label-md opacity-80">Sudden blurred or blackened vision in one or
+                                        both eyes.</p>
+                                </div>
+                                <div class="bg-white/10 p-md rounded-2xl border border-white/20">
+                                    <span class="material-symbols-outlined text-secondary-container mb-xs">forum</span>
+                                    <h5 class="font-bold mb-xs">Difficulty Speaking</h5>
+                                    <p class="text-label-md opacity-80">Slurred speech or trouble understanding others.
+                                    </p>
+                                </div>
+                                <div class="bg-white/10 p-md rounded-2xl border border-white/20">
+                                    <span
+                                        class="material-symbols-outlined text-secondary-container mb-xs">balance</span>
+                                    <h5 class="font-bold mb-xs">Loss of Balance</h5>
+                                    <p class="text-label-md opacity-80">Sudden dizziness, loss of coordination, or
+                                        trouble walking.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="bg-white/5 backdrop-blur-xl p-lg rounded-3xl border border-white/20">
+                                <h4 class="font-title-md mb-md">The FAST Protocol (Stroke)</h4>
+                                <ul class="space-y-md">
+                                    <li class="flex gap-md">
+                                        <span
+                                            class="w-10 h-10 flex-shrink-0 bg-white text-primary rounded-full flex items-center justify-center font-bold">F</span>
+                                        <div>
+                                            <p class="font-bold">Face Drooping</p>
+                                            <p class="text-label-sm opacity-80">Does one side of the face droop or is it
+                                                numb?</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex gap-md">
+                                        <span
+                                            class="w-10 h-10 flex-shrink-0 bg-white text-primary rounded-full flex items-center justify-center font-bold">A</span>
+                                        <div>
+                                            <p class="font-bold">Arm Weakness</p>
+                                            <p class="text-label-sm opacity-80">Is one arm weak or numb? Ask the person
+                                                to raise both arms.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex gap-md">
+                                        <span
+                                            class="w-10 h-10 flex-shrink-0 bg-white text-primary rounded-full flex items-center justify-center font-bold">S</span>
+                                        <div>
+                                            <p class="font-bold">Speech Difficulty</p>
+                                            <p class="text-label-sm opacity-80">Is speech slurred? Is the person unable
+                                                to speak?</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex gap-md">
+                                        <span
+                                            class="w-10 h-10 flex-shrink-0 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center font-bold">T</span>
+                                        <div>
+                                            <p class="font-bold">Time to Call</p>
+                                            <p class="text-label-sm opacity-80">If the person shows any of these
+                                                symptoms, call emergency services.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostics -->
+        <section class="py-xl bg-surface">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Precision Diagnostics</h2>
+                        <p class="font-body-md text-on-surface-variant mb-lg">Our centers utilize advanced neuro-imaging
+                            and diagnostic procedures to pinpoint conditions with unmatched accuracy.</p>
+                        <div class="space-y-sm">
+                            <div
+                                class="flex gap-md p-md bg-white rounded-2xl border border-outline-variant/30 hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">biotech</span>
+                                <div>
+                                    <h5 class="font-title-md text-on-surface">MRI &amp; CT Scans</h5>
+                                    <p class="font-body-md text-on-surface-variant">High-resolution structural imaging
+                                        of brain tissue and blood vessels.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex gap-md p-md bg-white rounded-2xl border border-outline-variant/30 hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">vital_signs</span>
+                                <div>
+                                    <h5 class="font-title-md text-on-surface">EEG (Electroencephalogram)</h5>
+                                    <p class="font-body-md text-on-surface-variant">Monitoring electrical activity in
+                                        the brain to detect seizure patterns.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex gap-md p-md bg-white rounded-2xl border border-outline-variant/30 hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">medical_information</span>
+                                <div>
+                                    <h5 class="font-title-md text-on-surface">Lumbar Puncture</h5>
+                                    <p class="font-body-md text-on-surface-variant">Analyzing cerebrospinal fluid for
+                                        signs of infection or inflammation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-sm">
+                        <img class="rounded-2xl aspect-square object-cover shadow-md"
+                            data-alt="A professional medical technician operating a high-end MRI machine in a clean, brightly lit modern hospital radiology department, pristine white and blue digital wellness aesthetic."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7nrK--NV2xCiBQOGbXdq-knBAaongwO7gMYs_q1HjAa_gi1n7AwHnVJ3kBZW0BkrlT5oqJh_zfzrSWMyLeQiLCgwzaIaYLJH-7H9gzkZggUPo1NoYSZS73eN65hSycr1vSDs4926eRIP1FQI9qHknKEhuwhAqd9SUkq9xZ44u87DnJW-s27ATluCWCthFyjywuMTAoR-IObb1vnKrE8EBvqxapa2a6RVFbWGTY7dlESN-3MAxgkd2gg">
+                        <img class="rounded-2xl aspect-square object-cover shadow-md mt-lg"
+                            data-alt="Close up of a brain scan displayed on a high-definition monitor in a darkened room, highlighting neurological pathways in neon blue and white colors, high-tech diagnostic imagery."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_uoHel3_oq9NBu9p-VJ4zIa1YO3zXgEgJjAUJy_d_uGH9Tqky6_zzwKTICFMc9yjSZToQpC_9O8XO8GgdbKsNRRqymmNqs7C2L5V1fbNWuWJR6gyUo7e6mMHDXQj6hOK6EczOZ0OZNfu0fCfPNxWo80rwXloryMsU4o_sW7graUI3B8KaebOfITPsb4wpAAn5Lpm9INASUcI0snAxxpwQn2WiTum419-XZjEWuWC7FDy-Y4z_Z-zm9w">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brain Health & Fun Facts -->
+        <section class="py-xl">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-lg">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Wellness &amp; Insights</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <!-- Fun Fact -->
+                    <div
+                        class="bg-secondary-container/10 p-md rounded-3xl border border-secondary-container/30 flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-sm"
+                            style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                        <h6 class="font-bold text-secondary mb-xs">Did You Know?</h6>
+                        <p class="text-label-md text-on-secondary-fixed-variant">The human brain generates about 20
+                            watts of electricity—enough to power a small light bulb.</p>
+                    </div>
+                    <!-- Fact 2 -->
+                    <div
+                        class="bg-primary-container/10 p-md rounded-3xl border border-primary-container/30 flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-sm"
+                            style="font-variation-settings: 'FILL' 1;">speed</span>
+                        <h6 class="font-bold text-primary mb-xs">Processing Speed</h6>
+                        <p class="text-label-md text-on-primary-fixed">Information travels through nerves at speeds up
+                            to 268 miles per hour.</p>
+                    </div>
+                    <!-- Health Tip -->
+                    <div
+                        class="bg-tertiary-fixed/20 p-md rounded-3xl border border-tertiary-fixed/40 flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-tertiary mb-sm"
+                            style="font-variation-settings: 'FILL' 1;">restaurant</span>
+                        <h6 class="font-bold text-tertiary mb-xs">Nutrition Tip</h6>
+                        <p class="text-label-md text-on-tertiary-fixed-variant">Omega-3 fatty acids are vital for brain
+                            health and cognitive longevity.</p>
+                    </div>
+                    <!-- Fact 3 -->
+                    <div
+                        class="bg-surface-container-high p-md rounded-3xl border border-outline-variant flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-sm"
+                            style="font-variation-settings: 'FILL' 1;">bedtime</span>
+                        <h6 class="font-bold text-on-surface mb-xs">Sleep Matters</h6>
+                        <p class="text-label-md text-on-surface-variant">Sleep triggers a "rinse" of cerebrospinal fluid
+                            that clears toxins from the brain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-xl bg-white">
+            <div class="max-w-3xl mx-auto px-gutter">
+                <h2 class="font-headline-lg text-headline-lg text-center text-primary mb-lg">Common Questions</h2>
+                <div class="space-y-sm">
+                    <div class="border border-outline-variant rounded-2xl overflow-hidden">
+                        <button
+                            class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors"
+                            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('span:last-child').classList.toggle('rotate-180')">
+                            <span class="font-title-md text-on-surface">Can brain cells regenerate?</span>
+                            <span class="material-symbols-outlined transition-transform">expand_more</span>
+                        </button>
+                        <div class="hidden p-md pt-0 text-on-surface-variant font-body-md bg-surface-container-low/30">
+                            For a long time, scientists believed we were born with all the neurons we'd ever have.
+                            However, research now suggests that a process called neurogenesis continues into adulthood
+                            in certain areas of the brain, like the hippocampus.
+                        </div>
+                    </div>
+                    <div class="border border-outline-variant rounded-2xl overflow-hidden">
+                        <button
+                            class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors"
+                            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('span:last-child').classList.toggle('rotate-180')">
+                            <span class="font-title-md text-on-surface">How can I improve my memory?</span>
+                            <span class="material-symbols-outlined transition-transform">expand_more</span>
+                        </button>
+                        <div class="hidden p-md pt-0 text-on-surface-variant font-body-md bg-surface-container-low/30">
+                            Regular physical exercise, adequate sleep, a healthy diet, and cognitive stimulation (like
+                            learning a new skill) are all proven to support and improve memory function.
+                        </div>
+                    </div>
+                    <div class="border border-outline-variant rounded-2xl overflow-hidden">
+                        <button
+                            class="w-full flex justify-between items-center p-md text-left hover:bg-surface-container-low transition-colors"
+                            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('span:last-child').classList.toggle('rotate-180')">
+                            <span class="font-title-md text-on-surface">Is stress harmful to the nervous system?</span>
+                            <span class="material-symbols-outlined transition-transform">expand_more</span>
+                        </button>
+                        <div class="hidden p-md pt-0 text-on-surface-variant font-body-md bg-surface-container-low/30">
+                            Chronic stress leads to long-term elevation of cortisol, which can damage the brain's
+                            communication networks and shrink the prefrontal cortex, affecting decision-making and
+                            memory.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-lg mt-auto bg-surface-container-highest border-t border-outline-variant">
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-sm">
+            <div>
+                <span class="font-title-md text-primary block mb-xs">HealSphere</span>
+                <p class="font-body-md text-on-surface-variant max-w-sm mb-md">Leading the future of personalized
+                    digital healthcare through data-driven insights and compassionate clinical excellence.</p>
+                <p class="font-body-md text-on-surface-variant opacity-70">© 2024 HealSphere. Medical disclaimer: For
+                    informational purposes only.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-md">
+                <div class="flex flex-col gap-xs">
+                    <span class="font-label-md font-bold text-on-surface uppercase">Resources</span>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                        href="#">Emergency Contacts</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Terms
+                        of Service</a>
+                </div>
+                <div class="flex flex-col gap-xs">
+                    <span class="font-label-md font-bold text-on-surface uppercase">Company</span>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                        href="#">Privacy Policy</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                        href="#">Medical Board Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Micro-interactions and effects
+        document.querySelectorAll('.disease-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const icon = card.querySelector('.material-symbols-outlined:last-child');
+                const content = card.querySelector('p');
+                if (content.classList.contains('line-clamp-3')) {
+                    content.classList.remove('line-clamp-3');
+                    icon.style.transform = 'rotate(180deg)';
+                    card.classList.add('bg-primary-container/5');
+                } else {
+                    content.classList.add('line-clamp-3');
+                    icon.style.transform = 'rotate(0deg)';
+                    card.classList.remove('bg-primary-container/5');
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

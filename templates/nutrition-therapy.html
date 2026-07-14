@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nutrition Therapy | HealSphere Medical Portal</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#0c56d0",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-secondary-container": "#005f71",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#72e9af",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "secondary-container": "#50dcff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "secondary-fixed": "#afecff",
+                        "surface-container-low": "#f3f4f6",
+                        "secondary": "#00687b",
+                        "surface-variant": "#e1e2e4",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "surface-container-high": "#e7e8ea",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#82f9be",
+                        "on-secondary-fixed": "#001f27",
+                        "surface-dim": "#d9dadc",
+                        "surface-container": "#edeef0",
+                        "inverse-on-surface": "#f0f1f3",
+                        "primary-container": "#0052cc",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "primary": "#003d9b",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#b2c5ff",
+                        "outline-variant": "#c3c6d6",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9fb",
+                        "on-surface-variant": "#434654",
+                        "on-primary-container": "#c4d2ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#002113",
+                        "on-background": "#191c1e",
+                        "surface-bright": "#f8f9fb",
+                        "outline": "#737685",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary-fixed": "#001848",
+                        "tertiary-container": "#006844",
+                        "tertiary": "#004e32",
+                        "surface": "#f8f9fb",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "inverse-surface": "#2e3132"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xs": "8px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "container-max": "1280px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .stepper-line::after {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 20px;
+            bottom: -24px;
+            width: 2px;
+            background: #c4d2ff;
+        }
+        .stepper-item:last-child .stepper-line::after {
+            display: none;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c3c6d6;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #737685;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim tracking-tight">HealSphere</span>
+<div class="hidden md:flex gap-sm ml-lg">
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors font-body-md" href="/">Dashboard</a>
+
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary font-body-md" href="#">Protocols</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors font-body-md" href="#">Library</a>
+</div>
+</div>
+
+</div>
+<button class="p-xs text-on-surface-variant hover:text-primary active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Breadcrumb & Back Button Row -->
+<div class="mt-16 bg-surface-bright/50 border-b border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-gutter py-md flex flex-wrap justify-between items-center gap-sm">
+<nav class="flex items-center gap-xs text-label-md text-on-surface-variant/70">
+<a class="hover:text-primary" href="/">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Treatment Systems</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Nutrition Therapy</span>
+</nav>
+<a href="/"
+<button class="flex items-center gap-xs px-md py-xs rounded-full border-2 border-primary text-primary font-label-md hover:bg-primary/5 active:scale-95 transition-all" onclick="window.history.back()">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                Back to Dashboard
+            </button>
+    </a>
+</div>
+</div>
+<!-- Main Content Container -->
+<main class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-lg py-lg px-gutter">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col gap-xs p-md sticky top-24 w-64 h-fit rounded-xl bg-surface-container-low dark:bg-surface-container-lowest border border-outline-variant/20 shadow-sm">
+<div class="flex items-center gap-sm mb-md px-xs">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">nutrition</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary leading-tight">Nutrition Therapy</h3>
+<p class="text-label-sm text-on-surface-variant/70 uppercase tracking-wider">Clinical Protocols</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-sm p-sm bg-primary-container text-on-primary-container rounded-lg font-bold transition-all active:translate-x-1" href="#overview">
+<span class="material-symbols-outlined">info</span> Overview
+                </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-md transition-all active:translate-x-1" href="#timeline">
+<span class="material-symbols-outlined">history</span> Timeline
+                </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-md transition-all active:translate-x-1" href="#principles">
+<span class="material-symbols-outlined">psychology</span> Principles
+                </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-md transition-all active:translate-x-1" href="#process">
+<span class="material-symbols-outlined">steppers</span> Process
+                </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-md transition-all active:translate-x-1" href="#disease-management">
+<span class="material-symbols-outlined">medical_services</span> Conditions
+                </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-md transition-all active:translate-x-1" href="#evidence">
+<span class="material-symbols-outlined">science</span> Evidence
+                </a>
+</nav>
+
+<div class="mt-xl pt-md border-t border-outline-variant/30">
+<a class="flex items-center gap-sm p-sm text-on-surface-variant/70 hover:text-primary font-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span> Support
+                </a>
+<a class="flex items-center gap-sm p-sm text-on-surface-variant/70 hover:text-primary font-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">gavel</span> Disclaimer
+                </a>
+</div>
+</aside>
+<!-- Content Canvas -->
+<div class="flex-1 space-y-xl">
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-[32px] bg-primary text-on-primary p-lg lg:p-xl flex flex-col lg:flex-row items-center gap-lg" id="overview">
+<!-- Background Shader -->
+
+<div class="relative z-10 lg:w-3/5 space-y-md">
+<span class="inline-block px-sm py-1 rounded-full bg-on-primary/10 border border-on-primary/20 text-label-md backdrop-blur-md">
+                        Primary Treatment System
+                    </span>
+<h1 class="font-display-lg text-display-lg leading-none tracking-tight">Nutrition Therapy: Healing Through Food</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container/90 italic">"Evidence-Based Clinical Nutrition for Optimal Health"</p>
+<p class="font-body-md text-body-md text-on-primary/80 max-w-xl">
+                        A clinical approach to health using food and nutrients to manage diseases and improve physiological function. Through precision analysis and personalized metabolic adjustments, we target the root causes of dysfunction.
+                    </p>
+<div class="flex flex-wrap gap-sm pt-md">
+<button class="px-xl py-md bg-secondary-container text-on-secondary-container rounded-full font-label-md font-bold hover:shadow-xl active:scale-95 transition-all">
+                            Explore Conditions
+                        </button>
+<button class="px-xl py-md bg-transparent border-2 border-on-primary/30 hover:bg-on-primary/10 text-on-primary rounded-full font-label-md transition-all">
+                            Clinical Data
+                        </button>
+</div>
+</div>
+<div class="relative z-10 lg:w-2/5 w-full flex justify-center">
+<div class="w-full aspect-square rounded-[40px] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700">
+<img class="w-full h-full object-cover" data-alt="A premium, clean clinical medical illustration of vibrant, fresh organic ingredients being digitally analyzed with HUD-style nutrition data overlays. The image has a serene professional feel with a palette of soft teals, whites, and deep primary blues, highlighting metabolic health and precision dietetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_CTtzrvY7cIVD3Yr8N4WWlxtFr-E14S5DofKCbOy3a6ujtyK4AXY1gb8ToNveEwo5UhhPMSgGqSopWnqAF8Cqp3-X0jAh6uZvF0KbrloFCodYBh9-fO_5kqAa9hygUePQQcuZdrX1QTNRmBAso1mANyjo90oRPebVks0EnLJzS8Rn_QCGErhDckcKAoTZWUnd6SIlEsrXJCEW4DNOotwwdC_MzUIaPLohjUASveuWB3RHqjcUCwFvtw"/>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary">What is Nutrition Therapy?</h2>
+<div class="h-1 w-24 bg-tertiary rounded-full"></div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        At its core, Medical Nutrition Therapy (MNT) is an evidence-based medical approach to treating certain chronic conditions through the use of an individually tailored nutrition plan. This process involves a comprehensive assessment of the patient’s nutritional status followed by treatment which includes counseling and use of specialized diets.
+                    </p>
+<div class="p-md bg-tertiary-container text-tertiary-fixed rounded-xl border-l-4 border-tertiary">
+<p class="font-bold italic">"Let food be thy medicine and medicine be thy food." — Philosophy of Precision Metabolic Care</p>
+</div>
+</div>
+<div class="glass-card p-lg rounded-[24px] border border-outline-variant/30 flex flex-col justify-center gap-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md">Metabolic Health</h4>
+<p class="text-label-md text-on-surface-variant">Focusing on cellular efficiency</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined">ecg_heart</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md">Personalized Dietetics</h4>
+<p class="text-label-md text-on-surface-variant">Genetic and lifestyle alignment</p>
+</div>
+</div>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="space-y-lg" id="timeline">
+<div class="text-center space-y-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">History &amp; Evolution</h2>
+<p class="text-on-surface-variant">From classical dietetics to modern precision science</p>
+</div>
+<div class="relative overflow-x-auto pb-lg">
+<div class="flex min-w-[800px] gap-lg p-md">
+<!-- Timeline Item -->
+<div class="flex-1 flex flex-col gap-sm border-l-2 border-outline-variant pl-md pb-md">
+<span class="text-label-sm font-bold text-primary bg-primary-fixed px-sm py-1 rounded-full w-fit">19th Century</span>
+<h4 class="font-title-md text-title-md">Clinical Dietetics Origins</h4>
+<p class="text-label-md text-on-surface-variant">Initial focus on sanitation and hospital nutrition for rapid wound healing and infection control.</p>
+</div>
+<div class="flex-1 flex flex-col gap-sm border-l-2 border-primary pl-md pb-md">
+<span class="text-label-sm font-bold text-primary bg-primary-fixed px-sm py-1 rounded-full w-fit">20th Century</span>
+<h4 class="font-title-md text-title-md">Macronutrient Science</h4>
+<p class="text-label-md text-on-surface-variant">Discovery of vitamins and minerals. Development of specialized diets for diabetes and heart disease.</p>
+</div>
+<div class="flex-1 flex flex-col gap-sm border-l-2 border-secondary pl-md pb-md">
+<span class="text-label-sm font-bold text-primary bg-primary-fixed px-sm py-1 rounded-full w-fit">Today</span>
+<h4 class="font-title-md text-title-md">Precision Nutrition</h4>
+<p class="text-label-md text-on-surface-variant">Microbiome analysis, nutrigenomics, and real-time metabolic monitoring using AI models.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Principles: Bento Grid -->
+<section class="space-y-lg" id="principles">
+<h2 class="font-headline-lg text-headline-lg text-primary border-l-4 border-primary pl-md">Core Principles</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+<div class="md:col-span-2 p-lg rounded-[24px] bg-white border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-[40px] mb-md">person_pin</span>
+<h3 class="font-title-md text-title-md mb-xs">Personalization</h3>
+<p class="text-on-surface-variant">Protocols designed for your specific genomic expression and physiological needs.</p>
+</div>
+<div class="p-lg rounded-[24px] bg-surface-container-low border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-md">balance</span>
+<h3 class="font-title-md text-title-md mb-xs">Metabolic Balance</h3>
+<p class="text-label-md text-on-surface-variant">Optimizing glucose, insulin, and lipid levels.</p>
+</div>
+<div class="p-lg rounded-[24px] bg-surface-container-low border border-outline-variant">
+<span class="material-symbols-outlined text-tertiary text-[32px] mb-md">security</span>
+<h3 class="font-title-md text-title-md mb-xs">Preventative Care</h3>
+<p class="text-label-md text-on-surface-variant">Mitigating chronic risk factors through proactive intake.</p>
+</div>
+<div class="md:col-span-4 p-lg rounded-[24px] bg-primary-container text-on-primary-container flex flex-col md:flex-row items-center gap-lg">
+<div class="md:w-1/4">
+<span class="material-symbols-outlined text-[64px]">verified</span>
+</div>
+<div class="md:w-3/4">
+<h3 class="font-title-md text-title-md mb-xs">Evidence-Based Protocols</h3>
+<p class="text-body-md">Every recommendation is backed by peer-reviewed clinical research and double-blind longitudinal studies. No fad diets, only physiological truth.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works: Stepper -->
+<section class="space-y-lg p-lg bg-surface-container rounded-[32px]" id="process">
+<h2 class="font-headline-lg text-headline-lg text-center">Treatment Journey</h2>
+<div class="max-w-2xl mx-auto space-y-0">
+<!-- Step 1 -->
+<div class="stepper-item flex gap-md">
+<div class="stepper-line relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">1</div>
+</div>
+<div class="pb-xl">
+<h4 class="font-title-md text-title-md text-primary">Initial Assessment</h4>
+<p class="text-on-surface-variant">Biochemical markers, dietary history, and lifestyle analysis to determine metabolic baseline.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="stepper-item flex gap-md">
+<div class="stepper-line relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">2</div>
+</div>
+<div class="pb-xl">
+<h4 class="font-title-md text-title-md text-primary">Plan Development</h4>
+<h5 class="text-label-md text-secondary font-bold">The Strategic Blueprints</h5>
+<p class="text-on-surface-variant">Creating specific macro/micronutrient targets and meal timings optimized for clinical outcomes.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="stepper-item flex gap-md">
+<div class="stepper-line relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">3</div>
+</div>
+<div class="pb-xl">
+<h4 class="font-title-md text-title-md text-primary">Implementation</h4>
+<p class="text-on-surface-variant">Integration of the plan into daily life with professional guidance and nutritional coaching.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="stepper-item flex gap-md">
+<div class="stepper-line relative flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold z-10">4</div>
+</div>
+<div class="pb-xl">
+<h4 class="font-title-md text-title-md text-primary">Monitoring</h4>
+<p class="text-on-surface-variant">Periodic blood work and performance reviews to refine and iterate the therapeutic plan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Conditions Managed -->
+<section class="space-y-lg" id="disease-management">
+<div class="flex items-end justify-between">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Clinical Indications</h2>
+<span class="text-label-md text-primary font-bold">4 Main Categories</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<div class="group p-md rounded-[20px] bg-white border border-outline-variant hover:border-primary hover:shadow-lg transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-weight="fill">bloodtype</span>
+</div>
+<h4 class="font-title-md text-title-md mb-xs">Diabetes</h4>
+<p class="text-label-md text-on-surface-variant">Glycemic control and insulin sensitivity optimization.</p>
+</div>
+<div class="group p-md rounded-[20px] bg-white border border-outline-variant hover:border-secondary hover:shadow-lg transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-weight="fill">monitor_heart</span>
+</div>
+<h4 class="font-title-md text-title-md mb-xs">Cardiovascular</h4>
+<p class="text-label-md text-on-surface-variant">Lipid profile management and hypertension reduction.</p>
+</div>
+<div class="group p-md rounded-[20px] bg-white border border-outline-variant hover:border-tertiary hover:shadow-lg transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-weight="fill">desk</span>
+</div>
+<h4 class="font-title-md text-title-md mb-xs">GI Disorders</h4>
+<p class="text-label-md text-on-surface-variant">IBS, Crohn’s, and microbiome restoration protocols.</p>
+</div>
+<div class="group p-md rounded-[20px] bg-white border border-outline-variant hover:border-error hover:shadow-lg transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-xl bg-error/10 text-error flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-weight="fill">shield_with_heart</span>
+</div>
+<h4 class="font-title-md text-title-md mb-xs">Autoimmune</h4>
+<p class="text-label-md text-on-surface-variant">Reducing systemic inflammation through anti-inflammatory protocols.</p>
+</div>
+</div>
+</section>
+<!-- Key Benefits & Progress Bars -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-xl" id="evidence">
+<!-- Scientific Evidence -->
+<div class="space-y-lg">
+<h2 class="font-headline-lg text-headline-lg">Clinical Efficacy</h2>
+<div class="space-y-md">
+<div class="space-y-xs">
+<div class="flex justify-between text-label-md">
+<span class="font-bold">Metabolic Health</span>
+<span class="text-primary">Strong Evidence</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[95%]"></div>
+</div>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between text-label-md">
+<span class="font-bold">Autoimmune Support</span>
+<span class="text-secondary">Moderate Evidence</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[70%]"></div>
+<div class="space-y-xs">
+<div class="flex justify-between text-label-md">
+<span class="font-bold">Longevity</span>
+<span class="text-tertiary">Emerging Research</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[45%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Limitations & Risks -->
+<div class="p-lg rounded-[24px] bg-error-container text-on-error-container border border-error/20">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-[32px]">warning</span>
+<h2 class="font-headline-lg text-headline-lg">Risks &amp; Contraindications</h2>
+</div>
+<ul class="space-y-md">
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-error">close</span>
+<span class="font-body-md"><strong>Acute Trauma:</strong> Not suitable for acute surgical trauma requiring immediate parenteral nutrition.</span>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-error">close</span>
+<span class="font-body-md"><strong>Severe Disorders:</strong> Not recommended for individuals with active, severe eating disorders without multidisciplinary support.</span>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-error">close</span>
+<span class="font-body-md"><strong>Interactions:</strong> Specific drug-nutrient interactions must be monitored by a pharmacist.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Questions</h2>
+<div class="space-y-sm">
+<div class="faq-item border border-outline-variant/30 rounded-xl overflow-hidden bg-white">
+<button class="w-full flex items-center justify-between p-md text-left hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)">
+<span class="font-title-md text-title-md">Is it covered by insurance?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-md pt-0 text-on-surface-variant bg-surface-container-lowest">
+                            Most clinical nutrition therapy for chronic conditions like Diabetes or Heart Disease is covered under major insurance plans. We provide full documentation for reimbursement.
+                        </div>
+</div>
+<div class="faq-item border border-outline-variant/30 rounded-xl overflow-hidden bg-white">
+<button class="w-full flex items-center justify-between p-md text-left hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)">
+<span class="font-title-md text-title-md">How long until I see results?</span>
+<span class="material-symbols-outlined transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-md pt-0 text-on-surface-variant bg-surface-container-lowest">
+                            While cellular metabolism begins shifting immediately, noticeable changes in energy levels and inflammation markers usually manifest within 21-30 days of strict adherence.
+                        </div>
+</div>
+</div>
+</section>
+<!-- Disclaimer -->
+<div class="p-lg rounded-xl bg-surface-container-high/30 border border-outline-variant/30 text-center">
+<p class="font-label-md text-on-surface-variant/70 italic">
+                    Medical Disclaimer: The information provided is for educational purposes only and does not constitute medical advice. Consult with a qualified healthcare professional before beginning any specialized clinical diet or nutritional therapy.
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-high dark:bg-surface-container-lowest border-t border-outline-variant/50">
+<div class="flex flex-col items-center gap-sm py-lg px-gutter text-center max-w-container-max mx-auto">
+<span class="font-title-md text-title-md text-on-surface">HealSphere</span>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors font-label-sm" href="#">Medical Disclaimer</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors font-label-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant/80 hover:text-primary transition-colors font-label-sm" href="#">Citation Guide</a>
+</div>
+<p class="text-on-surface-variant font-label-sm mt-sm">© 2024 HealSphere Medical Portal. Professional clinical use only.</p>
+</div>
+</footer>
+<script>
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.material-symbols-outlined');
+            
+            // Close others (optional)
+            // document.querySelectorAll('.faq-content').forEach(c => {
+            //     if(c !== content) c.classList.add('hidden');
+            // });
+
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        // Active Scroll Spy Logic
+        window.addEventListener('scroll', () => {
+            const sections = ['overview', 'timeline', 'principles', 'process', 'disease-management', 'evidence'];
+            let current = '';
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 150) {
+                        current = section;
+                    }
+                }
+            });
+
+            const navLinks = document.querySelectorAll('aside nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                link.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+                }
+            });
+        });
+    </script>
+</body></html>

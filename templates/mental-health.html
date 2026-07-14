@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mental Health | HealSphere Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e1e2e4",
+                    "on-primary-fixed": "#001848",
+                    "background": "#f8f9fb",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#72e9af",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#65dca4",
+                    "outline": "#737685",
+                    "primary-container": "#0052cc",
+                    "on-tertiary-fixed": "#002113",
+                    "secondary-fixed": "#afecff",
+                    "surface-container": "#edeef0",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#434654",
+                    "tertiary": "#004e32",
+                    "secondary-container": "#50dcff",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1e",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f4f6",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "surface": "#f8f9fb",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-tertiary-fixed-variant": "#005235",
+                    "on-primary-container": "#c4d2ff",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#0c56d0",
+                    "on-surface": "#191c1e",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#00687b",
+                    "on-secondary-fixed-variant": "#004e5d",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#d9dadc",
+                    "surface-container-high": "#e7e8ea",
+                    "on-secondary-fixed": "#001f27",
+                    "tertiary-container": "#006844",
+                    "on-secondary-container": "#005f71",
+                    "inverse-primary": "#b2c5ff",
+                    "primary-fixed": "#dae2ff",
+                    "surface-bright": "#f8f9fb",
+                    "primary": "#003d9b",
+                    "outline-variant": "#c3c6d6",
+                    "tertiary-fixed": "#82f9be",
+                    "surface-container-highest": "#e1e2e4",
+                    "secondary-fixed-dim": "#48d7f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "8px",
+                    "lg": "48px",
+                    "sm": "16px",
+                    "md": "24px",
+                    "base": "4px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "title-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stepper-line::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 20px;
+            height: calc(100% - 32px);
+            width: 2px;
+            background: #dae2ff;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-gutter py-xs w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">HealSphere</span>
+<div class="hidden md:flex items-center gap-sm">
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-xs rounded-full hover:bg-primary-container/10 transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-xs rounded-full hover:bg-primary-container/10 transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary-container overflow-hidden border-2 border-white shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A professional medical practitioner profile portrait with soft studio lighting, wearing a clean white lab coat over a blue shirt, looking approachable and empathetic against a soft-focus clinical background with blue and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfa0h5OhHl_ADpZ4Gh7mT-s2YqRQzLatD__S5wkD1SNgVlHbCB4qNA2LvqQEQPPTYieFMraBSXisLQPkuZbGXne3NvnArF9TkyJJbUrOE9tzZXPtNrcGjNwUf7zYRKMRUm6nCjeJwPCtuAYJPNY_nRsr2THmPORqDyw1ov6dZ-1DJifgYDIQM9dMSQgpS8elb-CDwlEjz3cW8PGAmc7B5USEeNqiSvWElrKHcKJf-T7zcGKRQAgu7NHQ"/>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex max-w-container-max mx-auto pt-24 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen w-64 sticky top-24 left-0 p-sm gap-xs bg-surface border-r border-outline-variant/20">
+<div class="mb-md px-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Clinical Portal</p>
+<h3 class="font-title-md text-title-md text-primary font-bold">Mental Health</h3>
+</div>
+<nav class="flex flex-col gap-xs">
+<a href="/"
+<a class="flex items-center gap-sm px-md py-sm rounded-xl bg-primary-container text-on-primary-container font-bold transition-all duration-200" href="#overview">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl text-on-surface-variant hover:bg-surface-variant transition-all duration-200" href="#history">
+<span class="material-symbols-outlined">history</span>
+<span>Medical History</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl text-on-surface-variant hover:bg-surface-variant transition-all duration-200" href="#conditions">
+<span class="material-symbols-outlined">clinical_notes</span>
+<span>Conditions</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl text-on-surface-variant hover:bg-surface-variant transition-all duration-200" href="#evidence">
+<span class="material-symbols-outlined">science</span>
+<span>Scientific Evidence</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-xl text-on-surface-variant hover:bg-surface-variant transition-all duration-200" href="#faq">
+<span class="material-symbols-outlined">help</span>
+<span>Help Center</span>
+</a>
+</nav>
+<div class="mt-auto pt-md border-t border-outline-variant/30">
+<button class="w-full py-sm bg-primary text-white rounded-full font-bold shadow-md hover:shadow-lg active:scale-95 transition-all">
+                    Book Appointment
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 px-sm md:px-lg pb-xl overflow-hidden">
+<!-- Breadcrumb -->
+<a href="/"
+<nav class="flex items-center gap-xs text-label-sm font-label-sm text-on-surface-variant mb-md">
+<span>Home</span>
+</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span>Treatment Systems</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">Mental Health</span>
+</nav>
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-[32px] bg-white border border-outline-variant/20 shadow-sm p-md md:p-xl mb-xl" id="overview">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-xl items-center">
+<div>
+<span class="inline-block px-sm py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full font-label-sm text-label-sm mb-sm">Wellness Hub</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-sm leading-tight">Mental Health: <span class="text-gradient">Nurturing the Mind</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md">Comprehensive Clinical Care for Emotional Wellbeing. Explore advanced treatments and integrated neurobiological approaches to mental wellness.</p>
+<div class="flex flex-wrap gap-sm">
+<a class="px-md py-sm bg-primary text-white rounded-full font-bold shadow-md hover:bg-primary-fixed-variant transition-colors" href="#conditions">Explore Conditions</a>
+<button class="px-md py-sm border-2 border-primary text-primary rounded-full font-bold hover:bg-primary-container/10 transition-colors">Watch Introduction</button>
+</div>
+</div>
+<div class="hidden md:block">
+<img class="w-full h-auto drop-shadow-2xl" data-alt="A sophisticated 3D medical illustration of a human brain glowing with soft blue and teal lights, surrounded by ethereal floating particles and translucent geometric shapes, symbolizing neural activity and clarity of mind. The lighting is soft and clinical, set against a clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvKlIYRClSH09VUFE9b9KmCgnOcOkOzBzub5sEHCAX_aTL11RdZcbTqhvu9F5Z5pccRAWahaTt7iCIDAV985EI-vO5FcbyL2-VJJ9UTOqbLA5NtkBFL5JKoVdSWviuChlaOwXiGnr7wAJcZDXl5U4wsUu0KUwKHHbxvfFnK5DTT05M6MgIPl0LxsqsfCzxfeBwAwJUhYM7Mqopm4zatwpa3dulM6-f48f4lSRpr1tZDLYREG-iAnqFPg"/>
+</div>
+</div>
+</section>
+<!-- What is Mental Health? -->
+<section class="grid md:grid-cols-3 gap-md mb-xl">
+<div class="md:col-span-2 glass-card rounded-3xl p-md">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">What is Mental Health?</h2>
+<p class="text-on-surface-variant mb-md">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices.</p>
+<div class="grid grid-cols-3 gap-sm">
+<div class="p-sm bg-surface-container rounded-2xl">
+<span class="material-symbols-outlined text-primary mb-xs">psychology</span>
+<p class="font-bold text-label-md">Cognitive</p>
+</div>
+<div class="p-sm bg-surface-container rounded-2xl">
+<span class="material-symbols-outlined text-primary mb-xs">favorite</span>
+<p class="font-bold text-label-md">Emotional</p>
+</div>
+<div class="p-sm bg-surface-container rounded-2xl">
+<span class="material-symbols-outlined text-primary mb-xs">groups</span>
+<p class="font-bold text-label-md">Behavioral</p>
+</div>
+</div>
+</div>
+<div class="bg-secondary-container/20 border border-secondary-container/30 rounded-3xl p-md">
+<h3 class="font-title-md text-title-md text-secondary mb-sm">Our Philosophy</h3>
+<p class="font-label-md text-label-md text-on-secondary-container font-medium mb-xs">The Bio-Psycho-Social Model</p>
+<p class="text-label-sm text-on-surface-variant leading-relaxed">We view health through an integrated lens, acknowledging the complex interplay between biological factors, psychological traits, and social environments.</p>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="mb-xl" id="history">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Evolution of Care</h2>
+<div class="flex flex-col md:flex-row gap-sm items-stretch">
+<div class="flex-1 p-md bg-white border border-outline-variant/30 rounded-2xl">
+<div class="text-primary font-black text-title-md mb-xs">19th C.</div>
+<h4 class="font-bold mb-xs">Clinical Psychiatry</h4>
+<p class="text-label-md text-on-surface-variant">The birth of modern psychiatry focusing on symptomatic classification and institutional reform.</p>
+</div>
+<div class="flex-1 p-md bg-primary-container text-on-primary-container rounded-2xl">
+<div class="text-on-primary-container opacity-60 font-black text-title-md mb-xs">20th C.</div>
+<h4 class="font-bold mb-xs">Psychotherapy</h4>
+<p class="text-label-md">Emergence of talk therapies, psychoanalysis, and behavioral medicine as core interventions.</p>
+</div>
+<div class="flex-1 p-md bg-white border border-outline-variant/30 rounded-2xl">
+<div class="text-primary font-black text-title-md mb-xs">21st C.</div>
+<h4 class="font-bold mb-xs">Integrated Neurobiology</h4>
+<p class="text-label-md text-on-surface-variant">Modern focus on neuroplasticity, digital therapeutics, and personalized genetic care.</p>
+</div>
+</div>
+</section>
+<!-- Core Principles - Bento Style -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-md mb-xl">
+<div class="col-span-2 md:col-span-1 p-md rounded-3xl bg-white shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-[32px]">spa</span>
+<div>
+<h4 class="font-bold mt-md">Holistic Approach</h4>
+<p class="text-label-sm text-on-surface-variant">Treating the whole person, not just the symptoms.</p>
+</div>
+</div>
+<div class="p-md rounded-3xl bg-white shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-[32px]">fact_check</span>
+<div>
+<h4 class="font-bold mt-md">Evidence-Based</h4>
+<p class="text-label-sm text-on-surface-variant">Clinical protocols backed by research.</p>
+</div>
+</div>
+<div class="p-md rounded-3xl bg-white shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-[32px]">volunteer_activism</span>
+<div>
+<h4 class="font-bold mt-md">Empathetic Care</h4>
+<p class="text-label-sm text-on-surface-variant">Compassionate support at every stage.</p>
+</div>
+</div>
+<div class="p-md rounded-3xl bg-white shadow-sm border border-outline-variant/20 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-[32px]">person_check</span>
+<div>
+<h4 class="font-bold mt-md">Patient Autonomy</h4>
+<p class="text-label-sm text-on-surface-variant">Empowering your choice in care paths.</p>
+</div>
+</div>
+</section>
+<!-- How It Works (Stepper) -->
+<section class="mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Path to Wellness</h2>
+<div class="relative flex flex-col gap-md pl-lg stepper-line">
+<div class="relative group">
+<div class="absolute -left-[30px] top-0 w-10 h-10 rounded-full bg-primary-fixed-dim border-4 border-white flex items-center justify-center font-bold text-primary z-10">1</div>
+<div class="bg-white p-md rounded-2xl border border-outline-variant/20 group-hover:border-primary-container transition-colors cursor-default">
+<h4 class="font-bold text-primary">Initial Assessment</h4>
+<p class="text-label-md text-on-surface-variant">Comprehensive psychological and biological evaluation to understand your unique needs.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -left-[30px] top-0 w-10 h-10 rounded-full bg-primary-fixed-dim border-4 border-white flex items-center justify-center font-bold text-primary z-10">2</div>
+<div class="bg-white p-md rounded-2xl border border-outline-variant/20 group-hover:border-primary-container transition-colors cursor-default">
+<h4 class="font-bold text-primary">Care Planning</h4>
+<h4 class="font-bold text-primary"></h4>
+<p class="text-label-md text-on-surface-variant">Developing a personalized treatment roadmap involving therapy, lifestyle, and/or medication.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -left-[30px] top-0 w-10 h-10 rounded-full bg-primary-fixed-dim border-4 border-white flex items-center justify-center font-bold text-primary z-10">3</div>
+<div class="bg-white p-md rounded-2xl border border-outline-variant/20 group-hover:border-primary-container transition-colors cursor-default">
+<h4 class="font-bold text-primary">Therapeutic Intervention</h4>
+<p class="text-label-md text-on-surface-variant">Active treatment phase utilizing evidence-based modalities like CBT, DBT, or Mindfulness.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -left-[30px] top-0 w-10 h-10 rounded-full bg-primary-fixed-dim border-4 border-white flex items-center justify-center font-bold text-primary z-10">4</div>
+<div class="bg-white p-md rounded-2xl border border-outline-variant/20 group-hover:border-primary-container transition-colors cursor-default">
+<h4 class="font-bold text-primary">Continuous Support</h4>
+<p class="text-label-md text-on-surface-variant">Long-term maintenance and check-ins to ensure sustained emotional resilience.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Conditions Grid -->
+<section class="mb-xl" id="conditions">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Specialized Care Areas</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Anxiety Card -->
+<div class="group rounded-[24px] bg-white border border-outline-variant/20 overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="h-32 bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-primary group-hover:scale-110 transition-transform">call</span>
+</div>
+<div class="p-md">
+<h4 class="font-bold text-title-md mb-xs">Anxiety</h4>
+<p class="text-label-md text-on-surface-variant mb-md">Managing excessive worry, panic disorders, and social phobias through CBT.</p>
+<button class="text-primary font-bold text-label-md flex items-center gap-xs">Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+<!-- Depression Card -->
+<div class="group rounded-[24px] bg-white border border-outline-variant/20 overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="h-32 bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-secondary group-hover:scale-110 transition-transform">wb_sunny</span>
+</div>
+<div class="p-md">
+<h4 class="font-bold text-title-md mb-xs">Depression</h4>
+<p class="text-label-md text-on-surface-variant mb-md">Comprehensive support for major depressive disorder and persistent low mood.</p>
+<button class="text-primary font-bold text-label-md flex items-center gap-xs">Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+<!-- PTSD Card -->
+<div class="group rounded-[24px] bg-white border border-outline-variant/20 overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="h-32 bg-tertiary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-tertiary group-hover:scale-110 transition-transform">shield</span>
+</div>
+<div class="p-md">
+<h4 class="font-bold text-title-md mb-xs">PTSD</h4>
+<p class="text-label-md text-on-surface-variant mb-md">Trauma-informed care focusing on recovery from distressing past events.</p>
+<button class="text-primary font-bold text-label-md flex items-center gap-xs">Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+<!-- Bipolar Card -->
+<div class="group rounded-[24px] bg-white border border-outline-variant/20 overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="h-32 bg-primary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-on-primary-fixed-variant group-hover:scale-110 transition-transform">balance</span>
+</div>
+<div class="p-md">
+<h4 class="font-bold text-title-md mb-xs">Bipolar Disorder</h4>
+<p class="text-label-md text-on-surface-variant mb-md">Stabilization and long-term management of mood episodes and cycling.</p>
+<button class="text-primary font-bold text-label-md flex items-center gap-xs">Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits & Limitations -->
+<section class="grid md:grid-cols-2 gap-xl mb-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Primary Benefits</h2>
+<div class="space-y-sm">
+<div class="flex items-start gap-md p-md bg-white border border-outline-variant/30 rounded-2xl">
+<span class="p-xs bg-tertiary-fixed text-on-tertiary-fixed rounded-lg material-symbols-outlined">psychology_alt</span>
+<div>
+<h4 class="font-bold">Improved Coping</h4>
+<p class="text-label-md text-on-surface-variant">Develop robust tools for managing life's challenges and stressors.</p>
+</div>
+</div>
+<div class="flex items-start gap-md p-md bg-white border border-outline-variant/30 rounded-2xl">
+<span class="p-xs bg-tertiary-fixed text-on-tertiary-fixed rounded-lg material-symbols-outlined">family_restroom</span>
+<div>
+<h4 class="font-bold">Better Relationships</h4>
+<p class="text-label-md text-on-surface-variant">Enhance emotional intelligence and communication skills.</p>
+</div>
+</div>
+<div class="flex items-start gap-md p-md bg-white border border-outline-variant/30 rounded-2xl">
+<span class="p-xs bg-tertiary-fixed text-on-tertiary-fixed rounded-lg material-symbols-outlined">center_focus_strong</span>
+<div>
+<h4 class="font-bold">Enhanced Focus</h4>
+<p class="text-label-md text-on-surface-variant">Reduce mental clutter to improve professional and personal performance.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Critical Considerations</h2>
+<div class="space-y-sm">
+<div class="p-md bg-error-container/30 border border-error-container/50 rounded-2xl flex gap-md">
+<span class="material-symbols-outlined text-error">warning</span>
+<div>
+<h4 class="font-bold text-on-error-container">Acute Crisis Warning</h4>
+<p class="text-label-md text-on-error-container/80">Self-harm or active suicidal ideation requires immediate emergency psychiatric intervention.</p>
+</div>
+</div>
+<div class="p-md bg-surface-container rounded-2xl flex gap-md">
+<span class="material-symbols-outlined text-on-surface-variant">info</span>
+<div>
+<h4 class="font-bold">Inpatient Requirement</h4>
+<p class="text-label-md text-on-surface-variant">Severe psychosis or physical detox often requires structured inpatient care settings.</p>
+</div>
+</div>
+<div class="p-md bg-surface-container rounded-2xl flex gap-md">
+<span class="material-symbols-outlined text-on-surface-variant">medication</span>
+<div>
+<h4 class="font-bold">Medication Interaction</h4>
+<p class="text-label-md text-on-surface-variant">Psychotropic medications require careful clinical monitoring for metabolic or neurological interactions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Scientific Evidence -->
+<section class="mb-xl p-md md:p-xl bg-inverse-surface text-inverse-on-surface rounded-[32px]" id="evidence">
+<div class="grid md:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-md">Evidence-Based Efficacy</h2>
+<p class="text-label-md opacity-80 mb-md">Our protocols are strictly mapped to peer-reviewed clinical data and the latest APA guidelines.</p>
+<div class="space-y-md">
+<div>
+<div class="flex justify-between text-label-sm mb-xs">
+<span>Cognitive Behavioral Therapy (CBT)</span>
+<span class="text-tertiary-fixed">Strong</span>
+</div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed w-[95%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-sm mb-xs">
+<span>Mindfulness-Based Therapy</span>
+<span class="text-tertiary-fixed">Strong</span>
+</div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed w-[88%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-sm mb-xs">
+<span>Digital Therapeutics</span>
+<span class="text-secondary-fixed">Moderate</span>
+</div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed w-[65%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white/5 p-md rounded-2xl flex flex-col justify-center border border-white/10">
+<h4 class="font-bold text-title-md mb-sm">Who is it for?</h4>
+<ul class="space-y-xs">
+<li class="flex items-center gap-sm text-label-md">
+<span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+                                Chronic Stress Management
+                            </li>
+<li class="flex items-center gap-sm text-label-md">
+<span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+                                Mood and Affective Disorders
+                            </li>
+<li class="flex items-center gap-sm text-label-md">
+<span class="material-symbols-outlined text-tertiary-fixed">check_circle</span>
+                                Major Life Transitions &amp; Grief
+                            </li>
+</ul>
+<hr class="my-md border-white/10"/>
+<div class="bg-error/10 p-sm rounded-xl border border-error/20">
+<p class="font-bold text-error text-label-sm">Not Recommended For:</p>
+<p class="text-label-sm">Active emergency life-threatening crises. Please call 911 or visit the nearest ER.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="mb-xl max-w-3xl mx-auto" id="faq">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md text-center">Frequently Asked Questions</h2>
+<div class="space-y-sm">
+<details class="group bg-white border border-outline-variant/30 rounded-2xl p-md cursor-pointer open:ring-2 open:ring-primary-container/20">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none">
+                            How long does therapy take?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-md text-on-surface-variant text-label-md">Treatment duration varies significantly based on individual goals. Short-term solution-focused therapy may last 8-12 weeks, while deep developmental work can continue for several months or longer.</p>
+</details>
+<details class="group bg-white border border-outline-variant/30 rounded-2xl p-md cursor-pointer open:ring-2 open:ring-primary-container/20">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none">
+                            Is it confidential?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-md text-on-surface-variant text-label-md">Yes. Patient confidentiality is protected by HIPAA regulations. Exceptions only occur if there is an immediate risk of harm to yourself or others, or under specific legal mandates.</p>
+</details>
+<details class="group bg-white border border-outline-variant/30 rounded-2xl p-md cursor-pointer open:ring-2 open:ring-primary-container/20">
+<summary class="flex justify-between items-center font-bold text-on-surface list-none">
+                            Do I need a psychiatrist?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-md text-on-surface-variant text-label-md">A psychiatrist is necessary if medication management is required. Many patients find success with a combination of a therapist (talk therapy) and a psychiatrist (medical management), or therapy alone.</p>
+</details>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest rounded-t-[32px] border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-lg py-md w-full max-w-container-max mx-auto gap-sm">
+<div>
+<span class="font-title-md text-title-md font-black text-on-surface">HealSphere</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">© 2024 HealSphere Medical Group. Licensed Healthcare Provider.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Emergency Contacts</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Medical Disclaimer</a>
+</div>
+</div>
+<div class="px-lg pb-md max-w-container-max mx-auto text-center">
+<div class="p-sm bg-surface-container-low rounded-xl border border-outline-variant/30">
+<p class="font-label-sm text-label-sm text-on-surface-variant italic opacity-80">
+                    Educational Disclaimer: This portal is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this site.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll spy for side nav
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('aside nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                link.classList.add('text-on-surface-variant', 'hover:bg-surface-variant');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    link.classList.remove('text-on-surface-variant', 'hover:bg-surface-variant');
+                }
+            });
+        });
+    </script>
+</body></html>

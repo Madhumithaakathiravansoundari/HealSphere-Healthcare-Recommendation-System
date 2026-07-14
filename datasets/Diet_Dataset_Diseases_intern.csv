@@ -1,0 +1,51 @@
+Disease_ID,Eat,Avoid,Water_Intake
+D001,"Whole grains, leafy vegetables, legumes","Sugary drinks, sweets, refined carbs",2.5-3 L/day
+D002,"Fruits, vegetables, low-sodium foods","Salty foods, processed foods",2-3 L/day
+D003,"Fruits rich in vitamin C, warm fluids","Smoking, cold drinks if triggering",2-3 L/day
+D004,"Magnesium-rich foods, fruits","Alcohol, excessive caffeine",2-2.5 L/day
+D005,"Soft foods, yogurt, bananas","Spicy, fried, acidic foods",2-2.5 L/day
+D006,"Protein-rich foods, soups","Alcohol, smoking",2.5-3 L/day
+D007,"ORS, fruits, light meals","Oily foods, alcohol",3 L/day
+D008,"Low-sodium diet, fruits","Processed foods, excess salt",As advised by doctor
+D009,"Omega-3 foods, vegetables",Sugary and processed foods,2-3 L/day
+D010,"Balanced diet, omega-3, nuts","Alcohol, excess sugar",2-3 L/day
+D011,"Oats, salmon, nuts, olive oil, vegetables","Trans fats, processed meat, fried foods","2-3 L/day"
+D012,"Fresh fruits, vegetables, lean protein","Salt, canned foods, processed food","1.5-2 L/day (doctor dependent)"
+D013,"Leafy greens, berries, fish, oats","Salt, processed foods, fried foods","2-2.5 L/day"
+D014,"Lean protein, fruits, vegetables, whole grains","Fried foods, carbonated drinks","2.5-3 L/day"
+D015,"Eggs, milk, chicken, legumes, fruits","Alcohol, junk food","3-4 L/day"
+D016,"Protein, citrus fruits, soup, vegetables","Alcohol, processed food","3-3.5 L/day"
+D017,"Soup, citrus fruits, yogurt, vegetables","Alcohol, fried food","3 L/day"
+D018,"Bananas, oatmeal, yogurt, boiled vegetables","Spicy food, alcohol, caffeine","2-2.5 L/day"
+D019,"Oatmeal, bananas, vegetables, lean chicken","Spicy food, chocolate, coffee, citrus excess","2-2.5 L/day"
+D020,"Whole grains, fruits, vegetables, lean protein","Alcohol, fatty foods","3 L/day"
+D021,"Lean protein, fruits, vegetables (doctor supervised)","Alcohol, excess salt","2-2.5 L/day"
+D022,"High-fiber foods, fruits, vegetables","Fried foods, fatty meats","2-3 L/day"
+D023,"Clear fluids before surgery, soft diet after recovery","Heavy meals, fried foods","2-3 L/day"
+D024,"Seafood, eggs, dairy, fruits","Excess soy, processed food","2-3 L/day"
+D025,"Calcium-rich foods, broccoli, dairy","Excess iodine, caffeine","2-3 L/day"
+D026,"Spinach, red meat, beans, raisins, citrus fruits","Tea/coffee with meals","2-3 L/day"
+D027,"High-protein foods, cooked vegetables, fruits","Raw seafood, alcohol","3 L/day"
+D028,"Vegetables, berries, fish, legumes","Alcohol, processed meat","2.5-3 L/day"
+D029,"Protein-rich foods, fruits, vegetables","Smoking, alcohol, processed foods","2.5-3 L/day"
+D030,"Tomatoes, broccoli, fish, nuts","Processed meat, excess dairy","2.5-3 L/day"
+D031,"Fish, olive oil, vegetables, fruits","Alcohol, processed food, sugar","2.5-3 L/day"
+D032,"Omega-3 foods, vegetables, fruits","Processed food, allergy-trigger foods","2-3 L/day"
+D033,"Vegetables, fruits, whole grains","Sugary drinks, fried food, excess dairy","2.5-3 L/day"
+D034,"Leafy greens, citrus fruits, fish","Excess caffeine","2-3 L/day"
+D035,"Carrots, spinach, citrus fruits, nuts","Processed food, excess sugar","2-3 L/day"
+DO36,"Vitamin C foods, leafy greens","Sugary junk food","2-3 L/day"
+D037,"Vitamin C foods, vegetables, fruits","Sugary foods","2-3 L/day"
+D038,"Warm soup, ginger, citrus fruits","Cold sugary drinks, alcohol","2.5-3 L/day"
+D039,"Mediterranean diet, berries, fish, nuts","Processed food, excess sugar","2-2.5 L/day"
+D040,"Whole grains, fruits, vegetables, omega-3 foods","High saturated fat foods","2-3 L/day"
+D041,"Balanced diet, leafy greens, fruits","Alcohol, excessive caffeine","2-3 L/day"
+D042,"Fish, olive oil, vegetables, berries","Processed food, sugar","2.5-3 L/day"
+D043,"Low-fat dairy, cherries, vegetables","Red meat, organ meat, beer","3-4 L/day"
+D044,"Milk, yogurt, cheese, broccoli","Soft drinks, excess salt","2-3 L/day"
+D045,"Soup, fruits, rice, vegetables","Alcohol, fried food","3-4 L/day"
+D046,"Soft rice, bananas, boiled vegetables","Spicy food, fried food","3-4 L/day"
+D047,"ORS, rice, bananas, coconut water","Oily food, spicy food","4-5 L/day (including ORS)"
+D048,"Soft foods, fruits, soup","Spicy, salty foods","3 L/day"
+D049,"Vitamin A-rich foods, fruits, soup","Processed food","3 L/day"
+D050,"Protein-rich foods, fruits, vegetables, whole grains","Raw meat, alcohol","3-3.5 L/day"

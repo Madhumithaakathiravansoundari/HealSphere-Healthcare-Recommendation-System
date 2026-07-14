@@ -1,0 +1,201 @@
+Disease_ID,Treatment_System,Recommendation,Evidence_Level
+D001,Yoga,Recommended,Moderate
+D001,Ayurveda,Supportive,Limited
+D001,Nutrition Therapy,Highly Recommended,Strong
+D001,Acupuncture,Not routinely recommended,Limited
+D002,Yoga,Recommended,Moderate
+D002,Ayurveda,Supportive,Limited
+D002,Nutrition Therapy,Highly Recommended,Strong
+D002,Acupuncture,Not routinely recommended,Limited
+D003,Yoga,Recommended,Moderate
+D003,Ayurveda,Supportive,Limited
+D003,Nutrition Therapy,Highly Recommended,Strong
+D003,Acupuncture,Not routinely recommended,Limited
+D004,Yoga,Recommended,Moderate
+D004,Ayurveda,Supportive,Limited
+D004,Nutrition Therapy,Highly Recommended,Strong
+D004,Acupuncture,Not routinely recommended,Limited
+D005,Yoga,Recommended,Moderate
+D005,Ayurveda,Supportive,Limited
+D005,Nutrition Therapy,Highly Recommended,Strong
+D005,Acupuncture,Not routinely recommended,Limited
+D006,Yoga,Recommended,Moderate
+D006,Ayurveda,Supportive,Limited
+D006,Nutrition Therapy,Highly Recommended,Strong
+D006,Acupuncture,Not routinely recommended,Limited
+D007,Yoga,Recommended,Moderate
+D007,Ayurveda,Supportive,Limited
+D007,Nutrition Therapy,Highly Recommended,Strong
+D007,Acupuncture,Not routinely recommended,Limited
+D008,Yoga,Recommended,Moderate
+D008,Ayurveda,Supportive,Limited
+D008,Nutrition Therapy,Highly Recommended,Strong
+D008,Acupuncture,Not routinely recommended,Limited
+D009,Yoga,Recommended,Moderate
+D009,Ayurveda,Supportive,Limited
+D009,Nutrition Therapy,Highly Recommended,Strong
+D009,Acupuncture,Not routinely recommended,Limited
+D010,Yoga,Recommended,Moderate
+D010,Ayurveda,Supportive,Limited
+D010,Nutrition Therapy,Highly Recommended,Strong
+D010,Acupuncture,Not routinely recommended,Limited
+D011,Yoga,Recommended,Moderate
+D011,Ayurveda,Supportive,Limited
+D011,Nutrition Therapy,Highly Recommended,Strong
+D011,Acupuncture,Not routinely recommended,Limited
+D012,Yoga,Recommended,Moderate
+D012,Ayurveda,Supportive,Limited
+D012,Nutrition Therapy,Highly Recommended,Strong
+D012,Acupuncture,Not routinely recommended,Limited
+D013,Yoga,Recommended,Moderate
+D013,Ayurveda,Supportive,Limited
+D013,Nutrition Therapy,Highly Recommended,Strong
+D013,Acupuncture,Not routinely recommended,Limited
+D014,Yoga,Recommended,Moderate
+D014,Ayurveda,Supportive,Limited
+D014,Nutrition Therapy,Highly Recommended,Strong
+D014,Acupuncture,Not routinely recommended,Limited
+D015,Yoga,Recommended,Moderate
+D015,Ayurveda,Supportive,Limited
+D015,Nutrition Therapy,Highly Recommended,Strong
+D015,Acupuncture,Not routinely recommended,Limited
+D016,Yoga,Recommended,Moderate
+D016,Ayurveda,Supportive,Limited
+D016,Nutrition Therapy,Highly Recommended,Strong
+D016,Acupuncture,Not routinely recommended,Limited
+D017,Yoga,Recommended,Moderate
+D017,Ayurveda,Supportive,Limited
+D017,Nutrition Therapy,Highly Recommended,Strong
+D017,Acupuncture,Not routinely recommended,Limited
+D018,Yoga,Recommended,Moderate
+D018,Ayurveda,Supportive,Limited
+D018,Nutrition Therapy,Highly Recommended,Strong
+D018,Acupuncture,Not routinely recommended,Limited
+D019,Yoga,Recommended,Moderate
+D019,Ayurveda,Supportive,Limited
+D019,Nutrition Therapy,Highly Recommended,Strong
+D019,Acupuncture,Not routinely recommended,Limited
+D020,Yoga,Recommended,Moderate
+D020,Ayurveda,Supportive,Limited
+D020,Nutrition Therapy,Highly Recommended,Strong
+D020,Acupuncture,Not routinely recommended,Limited
+D021,Yoga,Recommended,Moderate
+D021,Ayurveda,Supportive,Limited
+D021,Nutrition Therapy,Highly Recommended,Strong
+D021,Acupuncture,Not routinely recommended,Limited
+D022,Yoga,Recommended,Moderate
+D022,Ayurveda,Supportive,Limited
+D022,Nutrition Therapy,Highly Recommended,Strong
+D022,Acupuncture,Not routinely recommended,Limited
+D023,Yoga,Recommended,Moderate
+D023,Ayurveda,Supportive,Limited
+D023,Nutrition Therapy,Highly Recommended,Strong
+D023,Acupuncture,Not routinely recommended,Limited
+D024,Yoga,Recommended,Moderate
+D024,Ayurveda,Supportive,Limited
+D024,Nutrition Therapy,Highly Recommended,Strong
+D024,Acupuncture,Not routinely recommended,Limited
+D025,Yoga,Recommended,Moderate
+D025,Ayurveda,Supportive,Limited
+D025,Nutrition Therapy,Highly Recommended,Strong
+D025,Acupuncture,Not routinely recommended,Limited
+D026,Yoga,Recommended,Moderate
+D026,Ayurveda,Supportive,Limited
+D026,Nutrition Therapy,Highly Recommended,Strong
+D026,Acupuncture,Not routinely recommended,Limited
+D027,Yoga,Recommended,Moderate
+D027,Ayurveda,Supportive,Limited
+D027,Nutrition Therapy,Highly Recommended,Strong
+D027,Acupuncture,Not routinely recommended,Limited
+D028,Yoga,Recommended,Moderate
+D028,Ayurveda,Supportive,Limited
+D028,Nutrition Therapy,Highly Recommended,Strong
+D028,Acupuncture,Not routinely recommended,Limited
+D029,Yoga,Recommended,Moderate
+D029,Ayurveda,Supportive,Limited
+D029,Nutrition Therapy,Highly Recommended,Strong
+D029,Acupuncture,Not routinely recommended,Limited
+D030,Yoga,Recommended,Moderate
+D030,Ayurveda,Supportive,Limited
+D030,Nutrition Therapy,Highly Recommended,Strong
+D030,Acupuncture,Not routinely recommended,Limited
+D031,Yoga,Recommended,Moderate
+D031,Ayurveda,Supportive,Limited
+D031,Nutrition Therapy,Highly Recommended,Strong
+D031,Acupuncture,Not routinely recommended,Limited
+D032,Yoga,Recommended,Moderate
+D032,Ayurveda,Supportive,Limited
+D032,Nutrition Therapy,Highly Recommended,Strong
+D032,Acupuncture,Not routinely recommended,Limited
+D033,Yoga,Recommended,Moderate
+D033,Ayurveda,Supportive,Limited
+D033,Nutrition Therapy,Highly Recommended,Strong
+D033,Acupuncture,Not routinely recommended,Limited
+D034,Yoga,Recommended,Moderate
+D034,Ayurveda,Supportive,Limited
+D034,Nutrition Therapy,Highly Recommended,Strong
+D034,Acupuncture,Not routinely recommended,Limited
+D035,Yoga,Recommended,Moderate
+D035,Ayurveda,Supportive,Limited
+D035,Nutrition Therapy,Highly Recommended,Strong
+D035,Acupuncture,Not routinely recommended,Limited
+D036,Yoga,Recommended,Moderate
+D036,Ayurveda,Supportive,Limited
+D036,Nutrition Therapy,Highly Recommended,Strong
+D036,Acupuncture,Not routinely recommended,Limited
+D037,Yoga,Recommended,Moderate
+D037,Ayurveda,Supportive,Limited
+D037,Nutrition Therapy,Highly Recommended,Strong
+D037,Acupuncture,Not routinely recommended,Limited
+D038,Yoga,Recommended,Moderate
+D038,Ayurveda,Supportive,Limited
+D038,Nutrition Therapy,Highly Recommended,Strong
+D038,Acupuncture,Not routinely recommended,Limited
+D039,Yoga,Recommended,Moderate
+D039,Ayurveda,Supportive,Limited
+D039,Nutrition Therapy,Highly Recommended,Strong
+D039,Acupuncture,Not routinely recommended,Limited
+D040,Yoga,Recommended,Moderate
+D040,Ayurveda,Supportive,Limited
+D040,Nutrition Therapy,Highly Recommended,Strong
+D040,Acupuncture,Not routinely recommended,Limited
+D041,Yoga,Recommended,Moderate
+D041,Ayurveda,Supportive,Limited
+D041,Nutrition Therapy,Highly Recommended,Strong
+D041,Acupuncture,Not routinely recommended,Limited
+D042,Yoga,Recommended,Moderate
+D042,Ayurveda,Supportive,Limited
+D042,Nutrition Therapy,Highly Recommended,Strong
+D042,Acupuncture,Not routinely recommended,Limited
+D043,Yoga,Recommended,Moderate
+D043,Ayurveda,Supportive,Limited
+D043,Nutrition Therapy,Highly Recommended,Strong
+D043,Acupuncture,Not routinely recommended,Limited
+D044,Yoga,Recommended,Moderate
+D044,Ayurveda,Supportive,Limited
+D044,Nutrition Therapy,Highly Recommended,Strong
+D044,Acupuncture,Not routinely recommended,Limited
+D045,Yoga,Recommended,Moderate
+D045,Ayurveda,Supportive,Limited
+D045,Nutrition Therapy,Highly Recommended,Strong
+D045,Acupuncture,Not routinely recommended,Limited
+D046,Yoga,Recommended,Moderate
+D046,Ayurveda,Supportive,Limited
+D046,Nutrition Therapy,Highly Recommended,Strong
+D046,Acupuncture,Not routinely recommended,Limited
+D047,Yoga,Recommended,Moderate
+D047,Ayurveda,Supportive,Limited
+D047,Nutrition Therapy,Highly Recommended,Strong
+D047,Acupuncture,Not routinely recommended,Limited
+D048,Yoga,Recommended,Moderate
+D048,Ayurveda,Supportive,Limited
+D048,Nutrition Therapy,Highly Recommended,Strong
+D048,Acupuncture,Not routinely recommended,Limited
+D049,Yoga,Recommended,Moderate
+D049,Ayurveda,Supportive,Limited
+D049,Nutrition Therapy,Highly Recommended,Strong
+D049,Acupuncture,Not routinely recommended,Limited
+D050,Yoga,Recommended,Moderate
+D050,Ayurveda,Supportive,Limited
+D050,Nutrition Therapy,Highly Recommended,Strong
+D050,Acupuncture,Not routinely recommended,Limited

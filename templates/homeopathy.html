@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Homeopathy | HealSphere Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434654",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-secondary-fixed": "#001f27",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "on-secondary-container": "#005f71",
+                        "surface-dim": "#d9dadc",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#50dcff",
+                        "outline-variant": "#c3c6d6",
+                        "tertiary-container": "#006844",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#c4d2ff",
+                        "surface-container-high": "#e7e8ea",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed": "#001848",
+                        "inverse-surface": "#2e3132",
+                        "background": "#f8f9fb",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-tertiary-container": "#72e9af",
+                        "surface-variant": "#e1e2e4",
+                        "surface-container": "#edeef0",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "outline": "#737685",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f3",
+                        "primary": "#003d9b",
+                        "surface-tint": "#0c56d0",
+                        "tertiary": "#004e32",
+                        "primary-container": "#0052cc",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f8f9fb",
+                        "on-tertiary-fixed": "#002113",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#82f9be",
+                        "secondary-fixed": "#afecff",
+                        "surface-container-low": "#f3f4f6",
+                        "surface": "#f8f9fb",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "error": "#ba1a1a",
+                        "secondary": "#00687b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "base": "4px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #00687b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 docked full-width top-0 sticky z-50 shadow-sm">
+<div class="flex justify-between items-center px-md py-xs max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-md">
+<a class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary" href="#">HealSphere</a>
+<div class="hidden md:flex gap-sm items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md px-sm py-xs" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md px-sm py-xs" href="#">Research</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md px-sm py-xs" href="#">Resources</a>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-md py-lg">
+<!-- Breadcrumb & Back Action -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-lg gap-sm">
+<nav class="flex items-center gap-xs text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary" href="/">Home</a>
+<span class="material-symbols-outlined scale-75">chevron_right</span>
+<a class="hover:text-primary" href="#">Treatment Systems</a>
+<span class="material-symbols-outlined scale-75">chevron_right</span>
+<span class="text-primary font-bold">Homeopathy</span>
+</nav>
+<a href="/"
+<button class="flex items-center gap-xs text-primary font-label-md text-label-md px-md py-xs bg-primary/5 rounded-full hover:bg-primary/10 transition-all w-fit" onclick="window.history.back()">
+<span class="material-symbols-outlined">arrow_back</span>
+                Back to Dashboard
+            </button>
+</a>
+</div>
+<div class="flex flex-col lg:flex-row gap-lg">
+<!-- SideNavBar (Sticky Desktop) -->
+<aside class="hidden lg:flex flex-col w-64 shrink-0">
+<div class="sticky top-md bg-surface border border-outline-variant/30 rounded-xl p-md shadow-sm">
+<div class="mb-lg">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Modern Medicine</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Information Portal</p>
+</div>
+<div class="flex flex-col gap-xs">
+<a class="flex items-center gap-sm px-sm py-xs bg-primary-container text-on-primary-container font-bold rounded-lg transition-all active:scale-[0.98]" href="#overview">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#history">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-md text-label-md">History</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#principles">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-label-md text-label-md">Principles</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#mechanisms">
+<span class="material-symbols-outlined" data-icon="settings_heart">settings_heart</span>
+<span class="font-label-md text-label-md">Mechanisms</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#conditions">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-label-md text-label-md">Conditions</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#benefits">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span class="font-label-md text-label-md">Benefits</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#risks">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+<span class="font-label-md text-label-md">Risks</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#evidence">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+<span class="font-label-md text-label-md">Evidence</span>
+</a>
+</div>
+
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 space-y-xl">
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-[24px] bg-primary-container p-md md:p-xl flex items-center min-h-[480px]" id="overview">
+<div class="absolute inset-0 z-0 opacity-20">
+
+</div>
+<div class="relative z-10 w-full md:w-3/5 space-y-md">
+<h1 class="font-display-lg text-display-lg text-on-primary">Homeopathy: Gentle Individualized Care</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-lg">Natural balance through the Law of Similars. Discover a holistic approach to healing that treats the whole person, not just the symptoms.</p>
+<div class="flex flex-wrap gap-md pt-sm">
+<a class="bg-on-primary text-primary px-lg py-sm rounded-full font-label-md text-label-md hover:scale-105 transition-all shadow-lg" href="#conditions">Explore Conditions</a>
+<button class="flex items-center gap-xs text-on-primary px-lg py-sm rounded-full font-label-md text-label-md border border-on-primary/30 hover:bg-on-primary/10 transition-all">
+<span class="material-symbols-outlined">play_circle</span>
+                                View How It Works
+                            </button>
+</div>
+</div>
+<div class="hidden md:block absolute right-0 top-0 bottom-0 w-2/5 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro photography shot of crystal clear water droplets falling into a serene pool, with soft botanical elements and homeopathic medicine vials in the blurred background. The lighting is bright, airy, and clinical, emphasizing purity and natural healing with soft blue and green hues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM_e0Az_On7dg4xh6MudTC2i1WnkHziLfIW9ocAk2wge3RLwlXOUOE5rO_r8GuglYHSfQm0L7_5P4VKCFB_zz7FdkBEYjTUSTRDktxno7hadzG2s-syRmXykKncXuX_dVlpK7fV24RFsJdQ1Ecwav0wFkYZ1ds70MQd9NnUF4JC2HJbeYOFhwzW_mtPR3UKmWJ7LSpzjxuh6tqAeZHAIJq7hExKGGgI9-Ed_Kn64T68lKOBG1hDkrKIQ')"></div>
+</div>
+</section>
+<!-- What is Homeopathy? & History -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="bg-surface border border-outline-variant/30 p-lg rounded-xl custom-shadow space-y-md">
+<div class="inline-flex p-xs bg-tertiary/10 text-tertiary rounded-lg">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">What is Homeopathy?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Founded by Samuel Hahnemann in Germany, homeopathy is a clinical system focused on stimulating the body's innate healing response. It operates on the philosophy of holistic treatment, addressing the interconnectedness of physical, mental, and emotional health.</p>
+<div class="pt-md border-t border-outline-variant/20 grid grid-cols-2 gap-sm">
+<div>
+<h4 class="font-label-md text-label-md text-primary">Natural Balance</h4>
+<p class="text-xs text-on-surface-variant">Internal harmony recovery</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Patient Focused</h4>
+<p class="text-xs text-on-surface-variant">Tailored therapeutic paths</p>
+</div>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant/30 p-lg rounded-xl custom-shadow space-y-md" id="history">
+<div class="inline-flex p-xs bg-secondary/10 text-secondary rounded-lg">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">History &amp; Origin</h2>
+<div class="relative pl-lg space-y-lg before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/40">
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-[14px] h-[14px] rounded-full border-2 border-primary bg-white"></div>
+<span class="font-label-sm text-label-sm text-primary">Late 18th Century</span>
+<h4 class="font-title-md text-title-md">German Origins</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Samuel Hahnemann identifies the primary laws.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-[14px] h-[14px] rounded-full border-2 border-primary bg-white"></div>
+<span class="font-label-sm text-label-sm text-primary">19th Century</span>
+<h4 class="font-title-md text-title-md">Global Expansion</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Establishment in USA and across Europe.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-[14px] h-[14px] rounded-full border-2 border-primary bg-white"></div>
+<span class="font-label-sm text-label-sm text-primary">Modern Era</span>
+<h4 class="font-title-md text-title-md">Global Integration</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Integration into modern integrative medicine.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Principles -->
+<section id="principles">
+<div class="text-center max-w-2xl mx-auto mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Core Principles</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The foundations of homeopathic methodology designed for precise healthcare delivery.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<div class="bg-white p-lg rounded-xl border border-outline-variant/30 custom-shadow hover:border-primary/40 transition-colors group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-md group-hover:scale-110 transition-transform block">compare_arrows</span>
+<h3 class="font-title-md text-title-md mb-xs">Law of Similars</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">"Like cures like" – substances causing symptoms in healthy people cure them in sick people.</p>
+</div>
+<div class="bg-white p-lg rounded-xl border border-outline-variant/30 custom-shadow hover:border-primary/40 transition-colors group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-md group-hover:scale-110 transition-transform block">filter_1</span>
+<h3 class="font-title-md text-title-md mb-xs">Single Remedy</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">One medicine is administered at a time for accurate response observation.</p>
+</div>
+<div class="bg-white p-lg rounded-xl border border-outline-variant/30 custom-shadow hover:border-primary/40 transition-colors group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-md group-hover:scale-110 transition-transform block">water_drop</span>
+<h3 class="font-title-md text-title-md mb-xs">Minimum Dose</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Dilution reduces toxicity while 'potentization' increases therapeutic power.</p>
+</div>
+<div class="bg-white p-lg rounded-xl border border-outline-variant/30 custom-shadow hover:border-primary/40 transition-colors group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-md group-hover:scale-110 transition-transform block">person_search</span>
+<h3 class="font-title-md text-title-md mb-xs">Individualization</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Treatment is tailored to the specific expression of a patient's condition.</p>
+</div>
+</div>
+</section>
+<!-- How It Works (Stepper) -->
+<section class="bg-surface-container-low rounded-3xl p-md md:p-xl border border-outline-variant/20" id="mechanisms">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg text-center">How It Works: The Process</h2>
+<div class="relative flex flex-col md:flex-row items-start justify-between gap-lg">
+<div class="absolute top-12 left-0 right-0 h-[2px] bg-primary/10 hidden md:block z-0"></div>
+<div class="relative z-10 flex-1 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-md shadow-lg border-4 border-white">1</div>
+<h4 class="font-title-md text-title-md mb-xs">Consultation</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">In-depth 90-minute analysis of physical, mental, and lifestyle history.</p>
+</div>
+<div class="relative z-10 flex-1 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-md shadow-lg border-4 border-white">2</div>
+<h4 class="font-title-md text-title-md mb-xs">Substance Choice</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Selection of a base mineral, plant, or animal substance following Hahnemann's laws.</p>
+</div>
+<div class="relative z-10 flex-1 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-md shadow-lg border-4 border-white">3</div>
+<h4 class="font-title-md text-title-md mb-xs">Potentization</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Serial dilution and vigorous shaking (succussion) to release vital energy.</p>
+</div>
+<div class="relative z-10 flex-1 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-md shadow-lg border-4 border-white">4</div>
+<h4 class="font-title-md text-title-md mb-xs">Administration</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Highly diluted liquid or pellet doses delivered under the tongue.</p>
+</div>
+</div>
+</section>
+<!-- Conditions -->
+<section id="conditions">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg">Commonly Treated Conditions</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+<div class="group relative aspect-square overflow-hidden rounded-2xl custom-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A macro shot of vibrant flowers with floating pollen in soft morning sunlight, representing seasonal allergies. The aesthetic is clean and high-contrast clinical wellness." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzt42mTxkAq2p9Ff4dw7DMaqWg6IVtF8YXkPMPzRzhZrFyIsXCgE1ALECFVEVg4Hcm33DhNKwc8Z6Dvt0tyoDDiuXiUVnAnmkvh9zO2Zw22DjIu5WjoQru8iCx_s1glnEIzKQ8heASORs4gCzuucxMtZ0opS9_jirRttOohejUxi6axeF8r2KrayAaUKUli6onbiegpXFi2oCDIgxlknW-XNtG9krEndZgFZg48yh6W8_iL6_wuXfG2w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-md text-white">
+<h3 class="font-title-md text-title-md">Allergies</h3>
+<p class="text-xs opacity-90">Hay fever, dust sensitivities, skin rashes.</p>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-2xl custom-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist artistic visualization of human lungs and bronchi using glowing ethereal light paths on a clean medical white background. Professional healthcare illustration style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKdD11SM9jV77PKqP5vGLXp8bj0GJMS8OwnCHznlR5X_nOZn0qCnqr1bm84OCXP9sha3D1kYdtdprznBaDCasHb84OF-3UQgWME816k1D1OBPW6W0JUaMcaGx-_R1SbCHU0Ug4axuJPvIOtm5uS9oF5JcP_GTjQLThB04QN0f077obXgfcAm49K6C97Pwm__53-pCsPxUqerJkEP7HjyNGS888bwLzMGQYJq2SAesz-tr4FnMm0exHEw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-md text-white">
+<h3 class="font-title-md text-title-md">Respiratory</h3>
+<p class="text-xs opacity-90">Chronic sinusitis, persistent coughs, asthma support.</p>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-2xl custom-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A serene image of a person holding a cup of herbal tea with steam rising, suggesting digestive comfort and holistic wellness. Soft, clinical lighting and warm tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCV3dch7gAjs3ToG2F900W1XbjVAPFt6oiD9jpQL-NLO1PaN6p0Ye7AoRxMNhbnp-7u-_kp_td7onDeSE_9qmavsbBcjC7FJ0IwJqlFLkbezDVfC3q97eMUJO38Xcdr_Ig709cS49fGbtdmSD19o35EIAjwLDPv7gVYYTix2yJdmqHXEx0hjdOHrLb0Mlms4kwcXP9ylO1kYe4rMuIHgdqWpzdzmtailK_U1i1aaZCQXa_LssQvGga1DA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-md text-white">
+<h3 class="font-title-md text-title-md">Digestive</h3>
+<p class="text-xs opacity-90">IBS, heartburn, recurring gastric discomfort.</p>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-2xl custom-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A portrait of a person looking refreshed and energetic, standing in a field of high grass with a bright sun background, symbolizing overcoming chronic fatigue." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnF99_bOBDfvI1mnsKrQSvvXQ6FHJHnxkTWIt6iLqwlFp1G4SA-xek8J_VjauqOi97Whv77sPF6FfRJkoXid14Vfc6ai1ippk1Ghe4U2YRZqdSQ_fkAi1WRmpaneckX_At-fUYIT-b2zldxhRzape13tWk3P5hy6gAqaITjVr7iYXdTMwFIf8GXyKkO_numucmns_tBDWiRRGTxPoh-3IknqiaAFECm9zyqoLp8XjdiLBQMUFQGWa9vg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-md text-white">
+<h3 class="font-title-md text-title-md">Chronic Fatigue</h3>
+<p class="text-xs opacity-90">Post-viral fatigue, energy restoration, burnout.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits & Risks -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-lg" id="benefits">
+<div class="lg:col-span-2 space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Key Benefits</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex gap-md p-md bg-white border border-outline-variant/30 rounded-xl">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold">Non-toxic</h4>
+<p class="text-sm text-on-surface-variant">Ultra-diluted formulas minimize risks of toxicity or standard side effects.</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-white border border-outline-variant/30 rounded-xl">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">person_pin</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold">Personalized</h4>
+<p class="text-sm text-on-surface-variant">Treatments are matched to unique patient symptom complexes.</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-white border border-outline-variant/30 rounded-xl">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">payments</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold">Cost-effective</h4>
+<p class="text-sm text-on-surface-variant">Inexpensive manufacturing makes it accessible globally.</p>
+</div>
+</div>
+<div class="flex gap-md p-md bg-white border border-outline-variant/30 rounded-xl">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold">Safe for All Ages</h4>
+<p class="text-sm text-on-surface-variant">Suitable for infants, elderly, and during pregnancy under guidance.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-error-container/30 border border-error/10 p-lg rounded-2xl space-y-md" id="risks">
+<div class="flex items-center gap-xs text-error">
+<span class="material-symbols-outlined">warning</span>
+<h2 class="font-title-md text-title-md">Limitations &amp; Risks</h2>
+</div>
+<ul class="space-y-sm">
+<li class="flex gap-sm items-start">
+<span class="material-symbols-outlined text-error text-[18px] mt-1">emergency</span>
+<p class="text-sm text-on-surface-variant">Not for acute emergencies (fractures, heart attacks, etc.)</p>
+</li>
+<li class="flex gap-sm items-start">
+<span class="material-symbols-outlined text-error text-[18px] mt-1">coronavirus</span>
+<p class="text-sm text-on-surface-variant">Should not replace antibiotics for severe infections.</p>
+</li>
+<li class="flex gap-sm items-start">
+<span class="material-symbols-outlined text-error text-[18px] mt-1">cancel</span>
+<p class="text-sm text-on-surface-variant">Delaying conventional surgery for serious pathology is dangerous.</p>
+</li>
+</ul>
+</div>
+</section>
+<!-- Scientific Evidence -->
+<section class="bg-white p-lg rounded-3xl border border-outline-variant/30 custom-shadow" id="evidence">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg">Scientific Evidence Status</h2>
+<div class="space-y-lg">
+<div class="space-y-xs">
+<div class="flex justify-between font-label-md text-label-md">
+<span>Upper Respiratory Infections</span>
+<span class="text-primary font-bold">Emerging Evidence</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-1000 ease-out" style="width: 65%;"></div>
+</div>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between font-label-md text-label-md">
+<span>Allergic Rhinitis</span>
+<span class="text-primary font-bold">Growing Database</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-1000 ease-out" style="width: 55%;"></div>
+</div>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between font-label-md text-label-md">
+<span>Chronic Diseases</span>
+<span class="text-outline font-bold">Limited/Observational</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-1000 ease-out" style="width: 35%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-lg p-md bg-surface-container rounded-xl flex items-start gap-md">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<p class="text-sm text-on-surface-variant">While large-scale meta-analyses show mixed results, increasing observational studies indicate high patient satisfaction and clinical utility in integrative settings.</p>
+</div>
+</section>
+<!-- Suitable / Not Recommended -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="bg-tertiary-container/5 p-lg rounded-2xl border border-tertiary/10">
+<h3 class="font-title-md text-title-md text-tertiary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined">how_to_reg</span> Suitable Groups
+                        </h3>
+<ul class="space-y-sm text-on-surface-variant font-label-md">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Chronic allergy sufferers</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Patients seeking low-intervention therapy</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Children and sensitive patients</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span> Post-viral recovery support</li>
+</ul>
+</div>
+<div class="bg-error-container/5 p-lg rounded-2xl border border-error/10">
+<h3 class="font-title-md text-title-md text-error mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined">person_off</span> Not Recommended
+                        </h3>
+<ul class="space-y-sm text-on-surface-variant font-label-md">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Acute organ failure cases</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Life-threatening infectious diseases</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> As a replacement for emergency surgery</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Advanced stages of aggressive cancer</li>
+</ul>
+</div>
+</section>
+<!-- FAQ (Accordion) -->
+<section id="faq">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg">Frequently Asked Questions</h2>
+<div class="space-y-md">
+<details class="group bg-white border border-outline-variant/30 rounded-xl custom-shadow overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none group-open:bg-surface-container-low transition-colors">
+<span class="font-title-md text-title-md">How long does it take to see results?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                                Result timing varies significantly. Acute conditions may respond within hours, whereas chronic conditions usually follow a 1-month-per-1-year-of-illness recovery guideline. Consistency with the remedy is essential.
+                            </div>
+</details>
+<details class="group bg-white border border-outline-variant/30 rounded-xl custom-shadow overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none group-open:bg-surface-container-low transition-colors">
+<span class="font-title-md text-title-md">Are there any side effects?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                                Homeopathic remedies are highly diluted and typically do not cause toxic side effects. However, some patients experience a temporary "healing crisis" where symptoms slightly intensify before improving—this is considered a sign of the body engaging its healing mechanism.
+                            </div>
+</details>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant mt-xl">
+<div class="w-full py-lg px-md max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-lg">
+<div class="space-y-md max-w-sm">
+<h2 class="font-title-md text-title-md font-bold text-primary">HealSphere Portal</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 HealSphere Portal. All rights reserved. Medical Disclaimer: Information provided is for educational purposes only.</p>
+</div>
+<div class="flex flex-wrap gap-lg">
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Policies</h4>
+<ul class="space-y-xs font-label-sm text-label-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Support</h4>
+<ul class="space-y-xs font-label-sm text-label-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Medical Advisory Board</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-md pb-lg">
+<div class="bg-surface-variant/20 p-md rounded-xl text-[11px] leading-relaxed text-on-surface-variant opacity-70 italic border border-outline-variant/10">
+                The content on this page is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this portal.
+            </div>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple Active State Management for Sidebar
+        window.addEventListener('scroll', () => {
+            let current = "";
+            const sections = document.querySelectorAll("section[id]");
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            const navLinks = document.querySelectorAll("aside a");
+            navLinks.forEach((link) => {
+                link.classList.remove("bg-primary-container", "text-on-primary-container", "font-bold");
+                link.classList.add("text-on-surface-variant");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("bg-primary-container", "text-on-primary-container", "font-bold");
+                    link.classList.remove("text-on-surface-variant");
+                }
+            });
+        });
+    </script>
+</body></html>

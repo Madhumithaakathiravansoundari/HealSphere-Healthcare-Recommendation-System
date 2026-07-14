@@ -1,0 +1,51 @@
+Disease_ID,Exercise,Duration,Yoga,Difficulty
+D001,Brisk Walking,30 or 45 min/day,Surya Namaskar,Easy
+D002,Walking,30 min/day,Shavasana,Easy
+D003,Breathing Exercises,20 min/day,Anulom Vilom,Easy
+D004,Light Cardio,20?30 min/day,Balasana,Easy
+D005,Walking,20?30 min/day,Vajrasana,Easy
+D006,Light Walking (after recovery),15?20 min/day,Pranayama,Easy
+D007,Light Stretching,15?20 min/day,Shavasana,Easy
+D008,Low-impact Walking,20?30 min/day,Tadasana,Easy
+D009,Swimming / Cycling,30 min/day,Trikonasana,Moderate
+D010,Walking,30 min,Balasana,Easy
+D011,Cycling,30 min,Setu Bandhasana,Moderate
+D012,Slow Walking,20 min,Shavasana,Easy
+D013,Physiotherapy Exercises,20 min,Tadasana,Moderate
+D014,Pursed Lip Breathing,20 min,Bhujangasana,Easy
+D015,Walking,20 min,Pranayama,Easy
+D016,Light Walking,20 min,Anulom Vilom,Easy
+D017,Stretching,20 min,Shavasana,Easy
+D018,Walking After Meals,20 min,Vajrasana,Easy
+D019,Walking,30 min,Vajrasana,Easy
+D020,Walking,30 min,Ardha Matsyendrasana,Moderate
+D021,Light Walking,20 min,Shavasana,Easy
+D022,Walking,30 min,Pawanmuktasana,Easy
+D023,No Exercise (Acute Stage),0 min,No Yoga,Not Recommended
+D024,Walking,30 min,Surya Namaskar,Easy
+D025,Swimming,30 min,Nadi Shodhana,Moderate
+D026,Walking,30 min,Tadasana,Easy
+D027,Light Walking,20 min,Pranayama,Easy
+D028,Walking,30 min,Gentle Yoga,Easy
+D029,Breathing Exercises,20 min,Bhujangasana,Easy
+D030,Walking,30 min,Bridge Pose,Easy
+D031,Swimming,30 min,Shavasana,Easy
+D032,Walking,30 min,Pranayama,Easy
+D033,Jogging,30 min,Surya Namaskar,Moderate
+D034,Walking,30 min,Palming Exercise,Easy
+D035,Walking,30 min,Tadasana,Easy
+D036,Walking,20 min,Pranayama,Easy
+D037,Walking,20 min,Bhujangasana,Easy
+D038,Walking,30 min,Anulom Vilom,Easy
+D039,Walking,20 min,Tadasana,Easy
+D040,Tai Chi,30 min,Vrikshasana,Moderate
+D041,Walking,30 min,Shavasana,Easy
+D042,Swimming,30 min,Balasana,Moderate
+D043,Cycling,30 min,Pawanmuktasana,Moderate
+D044,Weight-Bearing Walking,30 min,Tadasana,Moderate
+D045,Light Walking,15 min,Shavasana,Easy
+D046,Walking,20 min,Vajrasana,Easy
+D047,No Exercise (Acute Stage),0 min,No Yoga,Not Recommended
+D048,Light Stretching,15 min,Shavasana,Easy
+D049,Light Walking,15 min,Pranayama,Easy
+D050,Walking,30 min,Anulom Vilom,Easy

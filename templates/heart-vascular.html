@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Heart &amp; Vascular System | HealSphere Clinical Excellence</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001848",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#50dcff",
+                        "on-surface-variant": "#434654",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f4f6",
+                        "secondary": "#00687b",
+                        "primary-fixed": "#dae2ff",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#002113",
+                        "tertiary-fixed": "#82f9be",
+                        "inverse-on-surface": "#f0f1f3",
+                        "surface-container-highest": "#e1e2e4",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#005f71",
+                        "surface-container-high": "#e7e8ea",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "primary": "#003d9b",
+                        "surface-bright": "#f8f9fb",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#0c56d0",
+                        "on-secondary-fixed": "#001f27",
+                        "on-primary-container": "#c4d2ff",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "primary-container": "#0052cc",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "surface": "#f8f9fb",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#afecff",
+                        "on-tertiary-container": "#72e9af",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d9dadc",
+                        "tertiary": "#004e32",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#006844",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "outline": "#737685",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c3c6d6",
+                        "surface-container": "#edeef0",
+                        "surface-variant": "#e1e2e4",
+                        "inverse-primary": "#b2c5ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "xs": "8px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "lg": "48px",
+                        "base": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #00687b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pill-button {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pill-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+        <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+            <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-primary text-3xl"
+                    style="font-variation-settings: 'FILL' 1;">favorite</span>
+                <h1 class="font-headline-lg text-headline-lg font-bold text-primary">Heart &amp; Vascular</h1>
+            </div>
+            <div class="hidden md:flex gap-md">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
+                    href="#anatomy">Anatomy</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
+                    href="#circulation">Circulation</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
+                    href="#diseases">Diseases</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
+                    href="#diagnosis">Diagnosis</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
+                    href="#prevention">Prevention</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
+                    href="#faq">FAQ</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-sm py-2 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all scale-95 active:scale-90 duration-200">
+                Consult Specialist
+            </button>
+        </div>
+    </nav>
+    <main class="pt-[80px]">
+        <!-- Breadcrumbs -->
+        <div class="max-w-container-max mx-auto px-gutter py-md">
+            <nav class="flex text-label-md font-label-md text-on-surface-variant">
+                <a class="hover:text-primary" href="/">Home</a>
+                <span class="mx-2">/</span>
+                <a class="hover:text-primary" href="#">Library</a>
+                <span class="mx-2">/</span>
+                <span class="text-primary font-bold">Heart &amp; Vascular System</span>
+            </nav>
+        </div>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden px-gutter py-xl">
+            <div class="max-w-container-max mx-auto grid lg:grid-cols-2 items-center gap-lg">
+                <div class="z-10">
+                    <span
+                        class="inline-block px-sm py-1 bg-primary/10 text-primary rounded-full font-label-sm text-label-sm mb-md uppercase tracking-wider">Clinical
+                        Education</span>
+                    <h2 class="font-display-lg text-display-lg text-gradient mb-md leading-tight">The Heart &amp;
+                        Vascular System</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl">
+                        The cardiovascular system is the body's life-sustaining pump and highway. Discover how the heart
+                        circulates oxygen and nutrients through a complex 60,000-mile network of vessels to every single
+                        cell in your body.
+                    </p>
+
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-primary/5 blur-3xl rounded-full scale-110 group-hover:bg-primary/10 transition-all duration-500">
+                    </div>
+                    <img class="relative w-full h-auto object-contain drop-shadow-2xl"
+                        data-alt="A highly detailed, medical 3D illustration of a human heart isolated on a clean white background. The lighting is soft and clinical, highlighting the intricate textures of the myocardium, superior vena cava, and aorta. Soft blue and red highlights emphasize the flow of oxygenated and deoxygenated blood within the anatomy. The overall aesthetic is professional, serene, and educational, characteristic of a high-end medical digital wellness platform."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqKtlHtxC6bIJ1Jv6CHP-ac5icUZalXi7Ejjxt1SiyO_eDy7i061TydAV-vy1UCNbl8k3QAQtQj-WcJJz85RcfmLa0Ybs9xMfUvsf2V_LRh2De3xIQDjOhHVEATMEhb6i-Bm3NE5KJPDi01AxqRAyBpBXi8FDABkdYzRKWKC0ojZwKPFFifzRhrbMFQnv1MhBeSYvhEiUPMLWxzNzLhm-idMMduZiKFt0uL9SkYOIdDWipDAMg8cT78g">
+                </div>
+            </div>
+        </section>
+        <!-- Anatomy Section -->
+        <section class="bg-surface-container-low py-xl px-gutter" id="anatomy">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-xl">
+                    <h3 class="font-headline-lg text-headline-lg text-primary mb-sm">Anatomy of the Heart</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">A complex
+                        four-chambered muscle that contracts over 100,000 times a day without rest.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <!-- Four Chambers -->
+                    <div class="glass-card p-lg rounded-xl transition-all hover:-translate-y-2">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">view_quilt</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-on-surface mb-xs">Four Chambers</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The atria receive blood, while the
+                            ventricles pump it out with immense force.</p>
+                    </div>
+                    <!-- Valves -->
+                    <div class="glass-card p-lg rounded-xl transition-all hover:-translate-y-2">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">door_open</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-on-surface mb-xs">Cardiac Valves</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Tricuspid, Mitral, Pulmonary, and
+                            Aortic valves ensure one-way blood flow.</p>
+                    </div>
+                    <!-- Electrical System -->
+                    <div class="glass-card p-lg rounded-xl transition-all hover:-translate-y-2">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-on-surface mb-xs">Conduction System</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The SA node acts as a natural
+                            pacemaker, sending electrical pulses for timing.</p>
+                    </div>
+                    <!-- Myocardium -->
+                    <div class="glass-card p-lg rounded-xl transition-all hover:-translate-y-2">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-md">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md text-on-surface mb-xs">Myocardium</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The thick muscular wall of the
+                            heart that performs the heavy lifting of pumping.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Circulation Section -->
+        <section class="py-xl px-gutter" id="circulation">
+            <div class="max-w-container-max mx-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-xl">
+                    <div class="lg:w-1/2">
+                        <h3 class="font-headline-lg text-headline-lg text-primary mb-md">The Dual Circulation Loop</h3>
+                        <div class="space-y-md">
+                            <div
+                                class="flex gap-md p-md bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all">
+                                <div
+                                    class="shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">
+                                    1</div>
+                                <div>
+                                    <h5 class="font-title-md text-title-md text-on-surface">Pulmonary Circulation</h5>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Deoxygenated blood
+                                        travels to the lungs to exchange carbon dioxide for fresh oxygen.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex gap-md p-md bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all">
+                                <div
+                                    class="shrink-0 w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center font-bold text-secondary">
+                                    2</div>
+                                <div>
+                                    <h5 class="font-title-md text-title-md text-on-surface">Systemic Circulation</h5>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Oxygen-rich blood is
+                                        pumped from the left ventricle to the rest of the body’s organs and tissues.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <div class="relative rounded-2xl overflow-hidden aspect-video shadow-2xl">
+                            <img class="w-full h-full object-cover"
+                                data-alt="A clean, minimalist diagram of the human cardiovascular circulation system. The diagram uses a dual-loop design with vibrant red representing oxygenated blood and cool blue representing deoxygenated blood. The heart is centered, with stylized lung and body tissue icons on either side. The background is a soft, medical-grade off-white with subtle grid patterns. The art style is modern infographic, using smooth gradients and high legibility typography in clinical blue tones."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIJ1SdGapgzY7msbdUV5Kmkuw9b-8IDY23974M8dlHcdTG8mJzVdSrdkraMQp6971rJXF8Vj-VTppzDc2rXF1rA_VWf-9A6UsbiBL4l-9zNnQcfc8iTx2UFZncelILzh8bE-j7vPM24FHBaRNrPcvuC1wmV2sBOH4xlQZgqEKzdK0vYwi1lF2aDYfxmkR-eJO68xdw-pNh2PjDKml-4ifGd7Jh-Ofds6wy5U7e4iLtbLWnk0k9SCLUHQ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blood Vessels Comparison -->
+        <section class="bg-surface-container py-xl px-gutter">
+            <div class="max-w-container-max mx-auto">
+                <h3 class="font-headline-lg text-headline-lg text-center text-primary mb-xl">The Vascular Network</h3>
+                <div class="grid md:grid-cols-3 gap-md">
+                    <!-- Arteries -->
+                    <div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/20">
+                        <div class="text-error mb-md"><span class="material-symbols-outlined text-4xl">east</span></div>
+                        <h4 class="font-title-md text-title-md mb-xs">Arteries</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Thick-walled vessels that
+                            carry oxygenated blood away from the heart under high pressure.</p>
+                        <ul class="text-label-md font-label-md text-on-surface space-y-xs">
+                            <li class="flex items-center gap-xs"><span
+                                    class="material-symbols-outlined text-sm text-error">circle</span> High pressure
+                            </li>
+                            <li class="flex items-center gap-xs"><span
+                                    class="material-symbols-outlined text-sm text-error">circle</span> Elastic walls
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Capillaries -->
+                    <div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/20">
+                        <div class="text-tertiary mb-md"><span
+                                class="material-symbols-outlined text-4xl">device_hub</span></div>
+                        <h4 class="font-title-md text-title-md mb-xs">Capillaries</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Microscopic vessels where
+                            oxygen, nutrients, and waste products are exchanged with cells.</p>
+                        <ul class="text-label-md font-label-md text-on-surface space-y-xs">
+                            <li class="flex items-center gap-xs"><span
+                                    class="material-symbols-outlined text-sm text-tertiary">circle</span> Single-cell
+                                thick</li>
+                            <li class="flex items-center gap-xs"><span
+                                    class="material-symbols-outlined text-sm text-tertiary">circle</span> Diffusion
+                                bridge</li>
+                        </ul>
+                    </div>
+                    <!-- Veins -->
+                    <div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/20">
+                        <div class="text-primary mb-md"><span class="material-symbols-outlined text-4xl">west</span>
+                        </div>
+                        <h4 class="font-title-md text-title-md mb-xs">Veins</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Return deoxygenated blood to
+                            the heart using valves to prevent backward flow.</p>
+                        <ul class="text-label-md font-label-md text-on-surface space-y-xs">
+                            <li class="flex items-center gap-xs"><span
+                                    class="material-symbols-outlined text-sm text-primary">circle</span> Low pressure
+                            </li>
+                            <li class="flex items-center gap-xs"><span
+                                    class="material-symbols-outlined text-sm text-primary">circle</span> One-way valves
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Common Diseases Bento Grid -->
+        <section class="py-xl px-gutter" id="diseases">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-xl">
+                    <h3 class="font-headline-lg text-headline-lg text-primary mb-xs">Cardiovascular Conditions</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Understanding potential risks and
+                        clinical pathologies.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-md">
+                    <!-- Hypertension -->
+                    <div
+                        class="md:col-span-3 glass-card p-lg rounded-2xl flex flex-col justify-between hover:border-primary transition-all cursor-pointer">
+                        <div>
+                            <div class="mb-md"><span
+                                    class="material-symbols-outlined text-primary text-4xl">speed</span></div>
+                            <h4 class="font-title-md text-title-md mb-sm">Hypertension (High BP)</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md">The "silent killer" that
+                                puts constant strain on your heart and arteries over time.</p>
+                        </div>
+                        <span class="text-primary font-label-md flex items-center gap-xs">Learn More <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                    <!-- Heart Attack -->
+                    <div
+                        class="md:col-span-3 glass-card p-lg rounded-2xl flex flex-col justify-between hover:border-error transition-all cursor-pointer">
+                        <div>
+                            <div class="mb-md text-error"><span
+                                    class="material-symbols-outlined text-4xl">warning</span></div>
+                            <h4 class="font-title-md text-title-md mb-sm">Myocardial Infarction</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-md">A blockage that stops
+                                blood flow to heart muscle, causing tissue damage.</p>
+                        </div>
+                        <span class="text-error font-label-md flex items-center gap-xs">Emergency Guide <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                    <!-- Others -->
+                    <div
+                        class="md:col-span-2 glass-card p-md rounded-2xl hover:bg-surface-container transition-all cursor-pointer">
+                        <h4 class="font-title-md text-title-md mb-sm">Heart Failure</h4>
+                        <p class="font-label-md text-label-md text-on-surface-variant">The heart's inability to pump
+                            efficiently.</p>
+                    </div>
+                    <div
+                        class="md:col-span-2 glass-card p-md rounded-2xl hover:bg-surface-container transition-all cursor-pointer">
+                        <h4 class="font-title-md text-title-md mb-sm">Arrhythmia</h4>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Irregular heartbeats or rhythms.
+                        </p>
+                    </div>
+                    <div
+                        class="md:col-span-2 glass-card p-md rounded-2xl hover:bg-surface-container transition-all cursor-pointer">
+                        <h4 class="font-title-md text-title-md mb-sm">CAD</h4>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Narrowing of coronary arteries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Risk Factors & Symptoms -->
+        <section class="bg-on-primary-fixed text-on-primary py-xl px-gutter relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-20 blur-[100px]"></div>
+            <div class="max-w-container-max mx-auto relative z-10">
+                <div class="grid lg:grid-cols-2 gap-xl">
+                    <div>
+                        <h3 class="font-headline-lg text-headline-lg mb-lg">Critical Risk Factors</h3>
+                        <div class="space-y-sm">
+                            <div class="flex items-center gap-md p-md bg-white/5 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-secondary-container">smoke_free</span>
+                                <span class="font-body-lg text-body-lg">Tobacco Consumption</span>
+                            </div>
+                            <div class="flex items-center gap-md p-md bg-white/5 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-secondary-container">monitor_weight</span>
+                                <span class="font-body-lg text-body-lg">Obesity &amp; Physical Inactivity</span>
+                            </div>
+                            <div class="flex items-center gap-md p-md bg-white/5 rounded-xl border border-white/10">
+                                <span class="material-symbols-outlined text-secondary-container">genetics</span>
+                                <span class="font-body-lg text-body-lg">Genetics &amp; Family History</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-lg text-headline-lg mb-lg">Warning Symptoms</h3>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="p-md bg-error/10 border border-error/30 rounded-xl">
+                                <span class="material-symbols-outlined text-error mb-sm"
+                                    style="font-variation-settings: 'FILL' 1;">heart_broken</span>
+                                <h5 class="font-title-md text-title-md mb-xs">Angina</h5>
+                                <p class="font-label-md text-label-md text-on-primary/70">Chest pain or discomfort.</p>
+                            </div>
+                            <div class="p-md bg-error/10 border border-error/30 rounded-xl">
+                                <span class="material-symbols-outlined text-error mb-sm"
+                                    style="font-variation-settings: 'FILL' 1;">air</span>
+                                <h5 class="font-title-md text-title-md mb-xs">Dyspnea</h5>
+                                <p class="font-label-md text-label-md text-on-primary/70">Shortness of breath.</p>
+                            </div>
+                            <div class="p-md bg-error/10 border border-error/30 rounded-xl">
+                                <span class="material-symbols-outlined text-error mb-sm"
+                                    style="font-variation-settings: 'FILL' 1;">airlines</span>
+                                <h5 class="font-title-md text-title-md mb-xs">Dizziness</h5>
+                                <p class="font-label-md text-label-md text-on-primary/70">Feeling lightheaded or
+                                    fainting.</p>
+                            </div>
+                            <div class="p-md bg-error/10 border border-error/30 rounded-xl">
+                                <span class="material-symbols-outlined text-error mb-sm"
+                                    style="font-variation-settings: 'FILL' 1;">sick</span>
+                                <h5 class="font-title-md text-title-md mb-xs">Nausea</h5>
+                                <p class="font-label-md text-label-md text-on-primary/70">Often accompanied by cold
+                                    sweats.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic Tests -->
+        <section class="py-xl px-gutter bg-surface" id="diagnosis">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-xl">
+                    <h3 class="font-headline-lg text-headline-lg text-primary mb-sm">Modern Diagnostic Imaging</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Utilizing
+                        state-of-the-art technology to visualize cardiac function and structure.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-lg">
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden border border-outline-variant/30 group hover:shadow-xl transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                                data-alt="A professional close-up photo of an ECG (Electrocardiogram) monitor in a modern hospital setting. The screen shows a vibrant green heart rhythm wave moving across a clinical interface. The surroundings are soft-focus, showing medical equipment in a serene clinical environment with blue and white tones. The lighting is bright and clean, emphasizing a professional digital healthcare experience."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdRAH2qfaOVUeHAYSb6yYGXvBxvW4bu4mMePKtc4SWeKqsKrxITTt2L03DNNl5i7xPfJ0R_D4DEvKt0EexIjpaipHxYX2Zly8cW-NG_OLxPyXOcCNx296Wob3WorEklEUVmBlSGQdABOU6a12wiSMPuBMm1SkcbzDll7Hmi6E8dBfYQcBCN92pEwp24fkBJ768udOzS8p-UCcOGrrIIogkzn6N5DOqL_cG2zRoOK8GKZgDZ1w10PCmDw">
+                        </div>
+                        <div class="p-lg">
+                            <h4 class="font-title-md text-title-md mb-sm">ECG / EKG</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Records the electrical signals
+                                in your heart to check for different heart conditions.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden border border-outline-variant/30 group hover:shadow-xl transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                                data-alt="A high-tech medical echocardiogram procedure being performed. A sonographer is using an ultrasound probe on a patient's chest, while a modern high-resolution monitor displays a clear, live-action cross-section of a heart in motion. The color palette is composed of medical blues, cool grays, and crisp whites. The scene conveys expertise, safety, and advanced technology."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFZqFlxCY9fQQvZVFh7eFsHb46cyBIgapydyUzvhJIMdB0y0E7-KNpctqvCW6od-dSFor-hgsvLlSqomyYAickUpt8eosHV1Q-tocvQLeCO4AW672Xrm2rGizQVBnPnore6bGrkBxkpJt5EnI2kdgoA8ta9I4KnCexQWr2nx1KXvti12ZWa0MZLud8xyQU_bUvZnnepodU9tEdgj2loaOYwKjdD99sfAlsstgN3EGQI_UKnASKuwfANg">
+                        </div>
+                        <div class="p-lg">
+                            <h4 class="font-title-md text-title-md mb-sm">Echocardiogram</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Uses sound waves to produce
+                                images of your heart, allowing physicians to see it beating.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden border border-outline-variant/30 group hover:shadow-xl transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                                data-alt="An angiography suite in a contemporary cardiac catheterization lab. The image features complex medical imaging machinery and multiple overhead monitors displaying skeletal and vascular x-ray maps of arteries. The environment is sterile, modern, and highly technical, utilizing clinical blue lighting to create a focused, high-precision medical atmosphere."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAP43dxjnhgle9he3XoyIRqa-tT-2kqz795i4ZPhyXY8YZbLLWoA4QRqWfkwfOJ5OpHAn3HhHOtzWn5nQr29xHZ_LVNlJ_jr2ZfaD5qOIM3LkNmM3_bFXEMO0x-ky08PhExxjZJ1ent-g60HSpbyvN1-PyrmbnfhT6QevD6H9JHaSzcQBSqo_eHGXfHnjCrK56riorwSA2wBipdCs8CJlDXeqtwi5-eWmjUiX3Yv9YjWpIb2YyaMiTJg">
+                        </div>
+                        <div class="p-lg">
+                            <h4 class="font-title-md text-title-md mb-sm">Angiography</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">An X-ray technique used to
+                                examine blood vessels using a special contrast dye.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Prevention & Action -->
+        <section class="py-xl px-gutter" id="prevention">
+            <div
+                class="max-w-container-max mx-auto bg-primary-container text-on-primary-container rounded-[32px] p-lg md:p-xl relative overflow-hidden">
+                <div class="absolute bottom-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+                    <span class="material-symbols-outlined text-[300px]"
+                        style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+                </div>
+                <div class="relative z-10 lg:w-2/3">
+                    <h3 class="font-headline-lg text-headline-lg mb-md">Heart-Healthy Living</h3>
+                    <p class="font-body-lg text-body-lg mb-lg opacity-90">Most heart disease is preventable. Small
+                        changes today lead to a stronger heart tomorrow.</p>
+                    <div class="grid md:grid-cols-2 gap-lg">
+                        <div class="space-y-md">
+                            <div class="flex items-start gap-sm">
+                                <span class="material-symbols-outlined mt-1">restaurant</span>
+                                <div>
+                                    <h5 class="font-title-md text-title-md">Nutritional Excellence</h5>
+                                    <p class="font-body-md text-body-md opacity-80">Focus on fiber-rich fruits,
+                                        vegetables, and lean proteins while reducing sodium.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-sm">
+                                <span class="material-symbols-outlined mt-1">directions_run</span>
+                                <div>
+                                    <h5 class="font-title-md text-title-md">Active Routine</h5>
+                                    <p class="font-body-md text-body-md opacity-80">Aim for at least 150 minutes of
+                                        moderate aerobic activity weekly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-md">
+                            <div class="flex items-start gap-sm">
+                                <span class="material-symbols-outlined mt-1">self_improvement</span>
+                                <div>
+                                    <h5 class="font-title-md text-title-md">Stress Management</h5>
+                                    <p class="font-body-md text-body-md opacity-80">Practice mindfulness or meditation
+                                        to lower chronic cortisol levels.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-sm">
+                                <span class="material-symbols-outlined mt-1">pill</span>
+                                <div>
+                                    <h5 class="font-title-md text-title-md">Clinical Management</h5>
+                                    <p class="font-body-md text-body-md opacity-80">Regular checkups for blood pressure,
+                                        cholesterol, and glucose levels.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interesting Facts -->
+        <section class="py-xl px-gutter">
+            <div class="max-w-container-max mx-auto">
+                <div class="grid md:grid-cols-3 gap-md">
+                    <div class="text-center p-lg glass-card rounded-2xl">
+                        <div class="text-4xl font-bold text-primary mb-xs">2.5 Billion</div>
+                        <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">
+                            Average Lifetime Beats</div>
+                    </div>
+                    <div class="text-center p-lg glass-card rounded-2xl">
+                        <div class="text-4xl font-bold text-primary mb-xs">60,000 Miles</div>
+                        <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Total
+                            Length of Vessels</div>
+                    </div>
+                    <div class="text-center p-lg glass-card rounded-2xl">
+                        <div class="text-4xl font-bold text-primary mb-xs">2,000 Gallons</div>
+                        <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Blood
+                            Pumped Per Day</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-xl px-gutter bg-surface-container-lowest" id="faq">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">Common Questions</h3>
+                <div class="space-y-sm">
+                    <div class="border border-outline-variant/30 rounded-xl overflow-hidden bg-white">
+                        <button
+                            class="w-full flex justify-between items-center p-lg text-left hover:bg-surface transition-all"
+                            onclick="toggleFaq(this)">
+                            <span class="font-title-md text-title-md text-on-surface">What is a normal resting heart
+                                rate?</span>
+                            <span class="material-symbols-outlined transition-transform">expand_more</span>
+                        </button>
+                        <div
+                            class="hidden p-lg pt-0 text-on-surface-variant font-body-md animate-in slide-in-from-top-2">
+                            A normal resting heart rate for adults ranges from 60 to 100 beats per minute. Highly
+                            trained athletes may have resting heart rates as low as 40 bpm.
+                        </div>
+                    </div>
+                    <div class="border border-outline-variant/30 rounded-xl overflow-hidden bg-white">
+                        <button
+                            class="w-full flex justify-between items-center p-lg text-left hover:bg-surface transition-all"
+                            onclick="toggleFaq(this)">
+                            <span class="font-title-md text-title-md text-on-surface">How does smoking affect the
+                                heart?</span>
+                            <span class="material-symbols-outlined transition-transform">expand_more</span>
+                        </button>
+                        <div
+                            class="hidden p-lg pt-0 text-on-surface-variant font-body-md animate-in slide-in-from-top-2">
+                            Smoking damages the lining of your arteries, leading to a buildup of fatty material
+                            (atheroma) which narrows the artery. This can cause angina, a heart attack, or a stroke.
+                        </div>
+                    </div>
+                    <div class="border border-outline-variant/30 rounded-xl overflow-hidden bg-white">
+                        <button
+                            class="w-full flex justify-between items-center p-lg text-left hover:bg-surface transition-all"
+                            onclick="toggleFaq(this)">
+                            <span class="font-title-md text-title-md text-on-surface">What's the difference between a
+                                heart attack and cardiac arrest?</span>
+                            <span class="material-symbols-outlined transition-transform">expand_more</span>
+                        </button>
+                        <div
+                            class="hidden p-lg pt-0 text-on-surface-variant font-body-md animate-in slide-in-from-top-2">
+                            A heart attack is a "plumbing" problem caused by a blockage in the blood flow to the heart.
+                            Cardiac arrest is an "electrical" problem where the heart suddenly stops beating
+                            unexpectedly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-xl bg-surface-container-high border-t border-outline-variant/20">
+        <div class="max-w-container-max mx-auto px-gutter py-lg">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md mb-lg">
+                <div class="flex items-center gap-sm">
+                    <span class="material-symbols-outlined text-primary text-2xl"
+                        style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    <span class="font-title-md text-title-md font-bold text-primary">HealSphere</span>
+                </div>
+                <div class="flex flex-wrap gap-md">
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="#">Privacy Policy</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="#">Terms of Service</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="#">Medical Disclaimer</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="#">Contact Support</a>
+                    <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="#">Patient Portal</a>
+                </div>
+            </div>
+            <div class="p-md bg-surface-container rounded-xl text-center mb-lg">
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-xs font-bold">Medical
+                    Disclaimer</p>
+                <p class="font-label-md text-label-md text-on-surface-variant italic">
+                    The information provided here is for educational purposes only and should not be used for
+                    self-diagnosis. Always consult a qualified healthcare professional for medical advice, diagnosis, or
+                    treatment. If you are experiencing a medical emergency, call 911 or your local emergency services
+                    immediately.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-sm opacity-80">
+                <p class="font-label-md text-label-md text-on-surface-variant">© 2024 Heart &amp; Vascular Clinical
+                    Excellence. All rights reserved.</p>
+                <div class="flex gap-sm">
+                    <span class="material-symbols-outlined text-on-surface-variant">language</span>
+                    <span class="material-symbols-outlined text-on-surface-variant">share</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+
+            const isOpen = !content.classList.contains('hidden');
+
+            // Close all first
+            document.querySelectorAll('#faq .hidden').forEach(el => {
+                // el.classList.add('hidden');
+            });
+
+            if (isOpen) {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    card.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Physiotherapy: Movement for Life | HealSphere</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e1e2e4",
+                    "primary-fixed": "#dae2ff",
+                    "secondary-container": "#50dcff",
+                    "on-surface": "#191c1e",
+                    "tertiary-container": "#006844",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d9dadc",
+                    "on-primary-fixed": "#001848",
+                    "secondary-fixed": "#afecff",
+                    "on-tertiary-fixed": "#002113",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-tertiary-container": "#72e9af",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9fb",
+                    "surface-container-low": "#f3f4f6",
+                    "inverse-primary": "#b2c5ff",
+                    "secondary-fixed-dim": "#48d7f9",
+                    "on-primary-container": "#c4d2ff",
+                    "outline-variant": "#c3c6d6",
+                    "tertiary-fixed": "#82f9be",
+                    "surface-bright": "#f8f9fb",
+                    "inverse-surface": "#2e3132",
+                    "outline": "#737685",
+                    "on-secondary-fixed-variant": "#004e5d",
+                    "surface-variant": "#e1e2e4",
+                    "on-tertiary-fixed-variant": "#005235",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#005f71",
+                    "surface-tint": "#0c56d0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e7e8ea",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#434654",
+                    "on-secondary-fixed": "#001f27",
+                    "primary-container": "#0052cc",
+                    "surface-container": "#edeef0",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#004e32",
+                    "secondary": "#00687b",
+                    "tertiary-fixed-dim": "#65dca4",
+                    "surface": "#f8f9fb",
+                    "primary": "#003d9b",
+                    "primary-fixed-dim": "#b2c5ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "lg": "48px",
+                    "base": "4px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "sm": "16px",
+                    "container-max": "1280px",
+                    "xs": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Inter"],
+                    "title-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-line::after {
+            content: '';
+            position: absolute;
+            left: 1.25rem;
+            top: 2rem;
+            bottom: 0;
+            width: 2px;
+            background-color: #dae2ff;
+        }
+        .last-step::after { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/80 dark:bg-on-surface/80 backdrop-blur-xl border-b border-outline-variant/30 docked full-width top-0 sticky z-50 shadow-sm">
+<div class="flex justify-between items-center px-md py-xs max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-sm">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary-fixed">HealSphere</span>
+</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="/">Dashboard</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-label-md text-label-md" href="#">Research</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">account_circle</span></button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-md py-lg flex flex-col lg:flex-row gap-lg">
+<!-- Sidebar Navigation -->
+<aside class="hidden lg:flex flex-col w-64 gap-xs p-md sticky top-md h-fit rounded-xl bg-surface-container-low dark:bg-surface-container-high shadow-sm shrink-0">
+<div class="mb-md">
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Modern Medicine</h3>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Information Portal</p>
+</div>
+<a class="flex items-center gap-sm px-sm py-xs bg-primary-container text-on-primary-container font-bold rounded-lg transition-all active:scale-[0.98]" href="#overview">
+<span class="material-symbols-outlined">info</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#history">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-md text-label-md">History</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#principles">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-md text-label-md">Principles</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#mechanisms">
+<span class="material-symbols-outlined">settings_heart</span>
+<span class="font-label-md text-label-md">Mechanisms</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#conditions">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="font-label-md text-label-md">Conditions</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#benefits">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-md text-label-md">Benefits</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#risks">
+<span class="material-symbols-outlined">warning</span>
+<span class="font-label-md text-label-md">Risks</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-xs text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all active:scale-[0.98]" href="#evidence">
+<span class="material-symbols-outlined">science</span>
+<span class="font-label-md text-label-md">Evidence</span>
+</a>
+<hr class="my-sm border-outline-variant/30"/>
+
+<a href="/"
+<button class="mt-xs w-full py-sm border-2 border-primary text-primary rounded-full font-label-md text-label-md hover:bg-primary/5 transition-colors" onclick="window.history.back()">
+                Back to Dashboard
+            </button>
+</a>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 space-y-lg">
+<!-- Breadcrumbs -->
+<nav class="flex text-on-surface-variant font-label-sm text-label-sm gap-xs items-center">
+<a class="hover:text-primary" href="/">Dashboard</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Medical Research</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Physiotherapy</span>
+</nav>
+<!-- Hero Section -->
+<section class="relative rounded-xl overflow-hidden min-h-[400px] flex items-center shadow-sm" id="overview">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A clean, clinical, wide-angle interior of a modern physiotherapy studio with soft morning light streaming through large windows. The scene features high-end rehabilitation equipment like a wooden Pilates reformer and adjustable treatment tables. The color palette is composed of serene blues, clinical whites, and soft greys, creating a professional and healing atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSlMYWxte2r7Nv1HwOPelUBGdxL7FUHV0PjQS5xJbHcV6WE9_NXmJH676sXJD3WGp5pRhaxlkH2sffco2KIZ7x0-2qVuRj7xDstKPKqfdxz-u7fe4Xyr-xfu5ItF7pu-SepOmDUdp9lVHGImQOU2FhKVT514Ze8Rfvxb-brVdkxuX_5YYDO2Aw8cLatGwR7BAbKqmbEOMhUBAxbBaXYZqDzx40EUpgVSogsmQFFOhoy-l-rDIJpjuq7g')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 p-lg max-w-2xl">
+<span class="inline-block px-sm py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-sm text-label-sm mb-md uppercase tracking-wider">Department of Rehabilitation</span>
+<h1 class="font-display-lg text-display-lg mb-sm text-primary">Physiotherapy: Movement for Life</h1>
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant font-medium mb-md">Restoring function and improving quality of life through clinical movement science.</p>
+<p class="font-body-lg text-body-lg text-on-surface opacity-80 leading-relaxed">Physiotherapy is a healthcare profession focused on human function and movement, maximizing physical potential. It uses physical approaches to promote, maintain and restore physical, psychological and social well-being.</p>
+</div>
+</section>
+<!-- What is Physiotherapy? -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30">
+<h2 class="font-headline-lg text-headline-lg mb-md text-primary flex items-center gap-xs">
+<span class="material-symbols-outlined text-3xl">health_metrics</span> What is Physiotherapy?
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">
+                        At its core, physiotherapy is about identifying and maximizing quality of life and movement potential within the spheres of promotion, prevention, treatment/intervention, and rehabilitation.
+                    </p>
+<div class="flex items-center gap-md p-md bg-secondary-fixed/20 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div>
+<p class="font-label-md text-label-md text-secondary font-bold uppercase">Primary Objective</p>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Restoring mobility and physical functionality.</p>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 p-lg rounded-xl border border-primary/10 flex flex-col justify-center">
+<h3 class="font-title-md text-title-md mb-sm text-primary">The Philosophy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        The core philosophy centers on <strong>Functional Independence</strong>. Unlike traditional medicine which may focus solely on pharmacological solutions, physiotherapy empowers the patient to become an active participant in their own recovery, using movement as the primary medicine.
+                    </p>
+</div>
+</section>
+<!-- Core Principles: Bento Grid -->
+<section class="space-y-md" id="principles">
+<h2 class="font-headline-lg text-headline-lg text-center text-primary">Core Principles of Practice</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-sm">
+<div class="glass-panel p-md rounded-xl flex flex-col gap-sm hover:translate-y-[-4px] transition-transform">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">clinical_notes</span>
+</div>
+<h4 class="font-title-md text-title-md">Evidence-Based</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Treatments rooted in the latest clinical research and peer-reviewed studies.</p>
+</div>
+<div class="glass-panel p-md rounded-xl flex flex-col gap-sm hover:translate-y-[-4px] transition-transform">
+<div class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<h4 class="font-title-md text-title-md">Patient-Centered</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Tailoring recovery goals to individual lifestyles and specific physical needs.</p>
+</div>
+<div class="glass-panel p-md rounded-xl flex flex-col gap-sm hover:translate-y-[-4px] transition-transform">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">fitbit</span>
+</div>
+<h4 class="font-title-md text-title-md">Functional Focus</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Aiming for real-world movement efficiency rather than just pain relief.</p>
+</div>
+<div class="glass-panel p-md rounded-xl flex flex-col gap-sm hover:translate-y-[-4px] transition-transform">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<h4 class="font-title-md text-title-md">Holistic Movement</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Considering the body as an interconnected system of biomechanical chains.</p>
+</div>
+</div>
+</section>
+<!-- History & Origin: Vertical Timeline -->
+<section class="bg-surface-container-low p-lg rounded-xl" id="history">
+<h2 class="font-headline-lg text-headline-lg mb-lg text-primary">The Evolution of Movement Science</h2>
+<div class="space-y-0">
+<!-- Item 1 -->
+<div class="relative pl-md pb-md step-line">
+<div class="absolute left-0 w-10 h-10 bg-white rounded-full border-4 border-primary-fixed z-10 flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-primary">1813</span>
+</div>
+<div class="ml-md">
+<h4 class="font-title-md text-title-md text-primary">The Royal Institute of Gymnastics</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Pehr Henrik Ling, "Father of Swedish Gymnastics," founds the RCIG for massage and exercise.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative pl-md pb-md step-line">
+<div class="absolute left-0 w-10 h-10 bg-white rounded-full border-4 border-primary-fixed z-10 flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-primary">1914</span>
+</div>
+<div class="ml-md">
+<h4 class="font-title-md text-title-md text-primary">Reconstruction Aides</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The profession surges during WWI to rehabilitate injured soldiers, focusing on mechanized recovery.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative pl-md pb-md step-line">
+<div class="absolute left-0 w-10 h-10 bg-white rounded-full border-4 border-primary-fixed z-10 flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-primary">1950</span>
+</div>
+<div class="ml-md">
+<h4 class="font-title-md text-title-md text-primary">Neurological Breakthroughs</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Expansion into stroke rehabilitation and pediatrics following the polio epidemics.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="relative pl-md last-step">
+<div class="absolute left-0 w-10 h-10 bg-primary text-white rounded-full border-4 border-primary-fixed z-10 flex items-center justify-center">
+<span class="font-label-sm text-label-sm">2024</span>
+</div>
+<div class="ml-md">
+<h4 class="font-title-md text-title-md text-primary">Precision &amp; Robotics</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Modern sports medicine integrated with wearable tech, AI diagnostics, and robotic-assisted gait training.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works: Stepper -->
+<section class="space-y-md" id="mechanisms">
+<h2 class="font-headline-lg text-headline-lg text-primary">Path to Recovery</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xs">
+<div class="relative p-md bg-surface-container rounded-xl flex flex-col items-center text-center gap-sm">
+<span class="text-primary font-bold opacity-20 text-4xl">01</span>
+<h5 class="font-label-md text-label-md font-bold uppercase tracking-widest text-primary">Assessment</h5>
+<p class="font-label-sm text-label-sm">Comprehensive physical exam and medical history review.</p>
+</div>
+<div class="relative p-md bg-surface-container rounded-xl flex flex-col items-center text-center gap-sm">
+<span class="text-primary font-bold opacity-20 text-4xl">02</span>
+<h5 class="font-label-md text-label-md font-bold uppercase tracking-widest text-primary">Goal Setting</h5>
+<p class="font-label-sm text-label-sm">Defining functional milestones (e.g., walking 1km without pain).</p>
+</div>
+<div class="relative p-md bg-surface-container rounded-xl flex flex-col items-center text-center gap-sm">
+<span class="text-primary font-bold opacity-20 text-4xl">03</span>
+<h5 class="font-label-md text-label-md font-bold uppercase tracking-widest text-primary">Intervention</h5>
+<p class="font-label-sm text-label-sm">Hands-on therapy, targeted exercises, and modalities.</p>
+</div>
+<div class="relative p-md bg-primary text-white rounded-xl flex flex-col items-center text-center gap-sm">
+<span class="text-white font-bold opacity-20 text-4xl">04</span>
+<h5 class="font-label-md text-label-md font-bold uppercase tracking-widest">Review</h5>
+<p class="font-label-sm text-label-sm">Progress evaluation and adjustment of the treatment plan.</p>
+</div>
+</div>
+</section>
+<!-- Conditions Treated: Cards -->
+<section class="space-y-md" id="conditions">
+<h2 class="font-headline-lg text-headline-lg text-primary">Specialized Areas of Care</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="p-lg bg-surface-container-lowest border-b-4 border-secondary rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-secondary text-3xl mb-sm">sleep_score</span>
+<h4 class="font-title-md text-title-md mb-sm">Musculoskeletal</h4>
+<ul class="font-label-md text-label-md text-on-surface-variant space-y-xs list-disc list-inside">
+<li>Back and Neck Pain</li>
+<li>Sports Injuries</li>
+<li>Post-surgical Recovery</li>
+<li>Osteoarthritis</li>
+</ul>
+</div>
+<div class="p-lg bg-surface-container-lowest border-b-4 border-primary rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm">psychology</span>
+<h4 class="font-title-md text-title-md mb-sm">Neurological</h4>
+<ul class="font-label-md text-label-md text-on-surface-variant space-y-xs list-disc list-inside">
+<li>Stroke Rehabilitation</li>
+<li>Parkinson's Disease</li>
+<li>Multiple Sclerosis</li>
+<li>Spinal Cord Injuries</li>
+</ul>
+</div>
+<div class="p-lg bg-surface-container-lowest border-b-4 border-tertiary rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-sm">favorite</span>
+<h4 class="font-title-md text-title-md mb-sm">Cardiovascular</h4>
+<ul class="font-label-md text-label-md text-on-surface-variant space-y-xs list-disc list-inside">
+<li>Post-Cardiac Surgery</li>
+<li>Pulmonary Rehabilitation</li>
+<li>COPD Management</li>
+<li>General Conditioning</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Benefits & Risks Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+<div class="space-y-md" id="benefits">
+<h3 class="font-headline-lg text-headline-lg text-tertiary">Key Clinical Benefits</h3>
+<div class="space-y-sm">
+<div class="flex gap-md items-start p-md bg-tertiary/5 rounded-xl border border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h5 class="font-title-md text-title-md">Chronic Pain Management</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Significant reduction in reliance on opioids and NSAIDs through movement therapy.</p>
+</div>
+</div>
+<div class="flex gap-md items-start p-md bg-tertiary/5 rounded-xl border border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h5 class="font-title-md text-title-md">Avoidance of Surgery</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Effective management of conditions like meniscal tears or rotator cuff injuries without invasive procedures.</p>
+</div>
+</div>
+<div class="flex gap-md items-start p-md bg-tertiary/5 rounded-xl border border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h5 class="font-title-md text-title-md">Improved Balance &amp; Fall Prevention</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Proprioceptive training to reduce risk of injury, especially in geriatric populations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-md" id="risks">
+<h3 class="font-headline-lg text-headline-lg text-error">Limitations &amp; Risks</h3>
+<div class="space-y-sm">
+<div class="flex gap-md items-start p-md bg-error-container/20 rounded-xl border border-error/20">
+<span class="material-symbols-outlined text-error">warning</span>
+<div>
+<h5 class="font-title-md text-title-md text-on-error-container">Acute Fractures</h5>
+<p class="font-body-md text-body-md text-on-error-container">Mobilization must be delayed until initial structural stabilization is confirmed by imaging.</p>
+</div>
+</div>
+<div class="flex gap-md items-start p-md bg-error-container/20 rounded-xl border border-error/20">
+<span class="material-symbols-outlined text-error">warning</span>
+<div>
+<h5 class="font-title-md text-title-md text-on-error-container">Severe Inflammatory States</h5>
+<p class="font-body-md text-body-md text-on-error-container">Vigorous exercise may exacerbate conditions during acute flare-ups of RA or infections.</p>
+</div>
+</div>
+<div class="flex gap-md items-start p-md bg-error-container/20 rounded-xl border border-error/20">
+<span class="material-symbols-outlined text-error">warning</span>
+<div>
+<h5 class="font-title-md text-title-md text-on-error-container">Malignancy Issues</h5>
+<p class="font-body-md text-body-md text-on-error-container">Specific precautions are required when working with bone metastasis to avoid pathological fractures.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Scientific Evidence: Progress Bars -->
+<section class="bg-surface-container-high p-lg rounded-xl" id="evidence">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-lg gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Scientific Evidence Rating</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Based on systematic reviews and meta-analysis data (Cochrane Library).</p>
+</div>
+<span class="font-label-sm text-label-sm bg-primary text-white px-md py-1 rounded-full uppercase">Updated Q3 2024</span>
+</div>
+<div class="space-y-lg">
+<div class="space-y-xs">
+<div class="flex justify-between font-label-md text-label-md">
+<span>Musculoskeletal Recovery</span>
+<span class="text-primary font-bold">Strong Evidence (92%)</span>
+</div>
+<div class="w-full h-3 bg-white rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 92%"></div>
+</div>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between font-label-md text-label-md">
+<span>Chronic Lower Back Pain</span>
+<span class="text-secondary font-bold">High Evidence (85%)</span>
+</div>
+<div class="w-full h-3 bg-white rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 85%"></div>
+</div>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between font-label-md text-label-md">
+<span>Neuroplasticity Post-Stroke</span>
+<span class="text-tertiary font-bold">Moderate Evidence (68%)</span>
+</div>
+<div class="w-full h-3 bg-white rounded-full overflow-hidden">
+<div class="h-full bg-tertiary" style="width: 68%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Suitability Table -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="p-lg rounded-xl border border-outline-variant/30">
+<h4 class="font-title-md text-title-md text-primary mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined">how_to_reg</span> Highly Recommended For:
+                    </h4>
+<ul class="space-y-sm">
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-tertiary">check</span> Post-operative orthopedic patients</li>
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-tertiary">check</span> Athletes seeking injury prevention</li>
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-tertiary">check</span> Individuals with sedentary lifestyle stiffness</li>
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-tertiary">check</span> Elderly focused on maintaining mobility</li>
+</ul>
+</div>
+<div class="p-lg rounded-xl border border-outline-variant/30">
+<h4 class="font-title-md text-title-md text-error mb-md flex items-center gap-xs">
+<span class="material-symbols-outlined">block</span> Contraindications:
+                    </h4>
+<ul class="space-y-sm">
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-error">close</span> Unstable spinal fractures</li>
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-error">close</span> Acute systemic infection</li>
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-error">close</span> Severe cardiovascular instability</li>
+<li class="flex items-center gap-sm font-body-md text-body-md"><span class="material-symbols-outlined text-error">close</span> Advanced undiagnosed bone pain</li>
+</ul>
+</div>
+</section>
+<!-- FAQ: Accordion -->
+<section class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Common Questions</h2>
+<div class="space-y-xs">
+<details class="group bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden" open="">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<h5 class="font-title-md text-title-md text-on-surface">How many sessions will I need?</h5>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-md pb-md font-body-md text-body-md text-on-surface-variant">
+                            Recovery time varies by condition. Acute injuries may resolve in 4-6 sessions, while complex neurological or chronic conditions might require ongoing maintenance over several months.
+                        </div>
+</details>
+<details class="group bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<h5 class="font-title-md text-title-md text-on-surface">Will the treatment be painful?</h5>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-md pb-md font-body-md text-body-md text-on-surface-variant">
+                            Physiotherapy aims to reduce pain, not cause it. Some discomfort may occur during deep tissue work or intensive exercise, but your therapist will always work within your tolerance.
+                        </div>
+</details>
+<details class="group bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<h5 class="font-title-md text-title-md text-on-surface">Do I need a doctor's referral?</h5>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-md pb-md font-body-md text-body-md text-on-surface-variant">
+                            In many jurisdictions, physiotherapists are "first contact" practitioners, meaning you can book an appointment directly. However, some insurance plans may require a GP referral for reimbursement.
+                        </div>
+</details>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-on-surface border-t border-outline-variant full-width mt-xl">
+<div class="w-full py-lg px-md max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
+<div>
+<span class="font-title-md text-title-md font-bold text-primary">HealSphere Portal</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-xs max-w-md">
+                    © 2024 HealSphere Portal. All rights reserved. Medical Disclaimer: Information provided is for educational purposes only.
+                </p>
+</div>
+<div class="flex flex-wrap gap-md font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Medical Advisory Board</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+<!-- Bottom Disclaimer Banner -->
+<div class="bg-surface-container py-md px-md border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto flex gap-sm items-start">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">info</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant italic leading-relaxed">
+                    Disclaimer: This content is intended for informational purposes and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this portal.
+                </p>
+</div>
+</div>
+</footer>
+<!-- FAB for quick contact (contextually allowed on main hub) -->
+<button class="fixed bottom-md right-md bg-primary text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform z-40 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_call</span>
+</button>
+<script>
+        // Smooth scroll implementation for sidebar links
+        document.querySelectorAll('aside a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active state in sidebar
+                    document.querySelectorAll('aside a').forEach(a => {
+                        a.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                        a.classList.add('text-on-surface-variant');
+                    });
+                    this.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    this.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+
+        // Sticky nav active state observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    const activeLink = document.querySelector(`aside a[href="#${id}"]`);
+                    if (activeLink) {
+                        document.querySelectorAll('aside a').forEach(a => {
+                            a.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                            a.classList.add('text-on-surface-variant');
+                        });
+                        activeLink.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                        activeLink.classList.remove('text-on-surface-variant');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body></html>

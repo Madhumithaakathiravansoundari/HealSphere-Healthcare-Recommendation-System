@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>HealSphere | Module 09: Ears &amp; Hearing</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e1e2e4",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "primary-container": "#0052cc",
+                        "on-tertiary-container": "#72e9af",
+                        "surface-variant": "#e1e2e4",
+                        "surface": "#f8f9fb",
+                        "on-surface-variant": "#434654",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "on-primary-fixed": "#001848",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "secondary-container": "#50dcff",
+                        "surface-container-low": "#f3f4f6",
+                        "tertiary-container": "#006844",
+                        "surface-container-high": "#e7e8ea",
+                        "primary": "#003d9b",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "secondary": "#00687b",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface": "#191c1e",
+                        "on-secondary-container": "#005f71",
+                        "surface-dim": "#d9dadc",
+                        "on-primary-container": "#c4d2ff",
+                        "tertiary": "#004e32",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#c3c6d6",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9fb",
+                        "on-secondary": "#ffffff",
+                        "outline": "#737685",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-tint": "#0c56d0",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#82f9be",
+                        "on-secondary-fixed": "#001f27",
+                        "secondary-fixed": "#afecff",
+                        "surface-bright": "#f8f9fb",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "surface-container": "#edeef0",
+                        "primary-fixed": "#dae2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "xs": "8px",
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8f9fb 0%, #edf1f7 100%);
+        }
+
+        .pill-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+        <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+            <div class="flex items-center gap-md">
+                <span class="font-title-md text-title-md font-bold text-primary">HealSphere</span>
+            </div>
+            <!-- Desktop Nav Links -->
+
+            <div class="flex items-center gap-md">
+                <button
+                    class="hidden md:block px-md py-xs rounded-full border-2 border-primary text-primary font-label-md hover:bg-primary/5 transition-all active:scale-95 duration-200">
+                    Sign Out
+                </button>
+                <button class="md:hidden text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-xl pb-lg">
+
+            <div class="max-w-container-max mx-auto px-gutter relative z-10">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-xs mb-md">
+                        <span
+                            class="bg-primary-container text-on-primary-container text-label-sm font-label-sm px-md py-1 rounded-full">Clinical
+                            Content</span>
+                        <span
+                            class="bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm px-md py-1 rounded-full flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[14px]">schedule</span> 40 Min Read
+                        </span>
+                    </div>
+                    <h1 class="font-display-lg text-display-lg text-primary mb-sm leading-tight">Module 09: Ears &amp;
+                        Hearing</h1>
+                    <p class="font-title-md text-title-md text-secondary mb-md">The Gateway to Sound and Balance</p>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        An intricate biological marvel, the auditory system serves as our primary interface for
+                        communication and spatial awareness. Explore the mechanics of sound transduction and the complex
+                        vestibular networks that maintain our equilibrium.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Ear Anatomy Section -->
+        <section class="py-xl bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex items-center gap-md mb-lg">
+                    <div class="h-[2px] w-12 bg-primary"></div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Anatomical Architecture</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                    <!-- Outer Ear -->
+                    <div
+                        class="glass-card rounded-xl p-md pill-shadow hover:translate-y-[-4px] transition-transform duration-300 transition-all duration-700 ease-out opacity-100 translate-y-0">
+                        <div class="w-full h-48 rounded-lg mb-md bg-surface overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="High-fidelity medical illustration of the outer ear, specifically the pinna and the ear canal leading to the eardrum. Professional clinical style with soft studio lighting, clean white background, and teal medical annotations. Precise anatomical detail showing skin texture and cartilage structure."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjhlyxCYSgvDbXE2b9_S5QypUc3Hfdc2MA_kLPNYH32z5bjuU1Fi1tePHg806l0fKqfwM5yeiOdKsQHW-7374t6BREsXlkjy9sLZulN7vRi67Zn7tpGOwMAvTY3IAOJH50vSwWBeM3daF_hBR3m8UHecX42u4j531wUaaqbsYz-DoQ0uJ01Q-Zt7K8lOF-8Uk2Dw2gu5xEXqHPPDknRvtHwuLgXjUA2ITEiBntMip7mNT-N0Uv1hgEUA">
+                        </div>
+                        <h3 class="font-title-md text-title-md text-primary mb-xs">Outer Ear</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">The external interface
+                            designed to capture and channel acoustic energy into the auditory canal.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 font-label-md text-label-md"><span
+                                    class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Pinna
+                                (Auricle)</li>
+                            <li class="flex items-center gap-2 font-label-md text-label-md"><span
+                                    class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                External Auditory Canal</li>
+                        </ul>
+                    </div>
+                    <!-- Middle Ear -->
+                    <div
+                        class="glass-card rounded-xl p-md pill-shadow hover:translate-y-[-4px] transition-transform duration-300 transition-all duration-700 ease-out opacity-100 translate-y-0">
+                        <div class="w-full h-48 rounded-lg mb-md bg-surface overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="A cross-section illustration of the middle ear, focusing on the tympanic membrane and the three ossicles: malleus, incus, and stapes. The style is modern medical educational, using a serene clinical palette of soft blues and greys. Transparent layers emphasize the mechanical connections between the tiny bones."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI1mAs32FWDjk_PmnUcdcUOezRsykUqLLNyvwPi9ks1LsBPPmJJEpGJqGu34YRxaz3q1YL9zjrsMRFu9bGG_uW3LXr_tKhK915G274s5T4VWw-oeekOwxiYyXsCy-zp1_qRJYL1DNere6V7rqgzSUsr0HTRKtLGM7ZcP_o6dxPUVDYPz0js0kPkWEkYR5HsvcSB7c864i09HfccpyvbzjsiEyd3RjSseYoUXan5MkYIo92mAFk9hr6NQ">
+                        </div>
+                        <h3 class="font-title-md text-title-md text-primary mb-xs">Middle Ear</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">An air-filled chamber that
+                            amplifies sound vibrations through a chain of the body's smallest bones.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 font-label-md text-label-md"><span
+                                    class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                Tympanic Membrane</li>
+                            <li class="flex items-center gap-2 font-label-md text-label-md"><span
+                                    class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                Ossicles (Malleus, Incus, Stapes)</li>
+                        </ul>
+                    </div>
+                    <!-- Inner Ear -->
+                    <div
+                        class="glass-card rounded-xl p-md pill-shadow hover:translate-y-[-4px] transition-transform duration-300 transition-all duration-700 ease-out opacity-100 translate-y-0">
+                        <div class="w-full h-48 rounded-lg mb-md bg-surface overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Detailed medical drawing of the inner ear structures, including the snail-shaped cochlea, the semicircular canals for balance, and the auditory nerve pathways. Rendered in a clean, professional clinical style with soft teal and white tones. High clarity on the delicate internal structures like the hair cells within the cochlea."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArygmAHhTEdhGkEOtb4eEw6vkRTzJPfzEiwPlJTKf_xfX-JxqncTr44YBR5OvBq5HySfjnJTv4NQJMBRLzp077gexCT4-HNz_KQn89FLxZgJKd5uXrmX_mJ10YJIPlCybBFd7b3VuJi8Ou7q0DuA_e-kjuA92m4FBEqPLodjoMJhqLyJ99BZMP_uoxi7bdX3BM3OIJIlS40HhJLP9vpY9QSig3MxAm3_3J-9921dQdOrPsGv6tnrGOnQ">
+                        </div>
+                        <h3 class="font-title-md text-title-md text-primary mb-xs">Inner Ear</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">The neural hub where physical
+                            vibrations are converted into electrical impulses for the brain.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 font-label-md text-label-md"><span
+                                    class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                Cochlea</li>
+                            <li class="flex items-center gap-2 font-label-md text-label-md"><span
+                                    class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                Semicircular Canals &amp; Auditory Nerve</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mechanics Section -->
+        <section class="py-xl">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">The Physics of Perception
+                        </h2>
+                        <div class="space-y-md">
+                            <div
+                                class="flex gap-md p-md bg-surface-container rounded-xl border border-outline-variant/30">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-on-secondary-container">hearing</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-title-md text-title-md text-on-surface mb-xs">The Hearing Process
+                                    </h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Sound waves enter the
+                                        canal, vibrate the eardrum, and are mechanical amplified by the ossicles. In the
+                                        cochlea, fluid movement triggers hair cells to send electrical signals to the
+                                        brain via the auditory nerve.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex gap-md p-md bg-surface-container rounded-xl border border-outline-variant/30">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-on-tertiary-fixed">balance</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-title-md text-title-md text-on-surface mb-xs">The Balance System
+                                    </h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Three fluid-filled
+                                        semicircular canals detect head rotation, while otolith organs sense gravity and
+                                        linear acceleration. This vestibular data allows the brain to maintain spatial
+                                        orientation and gaze stability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A sophisticated abstract visualization of sound waves traveling through a professional clinical environment. The waves are rendered as elegant, translucent blue and white ripples flowing across the screen. The background is a clean, bright medical laboratory setting with soft focus. The overall mood is high-tech, calm, and scientific."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrdIS_T3xtXu-jS7tpRgkOkvJ4lJFiUDiUy7x9n-_Mms3GnXltcHunHFdidvwR6D0OVpPrk87d6HgXQh23rmuPDc6O7_8hk0tMIanx8I9vYHA14E1qEnNDJqMP3Ysnng1KpS4CRbG1pVSMvjTOJF_AmFaVxGusRECsOHE6l1GBpnI5sK8xIM4E_8Huer_vltaMif5APt6ZcxdnJ1Rgbv8vrVWlSKAdYH7U3SOP-AUL1yIjVJ8ToSyj-g">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div class="absolute bottom-md left-md right-md">
+                            <p class="text-white font-label-md italic">Transduction: Converting kinetic energy into
+                                neural data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pathology Center -->
+        <section class="py-xl bg-primary text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+
+            </div>
+            <div class="max-w-container-max mx-auto px-gutter relative z-10">
+                <h2 class="font-headline-lg text-headline-lg mb-lg text-center">Pathology Center: ENT Clinical
+                    Conditions</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-md border border-white/20">
+                        <h4 class="font-title-md text-title-md mb-xs">Otitis Media</h4>
+                        <p class="font-label-md text-label-md text-primary-fixed mb-md">Middle Ear Infection</p>
+                        <p class="font-body-md text-body-md opacity-90">Acute inflammation usually following a
+                            respiratory infection, causing fluid buildup and sharp pain.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-md border border-white/20">
+                        <h4 class="font-title-md text-title-md mb-xs">Hearing Loss</h4>
+                        <p class="font-label-md text-label-md text-primary-fixed mb-md">Sensory vs. Conductive</p>
+                        <p class="font-body-md text-body-md opacity-90">Conductive issues block sound transit, while
+                            sensorineural involves cochlear or nerve damage.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-md border border-white/20">
+                        <h4 class="font-title-md text-title-md mb-xs">Tinnitus</h4>
+                        <p class="font-label-md text-label-md text-primary-fixed mb-md">Phantom Noise</p>
+                        <p class="font-body-md text-body-md opacity-90">Perception of noise when no external sound is
+                            present, often described as ringing or buzzing.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-md border border-white/20">
+                        <h4 class="font-title-md text-title-md mb-xs">Meniere's</h4>
+                        <p class="font-label-md text-label-md text-primary-fixed mb-md">Vestibular Disorder</p>
+                        <p class="font-body-md text-body-md opacity-90">Episodes of vertigo, hearing loss, and ear
+                            pressure caused by fluid imbalances in the inner ear.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic & Management Roadmap -->
+        <section class="py-xl">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex flex-col md:flex-row gap-xl">
+                    <div class="md:w-1/2">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Diagnostic Roadmap</h2>
+                        <div class="space-y-sm">
+                            <div class="flex items-start gap-md">
+                                <span
+                                    class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                                <div>
+                                    <h5 class="font-title-md text-title-md">Otoscopy</h5>
+                                    <p class="font-body-md text-on-surface-variant">Visual inspection of the canal and
+                                        eardrum using a specialized light tool.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <span
+                                    class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                                <div>
+                                    <h5 class="font-title-md text-title-md">Audiometry</h5>
+                                    <p class="font-body-md text-on-surface-variant">Quantitative hearing tests to
+                                        determine thresholds across various frequencies.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <span
+                                    class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                                <div>
+                                    <h5 class="font-title-md text-title-md">Tympanometry</h5>
+                                    <p class="font-body-md text-on-surface-variant">Assessing the health of the middle
+                                        ear and mobility of the eardrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Management Pillars</h2>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div
+                                class="p-md rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    style="font-size: 32px;">hearing_disabled</span>
+                                <span class="font-label-md text-on-surface">Hearing Aids</span>
+                            </div>
+                            <div
+                                class="p-md rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    style="font-size: 32px;">memory</span>
+                                <span class="font-label-md text-on-surface">Cochlear Implants</span>
+                            </div>
+                            <div
+                                class="p-md rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    style="font-size: 32px;">medication</span>
+                                <span class="font-label-md text-on-surface">Medications</span>
+                            </div>
+                            <div
+                                class="p-md rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    style="font-size: 32px;">directions_walk</span>
+                                <span class="font-label-md text-on-surface">Vestibular Rehab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hearing Care & Prevention -->
+        <section class="py-xl bg-secondary-container/10">
+            <div class="max-w-container-max mx-auto px-gutter text-center">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg">Hearing Care &amp; Prevention</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center pill-shadow mb-md">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-size: 32px;">volume_off</span>
+                        </div>
+                        <h5 class="font-title-md text-title-md mb-xs">Volume Control</h5>
+                        <p class="font-body-md text-on-surface-variant max-w-xs">Adhere to the 60/60 rule: 60% max
+                            volume for no more than 60 minutes daily.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center pill-shadow mb-md">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-size: 32px;">calendar_today</span>
+                        </div>
+                        <h5 class="font-title-md text-title-md mb-xs">Regular Checkups</h5>
+                        <p class="font-body-md text-on-surface-variant max-w-xs">Baseline audiograms and annual ENT
+                            screenings help detect early-stage changes.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center pill-shadow mb-md">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-size: 32px;">cleaning_services</span>
+                        </div>
+                        <h5 class="font-title-md text-title-md mb-xs">Proper Cleaning</h5>
+                        <p class="font-body-md text-on-surface-variant max-w-xs">Avoid using Q-tips or sharp objects.
+                            Ears are self-cleaning; consult a professional for wax removal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="py-xl mb-xl">
+            <div class="max-w-3xl mx-auto px-gutter">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg text-center">Frequently Asked
+                    Questions</h2>
+                <div class="space-y-sm">
+                    <details
+                        class="group bg-surface-container-low rounded-xl border border-outline-variant/30 overflow-hidden transition-all">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md text-title-md text-on-surface">What are the early signs of
+                                hearing loss?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-md pt-0 border-t border-outline-variant/30 font-body-md text-on-surface-variant">
+                            Common early signs include difficulty following conversations in noisy environments,
+                            frequently asking others to repeat themselves, and increasing the volume on electronic
+                            devices beyond typical levels.
+                        </div>
+                    </details>
+                    <details
+                        class="group bg-surface-container-low rounded-xl border border-outline-variant/30 overflow-hidden transition-all">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md text-title-md text-on-surface">Can tinnitus be cured?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-md pt-0 border-t border-outline-variant/30 font-body-md text-on-surface-variant">
+                            While there is often no direct 'cure' for primary tinnitus, it can be effectively managed
+                            through sound therapy, cognitive behavioral therapy, and addressing underlying medical
+                            conditions that may be contributing to the noise.
+                        </div>
+                    </details>
+                    <details
+                        class="group bg-surface-container-low rounded-xl border border-outline-variant/30 overflow-hidden transition-all">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md text-title-md text-on-surface">How do the ears help with
+                                balance?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-md pt-0 border-t border-outline-variant/30 font-body-md text-on-surface-variant">
+                            The inner ear contains the vestibular system—a complex set of canals and organs that monitor
+                            the position and motion of your head. These sensory inputs are sent to the brain to
+                            coordinate muscle movements and keep you upright.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container dark:bg-surface-container-low border-t border-outline-variant">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter gap-md max-w-container-max mx-auto py-lg">
+            <div class="flex flex-col items-center md:items-start gap-xs">
+                <span class="font-title-md text-title-md font-black text-on-surface">HealSphere</span>
+                <p class="font-label-sm text-label-sm text-secondary">© 2024 HealSphere Medical Education. Professional
+                    Use Only.</p>
+            </div>
+            <div class="flex gap-md flex-wrap justify-center">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm hover:underline"
+                    href="#">Medical Disclaimer</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm hover:underline"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm hover:underline"
+                    href="#">Terms of Service</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm hover:underline"
+                    href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Micro-interaction Scripts -->
+    <script>
+        // Simple fade-in animation for cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(card);
+        });
+
+        // Add active state styles to active navigation links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => l.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1'));
+                link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

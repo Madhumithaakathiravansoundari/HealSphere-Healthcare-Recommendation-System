@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>HealSphere | Respiratory System (Lungs)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2e3132",
+                        "on-primary-container": "#c4d2ff",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "on-primary-fixed": "#001848",
+                        "secondary": "#00687b",
+                        "on-tertiary-container": "#72e9af",
+                        "surface-container": "#edeef0",
+                        "on-tertiary-fixed": "#002113",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "background": "#f8f9fb",
+                        "surface-variant": "#e1e2e4",
+                        "secondary-container": "#50dcff",
+                        "tertiary-fixed": "#82f9be",
+                        "surface-container-highest": "#e1e2e4",
+                        "tertiary": "#004e32",
+                        "surface-bright": "#f8f9fb",
+                        "primary-fixed": "#dae2ff",
+                        "primary-container": "#0052cc",
+                        "outline-variant": "#c3c6d6",
+                        "on-secondary-container": "#005f71",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0c56d0",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#afecff",
+                        "on-surface-variant": "#434654",
+                        "surface": "#f8f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "primary": "#003d9b",
+                        "on-secondary-fixed": "#001f27",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadc",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e7e8ea",
+                        "surface-container-low": "#f3f4f6",
+                        "outline": "#737685",
+                        "inverse-on-surface": "#f0f1f3",
+                        "tertiary-container": "#006844",
+                        "on-surface": "#191c1e",
+                        "on-background": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "container-max": "1280px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "gutter": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .active-nav-pill {
+            background: rgba(0, 61, 155, 0.1);
+            border-radius: 9999px;
+        }
+
+        .breath-animation {
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- Top Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+        <div class="flex justify-between items-center w-full px-lg py-sm max-w-container-max mx-auto">
+            <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined text-primary text-3xl">air</span>
+                <span class="font-headline-lg text-headline-lg font-bold text-primary">HealSphere</span>
+            </div>
+            <div class="hidden md:flex items-center gap-md">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-title-md text-sm"
+                    href="/">Dashboard</a>
+                <div class="relative ml-sm group">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant cursor-pointer p-xs hover:bg-primary/5 rounded-full transition-colors">notifications</span>
+                </div>
+                
+            </div>
+            <button class="md:hidden material-symbols-outlined text-on-surface-variant">menu</button>
+        </div>
+    </nav>
+    <main class="pt-24 pb-xl">
+        <!-- Hero Section -->
+        <section
+            class="max-w-container-max mx-auto px-lg grid lg:grid-cols-2 gap-lg items-center mb-xl transition-all duration-700 ease-out opacity-100 translate-y-0">
+            <div class="space-y-md">
+                <span
+                    class="inline-block px-sm py-xs bg-secondary-container text-on-secondary-container rounded-full font-label-md">Respiratory
+                    System</span>
+                <h1 class="font-display-lg text-display-lg text-primary">The Lungs: Our Vital Engine</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    The lungs are the primary organs of respiration, responsible for the vital exchange of gases. They
+                    deliver oxygen to your blood and remove carbon dioxide, fueling every cell in your body with the
+                    life-sustaining breath of air.
+                </p>
+
+            </div>
+            <div class="relative">
+                <div class="w-full h-96 rounded-3xl overflow-hidden glass-card relative group">
+                    <img class="w-full h-full object-cover breath-animation"
+                        data-alt="A highly detailed, professional medical illustration of a human respiratory system on a clean, white surgical background. The lungs are depicted with a soft, semi-transparent realistic texture, showing the branching bronchial tubes in calming shades of teal and clinical blue. Soft ambient lighting illuminates the chest cavity, emphasizing a sense of health, clarity, and modern digital hygiene typical of a high-end medical portal."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnPDZMjQ8MOjI8y8fAUf6NFbmbaK5MUq-Eoexvj6QVH1Gctr0c6TUN0GDOqvldRQZAZIugsBs-wUQgUmRh0-L8dIzY97ib0pbQ-6pKJouDL0O7ubrjCBR2sXMvNDiBKz9b27w95yHKkNvpZ7E8ICfaIaSxxgwRJ1z1CgRSWvz9HM3u-AIVRq0hKoljTtfY2XCqXUrQEKI2vRhIJ1fLrrkPLgZ2GuoeeOXUWtuT17rLuCwtVBJYP57RJg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                </div>
+                <!-- Stat Badges -->
+                <div class="absolute -bottom-xs -left-xs glass-card p-md rounded-2xl animate-bounce">
+                    <p class="text-primary font-bold text-headline-lg">22,000</p>
+                    <p class="text-on-surface-variant font-label-sm">Breaths per Day</p>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Grid: Anatomy & Breathing -->
+        <section
+            class="max-w-container-max mx-auto px-lg mb-xl transition-all duration-700 ease-out opacity-100 translate-y-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                <!-- Anatomy Card -->
+                <div class="md:col-span-2 glass-card p-lg rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <h2 class="font-title-md text-title-md text-primary mb-sm">Lung Anatomy</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-md">
+                            <div class="space-y-xs group">
+                                <span
+                                    class="material-symbols-outlined text-secondary text-3xl p-xs bg-secondary-fixed/30 rounded-lg group-hover:scale-110 transition-transform">airplay</span>
+                                <h4 class="font-bold">Trachea</h4>
+                                <p class="text-sm text-on-surface-variant">The windpipe that directs air into the lungs.
+                                </p>
+                            </div>
+                            <div class="space-y-xs group">
+                                <span
+                                    class="material-symbols-outlined text-secondary text-3xl p-xs bg-secondary-fixed/30 rounded-lg group-hover:scale-110 transition-transform">schema</span>
+                                <h4 class="font-bold">Bronchi</h4>
+                                <p class="text-sm text-on-surface-variant">Large tubes leading to each lung.</p>
+                            </div>
+                            <div class="space-y-xs group">
+                                <span
+                                    class="material-symbols-outlined text-secondary text-3xl p-xs bg-secondary-fixed/30 rounded-lg group-hover:scale-110 transition-transform">nature</span>
+                                <h4 class="font-bold">Alveoli</h4>
+                                <p class="text-sm text-on-surface-variant">Tiny sacs where gas exchange occurs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-lg pt-md border-t border-outline-variant/30 flex items-center justify-between">
+                    </div>
+                </div>
+                <!-- Process Card -->
+                <div class="bg-primary text-on-primary p-lg rounded-3xl flex flex-col">
+                    <h2 class="font-title-md text-title-md mb-md">Breathing Process</h2>
+                    <div class="flex-1 space-y-md">
+                        <div class="bg-white/10 p-md rounded-xl backdrop-blur-sm border border-white/20">
+                            <h4 class="font-bold flex items-center gap-xs"><span
+                                    class="material-symbols-outlined">expand</span> Inspiration</h4>
+                            <p class="text-sm opacity-90">Diaphragm contracts and moves downward, creating a vacuum that
+                                pulls air in.</p>
+                        </div>
+                        <div class="bg-white/10 p-md rounded-xl backdrop-blur-sm border border-white/20">
+                            <h4 class="font-bold flex items-center gap-xs"><span
+                                    class="material-symbols-outlined">compress</span> Expiration</h4>
+                            <p class="text-sm opacity-90">Diaphragm relaxes and moves upward, forcing carbon dioxide out
+                                of the lungs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Common Diseases Section -->
+        <section
+            class="max-w-container-max mx-auto px-lg mb-xl transition-all duration-700 ease-out opacity-100 translate-y-0">
+            <div class="text-center mb-lg">
+                <h2 class="font-headline-lg text-headline-lg text-primary">Respiratory Conditions</h2>
+                <p class="text-on-surface-variant">Early detection is key to managing lung health effectively.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-sm">
+                <!-- Disease Cards -->
+                <div class="glass-card p-md rounded-2xl hover:-translate-y-2 transition-all group">
+                    <span class="material-symbols-outlined text-error text-3xl mb-xs">emergency</span>
+                    <h3 class="font-bold text-primary">Asthma</h3>
+                    <p class="text-sm text-on-surface-variant mt-xs">Inflammation of the airways making breathing
+                        difficult.</p>
+                </div>
+                <div class="glass-card p-md rounded-2xl hover:-translate-y-2 transition-all">
+                    <span class="material-symbols-outlined text-secondary text-3xl mb-xs">coronavirus</span>
+                    <h3 class="font-bold text-primary">Pneumonia</h3>
+                    <p class="text-sm text-on-surface-variant mt-xs">Infection that inflames the air sacs in one or both
+                        lungs.</p>
+                </div>
+                <div class="glass-card p-md rounded-2xl hover:-translate-y-2 transition-all">
+                    <span class="material-symbols-outlined text-tertiary text-3xl mb-xs">microbiology</span>
+                    <h3 class="font-bold text-primary">Tuberculosis</h3>
+                    <p class="text-sm text-on-surface-variant mt-xs">Bacterial infection that primarily affects the
+                        lungs.</p>
+                </div>
+                <div class="glass-card p-md rounded-2xl hover:-translate-y-2 transition-all">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-xs">masks</span>
+                    <h3 class="font-bold text-primary">COPD</h3>
+                    <p class="text-sm text-on-surface-variant mt-xs">Chronic obstructive disease blocking airflow.</p>
+                </div>
+                <div class="glass-card p-md rounded-2xl hover:-translate-y-2 transition-all">
+                    <span class="material-symbols-outlined text-on-surface text-3xl mb-xs">warning</span>
+                    <h3 class="font-bold text-primary">Lung Cancer</h3>
+                    <p class="text-sm text-on-surface-variant mt-xs">Malignant cells forming in the lung tissues.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnosis & Treatments (Split Screen) -->
+        <section
+            class="max-w-container-max mx-auto px-lg grid lg:grid-cols-2 gap-lg mb-xl transition-all duration-700 ease-out opacity-100 translate-y-0">
+            <div class="space-y-md">
+                <h2 class="font-headline-lg text-headline-lg text-primary">Diagnostic Procedures</h2>
+                <div class="space-y-sm">
+                    <div class="flex gap-md items-start p-md glass-card rounded-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-primary">monitor_heart</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Spirometry</h4>
+                            <p class="text-sm text-on-surface-variant">Measures how much air you can breathe in and out,
+                                and how fast.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-md items-start p-md glass-card rounded-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-primary">radiology</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Chest X-ray / CT Scan</h4>
+                            <p class="text-sm text-on-surface-variant">Imaging to visualize structures and identify
+                                abnormalities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-md">
+                <h2 class="font-headline-lg text-headline-lg text-secondary">Modern Treatments</h2>
+                <div class="grid grid-cols-2 gap-sm">
+                    <div class="p-md bg-secondary-container/20 rounded-2xl border border-secondary-container/30">
+                        <span class="material-symbols-outlined text-secondary">medication</span>
+                        <p class="font-bold mt-xs">Inhalers</p>
+                    </div>
+                    <div class="p-md bg-secondary-container/20 rounded-2xl border border-secondary-container/30">
+                        <span class="material-symbols-outlined text-secondary">air</span>
+                        <p class="font-bold mt-xs">Oxygen Therapy</p>
+                    </div>
+                    <div class="p-md bg-secondary-container/20 rounded-2xl border border-secondary-container/30">
+                        <span class="material-symbols-outlined text-secondary">exercise</span>
+                        <p class="font-bold mt-xs">Pulmonary Rehab</p>
+                    </div>
+                    <div class="p-md bg-secondary-container/20 rounded-2xl border border-secondary-container/30">
+                        <span class="material-symbols-outlined text-secondary">healing</span>
+                        <p class="font-bold mt-xs">Medications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Prevention & Exercises (Atmospheric Shader Area) -->
+        <section
+            class="relative py-xl overflow-hidden mb-xl transition-all duration-700 ease-out opacity-100 translate-y-0">
+
+            <div class="relative z-10 max-w-container-max mx-auto px-lg">
+                <div class="grid lg:grid-cols-2 gap-xl items-center">
+                    <div class="space-y-lg">
+                        <div class="glass-card p-lg rounded-3xl">
+                            <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Prevention Protocol</h2>
+                            <ul class="space-y-md">
+                                <li class="flex items-center gap-md">
+                                    <span class="material-symbols-outlined text-tertiary-container">smoke_free</span>
+                                    <span class="font-body-md">Quit smoking and avoid second-hand smoke.</span>
+                                </li>
+                                <li class="flex items-center gap-md">
+                                    <span class="material-symbols-outlined text-tertiary-container">eco</span>
+                                    <span class="font-body-md">Minimize exposure to outdoor/indoor pollutants.</span>
+                                </li>
+                                <li class="flex items-center gap-md">
+                                    <span class="material-symbols-outlined text-tertiary-container">vaccines</span>
+                                    <span class="font-body-md">Stay updated with flu and pneumonia vaccines.</span>
+                                </li>
+                                <li class="flex items-center gap-md">
+                                    <span class="material-symbols-outlined text-tertiary-container">clean_hands</span>
+                                    <span class="font-body-md">Practice frequent hand hygiene to prevent
+                                        infection.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-md">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">Breathing Exercises</h2>
+                        <div class="space-y-sm">
+                            <div
+                                class="bg-white p-md rounded-2xl shadow-sm border border-outline-variant/20 flex gap-md">
+                                <div class="bg-primary/5 p-xs rounded-full h-fit"><span
+                                        class="material-symbols-outlined text-primary">self_improvement</span></div>
+                                <div>
+                                    <h4 class="font-bold">Diaphragmatic Breathing</h4>
+                                    <p class="text-sm text-on-surface-variant italic">"Belly Breathing"</p>
+                                    <p class="text-sm mt-xs">Deep breathing through the nose, making the stomach rise,
+                                        then slow exhale through the mouth.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white p-md rounded-2xl shadow-sm border border-outline-variant/20 flex gap-md">
+                                <div class="bg-primary/5 p-xs rounded-full h-fit"><span
+                                        class="material-symbols-outlined text-primary">spa</span></div>
+                                <div>
+                                    <h4 class="font-bold">Pursed-Lip Breathing</h4>
+                                    <p class="text-sm text-on-surface-variant italic">"Calming Breath"</p>
+                                    <p class="text-sm mt-xs">Inhale for 2 seconds, then exhale through puckered lips for
+                                        4 seconds. Great for COPD recovery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Facts & FAQs -->
+        <section
+            class="max-w-container-max mx-auto px-lg mb-xl grid md:grid-cols-2 gap-lg transition-all duration-700 ease-out opacity-100 translate-y-0">
+            <div>
+                <h3 class="font-title-md text-title-md text-primary mb-md">Fascinating Lung Facts</h3>
+                <div class="space-y-md">
+                    <div class="flex items-center gap-md p-md glass-card rounded-2xl">
+                        <span class="material-symbols-outlined text-3xl text-secondary">square_foot</span>
+                        <div>
+                            <p class="font-bold">Surface Area</p>
+                            <p class="text-sm">Your lungs have roughly the same surface area as a tennis court.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-md p-md glass-card rounded-2xl">
+                        <span class="material-symbols-outlined text-3xl text-secondary">water_drop</span>
+                        <div>
+                            <p class="font-bold">Humidification</p>
+                            <p class="text-sm">Lungs warm and moisturize the air you breathe to match body temperature.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-title-md text-title-md text-primary mb-md">Frequently Asked Questions</h3>
+                <div class="space-y-sm">
+                    <details class="glass-card rounded-xl overflow-hidden group">
+                        <summary
+                            class="p-md cursor-pointer font-bold flex justify-between items-center bg-white/50 hover:bg-white/80 transition-all">
+                            How can I improve my lung capacity?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="p-md border-t border-outline-variant/20 text-sm text-on-surface-variant">
+                            Regular aerobic exercise like swimming or brisk walking, combined with specific breathing
+                            exercises and staying hydrated, can significantly improve lung efficiency over time.
+                        </div>
+                    </details>
+                    <details class="glass-card rounded-xl overflow-hidden group">
+                        <summary
+                            class="p-md cursor-pointer font-bold flex justify-between items-center bg-white/50 hover:bg-white/80 transition-all">
+                            What are the early signs of lung issues?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="p-md border-t border-outline-variant/20 text-sm text-on-surface-variant">
+                            Watch for persistent coughs, shortness of breath during light activities, recurring chest
+                            pain, or wheezing sounds during respiration.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- CTA / Tips Banner -->
+        <section
+            class="max-w-container-max mx-auto px-lg transition-all duration-700 ease-out opacity-100 translate-y-0">
+            <div
+                class="bg-primary-container text-on-primary-container p-lg rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-md overflow-hidden relative shadow-2xl">
+                <div class="relative z-10">
+                    <h2 class="font-headline-lg text-headline-lg mb-xs">Breathe Better Today</h2>
+                </div>
+                <div class="w-full md:w-1/3 aspect-video glass-card rounded-2xl overflow-hidden border-none p-0">
+                    <img class="w-full h-full object-cover opacity-80"
+                        data-alt="A serene, high-resolution lifestyle photograph of a person practicing deep breathing in a lush, sun-drenched park filled with soft green foliage. The sunlight is filtered through the leaves, creating a warm, hopeful atmosphere that emphasizes clean air and vitality. The overall aesthetic is breathable and clinical, reflecting the HealSphere brand identity of health and wellness through natural and modern means."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjVxln7iVL57F0uNZr_P4wXnIjtFp8Iub8MtSHjEjCu1su4GbcgS1_ckMWP3fZMk05OiRyq3_E9R1PXkXSn4t-T7Yoyxvby1k7aScQC6coMcBvt26bxxRdV11uSF9vV8Gv26h4vOwtjJARD7hY7_4ay72kZsO3RZ3Ycyr9ewIa5G8qC2Rk0eSSso1XU1NAFSw5LCBKntso1oxVOCgbmnHsFokY_0l7B5AYMWc5oniftt2TvkcPXxbL9Q">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 mt-xl">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start gap-md px-lg py-lg max-w-container-max mx-auto">
+            <div class="space-y-md max-w-sm">
+                <div class="flex items-center gap-xs">
+                    <span class="material-symbols-outlined text-primary text-3xl">air</span>
+                    <span
+                        class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">HealSphere</span>
+                </div>
+                <p class="font-label-md text-label-md text-on-surface-variant">
+                    © 2024 HealSphere. All rights reserved. Medical Disclaimer: Information provided is for educational
+                    purposes only and not a substitute for professional medical advice.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-lg">
+                <div class="space-y-sm">
+                    <h5 class="font-bold text-primary">Quick Links</h5>
+                    <ul class="space-y-xs font-label-md text-on-surface-variant">
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Emergency Contacts</a>
+                        </li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                        <li class=""><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-sm">
+                    <h5 class="font-bold text-primary">Newsletter</h5>
+                    <div class="flex gap-xs">
+                        <input
+                            class="bg-white border border-outline-variant/50 rounded-full px-md py-xs text-sm focus:ring-2 focus:ring-primary focus:outline-none"
+                            placeholder="Your email" type="email">
+                        <button
+                            class="bg-primary text-on-primary p-xs rounded-full material-symbols-outlined">send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Micro-interactions Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth reveal animation for sections
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

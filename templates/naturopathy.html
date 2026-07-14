@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Naturopathy | HealSphere Integrated Healthcare</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f3f4f6",
+                    "inverse-on-surface": "#f0f1f3",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "background": "#f8f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-surface-variant": "#434654",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#001848",
+                    "on-tertiary-container": "#72e9af",
+                    "secondary-fixed-dim": "#48d7f9",
+                    "surface-variant": "#e1e2e4",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "surface-tint": "#0c56d0",
+                    "on-secondary-container": "#005f71",
+                    "on-primary-container": "#c4d2ff",
+                    "surface-bright": "#f8f9fb",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#edeef0",
+                    "on-tertiary-fixed": "#002113",
+                    "secondary-container": "#50dcff",
+                    "primary-fixed": "#dae2ff",
+                    "on-secondary-fixed": "#001f27",
+                    "outline": "#737685",
+                    "primary-container": "#0052cc",
+                    "surface-container-highest": "#e1e2e4",
+                    "on-secondary-fixed-variant": "#004e5d",
+                    "tertiary-container": "#006844",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-fixed": "#82f9be",
+                    "primary": "#003d9b",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#00687b",
+                    "surface-dim": "#d9dadc",
+                    "tertiary-fixed-dim": "#65dca4",
+                    "inverse-primary": "#b2c5ff",
+                    "outline-variant": "#c3c6d6",
+                    "surface": "#f8f9fb",
+                    "on-tertiary-fixed-variant": "#005235",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e7e8ea",
+                    "tertiary": "#004e32",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#afecff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "8px",
+                    "xl": "80px",
+                    "sm": "16px",
+                    "container-max": "1280px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "title-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #00687b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .serene-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+        .step-line::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 2.5rem;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .step-line::after { left: 1.25rem; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-on-background/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-gutter py-xs max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary">HealSphere</span>
+</div>
+<nav class="hidden md:flex gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary" href="#">Treatments</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Diseases</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Body Systems</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">AI Assistant</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female doctor with a stethoscope around her neck, smiling warmly in a bright, modern clinic office setting. High-key lighting emphasizes a clean, clinical yet empathetic atmosphere with soft blue and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9HAJTAJ0AYOse5X3ZUmt8og_lt9ZM6pDSpi2KzFm4FFsNutOU0xcJZbJ7Sn6YUa1x_TqNWkTcfeZPXTPlAEnS_-PI_t5B5fwHTCMWSvkzXioHBA2B6TxS3dR10njHOuDX6jDfWCtA2D8KuWPEQHF0J3SUPEcLcIh1ITr5yxF4YGM-u3Ax3ER409mVqABj2ML9e8O3yq0JsMirdWrI2aFvuvgpVNAHxMOW6eWcViD6eOR7Vd3Jfe2lQw"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-16 max-w-container-max mx-auto px-gutter py-lg">
+<!-- Breadcrumb & Back -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-sm mb-md">
+<nav class="flex items-center gap-xs font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="/">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Treatment Systems</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Naturopathy</span>
+</nav>
+<button class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:bg-primary-fixed/30 px-sm py-xs rounded-full transition-all active:scale-95" onclick="window.history.back()">
+<a href="/"
+    <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                Back to Dashboard
+            </button></a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg relative">
+<!-- Sticky Sidebar Navigation -->
+<aside class="hidden lg:block lg:col-span-3">
+<div class="sticky top-24 space-y-xs p-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 serene-shadow">
+<h3 class="font-title-md text-title-md text-primary mb-sm px-xs">Navigation</h3>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg text-primary bg-primary-container font-semibold transition-all" href="#overview">
+<span class="material-symbols-outlined text-[20px]">info</span> Overview
+                        </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all" href="#history">
+<span class="material-symbols-outlined text-[20px]">history</span> History
+                        </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all" href="#principles">
+<span class="material-symbols-outlined text-[20px]">gavel</span> Principles
+                        </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all" href="#process">
+<span class="material-symbols-outlined text-[20px]">account_tree</span> Process
+                        </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all" href="#conditions">
+<span class="material-symbols-outlined text-[20px]">medical_information</span> Conditions
+                        </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all" href="#benefits">
+<span class="material-symbols-outlined text-[20px]">verified</span> Benefits &amp; Risks
+                        </a>
+<a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all" href="#evidence">
+<span class="material-symbols-outlined text-[20px]">science</span> Evidence
+                        </a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="lg:col-span-9 space-y-xl">
+<!-- Hero Section -->
+<section class="relative rounded-3xl overflow-hidden min-h-[400px] flex items-center serene-shadow" id="overview">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A breathtaking medical illustration blending nature and science. A double helix DNA strand transitions into lush green vines and leaves, set against a sterile, high-tech clinical background with soft teal bokeh lights. The image conveys healing, vitality, and advanced primary care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkXZh5gckEMtwP2n6VLnijDW6MPBCz14AZbVZGo8aGxu9Lrowi3zu1SPMjLwzFuNwZ1yxdQo1Neusn0nkadZGkIK8bequ890Rvziat_xnStINUL_LlzJbde7G2wNvzUC7f7d4YGN0aE6RxgnSD9lx6A5H237eakYDZ18F4HRekgl9Dazpqno-Bh2uanZa7PiBGvDBR-aZlfvA2Uu6IrRQ28vGhmotTcG6UiUVS7EUfjVMajKiUmp5JEQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 p-lg max-w-2xl">
+<span class="inline-block px-sm py-1 bg-secondary-container text-on-secondary-fixed-variant rounded-full text-label-sm font-label-sm mb-sm">Integrative Medicine</span>
+<h1 class="font-display-lg text-display-lg text-gradient mb-xs">Naturopathy: Healing Through Nature</h1>
+<p class="font-title-md text-title-md text-on-surface-variant font-medium mb-md">Evidence-Based Natural Primary Care</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                            A system of healthcare which encourages the body's self-healing process through natural therapies and lifestyle modifications.
+                        </p>
+<a class="inline-flex items-center px-lg py-md bg-primary-container text-on-primary-container rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all" href="#conditions">
+                            Explore Conditions
+                        </a>
+</div>
+</section>
+<!-- What is Naturopathy? -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest p-lg rounded-3xl border border-outline-variant/20 serene-shadow">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">What is Naturopathy?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            A distinct primary health care profession that emphasizes prevention, treatment, and optimal health through the use of therapeutic methods and substances that encourage individuals' inherent self-healing process.
+                        </p>
+</div>
+<div class="bg-tertiary-container/10 p-lg rounded-3xl border border-tertiary/20 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-tertiary text-5xl mb-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+<h3 class="font-title-md text-title-md text-tertiary mb-xs italic">Vis Medicatrix Naturae</h3>
+<p class="font-label-md text-label-md text-on-tertiary-fixed-variant">(The Healing Power of Nature)</p>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="bg-surface-container-lowest p-lg rounded-3xl border border-outline-variant/20 serene-shadow" id="history">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-lg">History &amp; Origin</h2>
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Connector line -->
+<div class="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-outline-variant/30"></div>
+<div class="relative z-10 text-center md:text-left">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto md:mx-0 mb-sm border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<h4 class="font-bold text-primary">400 BCE</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Hippocrates</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Early foundations of natural healing in Greek medicine.</p>
+</div>
+<div class="relative z-10 text-center md:text-left">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto md:mx-0 mb-sm border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined">description</span>
+</div>
+<h4 class="font-bold text-primary">1902</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Benedict Lust</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Formalisation of the term 'Naturopathy' in the United States.</p>
+</div>
+<div class="relative z-10 text-center md:text-left">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mx-auto md:mx-0 mb-sm border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined">clinical_notes</span>
+</div>
+<h4 class="font-bold text-primary">21st Century</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Modern Integration</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Evidence-based practice integrated into clinical systems.</p>
+</div>
+</div>
+</section>
+<!-- Core Principles Bento -->
+<section id="principles">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-lg">Core Principles</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="bg-white p-sm rounded-2xl border border-outline-variant/30 serene-shadow hover:-translate-y-1 transition-transform group">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-primary-fixed rounded-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">do_not_disturb_on</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">First Do No Harm</h4>
+<p class="font-label-sm text-label-sm text-primary mb-xs">Primum Non Nocere</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Using the least force necessary to diagnose and treat.</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-sm rounded-2xl border border-outline-variant/30 serene-shadow hover:-translate-y-1 transition-transform group">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-primary-fixed rounded-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" style="font-variation-settings: 'FILL' 1;">forest</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Healing Power</h4>
+<p class="font-label-sm text-label-sm text-primary mb-xs">Nature's Wisdom</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Supporting the body's innate ability to heal itself.</p>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Identify the Cause</h4>
+<p class="font-label-sm text-label-sm text-primary mb-xs">Tolle Causam</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Treating root causes rather than just symptoms.</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-sm rounded-2xl border border-outline-variant/30 serene-shadow hover:-translate-y-1 transition-transform group">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-primary-fixed rounded-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">school</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Doctor as Teacher</h4>
+<p class="font-label-sm text-label-sm text-primary mb-xs">Docere</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Educating patients and encouraging self-responsibility.</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-sm rounded-2xl border border-outline-variant/30 serene-shadow hover:-translate-y-1 transition-transform group">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-primary-fixed rounded-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">accessibility_new</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Whole Person</h4>
+<p class="font-label-sm text-label-sm text-primary mb-xs">Holistic Approach</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Considering physical, mental, and environmental factors.</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-sm rounded-2xl border border-outline-variant/30 serene-shadow hover:-translate-y-1 transition-transform group">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-primary-fixed rounded-xl group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">shield</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Prevention</h4>
+<p class="font-label-sm text-label-sm text-primary mb-xs">Proactive Care</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Focusing on long-term wellness and risk reduction.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it works - Stepper -->
+<section id="process">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-lg text-center">Treatment Journey</h2>
+<div class="space-y-sm relative">
+<div class="flex flex-col md:flex-row gap-md items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold relative z-10 shadow-lg">1</div>
+<div class="bg-surface-container-lowest p-md rounded-2xl border border-outline-variant/30 serene-shadow flex-grow">
+<h4 class="font-title-md text-title-md text-on-surface mb-xs">Assessment</h4>
+<p class="text-on-surface-variant">Initial clinical intake: Reviewing medical history, diet, lifestyle, and diagnostic tests.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-md items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold relative z-10 shadow-lg">2</div>
+<div class="bg-surface-container-lowest p-md rounded-2xl border border-outline-variant/30 serene-shadow flex-grow">
+<h4 class="font-title-md text-title-md text-on-surface mb-xs">Modality Selection</h4>
+<p class="text-on-surface-variant">Choosing evidence-based nutrition, botanicals, and lifestyle therapies tailored to you.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-md items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold relative z-10 shadow-lg">3</div>
+<div class="bg-surface-container-lowest p-md rounded-2xl border border-outline-variant/30 serene-shadow flex-grow">
+<h4 class="font-title-md text-title-md text-on-surface mb-xs">Implementation</h4>
+<p class="text-on-surface-variant">Application of chosen natural therapies with active clinical supervision.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-md items-start group">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold relative z-10 shadow-lg">4</div>
+<div class="bg-surface-container-lowest p-md rounded-2xl border border-outline-variant/30 serene-shadow flex-grow">
+<h4 class="font-title-md text-title-md text-on-surface mb-xs">Follow-up</h4>
+<p class="text-on-surface-variant">Monitoring physiological progress and adjusting protocols for optimal healing.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Conditions Commonly Treated -->
+<section id="conditions">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-lg">Commonly Managed Conditions</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-lowest border border-outline-variant/20 serene-shadow flex h-40">
+<div class="w-1/3 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up photography of fresh healthy green vegetables and fiber-rich foods, representing digestive wellness and natural gut health. High-end lifestyle aesthetic with soft focus and vibrant colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1tLiDWDd78r4nkvuJ4NdIJQ_jUDlGJn1OTQrzRCeea1PMvG9H2zyecxwgfCwC5CQv_aEWlgt5VlnS7PAAf0C3dR6j74xVmiJcILGCkqkgwXam-we5xMFEnv_XJUMg2LQbgD620pIHHCV7XD-C3XjOeJFGmfYT04ALJHC9qXAUsj55w3tgYXRqT9QudEhApcI6eGKUxnI-lesKzQUfPiIw5mES7XEFFbBiCOAZh84Jumwk1abcl7aeUg"/>
+</div>
+<div class="w-2/3 p-md flex flex-col justify-center">
+<h4 class="font-title-md text-title-md text-primary mb-xs">Digestive Disorders</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">IBS, food sensitivities, and microbiome balance.</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-lowest border border-outline-variant/20 serene-shadow flex h-40">
+<div class="w-1/3 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A person peacefully sleeping in a sunlit room with soft white linens, symbolizing hormone balance and restorative sleep. The mood is calm, airy, and high-quality, emphasizing wellness and vitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXS4-WJVf_asQ205lSM5z3Lp9busNcm8bPcpudzGYereWCnaQ4TOwoAGPWxTd_o8jdhpTrxKElu5LmI4MDTod2hQ2g2MrHTS1jhzD4dpZussCA3zhIvcSuq5Q_zDCiWSc_uv3lZZB0fW7jYBbKFy8ET7etOnM5MURLB-wBUH_TVcggkdarxdEviRvPMiLdcIMkZOEWE8ksXrz-U5jTHjb4h4BlQ6mA8sYssXSZUralTx2sEmnIXWrasA"/>
+</div>
+<div class="w-2/3 p-md flex flex-col justify-center">
+<h4 class="font-title-md text-title-md text-primary mb-xs">Hormonal Imbalances</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">PCOS, thyroid support, and adrenal health.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits & Risks -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-lg" id="benefits">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Key Benefits</h2>
+<div class="space-y-sm">
+<div class="flex items-center gap-sm bg-tertiary-container/10 p-sm rounded-xl border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-medium text-on-tertiary-fixed-variant">Non-Invasive Modalities</span>
+</div>
+<div class="flex items-center gap-sm bg-tertiary-container/10 p-sm rounded-xl border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-medium text-on-tertiary-fixed-variant">Patient-Centered Experience</span>
+</div>
+<div class="flex items-center gap-sm bg-tertiary-container/10 p-sm rounded-xl border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-medium text-on-tertiary-fixed-variant">Preventative Focus</span>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-error mb-md">Safety &amp; Risks</h2>
+<div class="space-y-sm">
+<div class="flex items-center gap-sm bg-error-container/20 p-sm rounded-xl border border-error/20">
+<span class="material-symbols-outlined text-error">warning</span>
+<span class="font-medium text-on-error-container">Not for Acute Surgical Needs</span>
+</div>
+<div class="flex items-center gap-sm bg-error-container/20 p-sm rounded-xl border border-error/20">
+<span class="material-symbols-outlined text-error">warning</span>
+<span class="font-medium text-on-error-container">Pharmaceutical Drug Interactions</span>
+</div>
+<div class="flex items-center gap-sm bg-error-container/20 p-sm rounded-xl border border-error/20">
+<span class="material-symbols-outlined text-error">warning</span>
+<span class="font-medium text-on-error-container">Critical for Life-Threatening Events</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Evidence Section -->
+<section class="bg-surface-container-lowest p-lg rounded-3xl border border-outline-variant/20 serene-shadow" id="evidence">
+<div class="flex items-center gap-sm mb-lg">
+<span class="material-symbols-outlined text-primary text-3xl">science</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Scientific Evidence</h2>
+</div>
+<div class="space-y-lg">
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-title-md text-on-surface">Digestive Health</span>
+<span class="px-sm py-xs bg-tertiary-container text-on-tertiary-fixed font-bold rounded-lg text-label-sm">Strong Evidence</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[92%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-title-md text-on-surface">Hypertension Management</span>
+<span class="px-sm py-xs bg-secondary-fixed text-on-secondary-fixed font-bold rounded-lg text-label-sm">Moderate Evidence</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[65%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-title-md text-on-surface">Allergies</span>
+<span class="px-sm py-xs bg-primary-fixed text-on-primary-fixed font-bold rounded-lg text-label-sm">Emerging Evidence</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[35%] transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Suitability Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-secondary-container/10 p-lg rounded-3xl border border-secondary/20">
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-md">Suitable For</h3>
+<ul class="space-y-xs font-body-md text-on-secondary-fixed-variant">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-secondary">person</span> Chronic illness management</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-secondary">trending_up</span> Health optimization seekers</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-secondary">child_care</span> Pediatric wellness</li>
+</ul>
+</div>
+<div class="bg-error-container/10 p-lg rounded-3xl border border-error/20">
+<h3 class="font-headline-lg text-headline-lg text-error mb-md">Not Recommended For</h3>
+<ul class="space-y-xs font-body-md text-on-error-container">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-error">emergency</span> Acute surgical traumas</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-error">heart_broken</span> Life-threatening emergencies</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-error">blood_pressure</span> Critical vascular crises</li>
+</ul>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-lg">Frequently Asked Questions</h2>
+<div class="space-y-sm">
+<details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden" open="">
+<summary class="flex items-center justify-between p-md cursor-pointer font-title-md text-title-md text-on-surface list-none">
+                                Is Naturopathy the same as Homeopathy?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                                No. While both use natural substances, Naturopathy is a broad system of primary care that includes nutrition, physical medicine, and botanical medicine. Homeopathy is a specific therapeutic system based on the "like cures like" principle using highly diluted substances.
+                            </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex items-center justify-between p-md cursor-pointer font-title-md text-title-md text-on-surface list-none">
+                                Are Naturopathic Doctors licensed?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-md pt-0 text-on-surface-variant font-body-md border-t border-outline-variant/10">
+                                Licensing varies by jurisdiction. In many regions, Naturopathic Doctors (NDs) must graduate from accredited 4-year medical programs and pass professional board exams to be licensed as primary care providers.
+                            </div>
+</details>
+</div>
+</section>
+<!-- Disclaimer -->
+<footer class="bg-surface-container-high/50 p-lg rounded-3xl border border-outline-variant/30 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-2xl mx-auto italic">
+<strong>Educational Disclaimer:</strong> The information provided on HealSphere is for educational purposes only and is not intended as medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this portal. For emergencies, dial 911 immediately.
+                    </p>
+</footer>
+</div>
+</div>
+</main>
+<!-- Global Footer -->
+<footer class="w-full mt-auto bg-surface-container-highest dark:bg-on-background border-t border-outline-variant py-md px-gutter">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="space-y-sm">
+<span class="font-title-md text-title-md text-on-surface font-bold">HealSphere Healthcare</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 HealSphere Healthcare. For emergency dial 911 immediately.</p>
+</div>
+<div class="flex flex-col gap-xs">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Emergency Contacts</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Medical Disclaimer</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-xs">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Quick Links</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll spy for sidebar
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    const links = document.querySelectorAll('aside nav a');
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('bg-primary-container', 'text-primary', 'font-semibold');
+                            link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-low');
+                        } else {
+                            link.classList.remove('bg-primary-container', 'text-primary', 'font-semibold');
+                            link.classList.add('text-on-surface-variant', 'hover:bg-surface-container-low');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll adjustment for sticky nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 100;
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = target.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

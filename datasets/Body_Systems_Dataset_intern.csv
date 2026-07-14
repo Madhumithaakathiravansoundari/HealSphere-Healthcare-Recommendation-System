@@ -1,0 +1,16 @@
+Body_System_ID,Body_System,Description
+BS001,Cardiovascular System,Heart and blood vessels responsible for circulating blood throughout the body.
+BS002,Respiratory System,Lungs and airways responsible for breathing and oxygen exchange.
+BS003,Digestive System,"Organs that digest food, absorb nutrients, and eliminate waste."
+BS004,Nervous System,"Brain, spinal cord, and nerves that control body functions."
+BS005,Endocrine System,"Hormone-producing glands that regulate metabolism, growth, and reproduction."
+BS006,Urinary System,"Kidneys, bladder, and urinary tract that remove waste and regulate fluids."
+BS007,Immune System,Protects the body against infections and diseases.
+BS008,Musculoskeletal System,"Bones, muscles, joints, tendons, and ligaments that support movement."
+BS009,Skeletal System,Bones and cartilage that provide structure and protection.
+BS010,Reproductive System,Organs involved in reproduction and sexual health.
+BS011,Integumentary System,"Skin, hair, nails, and glands that protect the body."
+BS012,Liver (Hepatobiliary System),"Liver, gallbladder, and bile ducts involved in metabolism and digestion."
+BS013,Blood (Hematologic System),Blood and blood-forming tissues responsible for oxygen transport and immunity.
+BS014,Eye (Visual System),Eyes and related structures responsible for vision.
+BS015,"Ear, Nose & Throat (ENT)","Structures involved in hearing, balance, breathing, smell, and swallowing."

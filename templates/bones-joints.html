@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bones &amp; Joints | HealSphere Medical Education</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#afecff",
+                        "primary-container": "#0052cc",
+                        "primary": "#003d9b",
+                        "on-secondary-container": "#005f71",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-primary-container": "#c4d2ff",
+                        "on-error": "#ffffff",
+                        "secondary": "#00687b",
+                        "secondary-container": "#50dcff",
+                        "surface-container": "#edeef0",
+                        "outline": "#737685",
+                        "background": "#f8f9fb",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "on-surface-variant": "#434654",
+                        "surface-container-low": "#f3f4f6",
+                        "on-tertiary-container": "#72e9af",
+                        "surface-container-highest": "#e1e2e4",
+                        "surface-container-high": "#e7e8ea",
+                        "inverse-primary": "#b2c5ff",
+                        "inverse-surface": "#2e3132",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dae2ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#82f9be",
+                        "outline-variant": "#c3c6d6",
+                        "on-primary-fixed": "#001848",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#0c56d0",
+                        "tertiary-container": "#006844",
+                        "surface-bright": "#f8f9fb",
+                        "tertiary": "#004e32",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "surface-dim": "#d9dadc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#001f27",
+                        "inverse-on-surface": "#f0f1f3",
+                        "surface-variant": "#e1e2e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "lg": "48px",
+                        "container-max": "1280px",
+                        "xl": "80px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "gutter": "24px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0052cc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-background font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/20 shadow-sm">
+        <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+            <div class="font-display-lg text-display-lg text-primary tracking-tight">HealSphere</div>
+        </div>
+    </nav>
+    <!-- Main Content Area -->
+    <main class="md:ml-64 pt-24 px-gutter pb-xl max-w-[1440px] mx-auto">
+        <!-- Hero Section -->
+        <section class="mb-xl grid lg:grid-cols-2 gap-lg items-center">
+            <div class="order-2 lg:order-1">
+                <span class="text-primary font-bold tracking-widest uppercase text-label-sm mb-base block">Module 07:
+                    Orthopedics</span>
+                <h1 class="font-display-lg text-display-lg text-on-background mb-md">Bones &amp; Joints: The Human
+                    Framework</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    The musculoskeletal system provides form, support, stability, and movement to the body. Comprised of
+                    206 bones and hundreds of joints, this complex architecture protects vital organs and facilitates
+                    every physical action through a highly coordinated structural network.
+                </p>
+                <div class="mt-md flex gap-sm">
+                    <div class="flex items-center gap-xs text-primary font-semibold">
+                        <span class="material-symbols-outlined">verified</span>
+                        <span>Clinical Content</span>
+                    </div>
+                    <div class="flex items-center gap-xs text-secondary font-semibold">
+                        <span class="material-symbols-outlined">schedule</span>
+                        <span>45 Min Read</span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative group">
+                <div
+                    class="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl group-hover:bg-primary/10 transition-all">
+                </div>
+                <img class="relative w-full aspect-square object-contain rounded-2xl drop-shadow-xl"
+                    data-alt="A highly detailed, professional medical illustration of a human skeletal system in a clean, minimalist clinical setting. The lighting is soft and bright, highlighting the anatomical precision of the skull, ribcage, spine, and pelvic girdle against a soft grey and white background. The style is modern corporate healthcare with a focus on educational clarity and serene digital wellness."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ucVoEJM9-1fdpzD0vz3eJb37s7LFANYiP6Jblz8Zh6NWLO4FCsI35oYXZquioySNPdp8tc0WI2cgE7v9jUrOsV_Qnz-spJFABW8_wyyYL5-X6Cuoi-gAVehUlUc7U5aH4fDeI4O0Vd13qexm9aWkFWrEcefVKS396sUEmzS0Qu_HMcvo99oM8Rmdbo00-0ys1VwwwPCoKu4yuTZ75J0njdRoh8aM9WUmM6GEY40KtPUFcea6-7fBUw" />
+            </div>
+        </section>
+        <!-- Clinical Overview (Bento Style) -->
+        <section class="mb-xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                <div class="glass-card p-md rounded-xl flex flex-col gap-xs md:col-span-2">
+                    <h2 class="text-title-md font-title-md text-primary">Physiological Significance</h2>
+                    <p class="text-on-surface-variant">Bones serve as more than just rigid supports; they are dynamic
+                        organs involved in hematopoiesis (blood cell production), mineral storage (calcium and
+                        phosphorus), and endocrine regulation. Joints provide the vital articulation points where
+                        movement occurs through leverage.</p>
+                </div>
+                <div class="bg-primary-container p-md rounded-xl text-on-primary-container">
+                    <h3 class="text-title-md font-title-md mb-xs">Fast Facts</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-xs"><span
+                                class="material-symbols-outlined text-[18px]">check_circle</span> 206 Adult Bones</li>
+                        <li class="flex items-center gap-xs"><span
+                                class="material-symbols-outlined text-[18px]">check_circle</span> 360 Total Joints</li>
+                        <li class="flex items-center gap-xs"><span
+                                class="material-symbols-outlined text-[18px]">check_circle</span> Femur: Largest Bone
+                        </li>
+                        <li class="flex items-center gap-xs"><span
+                                class="material-symbols-outlined text-[18px]">check_circle</span> Stapes: Smallest Bone
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- The Human Skeleton: Interactive Breakdown -->
+        <section class="mb-xl">
+            <div class="text-center mb-lg">
+                <h2 class="text-headline-lg font-headline-lg text-on-background">Anatomical Classification</h2>
+                <p class="text-on-surface-variant">The 206 bones are divided into two main functional divisions.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-md">
+                <div class="glass-card p-md rounded-xl border-l-4 border-primary">
+                    <div class="flex items-center gap-sm mb-md">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">center_focus_strong</span>
+                        </div>
+                        <div>
+                            <h3 class="text-title-md font-title-md">Axial Skeleton (80 Bones)</h3>
+                            <p class="text-sm text-on-surface-variant">Forms the central axis of the body.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="p-sm bg-surface rounded-lg flex justify-between items-center">
+                            <span>Skull &amp; Hyoid</span>
+                            <span class="font-bold text-primary">29</span>
+                        </li>
+                        <li class="p-sm bg-surface rounded-lg flex justify-between items-center">
+                            <span>Vertebral Column</span>
+                            <span class="font-bold text-primary">26</span>
+                        </li>
+                        <li class="p-sm bg-surface rounded-lg flex justify-between items-center">
+                            <span>Thoracic Cage</span>
+                            <span class="font-bold text-primary">25</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card p-md rounded-xl border-l-4 border-secondary">
+                    <div class="flex items-center gap-sm mb-md">
+                        <div
+                            class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined">fit_screen</span>
+                        </div>
+                        <div>
+                            <h3 class="text-title-md font-title-md">Appendicular Skeleton (126 Bones)</h3>
+                            <p class="text-sm text-on-surface-variant">Associated with movement and limbs.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="p-sm bg-surface rounded-lg flex justify-between items-center">
+                            <span>Pectoral Girdles</span>
+                            <span class="font-bold text-secondary">4</span>
+                        </li>
+                        <li class="p-sm bg-surface rounded-lg flex justify-between items-center">
+                            <span>Upper Limbs</span>
+                            <span class="font-bold text-secondary">60</span>
+                        </li>
+                        <li class="p-sm bg-surface rounded-lg flex justify-between items-center">
+                            <span>Pelvic Girdle &amp; Lower Limbs</span>
+                            <span class="font-bold text-secondary">62</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Types of Bones: Modular Cards -->
+        <section class="mb-xl">
+            <h2 class="text-headline-lg font-headline-lg text-on-background mb-lg">Bone Morphology</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-sm">
+                <!-- Long -->
+                <div class="glass-card p-sm rounded-xl text-center group cursor-pointer hover:shadow-md transition-all">
+                    <div
+                        class="aspect-square bg-surface-container-high rounded-lg mb-sm flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A clean clinical illustration of a long bone, such as the femur, showing its elongated shaft and rounded ends. Bright high-key medical style with soft shadows and professional anatomical detail."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMq3BT2Davji7ROe4ELeNL3bmdnLI5y9aFslCz7Xey5zvDr4GbEGpon9tc1HQqGLhcUnSSfyDw0ZPIuJ1S_ETuzzKo9B7eIkEfwXOv-ZTuo1HgEeYab4g7lBjIkAHjSfAGQht_W48jw6tby3erfUwbFyhMfeeYvE7HmM1Qea8n_mDITsmuPP39R6hixWe5hHBZUVfqKfpQYcPQmXkT5gGIz7-SYBTY-YHwOz9yVFz1E_V2R6eqebaqzA" />
+                    </div>
+                    <h4 class="font-bold text-primary">Long Bones</h4>
+                    <p class="text-xs text-on-surface-variant mt-xs">e.g., Femur, Humerus</p>
+                </div>
+                <!-- Short -->
+                <div class="glass-card p-sm rounded-xl text-center group cursor-pointer hover:shadow-md transition-all">
+                    <div
+                        class="aspect-square bg-surface-container-high rounded-lg mb-sm flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Close-up clinical illustration of short bones like those found in the wrist carpals. Cuboidal shapes with anatomical precision and soft clinical lighting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8eLfUbPzAO6wbucQMvRTrxadCIy0FfobKdbcyN5hk-KbTyVsQsLzua0ZbmYst2_kGzVT4Dbc744Gh0Jwh61Fi8bjVKdpo_Eg9Q6QlnDpAquOptwQ_NUcQUEhpnKtnWiC2lqB1IhCZDjSkXQDqaGJmOkXoRW3dRAmri_jXYh1xrZGJ5zi84-MWpov5UUqF_pG4zPL5rdooJZUx672Aioiwvncl8Gc-6csRpD1HZGzWKMvFlw0Q_9r5TQ" />
+                    </div>
+                    <h4 class="font-bold text-primary">Short Bones</h4>
+                    <p class="text-xs text-on-surface-variant mt-xs">e.g., Carpals, Tarsals</p>
+                </div>
+                <!-- Flat -->
+                <div class="glass-card p-sm rounded-xl text-center group cursor-pointer hover:shadow-md transition-all">
+                    <div
+                        class="aspect-square bg-surface-container-high rounded-lg mb-sm flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A clinical diagram of a flat bone like the sternum or skull plates. Emphasis on the thin, curved structure designed for protection. Soft teal and white medical palette."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_J62c5qYgoVEmwdwjapLfGokVc41UuCImcm6nO4pC4PDRaYOY-4j5eHC2zKNb9_4ffU2j2oDWEPBcoGF1fLZUqLJVlsVouy3XhMgzotFyhbVbJwUESlQfAEvtbWQAuHqdjJQ4y573xONJbNEOQvenUdZsayDbNFaO5hwAZuZqrFmiv0E47ZKmmHU8X1fUdaoyxMEt3fnYlDR4S3N60DymcPpM1DQgObzsQ6LrCFBbvFjALSV_Sgl2Rg" />
+                    </div>
+                    <h4 class="font-bold text-primary">Flat Bones</h4>
+                    <p class="text-xs text-on-surface-variant mt-xs">e.g., Sternum, Scapula</p>
+                </div>
+                <!-- Irregular -->
+                <div class="glass-card p-sm rounded-xl text-center group cursor-pointer hover:shadow-md transition-all">
+                    <div
+                        class="aspect-square bg-surface-container-high rounded-lg mb-sm flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Detailed medical rendering of an irregular bone such as a vertebra. Complex geometry and processes highlighted with soft ambient lighting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCwoILcVZn9VhWNQV02RUSy9LFQNFuID3Q_9tnNHus8gDaKiNYL-Bpm6v254ohoQupBY5eacRAbb40gCuE137B0rYjpQqexnKG7888OnEJYKpFm4Go-76s-PjbVYxRkhxqazgoMUCccntCo3dmgh49Qwoy-rB958eAXfVXeG02vAcP4-hhNK4XHvhnUS38ZEroHHwvro_5oCWfbGmkC4vTnJOn4n4BzFX8pdET2bOS9o1lIzwWX2zOlQ" />
+                    </div>
+                    <h4 class="font-bold text-primary">Irregular</h4>
+                    <p class="text-xs text-on-surface-variant mt-xs">e.g., Vertebrae, Pelvis</p>
+                </div>
+                <!-- Sesamoid -->
+                <div class="glass-card p-sm rounded-xl text-center group cursor-pointer hover:shadow-md transition-all">
+                    <div
+                        class="aspect-square bg-surface-container-high rounded-lg mb-sm flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A clinical illustration of a sesamoid bone like the patella knee cap, embedded within a tendon. Clear educational style with soft clinical lighting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh1swsG6UqdGy2PiwFir3tA5UdvihfdgrMzTzc9jCLylZHirSGMegat5kMjyl7nKyC9Oc8h2Fa7TpHGqBQW0Uwedp6NFTB8xtwnvVnWCXxMwPiYNgO50YC48Prf-ldCihSGhsH3Vnt6y5Zz9vqfxkPJ3LcBOqg1wkfZISfra8p6WHOKNCL02T2iyIJryMazPO-KXL9VMzxbH7b-E9P8MTizOa07u0srp2W5pl2HrlGhGO4r3DY1gS8DQ" />
+                    </div>
+                    <h4 class="font-bold text-primary">Sesamoid</h4>
+                    <p class="text-xs text-on-surface-variant mt-xs">e.g., Patella</p>
+                </div>
+            </div>
+        </section>
+        <!-- Joint Types Visual Section -->
+        <section class="mb-xl p-lg rounded-3xl bg-surface-container relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-headline-lg font-headline-lg text-on-background mb-lg">Articulations: Joint Types</h2>
+                <div class="grid lg:grid-cols-3 gap-md">
+                    <div class="bg-white/40 backdrop-blur-sm p-md rounded-2xl border border-white/50">
+                        <div class="flex items-center gap-xs mb-sm">
+                            <span class="material-symbols-outlined text-primary">link</span>
+                            <h3 class="font-bold">Fibrous Joints</h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant mb-md">Connected by dense connective tissue, these
+                            joints allow for little to no movement.</p>
+                        <span class="text-xs px-2 py-1 bg-surface-variant rounded-full">e.g., Cranial Sutures</span>
+                    </div>
+                    <div class="bg-white/40 backdrop-blur-sm p-md rounded-2xl border border-white/50">
+                        <div class="flex items-center gap-xs mb-sm">
+                            <span class="material-symbols-outlined text-primary">adjust</span>
+                            <h3 class="font-bold">Cartilaginous Joints</h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant mb-md">Bones joined by hyaline or fibrocartilage,
+                            allowing limited movement.</p>
+                        <span class="text-xs px-2 py-1 bg-surface-variant rounded-full">e.g., Intervertebral
+                            Discs</span>
+                    </div>
+                    <div class="bg-white/40 backdrop-blur-sm p-md rounded-2xl border border-white/50">
+                        <div class="flex items-center gap-xs mb-sm">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-variation-settings: 'FILL' 1;">motion_mode</span>
+                            <h3 class="font-bold">Synovial Joints</h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant mb-md">Most mobile joints, characterized by a
+                            fluid-filled joint cavity.</p>
+                        <div class="flex flex-wrap gap-1 mt-md">
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded-full">Hinge</span>
+                            <span class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded-full">Pivot</span>
+                            <span
+                                class="text-[10px] px-2 py-0.5 bg-primary/10 text-primary rounded-full">Ball-and-Socket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute right-[-10%] top-[-10%] w-1/3 h-full opacity-20 pointer-events-none">
+            </div>
+        </section>
+        <!-- Common Orthopedic Conditions -->
+        <section class="mb-xl">
+            <h2 class="text-headline-lg font-headline-lg text-on-background mb-lg">Orthopedic Clinical Conditions</h2>
+            <div class="grid md:grid-cols-2 gap-md">
+                <!-- Condition: Osteoporosis -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all">
+                    <div class="flex justify-between items-start mb-md">
+                        <div>
+                            <h3 class="text-title-md font-title-md text-on-background">Osteoporosis</h3>
+                            <p class="text-label-sm text-error font-bold uppercase tracking-widest">Bone Density Loss
+                            </p>
+                        </div>
+                        <span class="material-symbols-outlined text-error">warning</span>
+                    </div>
+                    <p class="text-body-md text-on-surface-variant mb-md">A systemic skeletal disorder characterized by
+                        low bone mass and micro-architectural deterioration of bone tissue, leading to increased bone
+                        fragility.</p>
+                    <div class="bg-surface-container-low p-sm rounded-lg">
+                        <p class="text-xs font-bold mb-1">Key Symptoms:</p>
+                        <ul class="text-xs space-y-1 text-on-surface-variant">
+                            <li>• Back pain caused by a fractured vertebra</li>
+                            <li>• Loss of height over time</li>
+                            <li>• Stooped posture (Kyphosis)</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Condition: Arthritis -->
+                <div class="glass-card p-md rounded-xl hover:translate-y-[-4px] transition-all">
+                    <div class="flex justify-between items-start mb-md">
+                        <div>
+                            <h3 class="text-title-md font-title-md text-on-background">Arthritis</h3>
+                            <p class="text-label-sm text-secondary font-bold uppercase tracking-widest">Joint
+                                Inflammation</p>
+                        </div>
+                        <span class="material-symbols-outlined text-secondary">medical_services</span>
+                    </div>
+                    <p class="text-body-md text-on-surface-variant mb-md">Encompasses over 100 conditions that cause
+                        inflammation and pain in the joints. Common types include Osteoarthritis (wear-and-tear) and
+                        Rheumatoid Arthritis (autoimmune).</p>
+                    <div class="bg-surface-container-low p-sm rounded-lg">
+                        <p class="text-xs font-bold mb-1">Key Symptoms:</p>
+                        <ul class="text-xs space-y-1 text-on-surface-variant">
+                            <li>• Joint pain, swelling, and stiffness</li>
+                            <li>• Redness and decreased range of motion</li>
+                            <li>• Fatigue and morning stiffness (RA)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic Roadmap & Therapeutic Interventions -->
+        <section class="mb-xl grid md:grid-cols-2 gap-lg">
+            <div>
+                <h2 class="text-title-md font-title-md text-primary mb-md flex items-center gap-xs">
+                    <span class="material-symbols-outlined">biotech</span> Diagnostic Roadmap
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex gap-md items-start">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary text-white flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                            1</div>
+                        <div>
+                            <h4 class="font-bold">Imaging Modalities</h4>
+                            <p class="text-sm text-on-surface-variant">X-rays for fractures, MRI for soft
+                                tissue/cartilage, and DXA for bone density.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-md items-start">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary text-white flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                            2</div>
+                        <div>
+                            <h4 class="font-bold">Physical Assessment</h4>
+                            <p class="text-sm text-on-surface-variant">Evaluating range of motion (ROM), gait analysis,
+                                and palpation for joint tenderness.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-md items-start">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary text-white flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                            3</div>
+                        <div>
+                            <h4 class="font-bold">Laboratory Tests</h4>
+                            <p class="text-sm text-on-surface-variant">Blood markers (C-reactive protein, Rheumatoid
+                                Factor) and synovial fluid analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-title-md font-title-md text-secondary mb-md flex items-center gap-xs">
+                    <span class="material-symbols-outlined">healing</span> Therapeutic Interventions
+                </h2>
+                <div class="grid grid-cols-1 gap-sm">
+                    <div class="p-md bg-white rounded-xl border border-outline-variant/30 flex items-center gap-md">
+                        <span class="material-symbols-outlined text-secondary text-3xl">exercise</span>
+                        <div>
+                            <h4 class="font-bold">Physical Therapy</h4>
+                            <p class="text-xs text-on-surface-variant">Strength training and flexibility exercises to
+                                support joint integrity.</p>
+                        </div>
+                    </div>
+                    <div class="p-md bg-white rounded-xl border border-outline-variant/30 flex items-center gap-md">
+                        <span class="material-symbols-outlined text-secondary text-3xl">medication</span>
+                        <div>
+                            <h4 class="font-bold">Pharmacological Management</h4>
+                            <p class="text-xs text-on-surface-variant">NSAIDs, biologics, and bone-strengthening
+                                medications (bisphosphonates).</p>
+                        </div>
+                    </div>
+                    <div class="p-md bg-white rounded-xl border border-outline-variant/30 flex items-center gap-md">
+                        <span class="material-symbols-outlined text-secondary text-3xl">surgical</span>
+                        <div>
+                            <h4 class="font-bold">Surgical Options</h4>
+                            <p class="text-xs text-on-surface-variant">Arthroplasty (joint replacement), arthroscopy,
+                                and fracture fixation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Movement & Bone Health -->
+        <section
+            class="mb-xl bg-primary text-on-primary p-lg rounded-3xl grid md:grid-cols-2 gap-lg items-center shadow-xl">
+            <div>
+                <h2 class="text-headline-lg font-headline-lg mb-md">Nurturing the Framework</h2>
+                <p class="mb-lg opacity-90 leading-relaxed">Bone is a living tissue that responds to stress and
+                    nutrition. Peak bone mass is usually achieved in the early 20s, making early intervention and
+                    consistent care critical for lifelong mobility.</p>
+                <div class="grid grid-cols-2 gap-md">
+                    <div>
+                        <h4 class="font-bold mb-xs border-b border-white/20 pb-xs">Nutritional Pillars</h4>
+                        <ul class="text-sm space-y-1 opacity-80">
+                            <li>• Calcium (1000-1200mg/day)</li>
+                            <li>• Vitamin D (600-800 IU/day)</li>
+                            <li>• Phosphorus &amp; Magnesium</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-xs border-b border-white/20 pb-xs">Activity Pillars</h4>
+                        <ul class="text-sm space-y-1 opacity-80">
+                            <li>• Weight-bearing aerobic</li>
+                            <li>• Resistance training</li>
+                            <li>• Balance &amp; Flexibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="relative aspect-video rounded-2xl overflow-hidden bg-white/10 flex items-center justify-center">
+                <img class="w-full h-full object-cover"
+                    data-alt="A serene digital graphic showing a person engaging in balanced yoga in a bright, modern studio. The lighting is high-key and optimistic. Overlaid are soft architectural lines representing structural strength. The color palette features whites, light blues, and soft greens to evoke wellness and orthopedic health."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNM21vxsQvu5fzmIsS7GiimPIDepIxPXbIIk91op_kmmVNa4dCYEZOiXD0EKYmQyxE8gz2uuBeVEKLuOwO2VcqpZDItgUdU0GAZv3bh-kGxFrUkZ-cX1elvHV3DagYwKdQse4rxgKscN40h9RU2FwOqgaGJxSPMSTRNgBCQUEhsbl9x9vHpa49358yeH3RuxwYfG8Ud025mDMCjZsfD_p7YZRLSXrz_PEem5WXxDWirbs7rp27-y03fA" />
+            </div>
+        </section>
+        <!-- Prevention & FAQ -->
+        <section class="mb-xl max-w-3xl mx-auto">
+            <h2 class="text-headline-lg font-headline-lg text-center text-on-background mb-lg">Common Clinical Inquiries
+            </h2>
+            <div class="space-y-sm">
+                <!-- FAQ 1 -->
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <button
+                        class="w-full p-md flex justify-between items-center text-left hover:bg-surface-container-high transition-colors group"
+                        onclick="this.nextElementSibling.classList.toggle('hidden');">
+                        <span class="font-bold">What is the difference between Osteoarthritis and Rheumatoid
+                            Arthritis?</span>
+                        <span
+                            class="material-symbols-outlined group-active:rotate-180 transition-transform">expand_more</span>
+                    </button>
+                    <div class="p-md pt-0 text-sm text-on-surface-variant hidden">
+                        Osteoarthritis is a degenerative "wear-and-tear" condition where cartilage breaks down over
+                        time. Rheumatoid Arthritis is an autoimmune disorder where the immune system attacks the joint
+                        lining (synovium), often affecting small joints symmetrically.
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <button
+                        class="w-full p-md flex justify-between items-center text-left hover:bg-surface-container-high transition-colors group"
+                        onclick="this.nextElementSibling.classList.toggle('hidden');">
+                        <span class="font-bold">How often should bone density scans (DXA) be performed?</span>
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="p-md pt-0 text-sm text-on-surface-variant hidden">
+                        Recommendations vary by risk factors, but typically every 2 years for postmenopausal women and
+                        men over 70, or more frequently if managing osteoporosis treatments.
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <button
+                        class="w-full p-md flex justify-between items-center text-left hover:bg-surface-container-high transition-colors group"
+                        onclick="this.nextElementSibling.classList.toggle('hidden');">
+                        <span class="font-bold">Can exercise actually increase bone density?</span>
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="p-md pt-0 text-sm text-on-surface-variant hidden">
+                        Yes, weight-bearing and resistance exercises stimulate osteoblasts (bone-forming cells) through
+                        mechanical loading, helping to maintain or slightly increase bone mineral density even in later
+                        life.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-lg bg-surface-container-highest border-t border-outline-variant mt-auto">
+        <div class="flex flex-col items-center justify-center gap-sm px-gutter text-center">
+            <div class="font-title-md text-title-md text-on-surface">HealSphere Medical</div>
+            <div class="flex flex-wrap justify-center gap-md text-on-surface-variant font-label-sm text-label-sm">
+                <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Medical
+                    Disclaimer</a>
+                <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms of
+                    Service</a>
+                <a class="hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact
+                    Support</a>
+            </div>
+            <p class="text-on-surface-variant font-label-sm text-label-sm mt-md opacity-60">
+                © 2024 HealSphere Medical. For educational purposes only.
+            </p>
+        </div>
+    </footer>
+    <!-- Mobile Navigation Bottom Bar -->
+    <nav
+        class="md:hidden fixed bottom-0 left-0 w-full bg-surface/80 backdrop-blur-md z-50 flex justify-around p-sm border-t border-outline-variant/20 shadow-lg">
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px]">Home</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-primary font-bold">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+            <span class="text-[10px]">Modules</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined">search</span>
+            <span class="text-[10px]">Search</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px]">Profile</span>
+        </button>
+    </nav>
+    <script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+
+</html>

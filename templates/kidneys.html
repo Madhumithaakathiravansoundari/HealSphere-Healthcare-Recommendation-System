@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kidneys: Your Filtration Powerhouse | HealSphere</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#72e9af",
+                        "tertiary-container": "#006844",
+                        "primary": "#003d9b",
+                        "tertiary": "#004e32",
+                        "surface-tint": "#0c56d0",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-secondary-container": "#005f71",
+                        "tertiary-fixed": "#82f9be",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#50dcff",
+                        "surface-dim": "#d9dadc",
+                        "surface-container-low": "#f3f4f6",
+                        "secondary-fixed": "#afecff",
+                        "on-primary-container": "#c4d2ff",
+                        "on-surface-variant": "#434654",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed": "#001848",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8ea",
+                        "on-secondary-fixed": "#001f27",
+                        "surface-container": "#edeef0",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#b2c5ff",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "primary-fixed": "#dae2ff",
+                        "secondary": "#00687b",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "on-tertiary-fixed": "#002113",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8f9fb",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#0052cc",
+                        "surface-variant": "#e1e2e4",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "on-background": "#191c1e",
+                        "surface-container-highest": "#e1e2e4",
+                        "surface": "#f8f9fb",
+                        "on-surface": "#191c1e",
+                        "on-secondary": "#ffffff",
+                        "background": "#f8f9fb",
+                        "outline-variant": "#c3c6d6",
+                        "outline": "#737685",
+                        "tertiary-fixed-dim": "#65dca4",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "xs": "8px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 10px 30px rgba(0, 82, 204, 0.08);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20 flex justify-between items-center px-lg">
+        <div class="flex items-center gap-md max-w-container-max mx-auto w-full">
+            <h1 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+                HealSphere</h1>
+
+
+            <div class="flex items-center gap-sm">
+                <button class="p-2 hover:bg-surface-container-low rounded-full transition-all active:scale-95">
+                    <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+                </button>
+
+
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Area -->
+    <main class="md:ml-64 pt-20 min-h-screen">
+        <!-- Hero Section -->
+        <section
+            class="relative px-lg py-xl flex flex-col md:flex-row items-center gap-lg bg-gradient-to-br from-primary-fixed to-surface-bright overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
+            <div class="flex-1 z-10">
+                <span
+                    class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full font-label-sm text-label-sm mb-4 uppercase tracking-wider">Urology
+                    &amp; Nephrology</span>
+                <h2 class="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">Kidneys: Your Filtration
+                    <span class="text-primary">Powerhouse</span></h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Located just below your rib cage on each side of your spine, the kidneys are sophisticated chemical
+                    factories. They process about 200 quarts of blood daily to sift out approximately two quarts of
+                    waste products and extra water.
+                </p>
+            </div>
+            <div class="flex-1 w-full relative">
+                <div
+                    class="aspect-square w-full max-w-md mx-auto relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A highly detailed 3D medical illustration of a human kidney pair showing anatomical detail like the renal cortex and medulla. The art style is serene clinical with soft blue and teal highlights on a white background. Translucent vessels in red and blue signify blood flow. The lighting is soft and studio-like, emphasizing clarity and scientific accuracy."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL9TK-cUlF20n2GQkK7NN4-dfF1hkRO2kpTG1YUMqqmBtpYDORyy7lppXSVuvh1x3Yu_P23d8YzR1ttOOlFSTLqazkXa9Djj7iszjcl5Ogb4F6tlmTXQVRhuRp98ZRvZUJ4bMCdGX9M1Iy7IFCm8dztzkijSwvyA4plCSGbtUAh_UW1oH1ZHGypeftVdQVHcH1i9nCBcTKhxXKi1W3EMUZljn9LnU_VaRFGAcCB06cR78UlT7bA7w4qA">
+                </div>
+                <!-- Floating Badge -->
+                <div
+                    class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-outline-variant/30 flex items-center gap-3 animate-bounce">
+                    <div
+                        class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <div>
+                        <p class="font-label-md text-label-md">Peer Reviewed</p>
+                        <p class="text-xs text-on-surface-variant">Medical Board 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Kidney Functions -->
+        <section class="px-lg py-xl bg-surface transition-all duration-700 opacity-100 translate-y-0">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-lg text-center">
+                    <h3 class="font-headline-lg text-headline-lg mb-2">Core Renal Functions</h3>
+                    <p class="text-on-surface-variant font-body-md">Maintaining homeostasis through precision
+                        filtration.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <div class="glass-card p-md rounded-xl flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-primary text-4xl">filter_alt</span>
+                        <h4 class="font-title-md text-title-md">Filtration</h4>
+                        <p class="text-on-surface-variant font-body-md">Removing waste products like urea and creatinine
+                            from the bloodstream through the nephrons.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-xl flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-primary text-4xl">opacity</span>
+                        <h4 class="font-title-md text-title-md">Fluid Balance</h4>
+                        <p class="text-on-surface-variant font-body-md">Regulating the amount of water and electrolytes
+                            like sodium and potassium in the body.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-xl flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-primary text-4xl">speed</span>
+                        <h4 class="font-title-md text-title-md">BP Regulation</h4>
+                        <p class="text-on-surface-variant font-body-md">Producing hormones like renin that control blood
+                            pressure through the RAAS system.</p>
+                    </div>
+                    <div class="glass-card p-md rounded-xl flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-primary text-4xl">bloodtype</span>
+                        <h4 class="font-title-md text-title-md">RBC Production</h4>
+                        <p class="text-on-surface-variant font-body-md">Releasing erythropoietin (EPO), which stimulates
+                            bone marrow to make red blood cells.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Urinary System Overview -->
+        <section class="px-lg py-xl bg-surface-container-low transition-all duration-700 opacity-100 translate-y-0">
+            <div class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-lg items-center">
+                <div class="flex-1 order-2 lg:order-1">
+                    <h3 class="font-headline-lg text-headline-lg mb-6">The Urinary System</h3>
+                    <div class="space-y-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">
+                                1</div>
+                            <div>
+                                <h5 class="font-title-md text-title-md mb-1">Kidneys</h5>
+                                <p class="text-on-surface-variant">The primary filter where urine is initially formed
+                                    from blood plasma.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">
+                                2</div>
+                            <div>
+                                <h5 class="font-title-md text-title-md mb-1">Ureters</h5>
+                                <p class="text-on-surface-variant">Two thin tubes that carry urine from the kidneys to
+                                    the bladder.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">
+                                3</div>
+                            <div>
+                                <h5 class="font-title-md text-title-md mb-1">Bladder</h5>
+                                <p class="text-on-surface-variant">A hollow, muscular organ that stores urine until it's
+                                    ready to be excreted.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">
+                                4</div>
+                            <div>
+                                <h5 class="font-title-md text-title-md mb-1">Urethra</h5>
+                                <p class="text-on-surface-variant">The canal through which urine passes from the bladder
+                                    out of the body.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 order-1 lg:order-2">
+                    <img class="w-full rounded-2xl shadow-sm border border-outline-variant/20"
+                        data-alt="A simplified medical diagram showing the human urinary tract including the kidneys, ureters, bladder, and urethra. Minimalist aesthetic with clean lines and a soft medical blue and white color palette. Each organ is clearly labeled with high-contrast, elegant typography. The style is educational and professional, with a light airy background."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxUshw1jO7280Q09ja3-lnqMw_bD5nG7Xt5lfyW04CGXCDXa83FUKGVxg_jJkevNwnoMT43NjCisv0cYhK2jTkzomIw6MB-DjPYVsmLZIiUrSBANB5lrSjRzeyUtwNHeYndVyvtU1UYx6ybHkRRln1cbp1H_zAGCEGf7MTqAiz6xY_BCXnnR5pYJKSfHdH2CXM8HO0hG3uIdSoq1t6aWmoxEPe1lWAyuDrV16D0t9revpXbTH0ciHQ0w">
+                </div>
+            </div>
+        </section>
+        <!-- Renal Pathologies -->
+        <section class="px-lg py-xl bg-surface transition-all duration-700 opacity-100 translate-y-0">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-lg">
+                    <h3 class="font-headline-lg text-headline-lg mb-2">Common Renal Pathologies</h3>
+                    <p class="text-on-surface-variant font-body-md">Understanding disorders and their clinical
+                        presentations.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+                    <!-- Kidney Stones -->
+                    <div
+                        class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                        <div class="h-40 bg-surface-container-highest flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-primary opacity-30">grain</span>
+                        </div>
+                        <div class="p-md">
+                            <h4 class="font-title-md text-title-md mb-3">Kidney Stones (Nephrolithiasis)</h4>
+                            <p class="text-on-surface-variant font-label-md mb-4">Hard deposits of minerals and acid
+                                salts that stick together in concentrated urine.</p>
+                            <div class="bg-error-container/20 p-sm rounded-lg">
+                                <p class="text-error font-label-sm uppercase mb-1">Key Symptoms</p>
+                                <ul class="text-on-surface-variant text-sm list-disc pl-4">
+                                    <li class="">Severe side/back pain</li>
+                                    <li class="">Hematuria (blood in urine)</li>
+                                    <li class="">Nausea and vomiting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CKD -->
+                    <div
+                        class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                        <div class="h-40 bg-primary-container/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-primary opacity-30">timeline</span>
+                        </div>
+                        <div class="p-md">
+                            <h4 class="font-title-md text-title-md mb-3">Chronic Kidney Disease (CKD)</h4>
+                            <p class="text-on-surface-variant font-label-md mb-4">A gradual loss of kidney function over
+                                time, often caused by diabetes or hypertension.</p>
+                            <div class="bg-error-container/20 p-sm rounded-lg">
+                                <p class="text-error font-label-sm uppercase mb-1">Key Symptoms</p>
+                                <ul class="text-on-surface-variant text-sm list-disc pl-4">
+                                    <li class="">Swelling (Edema)</li>
+                                    <li class="">Fatigue and weakness</li>
+                                    <li class="">Changes in urination frequency</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AKI -->
+                    <div
+                        class="bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                        <div class="h-40 bg-surface-container-highest flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-primary opacity-30">warning</span>
+                        </div>
+                        <div class="p-md">
+                            <h4 class="font-title-md text-title-md mb-3">Acute Kidney Injury (AKI)</h4>
+                            <p class="text-on-surface-variant font-label-md mb-4">A sudden episode of kidney failure or
+                                kidney damage that happens within a few hours or days.</p>
+                            <div class="bg-error-container/20 p-sm rounded-lg">
+                                <p class="text-error font-label-sm uppercase mb-1">Key Symptoms</p>
+                                <ul class="text-on-surface-variant text-sm list-disc pl-4">
+                                    <li class="">Sudden oliguria</li>
+                                    <li class="">Shortness of breath</li>
+                                    <li class="">Confusion or drowsiness</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clinical Diagnostics -->
+        <section class="px-lg py-xl bg-primary text-white transition-all duration-700 opacity-100 translate-y-0">
+            <div class="max-w-container-max mx-auto">
+                <div class="flex flex-col lg:flex-row gap-lg items-center">
+                    <div class="flex-1">
+                        <h3 class="font-headline-lg text-headline-lg mb-4">Clinical Diagnostics</h3>
+                        <p class="font-body-lg text-body-lg opacity-80 mb-8">Standard protocols for assessing renal
+                            health and identifying functional abnormalities.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+                            <div class="flex items-center gap-4 bg-white/10 p-md rounded-xl backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-secondary-container">labs</span>
+                                <div>
+                                    <p class="font-title-md">Urinalysis</p>
+                                    <p class="text-sm opacity-70">Physical, chemical, and microscopic exam.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/10 p-md rounded-xl backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-secondary-container">vital_signs</span>
+                                <div>
+                                    <p class="font-title-md">Creatinine/GFR</p>
+                                    <p class="text-sm opacity-70">Estimating kidney filtration efficiency.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/10 p-md rounded-xl backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-secondary-container">medication</span>
+                                <div>
+                                    <p class="font-title-md">Blood Urea Nitrogen</p>
+                                    <p class="text-sm opacity-70">BUN test to check waste levels.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/10 p-md rounded-xl backdrop-blur-sm">
+                                <span class="material-symbols-outlined text-secondary-container">radiology</span>
+                                <div>
+                                    <p class="font-title-md">Ultrasound/CT</p>
+                                    <p class="text-sm opacity-70">Imaging of size, shape, and structure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <img class="w-full rounded-2xl shadow-xl"
+                            data-alt="A high-tech digital interface displaying nephrology diagnostic results. Charts show GFR trends and creatinine levels in a professional clinical dashboard style. The aesthetic is futuristic yet clean, with glowing teal data visualizations and anatomical sketches of kidneys in the background. High contrast between primary blue backgrounds and neon teal data points."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89vllhzdAXo2yJy3uQ1N7a8QxEisuHQvuiaMH0K_zBJTop-s8NXhbDZRd0tF8wevP2rIbbb02g4iHGBp_ug_EQ5ebVo6-ZdZPKxcZJL5-zA-oi5qbyjyp5Nfnr0_UZBzo5mcKhh_TAhzoX2N11r5qexLOR6ByUkRKYj984Zct0hMav-EUldewQ242iuxhUdmHnI32CFrnxSpxp8RcEK46Mviz-YCRBMY3bhCc4gmcMZFhTRBMfiDGNw">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Treatment & Dialysis -->
+        <section class="px-lg py-xl bg-surface transition-all duration-700 opacity-100 translate-y-0">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-xl">
+                    <h3 class="font-headline-lg text-headline-lg mb-4">Therapeutic Interventions</h3>
+                    <p class="text-on-surface-variant font-body-md max-w-2xl mx-auto">From medical management to
+                        advanced life-support technologies.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+                    <div class="glass-card p-lg rounded-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-4xl">monitor_heart</span>
+                            </div>
+                            <h4 class="font-display-lg text-title-md text-primary">Hemodialysis</h4>
+                        </div>
+                        <p class="text-on-surface-variant mb-6">In hemodialysis, blood is pumped out of your body to an
+                            artificial kidney machine, and returned to your body by tubes that connect you to the
+                            machine.</p>
+                        <ul class="space-y-3 text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Usually
+                                performed 3 times a week</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Lasts
+                                about 4 hours per session</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary text-sm">check_circle</span> Requires
+                                surgical access (Fistula/Graft)</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-lg rounded-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+                                <span class="material-symbols-outlined text-4xl">home_health</span>
+                            </div>
+                            <h4 class="font-display-lg text-title-md text-secondary">Peritoneal Dialysis</h4>
+                        </div>
+                        <p class="text-on-surface-variant mb-6">Uses the lining of your abdomen (peritoneum) and a
+                            cleaning solution (dialysate) to clean your blood. The solution is washed in and out of your
+                            belly.</p>
+                        <ul class="space-y-3 text-on-surface-variant">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-secondary text-sm">check_circle</span> Can be
+                                done at home</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                Performed daily or nightly while sleeping</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-secondary text-sm">check_circle</span> More
+                                flexible for travel and work</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Kidney by the Numbers -->
+        <section class="px-lg py-xl bg-surface-container-highest transition-all duration-700 opacity-100 translate-y-0">
+            <div class="max-w-container-max mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-md text-center">
+                    <div>
+                        <p class="font-display-lg text-display-lg text-primary">200</p>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Quarts of blood daily</p>
+                    </div>
+                    <div>
+                        <p class="font-display-lg text-display-lg text-primary">1M</p>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Nephrons per kidney</p>
+                    </div>
+                    <div>
+                        <p class="font-display-lg text-display-lg text-primary">2</p>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Litres of waste excreted</p>
+                    </div>
+                    <div>
+                        <p class="font-display-lg text-display-lg text-primary">24/7</p>
+                        <p class="font-label-md text-label-md text-on-surface-variant">Continuous filtration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Kidney Care & Prevention -->
+        <section class="px-lg py-xl bg-white transition-all duration-700 opacity-100 translate-y-0">
+            <div
+                class="max-w-container-max mx-auto flex flex-col md:flex-row gap-lg bg-surface-container-low rounded-3xl p-lg border border-outline-variant/30">
+                <div class="flex-1">
+                    <h3 class="font-headline-lg text-headline-lg mb-4">Prevention Protocols</h3>
+                    <p class="text-on-surface-variant mb-8">Maintain peak renal health with these evidence-based
+                        lifestyle adjustments.</p>
+                    <div class="space-y-md">
+                        <div class="flex gap-4 p-md bg-white rounded-xl">
+                            <span class="material-symbols-outlined text-primary">water_drop</span>
+                            <div>
+                                <h6 class="font-title-md text-title-md">Hydration</h6>
+                                <p class="text-on-surface-variant">Consistent water intake helps kidneys clear sodium
+                                    and toxins from the body.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-md bg-white rounded-xl">
+                            <span class="material-symbols-outlined text-primary">no_meals</span>
+                            <div>
+                                <h6 class="font-title-md text-title-md">Dietary Control</h6>
+                                <p class="text-on-surface-variant">Limit sodium and processed sugars to reduce the load
+                                    on glomerular filtration.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-md bg-white rounded-xl">
+                            <span class="material-symbols-outlined text-primary">pill</span>
+                            <div>
+                                <h6 class="font-title-md text-title-md">Monitor NSAIDs</h6>
+                                <p class="text-on-surface-variant">Avoid regular use of over-the-counter pain relievers
+                                    like ibuprofen which can cause damage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 bg-primary rounded-2xl p-md text-white flex flex-col justify-center">
+                    <div class="text-center mb-6">
+                        <span class="material-symbols-outlined text-6xl opacity-50">health_and_safety</span>
+                        <h4 class="text-2xl font-bold mt-4">Screening Checklist</h4>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input class="rounded border-white/30 bg-white/10 text-secondary-container focus:ring-0"
+                                type="checkbox">
+                            <span class="">Annual blood pressure check</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input class="rounded border-white/30 bg-white/10 text-secondary-container focus:ring-0"
+                                type="checkbox">
+                            <span class="">Fasting glucose test</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input class="rounded border-white/30 bg-white/10 text-secondary-container focus:ring-0"
+                                type="checkbox">
+                            <span class="">Urinalysis for protein leakage</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input checked=""
+                                class="rounded border-white/30 bg-white/10 text-secondary-container focus:ring-0"
+                                type="checkbox">
+                            <span class="">Serum creatinine/GFR evaluation</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="px-lg py-xl bg-surface transition-all duration-700 opacity-100 translate-y-0">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="font-headline-lg text-headline-lg mb-8 text-center">Frequently Asked Questions</h3>
+                <div class="space-y-sm">
+                    <details class="group bg-white border border-outline-variant/30 rounded-xl">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md">How much water should I drink daily for kidney health?</span>
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-md pb-md text-on-surface-variant">
+                            While the "8 glasses a day" rule is common, the exact amount depends on your age, climate,
+                            and activity level. Generally, drinking enough so that your urine is pale yellow or clear is
+                            a good indicator of proper hydration.
+                        </div>
+                    </details>
+                    <details class="group bg-white border border-outline-variant/30 rounded-xl">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md">Can you live with only one kidney?</span>
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-md pb-md text-on-surface-variant">
+                            Yes, most people can lead a normal, healthy life with one kidney. The single kidney
+                            increases in size and capacity to handle the workload of two.
+                        </div>
+                    </details>
+                    <details class="group bg-white border border-outline-variant/30 rounded-xl">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md">What are the early warning signs of kidney failure?</span>
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-md pb-md text-on-surface-variant">
+                            Early kidney disease often has no symptoms. However, signs can include persistent itching,
+                            muscle cramps, feeling tired, swollen ankles, or foamy urine. Regular screening is essential
+                            for those at risk.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="w-full mt-auto bg-surface-container-highest border-t border-outline-variant">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-md px-lg py-lg max-w-container-max mx-auto">
+                <div class="space-y-md">
+                    <h2 class="font-title-md text-title-md text-on-surface">HealSphere</h2>
+                    <p class="text-on-surface-variant font-label-md">Empowering healthcare professionals and patients
+                        through high-fidelity clinical education and data visualization.</p>
+                    <div class="flex gap-4">
+                        <a class="text-secondary hover:text-primary transition-opacity opacity-80 hover:opacity-100"
+                            href="#"><span class="material-symbols-outlined">public</span></a>
+                        <a class="text-secondary hover:text-primary transition-opacity opacity-80 hover:opacity-100"
+                            href="#"><span class="material-symbols-outlined">mail</span></a>
+                        <a class="text-secondary hover:text-primary transition-opacity opacity-80 hover:opacity-100"
+                            href="#"><span class="material-symbols-outlined">share</span></a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:items-end gap-sm">
+                    <nav class="flex flex-wrap gap-md md:justify-end">
+                        <a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Medical Disclaimer</a>
+                        <a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Emergency Contacts</a>
+                        <a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Privacy Policy</a>
+                        <a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Terms of Service</a>
+                        <a class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Support</a>
+                    </nav>
+                    <p class="text-on-surface-variant font-label-sm text-label-sm mt-4">© 2024 HealSphere Medical
+                        Education. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- FAB for quick action (Mobile/Desktop) -->
+    <button
+        class="fixed bottom-8 right-8 w-14 h-14 bg-primary-container text-on-primary-container rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all z-50">
+        <span class="material-symbols-outlined">chat_bubble</span>
+    </button>
+    <script>
+        // Micro-interactions and subtle scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

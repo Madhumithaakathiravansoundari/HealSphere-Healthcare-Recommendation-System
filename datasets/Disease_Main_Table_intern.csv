@@ -1,0 +1,51 @@
+Disease_ID,Disease_Name,Body_System_ID,Category,Severity,Description
+D001,Diabetes Type 2,BS005,Metabolic Disease,Moderate,Chronic high blood sugar due to insulin resistance.
+D002,Hypertension,BS001,Cardiovascular Disease,Moderate,Persistently elevated blood pressure.
+D003,Asthma,BS002,Respiratory Disease,Moderate,Chronic airway inflammation causing wheezing.
+D004,Migraine,BS004,Neurological Disorder,Moderate,Recurring severe headaches.
+D005,Gastritis,BS003,Gastrointestinal Disease,Mild,Inflammation of stomach lining.
+D006,Pneumonia,BS002,Infectious Disease,Severe,Lung infection affecting air sacs.
+D007,Dengue Fever,BS007,Viral Infection,Severe,Mosquito-borne viral illness.
+D008,Chronic Kidney Disease,BS006,Kidney Disease,Severe,Progressive kidney damage.
+D009,Osteoarthritis,BS009,Joint Disease,Moderate,Degeneration of joint cartilage.
+D010,Depression,BS004,Mental Health Disorder,Moderate,Persistent low mood.
+D011,Coronary Artery Disease,BS001,Heart Disease,Severe,Narrowing of coronary arteries.
+D012,Heart Failure,BS001,Heart Disease,Critical,Heart cannot pump efficiently.
+D013,Stroke,BS004,Neurological Disorder,Critical,Interrupted blood supply to brain.
+D014,COPD,BS002,Respiratory Disease,Severe,Chronic airflow limitation.
+D015,Tuberculosis,BS002,Bacterial Infection,Severe,Bacterial lung infection.
+D016,COVID-19,BS002,Viral Infection,Moderate,Coronavirus infection.
+D017,Influenza,BS002,Viral Infection,Mild,Seasonal flu infection.
+D018,Peptic Ulcer,BS003,Gastrointestinal Disease,Moderate,Sores in stomach lining.
+D019,GERD,BS003,Gastrointestinal Disease,Mild,Acid reflux disorder.
+D020,Hepatitis B,BS012,Viral Infection,Severe,Viral liver infection.
+D021,Cirrhosis,BS012,Liver Disease,Severe,Scarring of liver.
+D022,Gallstones,BS003,Gallbladder Disease,Moderate,Stone formation in gallbladder.
+D023,Appendicitis,BS003,Inflammatory Disease,Severe,Inflamed appendix.
+D024,Hypothyroidism,BS005,Hormonal Disorder,Moderate,Underactive thyroid.
+D025,Hyperthyroidism,BS005,Hormonal Disorder,Moderate,Overactive thyroid.
+D026,Anemia,BS013,Blood Disorder,Moderate,Low red blood cells.
+D027,Leukemia,BS013,Cancer,Critical,Cancer of blood-forming tissues.
+D028,Breast Cancer,BS010,Cancer,Severe,Malignant breast tumor.
+D029,Lung Cancer,BS010,Cancer,Critical,Malignant lung tumor.
+D030,Prostate Cancer,BS010,Cancer,Severe,Cancer of prostate gland.
+D031,Psoriasis,BS011,Skin Disease,Moderate,Autoimmune skin condition.
+D032,Eczema,BS011,Skin Disease,Mild,Inflammatory skin condition.
+D033,Acne,BS011,Skin Disease,Mild,Inflammation of hair follicles.
+D034,Glaucoma,BS014,Eye Disease,Severe,Damage to optic nerve.
+D035,Cataract,BS014,Eye Disease,Moderate,Clouding of eye lens.
+D036,Conjunctivitis,BS014,Eye Disease,Mild,Inflamed conjunctiva.
+D037,Otitis Media,BS015,ENT Disease,Moderate,Middle ear infection.
+D038,Sinusitis,BS015,ENT Disease,Moderate,Inflamed sinuses.
+D039,Alzheimer's Disease,BS004,Neurological Disorder,Severe,Progressive memory loss.
+D040,Parkinson's Disease,BS004,Neurological Disorder,Severe,Movement disorder.
+D041,Epilepsy,BS004,Neurological Disorder,Moderate,Recurring seizures.
+D042,Rheumatoid Arthritis,BS008,Autoimmune Disease,Severe,Inflammatory joint disease.
+D043,Gout,BS008,Joint Disease,Moderate,Uric acid crystal arthritis.
+D044,Osteoporosis,BS009,Bone Disease,Moderate,Weak brittle bones.
+D045,Malaria,BS007,Parasitic Infection,Severe,Mosquito-borne parasitic disease.
+D046,Typhoid Fever,BS003,Bacterial Infection,Severe,Salmonella infection.
+D047,Cholera,BS003,Bacterial Infection,Critical,Severe diarrheal illness.
+D048,Chickenpox,BS011,Viral Infection,Mild,Varicella-zoster infection.
+D049,Measles,BS007,Viral Infection,Severe,Highly contagious viral disease.
+D050,HIV Infection,BS007,Viral Infection,Critical,Virus that weakens immune system.

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Module 11: The Reproductive System | HealSphere</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#65dca4",
+                        "primary": "#003d9b",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c3c6d6",
+                        "tertiary-container": "#006844",
+                        "secondary": "#00687b",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "tertiary-fixed": "#82f9be",
+                        "surface-tint": "#0c56d0",
+                        "surface-variant": "#e1e2e4",
+                        "on-tertiary-container": "#72e9af",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d9dadc",
+                        "surface-bright": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#afecff",
+                        "on-secondary-container": "#005f71",
+                        "outline": "#737685",
+                        "surface-container": "#edeef0",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#dae2ff",
+                        "secondary-fixed-dim": "#48d7f9",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "secondary-container": "#50dcff",
+                        "surface": "#f8f9fb",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "inverse-primary": "#b2c5ff",
+                        "background": "#f8f9fb",
+                        "on-primary-container": "#c4d2ff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434654",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f4f6",
+                        "on-tertiary-fixed-variant": "#005235",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#004e32",
+                        "primary-container": "#0052cc",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8ea",
+                        "on-secondary-fixed": "#001f27",
+                        "on-primary-fixed": "#001848",
+                        "inverse-on-surface": "#f0f1f3",
+                        "inverse-surface": "#2e3132"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "container-max": "1280px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "title-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fb;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 82, 204, 0.05);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #dae2ff 0%, #f8f9fb 60%);
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm">
+        <div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-16">
+            <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined text-primary text-3xl"
+                    style="font-variation-settings: 'FILL' 1;">health_metrics</span>
+                <span class="font-title-md text-title-md font-bold text-primary">HealSphere</span>
+            </div>
+
+            <div class="flex items-center gap-md">
+                <span
+                    class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">notifications</span>
+                <span
+                    class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-all">account_circle</span>
+            </div>
+        </div>
+    </header>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="hero-gradient relative overflow-hidden py-xl md:py-24 transition-all duration-700 opacity-100">
+            <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 items-center gap-lg">
+                <div class="z-10">
+                    <div
+                        class="inline-flex items-center gap-xs px-3 py-1 bg-primary/10 text-primary rounded-full mb-md">
+                        <span class="material-symbols-outlined text-sm">school</span>
+                        <span class="text-label-sm font-label-sm">Module 11</span>
+                    </div>
+                    <h1 class="font-display-lg text-display-lg text-primary mb-sm leading-tight">The Reproductive
+                        <br><span class="text-secondary">System</span></h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Understanding Biological
+                        Continuity. A comprehensive deep-dive into the complex orchestration of human life, from
+                        anatomical foundations to cellular mechanics.</p>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-full bg-primary/5 absolute -top-12 -right-12 w-64 h-64 blur-3xl">
+                    </div>
+                    <div class="glass-card rounded-xl p-base relative overflow-hidden">
+                        <img class="w-full h-auto rounded-lg object-cover"
+                            data-alt="A high-fidelity 3D medical illustration showing a cross-section of the human pelvic region, highlighting the reproductive organs in soft blues and teals. The style is clean, clinical, and minimalist, set against a pristine white background with soft ambient lighting and subtle glassmorphic textures to signify professional healthcare education."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWuKp3-W1fBsXyGW7hs4V91I1i1W4CCW3gAmJFdIx2y-MJs2vU5vfYvcbnmillPUz4_CD9oKtlJXB60JengTkDzlAPRbg1ELHd-hRcPhIcuOK7iFfEKMgVejQ0qEdhK6Jhr2fNV6OyjuZSLwzgH996-7s5E87RtdQvirAHH9pZkXSmm2KRuf9sZkXZ_RAUQpADxIR23lGExGO9_hYRKLdRGNjxK0H8O6n6o3Ef-L7_14VEuHrcPYpF-Q">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Overview Section -->
+        <section class="py-xl bg-surface transition-all duration-700 opacity-100">
+            <div class="max-w-container-max mx-auto px-gutter text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Biological Significance</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        The reproductive system is a unique biological framework designed for the propagation of the
+                        species through biological inheritance. Unlike other organ systems that maintain individual
+                        homeostasis, this system coordinates complex hormonal regulation and gamete production to ensure
+                        the continuity of life. It serves as the bridge between generations, governed by the intricate
+                        hypothalamic-pituitary-gonadal (HPG) axis.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Anatomical Architecture -->
+        <section class="py-xl transition-all duration-700 opacity-100">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex items-center gap-sm mb-lg">
+                    <span class="h-px flex-1 bg-outline-variant/30"></span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Anatomical Architecture</h2>
+                    <span class="h-px flex-1 bg-outline-variant/30"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                    <!-- Male Anatomy -->
+                    <div class="glass-card p-lg rounded-xl">
+                        <div class="flex items-center gap-sm mb-md">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">male</span>
+                            </div>
+                            <h3 class="font-title-md text-title-md">Male Physiology</h3>
+                        </div>
+                        <div class="space-y-md">
+                            <div
+                                class="p-md bg-white rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-all">
+                                <h4 class="font-label-md text-label-md font-bold text-primary mb-xs">Testes</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Primary gonads responsible
+                                    for spermatogenesis and testosterone secretion within the scrotal sac.</p>
+                            </div>
+                            <div
+                                class="p-md bg-white rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-all">
+                                <h4 class="font-label-md text-label-md font-bold text-primary mb-xs">Vas Deferens</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">The muscular duct that
+                                    transports mature sperm from the epididymis to the ejaculatory ducts.</p>
+                            </div>
+                            <div
+                                class="p-md bg-white rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-all">
+                                <h4 class="font-label-md text-label-md font-bold text-primary mb-xs">Prostate &amp;
+                                    Glands</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Accessory glands producing
+                                    alkaline seminal fluid to nourish and protect sperm motility.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Female Anatomy -->
+                    <div class="glass-card p-lg rounded-xl">
+                        <div class="flex items-center gap-sm mb-md">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                                <span class="material-symbols-outlined">female</span>
+                            </div>
+                            <h3 class="font-title-md text-title-md">Female Physiology</h3>
+                        </div>
+                        <div class="space-y-md">
+                            <div
+                                class="p-md bg-white rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-all">
+                                <h4 class="font-label-md text-label-md font-bold text-secondary mb-xs">Ovaries</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Paired organs that produce
+                                    oocytes and synthesize estrogen and progesterone hormones.</p>
+                            </div>
+                            <div
+                                class="p-md bg-white rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-all">
+                                <h4 class="font-label-md text-label-md font-bold text-secondary mb-xs">Fallopian Tubes
+                                </h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Ciliated pathways where
+                                    fertilization typically occurs, connecting ovaries to the uterus.</p>
+                            </div>
+                            <div
+                                class="p-md bg-white rounded-lg border border-outline-variant/20 hover:border-primary/30 transition-all">
+                                <h4 class="font-label-md text-label-md font-bold text-secondary mb-xs">Uterus</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">A muscular, pear-shaped
+                                    organ designed for embryo implantation and fetal development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Reproductive Mechanics -->
+        <section class="py-xl bg-surface-container-low transition-all duration-700 opacity-100">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-xl text-center">Reproductive Mechanics</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                    <div class="flex flex-col items-center text-center p-md">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-md shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-primary">hub</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md mb-xs">Gametogenesis</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The meiotic process of producing
+                            haploid cells (sperm and ova) from diploid germ cells.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-md">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-md shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-primary">merge</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md mb-xs">Fertilization</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The fusion of male and female
+                            gametes to form a zygote, initiating embryonic development.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-md">
+                        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-md shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-primary">reorder</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md mb-xs">Hormonal Cycles</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Rhythmic fluctuations of FSH, LH,
+                            and sex steroids that govern reproductive readiness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pathology Center -->
+        <section class="py-xl transition-all duration-700 opacity-100">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex justify-between items-end mb-lg">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">Pathology Center</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Clinical manifestations and common
+                            disorders.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+                    <!-- PCOS -->
+                    <div
+                        class="bg-white p-md rounded-xl border border-outline-variant/30 hover:shadow-lg transition-all group">
+                        <div class="flex justify-between items-start mb-sm">
+                            <h3 class="font-title-md text-title-md text-primary">PCOS</h3>
+                            <span
+                                class="px-2 py-1 bg-error-container text-on-error-container text-[10px] uppercase font-bold rounded">High
+                                Prevalence</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Polycystic Ovary Syndrome
+                            involves hormonal imbalance, irregular periods, and excess androgen levels.</p>
+                        <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+                    </div>
+                    <!-- Endometriosis -->
+                    <div
+                        class="bg-white p-md rounded-xl border border-outline-variant/30 hover:shadow-lg transition-all group">
+                        <div class="flex justify-between items-start mb-sm">
+                            <h3 class="font-title-md text-title-md text-primary">Endometriosis</h3>
+                            <span
+                                class="px-2 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold rounded">Clinical
+                                Focus</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Growth of endometrial-like
+                            tissue outside the uterus, causing chronic pain and potential infertility.</p>
+                        <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+                    </div>
+                    <!-- Infertility -->
+                    <div
+                        class="bg-white p-md rounded-xl border border-outline-variant/30 hover:shadow-lg transition-all group">
+                        <div class="flex justify-between items-start mb-sm">
+                            <h3 class="font-title-md text-title-md text-primary">Infertility</h3>
+                            <span
+                                class="px-2 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold rounded">Clinical
+                                Focus</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">The inability to conceive
+                            after one year of regular unprotected intercourse, requiring multi-factorial evaluation.</p>
+                        <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+                    </div>
+                    <!-- Prostate -->
+                    <div
+                        class="bg-white p-md rounded-xl border border-outline-variant/30 hover:shadow-lg transition-all group">
+                        <div class="flex justify-between items-start mb-sm">
+                            <h3 class="font-title-md text-title-md text-primary">Prostate Disorders</h3>
+                            <span
+                                class="px-2 py-1 bg-error-container text-on-error-container text-[10px] uppercase font-bold rounded">High
+                                Prevalence</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Includes Benign Prostatic
+                            Hyperplasia (BPH) and Prostatitis, affecting urinary and sexual function.</p>
+                        <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+                    </div>
+                    <!-- STIs -->
+                    <div
+                        class="bg-white p-md rounded-xl border border-outline-variant/30 hover:shadow-lg transition-all group">
+                        <div class="flex justify-between items-start mb-sm">
+                            <h3 class="font-title-md text-title-md text-primary">STIs</h3>
+                            <span
+                                class="px-2 py-1 bg-error-container text-on-error-container text-[10px] uppercase font-bold rounded">High
+                                Prevalence</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Sexually transmitted
+                            infections including Chlamydia, Gonorrhea, and HPV requiring screening and treatment.</p>
+                        <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-500"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic & Treatment Roadmap -->
+        <section
+            class="py-xl bg-primary text-on-primary overflow-hidden relative transition-all duration-700 opacity-100">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[120px] opacity-20 -mr-24 -mt-24">
+            </div>
+            <div class="max-w-container-max mx-auto px-gutter relative z-10">
+                <h2 class="font-headline-lg text-headline-lg mb-xl text-center">Diagnostic &amp; Treatment Roadmap</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                    <div>
+                        <h3 class="font-title-md text-title-md mb-md flex items-center gap-xs">
+                            <span class="material-symbols-outlined">analytics</span> Evaluation Steps
+                        </h3>
+                        <div class="space-y-sm">
+                            <div class="flex gap-md items-start p-sm bg-white/5 rounded-lg border border-white/10">
+                                <span class="font-bold text-primary-fixed-dim">01</span>
+                                <div>
+                                    <h4 class="font-label-md text-label-md font-bold mb-xs text-white">Hormonal
+                                        Profiling</h4>
+                                    <p class="text-sm text-on-primary-container opacity-80">Serum analysis of FSH, LH,
+                                        Estradiol, Progesterone, and Testosterone.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-md items-start p-sm bg-white/5 rounded-lg border border-white/10">
+                                <span class="font-bold text-primary-fixed-dim">02</span>
+                                <div>
+                                    <h4 class="font-label-md text-label-md font-bold mb-xs text-white">Advanced Imaging
+                                    </h4>
+                                    <p class="text-sm text-on-primary-container opacity-80">Transvaginal/Pelvic
+                                        Ultrasound and MRI for structural assessment.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-md items-start p-sm bg-white/5 rounded-lg border border-white/10">
+                                <span class="font-bold text-primary-fixed-dim">03</span>
+                                <div>
+                                    <h4 class="font-label-md text-label-md font-bold mb-xs text-white">Functional
+                                        Testing</h4>
+                                    <p class="text-sm text-on-primary-container opacity-80">Semen analysis,
+                                        Hysterosalpingography, and Laparoscopy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-title-md text-title-md mb-md flex items-center gap-xs">
+                            <span class="material-symbols-outlined">medical_services</span> Management Strategies
+                        </h3>
+                        <div class="space-y-sm">
+                            <div class="flex gap-md items-start p-sm bg-white/5 rounded-lg border border-white/10">
+                                <span class="material-symbols-outlined text-secondary-fixed">pill</span>
+                                <div>
+                                    <h4 class="font-label-md text-label-md font-bold mb-xs text-white">Medical Therapy
+                                    </h4>
+                                    <p class="text-sm text-on-primary-container opacity-80">Hormone replacement,
+                                        ovulation induction, and antimicrobial therapy.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-md items-start p-sm bg-white/5 rounded-lg border border-white/10">
+                                <span class="material-symbols-outlined text-secondary-fixed">charger</span>
+                                <div>
+                                    <h4 class="font-label-md text-label-md font-bold mb-xs text-white">Surgical
+                                        Intervention</h4>
+                                    <p class="text-sm text-on-primary-container opacity-80">Minimally invasive
+                                        procedures for fibroids, polyps, or endometriosis.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-md items-start p-sm bg-white/5 rounded-lg border border-white/10">
+                                <span class="material-symbols-outlined text-secondary-fixed">family_restroom</span>
+                                <div>
+                                    <h4 class="font-label-md text-label-md font-bold mb-xs text-white">Assisted
+                                        Reproduction</h4>
+                                    <p class="text-sm text-on-primary-container opacity-80">IUI, IVF, and ICSI protocols
+                                        for complex infertility cases.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Preventive Healthcare Pillars -->
+        <section class="py-xl transition-all duration-700 opacity-100">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-xl text-center">Pillars of Preventive
+                    Healthcare</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <div class="p-lg bg-surface-container rounded-xl border-t-4 border-primary">
+                        <span class="material-symbols-outlined text-primary mb-md"
+                            style="font-size: 32px;">verified_user</span>
+                        <h3 class="font-title-md text-title-md mb-sm">Regular Screenings</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Adherence to Pap smears,
+                            mammograms, and PSA testing for early detection.</p>
+                    </div>
+                    <div class="p-lg bg-surface-container rounded-xl border-t-4 border-secondary">
+                        <span class="material-symbols-outlined text-secondary mb-md"
+                            style="font-size: 32px;">shield_watch</span>
+                        <h3 class="font-title-md text-title-md mb-sm">Safe Practices</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Barrier methods and vaccination
+                            (HPV) to prevent infection transmission.</p>
+                    </div>
+                    <div class="p-lg bg-surface-container rounded-xl border-t-4 border-tertiary">
+                        <span class="material-symbols-outlined text-tertiary mb-md" style="font-size: 32px;">spa</span>
+                        <h3 class="font-title-md text-title-md mb-sm">Hormonal Health</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Lifestyle adjustments, nutrition,
+                            and stress management for endocrine balance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clinical FAQ -->
+        <section class="py-xl bg-surface-container-lowest transition-all duration-700 opacity-100">
+            <div class="max-w-3xl mx-auto px-gutter">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-xl text-center">Clinical FAQ</h2>
+                <div class="space-y-sm">
+                    <details class="group bg-white border border-outline-variant/30 rounded-lg" open="">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md text-title-md text-on-surface">What defines a 'normal' hormonal
+                                cycle?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-md pt-0 text-on-surface-variant border-t border-outline-variant/10">
+                            A standard cycle ranges from 21 to 35 days, involving distinct follicular and luteal phases
+                            driven by the precise timing of hormone release from the HPG axis.
+                        </div>
+                    </details>
+                    <details class="group bg-white border border-outline-variant/30 rounded-lg">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md text-title-md text-on-surface">How does age impact reproductive
+                                capability?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-md pt-0 text-on-surface-variant border-t border-outline-variant/10">
+                            Age affects gamete quality and quantity (ovarian reserve) and hormonal baseline stability,
+                            with a more pronounced decline in female fertility after 35.
+                        </div>
+                    </details>
+                    <details class="group bg-white border border-outline-variant/30 rounded-lg">
+                        <summary class="flex justify-between items-center p-md cursor-pointer list-none">
+                            <span class="font-title-md text-title-md text-on-surface">When should clinical evaluation
+                                begin for infertility?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="p-md pt-0 text-on-surface-variant border-t border-outline-variant/10">
+                            Typically after 12 months of unsuccessful attempts for couples under 35, or after 6 months
+                            for couples where the female partner is over 35.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-lg mt-xl bg-surface-container-low border-t border-outline-variant/20">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-md">
+            <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined text-primary text-2xl">health_metrics</span>
+                <span class="font-title-md text-title-md font-bold text-primary">HealSphere</span>
+            </div>
+            <div class="flex gap-md">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Clinical Guidelines</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Contact Support</a>
+            </div>
+            <p class="font-label-sm text-label-sm text-secondary">© 2024 HealSphere Medical Education. All rights
+                reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Simple intersection observer for scroll reveal effects
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+    </script>
+
+
+</body>
+
+</html>
